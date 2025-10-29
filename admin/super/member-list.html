@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>전체 회원 목록 | SMART TRAVEL Admin</title>
+
+	<!-- 기본 스타일 (순서: reset -> variables -> components -> contents -> page layout) -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+	<!-- 공통 네비게이션 영역 -->
+	<div id="nav-slot"></div>
+
+	<!-- 상단 헤더바 -->
+	<header class="admin-topbar">
+		<div class="admin-topbar__inner">
+			<div class="admin-topbar__brand">
+				<span class="brand-logo">SMT</span>
+				<span class="brand-name">SMART TRAVEL</span>
+			</div>
+
+			<div class="admin-topbar__right">
+				<button type="button" class="topbar-lang">
+					<span class="topbar-lang__icon">🌐</span>
+					<span class="topbar-lang__text">English</span>
+				</button>
+
+				<button type="button" class="topbar-user">
+					<span class="topbar-user__icon">👤</span>
+					<span class="topbar-user__name">Admin</span>
+					<span class="topbar-user__arrow">▼</span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- 본문 -->
+	<main class="page-body">
+
+		<div class="page-layout">
+
+			<!-- 왼쪽: 사이드 메뉴(1,2,3) 가 있던 그 초록 dotted progress 영역 -->
+			<aside class="page-flow">
+				<ul class="page-flow__steps">
+					<li class="page-flow__step is-active">
+						<div class="page-flow__bubble">1</div>
+						<div class="page-flow__label">
+							<div class="page-flow__menu-group">회원 관리</div>
+							<div class="page-flow__menu-item is-active">전체 회원 목록</div>
+							<div class="page-flow__menu-item">B2B 고객 목록</div>
+							<div class="page-flow__menu-item">B2C 고객 목록</div>
+							<div class="page-flow__menu-item">에이전트 목록</div>
+							<div class="page-flow__menu-item">가이드 목록</div>
+						</div>
+					</li>
+
+					<li class="page-flow__step">
+						<div class="page-flow__bubble">2</div>
+						<div class="page-flow__label">
+							<div class="page-flow__menu-group">예약 관리</div>
+							<div class="page-flow__menu-group">매출 관리</div>
+							<div class="page-flow__menu-group">상품 관리</div>
+							<div class="page-flow__menu-group">문의 관리</div>
+							<div class="page-flow__menu-group">비자 신청 관리</div>
+						</div>
+					</li>
+
+					<li class="page-flow__step">
+						<div class="page-flow__bubble">3</div>
+						<div class="page-flow__label">
+							<div class="page-flow__menu-group">사이트 설정</div>
+						</div>
+					</li>
+				</ul>
+			</aside>
+
+			<!-- 오른쪽: 컨텐츠 카드 -->
+			<section class="page-content">
+
+				<!-- 페이지 타이틀 -->
+				<header class="page-header">
+					<h1 class="page-header__title">전체 회원 목록</h1>
+				</header>
+
+				<!-- 카드 박스 전체 -->
+				<div class="card-panel">
+
+					<!-- 상단 검색 영역 -->
+					<div class="member-search-row">
+
+						<div class="member-total">
+							검색결과 <strong class="member-total__count">999</strong>개
+						</div>
+
+						<div class="member-search">
+							<input type="text" class="member-search__input" placeholder="이름 검색">
+							<button type="button" class="member-search__btn" aria-label="검색">
+								<span class="member-search__icon">🔍</span>
+							</button>
+						</div>
+
+					</div>
+
+					<!-- 테이블 -->
+					<div class="table-wrap">
+						<table class="table table-member-list">
+							<thead>
+								<tr>
+									<th class="col-no">No</th>
+									<th class="col-type">회원 유형</th>
+									<th class="col-name">이름</th>
+									<th class="col-date">등록일시</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-no">10</td>
+									<td class="col-type">B2B</td>
+									<td class="col-name">Jose Ramirez</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">9</td>
+									<td class="col-type">B2C</td>
+									<td class="col-name">Jose Ramirez</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">8</td>
+									<td class="col-type">에이전트</td>
+									<td class="col-name">Bacolod City</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">7</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">6</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">5</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">4</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">3</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">2</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+								<tr>
+									<td class="col-no">1</td>
+									<td class="col-type">가이드</td>
+									<td class="col-name">Hyunwoo Park</td>
+									<td class="col-date">2025-06-20 12:12</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- 페이지네이션 -->
+					<nav class="pagination">
+						<button type="button" class="pagination__arrow pagination__arrow--first"
+							aria-label="처음으로">&laquo;</button>
+						<button type="button" class="pagination__arrow pagination__arrow--prev"
+							aria-label="이전 페이지">&lsaquo;</button>
+
+						<ul class="pagination__list">
+							<li class="pagination__item is-active"><button type="button">1</button></li>
+							<li class="pagination__item"><button type="button">2</button></li>
+							<li class="pagination__item"><button type="button">3</button></li>
+							<li class="pagination__item"><button type="button">4</button></li>
+							<li class="pagination__item"><button type="button">5</button></li>
+						</ul>
+
+						<button type="button" class="pagination__arrow pagination__arrow--next"
+							aria-label="다음 페이지">&rsaquo;</button>
+						<button type="button" class="pagination__arrow pagination__arrow--last"
+							aria-label="마지막으로">&raquo;</button>
+					</nav>
+
+					<!-- 하단 우측 버튼 -->
+					<div class="member-actions">
+						<button type="button" class="btn-download">
+							다운로드
+						</button>
+					</div>
+
+				</div><!-- /card-panel -->
+
+			</section>
+		</div><!-- /page-layout -->
+
+	</main>
+
+	<!-- jQuery 로 nav include -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		function loadNav(currentPage) {
+			// super/member-list.html 에서 ../inc/nav.html 로 접근
+			$('#nav-slot').load('../inc/nav.html', function () {
+				$('#nav-slot .menu-item').each(function () {
+					var pg = $(this).attr('data-page');
+					if (pg === currentPage) {
+						$(this).addClass('active');
+					}
+				});
+			});
+		}
+
+		// 이 페이지는 "회원 관리 > 전체 회원 목록" 화면이라고 가정
+		loadNav('member');
+	</script>
+
+</body>
+
+</html>
