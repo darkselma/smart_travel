@@ -1,0 +1,149 @@
+
+/* ===== Sidebar ===== */
+#sidebarMenu { position:absolute; right:calc(-1 * var(--sidebar-w)); top:0; width:var(--sidebar-w); height:100dvh; background:#fff; box-shadow:0 0 10px rgba(0,0,0,.1); transition:right .3s ease; z-index:90; }
+#sidebarMenu.on { right:0; }
+#sidebarMenu .header { display:flex; align-items:center; justify-content:space-between; padding:10px 20px; }
+#sidebarMenu .header .ic-close { width:20px; height:20px; }
+#sidebarMenu .member-log { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:0 20px; }
+#sidebarMenu .member-log .jw-button { flex:1; background:#000; white-space:nowrap; }
+#sidebarMenu .member-info { margin-top:10px; display:grid; grid-template-columns:50px 1fr; gap:5px 10px; padding:0 20px; }
+#sidebarMenu .member-info > .logo { position:relative; grid-row:span 2; width:50px; height:50px; border-radius:50%; background:#f4f4f4; overflow:hidden; }
+#sidebarMenu .member-info > .logo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+#sidebarMenu nav { position:relative; width:100%; height:calc(100% - var(--header-h)); padding:10px 30px 30px 30px; overflow:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+#sidebarMenu nav > button { position:absolute; right:20px; top:20px; }
+#sidebarMenu nav ul { margin-top:20px; display:grid; gap:10px; }
+#sidebarMenu nav ul > li { overflow:hidden; }
+#sidebarMenu nav ul > li dt { height:35px; }
+#sidebarMenu nav ul > li dd { display:none; height:35px; padding-left:40px; }
+#sidebarMenu nav ul > li.on dd { display:block; }
+#sidebarMenu nav ul > li a, #sidebarMenu nav ul > li button { position:relative; display:flex; align-items:center; gap:10px; width:100%; height:100%; }
+#sidebarMenu nav ul > li a i, #sidebarMenu nav ul > li button i { position:absolute; right:13px; top:50%; width:6px; height:6px; transform:rotate(45deg) translateY(-50%); border:1px solid transparent; border-color:#909090 #909090 transparent transparent; }
+#sidebarMenu nav ul > li dd a, #sidebarMenu nav ul > li dd button { font-size:13px; }
+#sidebarMenu a:focus-visible, #sidebarMenu button:focus-visible { outline:2px solid #222; outline-offset:2px; }
+
+/* ===== Header ===== */
+#header { position:fixed; top:0; left:0; width:100%; height:var(--header-h); border-bottom: 1px solid rgba(255, 255, 255, .3); transition: .2s ease; z-index:100; }
+#header.on { height:60px; background:#fff; }
+#header .wrap-inner { max-width:1280px; margin:0 auto; height:100%; display:flex; align-items:center; justify-content:space-between; padding:0; }
+#header a { color:#fff; }
+#header a span { display:flex; align-items:center; }
+#header.on a { color:#222; }
+#header a:hover { color:var(--deep-wave); }
+#header img { height:40px; margin-right:10px; }
+#header nav ul { display:flex; align-items:center; gap:40px; }
+#header nav ul li a { font-size:18px; font-weight:500; transition:color .2s ease; }
+#header.on nav ul li a { font-size:16px; }
+#header .ic-hamberg { display:none; }
+#header .member-info { display:flex; align-items:center; gap:20px; color:#fff;  }
+
+/* 반응형 */
+@media (max-width:1024px){
+  #header nav { display:none; }
+  #header .ic-hamberg { display:block; position:absolute; right:20px; top:50%; transform:translateY(-50%); }
+  #header .wrap-inner { justify-content:flex-start; }
+  #header a span { font-size:1rem; }
+}
+
+
+
+
+/* ===== Footer ===== */
+#footer { position:relative; width:100%; background:#f9f9f9; border-top:1px solid #eaeaea; font-size:13px; color:#555; line-height:1.6; }
+#footer .footer-inner { max-width:1280px; margin:0 auto; padding:40px 0; display:flex; flex-direction:column; gap:10px; }
+
+/* 1. 상단 로고+메뉴 */
+#footer .footer-top { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; }
+#footer .footer-logo { font-size:16px; display:flex; align-items:center; gap:10px; font-weight:700; color:#666; }
+#footer .footer-logo img { filter: grayscale(100%); height:40px; }
+#footer .footer-menu { display:flex; gap:20px; flex-wrap:wrap; }
+#footer .footer-menu a { font-size:14px; font-weight:bold; color:#333; transition:color .2s ease; }
+#footer .footer-menu a:hover { color:var(--deep-wave); text-decoration:underline; }
+
+/* 2. 중단 주소 + 셀렉트 */
+#footer .footer-middle { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px; padding-top:15px; }
+#footer .footer-info { flex:1; color:#777; }
+#footer .footer-select select { padding:6px 10px; border:1px solid #ccc; border-radius:4px; background:#fff; font-size:13px; }
+
+/* 3. 하단 Copyright */
+#footer .footer-bottom { color:#999; font-size:12px; }
+
+@media (max-width:768px){
+  #footer .footer-top, #footer .footer-middle { flex-direction:column; align-items:center; text-align:center; }
+  #footer .footer-menu { justify-content:center; }
+  #footer .footer-select { width:100%; }
+}
+
+/* ===== login ===== */
+#login { flex: 1 0 auto; padding:40px; display:flex; justify-content:center; align-items:center; padding-top:100px; }
+#login form { width:100%; max-width:380px; background:#fff; padding:40px; border-radius:10px; border:1px solid #eee; box-shadow:0 4px 10px rgba(0,0,0,.05); display:flex; flex-direction:column; }
+#login h2 { font-size:22px; color:#222; text-align:center; margin:0; }
+#login .mgt20 { margin-top:20px; }
+#login .mgt40 { margin-top:40px; }
+#login .field { display:flex; flex-direction:column; }
+#login .field label { font-size:14px; color:#333; margin-bottom:6px; }
+#login .field input { width:100%; height:40px; padding:0 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; background:#fff; transition:border .2s ease, box-shadow .2s ease; }
+#login .field input:focus { outline:none; border-color:#4876EE; box-shadow:0 0 0 2px rgba(72,118,238,.15); }
+#login .jw-checkbox { display:flex; align-items:center; gap:8px; font-size:14px; color:#333; user-select:none; }
+#login .jw-checkbox input { width:18px; height:18px; cursor:pointer; accent-color:#4876EE; }
+#login .jw-checkbox .icon { display:none; }
+#login .error { margin-top:12px; padding:10px; background:#ffeaea; border:1px solid #ffd0d0; color:#c40000; border-radius:6px; font-size:14px; }
+#login .jw-button { display:inline-flex; align-items:center; justify-content:center; height:42px; min-width:120px; padding:0 16px; border-radius:6px; font-size:15px; font-weight:600; text-decoration:none; cursor:pointer; transition:all .2s ease; border:1px solid transparent; }
+#login .jw-button.primary { background:#4876EE; color:#fff; border-color:#4876EE; }
+#login .jw-button.primary:hover { background:#335ed0; border-color:#335ed0; }
+#login .jw-button:disabled { opacity:.5; cursor:not-allowed; }
+#login input::placeholder { color:#9f9f9f; }
+#login input:focus::placeholder { color:transparent; }
+
+#join-wrap { display:flex; justify-content:center; align-items:center; min-height:100dvh; background:#f9f9f9; padding:40px; }
+#join-wrap .join-card { width:100%; max-width:640px; background:#fff; border:1px solid #eee; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.05); padding:40px; }
+#join-wrap .join-info { display:flex; flex-direction:column; gap:20px; }
+#join-wrap h1 { font-size:24px; color:#222; margin-bottom:10px; }
+#join-wrap p { font-size:15px; color:#555; line-height:1.6; }
+#join-wrap .terms-box { height:240px; overflow:auto; padding:20px; border:1px solid #ddd; border-radius:6px; background:#fafafa; font-size:14px; color:#333; line-height:1.6; }
+#join-wrap .muted-small { color:#888; font-size:13px; margin-top:10px; }
+#join-wrap .join-actions { display:flex; justify-content:flex-end; align-items:center; gap:10px; margin-top:25px; }
+#join-wrap .agree-label { display:flex; align-items:center; gap:6px; font-size:14px; color:#333; margin-right:auto; }
+#join-wrap .btn { display:inline-flex; align-items:center; justify-content:center; min-width:120px; height:38px; padding:0 18px; border-radius:5px; font-size:14px; font-weight:500; cursor:pointer; text-decoration:none; transition:all .2s ease; }
+#join-wrap .btn-primary { background:#4876EE; color:#fff; border:1px solid #4876EE; }
+#join-wrap .btn-primary:hover { background:#335ed0; border-color:#335ed0; }
+#join-wrap .btn-ghost { background:#fff; color:#333; border:1px solid #ccc; }
+#join-wrap .btn-ghost:hover { background:#f0f0f0; }
+#join-wrap input[type="checkbox"] { width:18px; height:18px; cursor:pointer; accent-color:#4876EE; }
+#join-wrap button:disabled { opacity:0.5; cursor:not-allowed; }
+
+#join-form-wrap { margin:100px 0; padding:40px; }
+#join-form-wrap .card { width:100%; max-width:480px; background:#fff; border:1px solid #eee; border-radius:10px; padding:40px; box-shadow:0 4px 10px rgba(0,0,0,.05); }
+#join-form-wrap h2 { font-size:22px; margin-bottom:10px; color:#222; }
+#join-form-wrap .form-note { font-size:14px; color:#666; margin-bottom:25px; }
+#join-form-wrap form { width:100%; }
+#join-form-wrap .form-group { display:flex; flex-direction:column; margin-bottom:20px; }
+#join-form-wrap .form-row { display:flex; gap:15px; margin-bottom:20px; }
+#join-form-wrap .form-row .form-group { flex:1; }
+#join-form-wrap label { font-weight:500; margin-bottom:6px; font-size:14px; color:#333; }
+#join-form-wrap .form-control { width:100%; height:38px; padding:0 10px; border:1px solid #ccc; border-radius:5px; font-size:14px; transition:border .2s ease, box-shadow .2s ease; }
+#join-form-wrap .form-control:focus { outline:none; border-color:#4876EE; box-shadow:0 0 0 2px rgba(72,118,238,.15); }
+#join-form-wrap .error { margin-top:10px; padding:10px; background:#ffeaea; color:#d00; font-size:14px; border-radius:5px; }
+#join-form-wrap .actions { display:flex; justify-content:flex-end; gap:10px; margin-top:25px; }
+#join-form-wrap .btn { display:inline-flex; align-items:center; justify-content:center; min-width:100px; height:38px; padding:0 15px; border-radius:5px; font-size:14px; font-weight:500; cursor:pointer; text-decoration:none; transition:all .2s ease; }
+#join-form-wrap .btn-primary { background:#4876EE; color:#fff; border:1px solid #4876EE; }
+#join-form-wrap .btn-primary:hover { background:#335ed0; border-color:#335ed0; }
+#join-form-wrap .btn-ghost { background:#fff; color:#333; border:1px solid #ccc; }
+#join-form-wrap .btn-ghost:hover { background:#f0f0f0; }
+
+
+
+
+/* ===== Layout ===== */
+.controller { display:flex; align-items:center; gap:10px; }
+
+
+/* ===== Responsive ===== */
+
+
+
+@media (prefers-reduced-motion:reduce){
+  * { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
+
+
+
