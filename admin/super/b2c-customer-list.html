@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<div id="header-slot"></div>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<div id="nav-slot"></div>
+
+		<section class="layout-content">
+			<h1 class="page-title">전체 회원 목록</h1>
+
+			<div class="card-panel member-list-card">
+
+				<div class="list-header">
+					<div class="result-count">
+						검색결과 <strong class="result-count__num">999</strong>개
+					</div>
+
+					<form class="search-form" action="" method="get">
+						<div class="search-field">
+							<input type="text" class="search-input" placeholder="고객명 검색">
+							<button type="submit" class="search-btn" aria-label="검색">
+								<span class="search-ico">🔍</span>
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<table class="jw-tableA">
+					<thead>
+						<tr>
+							<th scope="col" class="col-no">No</th>
+							<th scope="col" class="col-type">고객명</th>
+							<th scope="col" class="col-email">이메일</th>
+							<th scope="col" class="col-phone">연락처</th>
+							<th scope="col" class="col-date">등록일시</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="col-no"></td>
+							<td class="col-type"></td>
+							<td class="col-email"></td>
+							<td class="col-phone"></td>
+							<td class="col-date"></td>
+						</tr>
+						<tr>
+							<td class="col-no"></td>
+							<td class="col-type"></td>
+							<td class="col-email"></td>
+							<td class="col-phone"></td>
+							<td class="col-date"></td>
+						</tr>
+						<tr>
+							<td class="col-no"></td>
+							<td class="col-type"></td>
+							<td class="col-email"></td>
+							<td class="col-phone"></td>
+							<td class="col-date"></td>
+						</tr>
+						<!-- ...추가 row -->
+					</tbody>
+				</table>
+				<div class="controller">
+					<button type="button" class="jw-button">다운로드</button>
+				</div>
+			</div>
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav.html'
+		});
+	</script>
+</body>
+
+</html>
