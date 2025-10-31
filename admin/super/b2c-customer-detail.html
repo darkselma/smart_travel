@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+					<span>목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<button type="button" class="jw-button typeB">저장</button>
+				</div>
+			</div>
+			
+			<h1 class="page-title">B2C 고객 상세</h1>
+
+			<h2 class="section-title">기본 정보</h2>
+			<div class="card-panel jw-mgt16">
+			
+				<div class="grid-wrap">
+					<div class="grid-item">
+						<label class="label-name">고객명</label>
+						<input type="text" value="Jose Ramirez">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">연락처</label>
+						<div class="field-row">
+							<select class="select">
+								<option>+63</option>
+							</select>
+							<input type="text" value="917 123 4567">
+						</div>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">이메일</label>
+						<input type="email" value="ramirez@gmail.com">
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name">PW</label>
+						<div class="input-box">
+							<input type="password" value="**********">
+							<button type="button" class="jw-button typeD"><img src="/admin/image/replay.svg" alt="">초기화</button>
+						</div>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">고객 번호</label>
+						<input type="text" value="B100231" disabled>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">소속 지점명</label>
+						<input type="text" value="Bacolod City" disabled>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name">등록일시</label>
+						<input type="text" value="2025-06-20 12:12" disabled>
+					</div>
+
+					<div class="grid-item col-span-3">
+						<label class="label-name">메모</label>
+						<div class="editor-box-wrap">
+							<textarea name="editor-box" rows="5" placeholder="문의내용">메모입력란입니다.</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title">예약 내역</h2>
+			<div class="card-panel jw-mgt16">
+				<table class="jw-tableA">
+					<colgroup>
+						<col class="col-60"> <!-- No -->
+						<col> <!-- 상품명 (auto) -->
+						<col> <!-- 예약일 -->
+						<col> <!-- 여행 시작일 -->
+						<col> <!-- 예약 상태 -->
+						<col> <!-- 예약 인원 -->
+						<col> <!-- 주문 금액(₱) -->
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="no">No</th>
+							<th>상품명</th>
+							<th>예약일</th>
+							<th>여행 시작일</th>
+							<th>예약 상태</th>
+							<th class="is-center">예약 인원</th>
+							<th class="is-center">주문 금액(₱)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="no">5</td>
+							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
+							<td class="is-center">2024-12-01</td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">예약 확정</td>
+							<td class="is-center">5</td>
+							<td class="is-center">102,000</td>
+						</tr>
+						<tr>
+							<td class="no">4</td>
+							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
+							<td class="is-center">2024-12-01</td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">예약 확정</td>
+							<td class="is-center">5</td>
+							<td class="is-center">102,000</td>
+						</tr>
+						<tr>
+							<td class="no">3</td>
+							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
+							<td class="is-center">2024-12-01</td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">예약 확정</td>
+							<td class="is-center">5</td>
+							<td class="is-center">102,000</td>
+						</tr>
+						<tr>
+							<td class="no">2</td>
+							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
+							<td class="is-center">2024-12-01</td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">예약 확정</td>
+							<td class="is-center">5</td>
+							<td class="is-center">102,000</td>
+						</tr>
+						<tr>
+							<td class="no">1</td>
+							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
+							<td class="is-center">2024-12-01</td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">예약 확정</td>
+							<td class="is-center">5</td>
+							<td class="is-center">102,000</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="jw-pagebox" role="navigation" aria-label="페이지네이션">
+					<div class="contents">
+						<button type="button" class="first" aria-label="첫 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.0635 5.35156C10.2995 5.35156 10.4937 5.42844 10.6465 5.58105C10.7992 5.73373 10.8759 5.92817 10.876 6.16406C10.876 6.40017 10.7993 6.59527 10.6465 6.74805L7.39648 9.99805L10.6465 13.248C10.7992 13.4008 10.8759 13.595 10.876 13.8311C10.876 14.0671 10.7992 14.2613 10.6465 14.4141C10.4937 14.5668 10.2996 14.6436 10.0635 14.6436C9.82737 14.6436 9.63325 14.5668 9.48047 14.4141L5.64648 10.5811C5.56332 10.4978 5.50442 10.4076 5.46973 10.3105C5.43502 10.2134 5.41799 10.1091 5.41797 9.99805C5.41797 9.88699 5.43504 9.78273 5.46973 9.68555C5.50445 9.58832 5.56315 9.4974 5.64648 9.41406L9.48047 5.58105C9.63321 5.42844 9.82749 5.35156 10.0635 5.35156ZM13.876 5.35156C14.1121 5.35156 14.3072 5.42828 14.46 5.58105C14.6125 5.7337 14.6884 5.92826 14.6885 6.16406C14.6885 6.40009 14.6126 6.59529 14.46 6.74805L11.209 9.99805L14.459 13.248C14.6117 13.4008 14.6884 13.595 14.6885 13.8311C14.6885 14.0672 14.6118 14.2613 14.459 14.4141C14.3062 14.5668 14.1121 14.6436 13.876 14.6436C13.6399 14.6435 13.4457 14.5668 13.293 14.4141L9.45898 10.5811C9.37585 10.4978 9.31691 10.4076 9.28223 10.3105C9.24752 10.2134 9.23049 10.1091 9.23047 9.99805C9.23047 9.88701 9.24755 9.78271 9.28223 9.68555C9.31695 9.58832 9.37565 9.4974 9.45898 9.41406L13.293 5.58105C13.4457 5.42842 13.64 5.3516 13.876 5.35156Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="prev" aria-label="이전 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.25521 9.9987L12.5052 13.2487C12.658 13.4015 12.7344 13.5959 12.7344 13.832C12.7344 14.0681 12.658 14.2626 12.5052 14.4154C12.3524 14.5681 12.158 14.6445 11.9219 14.6445C11.6858 14.6445 11.4913 14.5681 11.3385 14.4154L7.50521 10.582C7.42188 10.4987 7.36285 10.4084 7.32813 10.3112C7.2934 10.214 7.27604 10.1098 7.27604 9.9987C7.27604 9.88759 7.2934 9.78342 7.32813 9.6862C7.36285 9.58898 7.42188 9.4987 7.50521 9.41536L11.3385 5.58203C11.4913 5.42925 11.6858 5.35286 11.9219 5.35286C12.158 5.35286 12.3524 5.42925 12.5052 5.58203C12.658 5.73481 12.7344 5.92925 12.7344 6.16536C12.7344 6.40148 12.658 6.59592 12.5052 6.7487L9.25521 9.9987Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+
+						<div class="page" role="list">
+							<button type="button" class="p" role="listitem">1</button>
+							<button type="button" class="p" role="listitem">2</button>
+							<button type="button" class="p show" role="listitem" aria-current="page">3</button>
+							<button type="button" class="p" role="listitem">4</button>
+							<button type="button" class="p" role="listitem">5</button>
+						</div>
+
+						<button type="button" class="next" aria-label="다음 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.7526 10.0013L7.5026 6.7513C7.34983 6.59852 7.27344 6.40408 7.27344 6.16797C7.27344 5.93186 7.34983 5.73741 7.5026 5.58464C7.65538 5.43186 7.84983 5.35547 8.08594 5.35547C8.32205 5.35547 8.51649 5.43186 8.66927 5.58464L12.5026 9.41797C12.5859 9.5013 12.645 9.59158 12.6797 9.6888C12.7144 9.78602 12.7318 9.89019 12.7318 10.0013C12.7318 10.1124 12.7144 10.2166 12.6797 10.3138C12.645 10.411 12.5859 10.5013 12.5026 10.5846L8.66927 14.418C8.51649 14.5707 8.32205 14.6471 8.08594 14.6471C7.84983 14.6471 7.65538 14.5707 7.5026 14.418C7.34983 14.2652 7.27344 14.0707 7.27344 13.8346C7.27344 13.5985 7.34983 13.4041 7.5026 13.2513L10.7526 10.0013Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="last" aria-label="마지막 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.23047 5.35938C6.46635 5.35945 6.66079 5.43529 6.81348 5.58789L10.6465 9.42188C10.7298 9.50521 10.7895 9.59516 10.8242 9.69238C10.8589 9.78958 10.876 9.89381 10.876 10.0049C10.876 10.116 10.8589 10.2202 10.8242 10.3174C10.7895 10.4146 10.7298 10.5046 10.6465 10.5879L6.81348 14.4219C6.66079 14.5745 6.46635 14.6503 6.23047 14.6504C5.99436 14.6504 5.79926 14.5747 5.64648 14.4219C5.49371 14.2691 5.41797 14.074 5.41797 13.8379C5.41804 13.602 5.49389 13.4076 5.64648 13.2549L8.89648 10.0049L5.64648 6.75488C5.49389 6.6022 5.41804 6.40776 5.41797 6.17188C5.41797 5.93576 5.49371 5.74067 5.64648 5.58789C5.79926 5.43511 5.99436 5.35938 6.23047 5.35938ZM10.0215 5.35938C10.2576 5.35938 10.4527 5.43511 10.6055 5.58789L14.4385 9.42188C14.5217 9.50513 14.5805 9.59528 14.6152 9.69238C14.65 9.7896 14.667 9.89377 14.667 10.0049C14.667 10.116 14.65 10.2202 14.6152 10.3174C14.5805 10.4145 14.5217 10.5046 14.4385 10.5879L10.6055 14.4219C10.4527 14.5747 10.2576 14.6504 10.0215 14.6504C9.78557 14.6504 9.59118 14.5745 9.43848 14.4219C9.2857 14.2691 9.20898 14.074 9.20898 13.8379C9.20905 13.6019 9.28577 13.4076 9.43848 13.2549L12.6885 10.0049L9.43848 6.75488C9.28577 6.60218 9.20905 6.40784 9.20898 6.17188C9.20898 5.93576 9.2857 5.74067 9.43848 5.58789C9.59118 5.43531 9.78557 5.35941 10.0215 5.35938Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+			<h2 class="section-title">문의 내역</h2>
+			<div class="card-panel jw-mgt16">
+				<table class="jw-tableA">
+					<colgroup>
+						<col class="col-60"> <!-- No -->
+						<col> <!-- 문의 유형 -->
+						<col> <!-- 문의 제목 (auto) -->
+						<col> <!-- 작성일 -->
+						<col> <!-- 답변 여부 -->
+						<col> <!-- 처리 상태 -->
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="no is-center">No</th>
+							<th>문의 유형</th>
+							<th>문의 제목</th>
+							<th>작성일</th>
+							<th class="is-center">답변 여부</th>
+							<th class="is-center">처리 상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="no is-center">5</td>
+							<td class="is-center">상품 문의</td>
+							<td class="td-ellipsis"><span>문의 제목입니다</span></td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">미답변</td>
+							<td class="is-center">접수됨</td>
+						</tr>
+						<tr>
+							<td class="no is-center">4</td>
+							<td class="is-center">상품 문의</td>
+							<td class="td-ellipsis"><span>문의 제목입니다</span></td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">미답변</td>
+							<td class="is-center">접수됨</td>
+						</tr>
+						<tr>
+							<td class="no is-center">3</td>
+							<td class="is-center">상품 문의</td>
+							<td class="td-ellipsis"><span>문의 제목입니다</span></td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">미답변</td>
+							<td class="is-center">접수됨</td>
+						</tr>
+						<tr>
+							<td class="no is-center">2</td>
+							<td class="is-center">상품 문의</td>
+							<td class="td-ellipsis"><span>문의 제목입니다</span></td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">미답변</td>
+							<td class="is-center">접수됨</td>
+						</tr>
+						<tr>
+							<td class="no is-center">1</td>
+							<td class="is-center">상품 문의</td>
+							<td class="td-ellipsis"><span>문의 제목입니다</span></td>
+							<td class="is-center">2025-04-19</td>
+							<td class="is-center">미답변</td>
+							<td class="is-center">접수됨</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="jw-pagebox" role="navigation" aria-label="페이지네이션">
+					<div class="contents">
+						<button type="button" class="first" aria-label="첫 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.0635 5.35156C10.2995 5.35156 10.4937 5.42844 10.6465 5.58105C10.7992 5.73373 10.8759 5.92817 10.876 6.16406C10.876 6.40017 10.7993 6.59527 10.6465 6.74805L7.39648 9.99805L10.6465 13.248C10.7992 13.4008 10.8759 13.595 10.876 13.8311C10.876 14.0671 10.7992 14.2613 10.6465 14.4141C10.4937 14.5668 10.2996 14.6436 10.0635 14.6436C9.82737 14.6436 9.63325 14.5668 9.48047 14.4141L5.64648 10.5811C5.56332 10.4978 5.50442 10.4076 5.46973 10.3105C5.43502 10.2134 5.41799 10.1091 5.41797 9.99805C5.41797 9.88699 5.43504 9.78273 5.46973 9.68555C5.50445 9.58832 5.56315 9.4974 5.64648 9.41406L9.48047 5.58105C9.63321 5.42844 9.82749 5.35156 10.0635 5.35156ZM13.876 5.35156C14.1121 5.35156 14.3072 5.42828 14.46 5.58105C14.6125 5.7337 14.6884 5.92826 14.6885 6.16406C14.6885 6.40009 14.6126 6.59529 14.46 6.74805L11.209 9.99805L14.459 13.248C14.6117 13.4008 14.6884 13.595 14.6885 13.8311C14.6885 14.0672 14.6118 14.2613 14.459 14.4141C14.3062 14.5668 14.1121 14.6436 13.876 14.6436C13.6399 14.6435 13.4457 14.5668 13.293 14.4141L9.45898 10.5811C9.37585 10.4978 9.31691 10.4076 9.28223 10.3105C9.24752 10.2134 9.23049 10.1091 9.23047 9.99805C9.23047 9.88701 9.24755 9.78271 9.28223 9.68555C9.31695 9.58832 9.37565 9.4974 9.45898 9.41406L13.293 5.58105C13.4457 5.42842 13.64 5.3516 13.876 5.35156Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="prev" aria-label="이전 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.25521 9.9987L12.5052 13.2487C12.658 13.4015 12.7344 13.5959 12.7344 13.832C12.7344 14.0681 12.658 14.2626 12.5052 14.4154C12.3524 14.5681 12.158 14.6445 11.9219 14.6445C11.6858 14.6445 11.4913 14.5681 11.3385 14.4154L7.50521 10.582C7.42188 10.4987 7.36285 10.4084 7.32813 10.3112C7.2934 10.214 7.27604 10.1098 7.27604 9.9987C7.27604 9.88759 7.2934 9.78342 7.32813 9.6862C7.36285 9.58898 7.42188 9.4987 7.50521 9.41536L11.3385 5.58203C11.4913 5.42925 11.6858 5.35286 11.9219 5.35286C12.158 5.35286 12.3524 5.42925 12.5052 5.58203C12.658 5.73481 12.7344 5.92925 12.7344 6.16536C12.7344 6.40148 12.658 6.59592 12.5052 6.7487L9.25521 9.9987Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+
+						<div class="page" role="list">
+							<button type="button" class="p" role="listitem">1</button>
+							<button type="button" class="p" role="listitem">2</button>
+							<button type="button" class="p show" role="listitem" aria-current="page">3</button>
+							<button type="button" class="p" role="listitem">4</button>
+							<button type="button" class="p" role="listitem">5</button>
+						</div>
+
+						<button type="button" class="next" aria-label="다음 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.7526 10.0013L7.5026 6.7513C7.34983 6.59852 7.27344 6.40408 7.27344 6.16797C7.27344 5.93186 7.34983 5.73741 7.5026 5.58464C7.65538 5.43186 7.84983 5.35547 8.08594 5.35547C8.32205 5.35547 8.51649 5.43186 8.66927 5.58464L12.5026 9.41797C12.5859 9.5013 12.645 9.59158 12.6797 9.6888C12.7144 9.78602 12.7318 9.89019 12.7318 10.0013C12.7318 10.1124 12.7144 10.2166 12.6797 10.3138C12.645 10.411 12.5859 10.5013 12.5026 10.5846L8.66927 14.418C8.51649 14.5707 8.32205 14.6471 8.08594 14.6471C7.84983 14.6471 7.65538 14.5707 7.5026 14.418C7.34983 14.2652 7.27344 14.0707 7.27344 13.8346C7.27344 13.5985 7.34983 13.4041 7.5026 13.2513L10.7526 10.0013Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="last" aria-label="마지막 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.23047 5.35938C6.46635 5.35945 6.66079 5.43529 6.81348 5.58789L10.6465 9.42188C10.7298 9.50521 10.7895 9.59516 10.8242 9.69238C10.8589 9.78958 10.876 9.89381 10.876 10.0049C10.876 10.116 10.8589 10.2202 10.8242 10.3174C10.7895 10.4146 10.7298 10.5046 10.6465 10.5879L6.81348 14.4219C6.66079 14.5745 6.46635 14.6503 6.23047 14.6504C5.99436 14.6504 5.79926 14.5747 5.64648 14.4219C5.49371 14.2691 5.41797 14.074 5.41797 13.8379C5.41804 13.602 5.49389 13.4076 5.64648 13.2549L8.89648 10.0049L5.64648 6.75488C5.49389 6.6022 5.41804 6.40776 5.41797 6.17188C5.41797 5.93576 5.49371 5.74067 5.64648 5.58789C5.79926 5.43511 5.99436 5.35938 6.23047 5.35938ZM10.0215 5.35938C10.2576 5.35938 10.4527 5.43511 10.6055 5.58789L14.4385 9.42188C14.5217 9.50513 14.5805 9.59528 14.6152 9.69238C14.65 9.7896 14.667 9.89377 14.667 10.0049C14.667 10.116 14.65 10.2202 14.6152 10.3174C14.5805 10.4145 14.5217 10.5046 14.4385 10.5879L10.6055 14.4219C10.4527 14.5747 10.2576 14.6504 10.0215 14.6504C9.78557 14.6504 9.59118 14.5745 9.43848 14.4219C9.2857 14.2691 9.20898 14.074 9.20898 13.8379C9.20905 13.6019 9.28577 13.4076 9.43848 13.2549L12.6885 10.0049L9.43848 6.75488C9.28577 6.60218 9.20905 6.40784 9.20898 6.17188C9.20898 5.93576 9.2857 5.74067 9.43848 5.58789C9.59118 5.43531 9.78557 5.35941 10.0215 5.35938Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/super.js"></script>
+
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_super.html'
+		});
+	</script>
+</body>
+
+</html>

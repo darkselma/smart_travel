@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<time class="page-date" datetime="2025-01-01">January 1, 2025</time>
+
+			<h1 class="page-title">운영현황</h1>
+			
+						
+			<div class="overview-card-grid jw-mgt32">
+				<!-- 예약 현황 -->
+				<article class="card">
+					<div>
+						<h2 class="card-title">예약 현황</h2>
+						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+					</div>
+					<div>
+						<ul class="status-list">
+							<li class="status-item">
+								<i class="dot dot-blue" aria-hidden="true"></i>
+								<span class="label">선금 확인 전</span>
+								<strong class="count">11건</strong>
+							</li>
+							<li class="status-item">
+								<i class="dot dot-green" aria-hidden="true"></i>
+								<span class="label">잔금 확인 전</span>
+								<strong class="count">8건</strong>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<!-- 문의 현황 -->
+				<article class="card">
+					<div>
+						<h2 class="card-title">문의 현황</h2>
+						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+					</div>
+					<div>
+						<ul class="status-list">
+							<li class="status-item">
+								<i class="dot dot-blue" aria-hidden="true"></i>
+								<span class="label">미답변</span>
+								<strong class="count">15건</strong>
+							</li>
+							<li class="status-item">
+								<i class="dot dot-green" aria-hidden="true"></i>
+								<span class="label">처리중</span>
+								<strong class="count">7건</strong>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+
+			<div class="card-panel jw-mgt68">
+				<h2 class="card-title">오늘 여행 일정</h2>
+				<p class="card-subtitle"><strong>12건</strong></p>
+
+				<div class="tableA-scroll">
+					<div class="jw-tableA typeB">
+						<table>
+							<colgroup>
+								<col style="width:60px;"><!-- No -->
+								<col><!-- 상품명 -->
+								<col style="width:220px;"><!-- 여행 기간 -->
+								<col style="width:120px;"><!-- 고객 유형 -->
+								<col style="width:100px;"><!-- 인원 수 -->
+								<col style="width:140px;"><!-- 배정 가이드 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>상품명</th>
+									<th>여행 기간</th>
+									<th>고객 유형</th>
+									<th>인원 수</th>
+									<th>배정 가이드</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">김민수</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td>한국 베이직 투어 4박 5일 – 남이섬, 에버랜드 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">이지훈</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td>단풍 투어 & 설악산 케이블카 4박 5일</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2C</td>
+									<td class="is-center">50</td>
+									<td class="is-center">이수빈</td>
+								</tr>
+								<tr>
+									<td class="is-center">4</td>
+									<td>겨울 패키지 4박 5일 – 에버랜드 & 스키 옵션 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">최하은</td>
+								</tr>
+								<tr>
+									<td class="is-center">5</td>
+									<td>전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마을</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">정예준</td>
+								</tr>
+								<tr>
+									<td class="is-center">6</td>
+									<td>낙산 힐링 투어 6박 7일 – 부산·여수·거제 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2C</td>
+									<td class="is-center">50</td>
+									<td class="is-center">위효빈</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/agent.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_agent.html'
+		});
+	</script>
+</body>
+
+</html>

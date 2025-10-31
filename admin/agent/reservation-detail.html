@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+					<span>목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<select class="select">
+						<option value="contract" selected>계약중</option>
+						<option value="review">검토중</option>
+						<option value="paused">중지</option>
+						<option value="terminated">해지</option>
+					</select>
+					
+					<button type="button" class="jw-button jw-button-primary">저장</button>
+				</div>
+			</div>
+
+			<h1 class="page-title">예약 상세</h1>
+
+			<h2 class="section-title">상품 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+
+					<!-- 1행: 상품명(전체폭) -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="product_name">상품명</label>
+						<input id="product_name" type="text" class="form-control"
+							value="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함" readonly>
+					</div>
+
+					<!-- 2행: 여행 기간 / 미팅 시간 / 미팅 장소 -->
+					<div class="grid-item">
+						<label class="label-name" for="trip_range">여행 기간</label>
+						<input id="trip_range" type="text" class="form-control" value="2025-04-19 - 2025-04-24" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="meet_time">미팅 시간</label>
+						<input id="meet_time" type="text" class="form-control" value="2025-04-19 09:00" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="meet_place">미팅 장소</label>
+						<input id="meet_place" type="text" class="form-control" value="인천국제공항 제2여객터미널" readonly>
+					</div>
+
+				</div>
+			</div>
+
+
+			<h2 class="section-title">예약 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+
+					<!-- 1행: 예약 번호 / 예약일시 -->
+					<div class="grid-item">
+						<label class="label-name" for="res_no">예약 번호</label>
+						<input id="res_no" type="text" class="form-control" value="23490871349" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="res_datetime">예약일시</label>
+						<input id="res_datetime" type="text" class="form-control" value="2025-12-01 12:12" readonly>
+					</div>
+
+					<div class="grid-item"></div>
+
+					<!-- 2행: 예약 인원 / 룸 옵션 -->
+					<div class="grid-item">
+						<label class="label-name" for="res_people">예약 인원</label>
+						<input id="res_people" type="text" class="form-control" value="성인x1, 아동x2" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="room_opt">룸 옵션</label>
+						<input id="room_opt" type="text" class="form-control" value="스탠다드x1, 싱글룸x1" readonly>
+					</div>
+
+					<div class="grid-item"></div>
+
+					<!-- 3행: 기내 수화물 추가 / 조식 신청 / 와이파이 대여 -->
+					<div class="grid-item">
+						<label class="label-name" for="opt_baggage">기내 수화물 추가</label>
+						<select id="opt_baggage" class="select">
+							<option selected>선택안함</option>
+							<option>15kg 추가</option>
+							<option>20kg 추가</option>
+							<option>30kg 추가</option>
+						</select>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="opt_breakfast">조식 신청</label>
+						<select id="opt_breakfast" class="select">
+							<option selected>신청</option>
+							<option>미신청</option>
+						</select>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="opt_wifi">와이파이 대여</label>
+						<select id="opt_wifi" class="select">
+							<option selected>신청</option>
+							<option>미신청</option>
+						</select>
+					</div>
+
+					<!-- 4행: 항공 좌석 요청사항 (전체폭) -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="seat_req">항공 좌석 요청사항</label>
+						<div class="editor-box-wrap">
+							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" disabled>창가 자리로 앉게 해주세요~</textarea>
+						</div>
+					</div>
+
+					<!-- 5행: 기타 요청사항 (전체폭) -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="etc_req">기타 요청사항</label>
+						<div class="editor-box-wrap">
+							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" disabled >기념일 여행이라 조용한 객실 요청드립니다.</textarea>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<h2 class="section-title">결제 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+
+					<div class="grid-item">
+						<label class="label-name" for="order_amount">주문 금액 (₱)</label>
+						<input id="order_amount" type="text" class="form-control" value="15,000" readonly>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+
+					<div class="grid-item">
+						<label class="label-name" for="deposit_amount">선금 (₱)</label>
+						<input id="deposit_amount" type="text" class="form-control" value="10,000" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="deposit_due">선금 입금 기한</label>
+						<input id="deposit_due" type="text" class="form-control" value="2025-12-01" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name">선금 증빙 파일</label>
+						<div class="file-pill">
+							
+						</div>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="balance_amount">잔금 (₱)</label>
+						<input id="balance_amount" type="text" class="form-control" value="5,000" readonly>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+
+				</div>
+			</div>
+
+
+			<h2 class="section-title">에이전트 전달사항</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="agent_memo">메모</label>
+						<div class="editor-box-wrap">
+							<textarea id="" rows="6" placeholder="내용을 입력해주세요" disabled >에이전트가 작성한 전달사항입니다</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<h2 class="section-title">항공편 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<h3 class="grid-wrap-title">출국편</h3>
+
+				<div class="grid-wrap jw-mgt12">
+					<!-- 1행: 항공편명 / 출발일시 / 도착일시 -->
+					<div class="grid-item">
+						<label class="label-name" for="out_flight_no">항공편명</label>
+						<input id="out_flight_no" type="text" class="form-control" value="PR467" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="out_depart_dt">출발일시</label>
+						<input id="out_depart_dt" type="text" class="form-control" value="2025-04-19 12:20" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="out_arrive_dt">도착일시</label>
+						<input id="out_arrive_dt" type="text" class="form-control" value="2025-04-19 14:20" readonly>
+					</div>
+
+					<!-- 2행: 출발지 / 도착지 -->
+					<div class="grid-item">
+						<label class="label-name" for="out_depart_airport">출발지</label>
+						<input id="out_depart_airport" type="text" class="form-control" value="마닐라 (MNL)" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="out_arrive_airport">도착지</label>
+						<input id="out_arrive_airport" type="text" class="form-control" value="인천 (ICN)" readonly>
+					</div>
+
+					<div class="grid-item"></div>
+				</div>
+			</div>
+			
+			<div class="card-panel jw-mgt16">
+				<h3 class="grid-wrap-title">귀국편</h3>
+
+				<div class="grid-wrap jw-mgt12">
+					<!-- 1행: 항공편명 / 출발일시 / 도착일시 -->
+					<div class="grid-item">
+						<label class="label-name" for="in_flight_no">항공편명</label>
+						<input id="in_flight_no" type="text" class="form-control" value="PR468" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="in_depart_dt">출발일시</label>
+						<input id="in_depart_dt" type="text" class="form-control" value="2025-04-24 15:05" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="in_arrive_dt">도착일시</label>
+						<input id="in_arrive_dt" type="text" class="form-control" value="2025-04-24 17:05" readonly>
+					</div>
+
+					<!-- 2행: 출발지 / 도착지 -->
+					<div class="grid-item">
+						<label class="label-name" for="in_depart_airport">출발지</label>
+						<input id="in_depart_airport" type="text" class="form-control" value="인천 (ICN)" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="in_arrive_airport">도착지</label>
+						<input id="in_arrive_airport" type="text" class="form-control" value="마닐라 (MNL)" readonly>
+					</div>
+
+					<div class="grid-item"></div>
+				</div>
+			</div>
+
+
+			<h2 class="section-title">예약 고객 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+
+					<div class="grid-item">
+						<label class="label-name" for="cust_name">이름</label>
+						<input id="cust_name" type="text" class="form-control" value="Jose Ramirez" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="cust_email">이메일</label>
+						<input id="cust_email" type="email" class="form-control" value="ramirez@gmail.com" readonly>
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name" for="cust_phone">연락처</label>
+						<input id="cust_phone" type="text" class="form-control" value="917 123 4567" readonly>
+					</div>
+
+				</div>
+			</div>
+
+
+			<h2 class="section-title">여행 고객 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<!-- 가로 스크롤 래퍼 -->
+				<div class="tableA-scroll">
+					<table class="jw-tableA booking-detail">
+						<colgroup>
+							<col style="width:50px;"><!-- No -->
+							<col style="width:100px;"><!-- 대표 여행자 -->
+							<col style="width:160px;"><!-- 인원 옵션 -->
+							<col style="width:160px;"><!-- 비자 신청 여부 -->
+							<col style="width:120px;"><!-- 호칭 -->
+							<col style="width:160px;"><!-- 이름 -->
+							<col style="width:160px;"><!-- 성 -->
+							<col style="width:120px;"><!-- 성별 -->
+							<col style="width:100px;"><!-- 나이 -->
+							<col style="width:160px;"><!-- 생년월일 -->
+							<col style="width:160px;"><!-- 출신국가 -->
+							<col style="width:180px;"><!-- 여권번호 -->
+							<col style="width:160px;"><!-- 여권 발행일 -->
+							<col style="width:160px;"><!-- 여권 만료일 -->
+							<col style="width:240px;"><!-- 여권 사진 -->
+						</colgroup>
+
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>대표 여행자</th>
+								<th>인원 옵션</th>
+								<th>비자 신청 여부</th>
+								<th>호칭</th>
+								<th>이름</th>
+								<th>성</th>
+								<th>성별</th>
+								<th>나이</th>
+								<th>생년월일</th>
+								<th>출신국가</th>
+								<th>여권번호</th>
+								<th>여권 발행일</th>
+								<th>여권 만료일</th>
+								<th>여권 사진</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<!-- row 1 -->
+							<tr>
+								<td class="is-center">1</td>
+								<td class="is-center"><input type="radio" name="lead_traveler" checked></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 2 -->
+							<tr>
+								<td class="is-center">2</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 3 -->
+							<tr>
+								<td class="is-center">3</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 4 -->
+							<tr>
+								<td class="is-center">4</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 5 -->
+							<tr>
+								<td class="is-center">5</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- rows 6 ~ 10 (동일 패턴) -->
+							<!-- 복사해서 No만 6~10으로 변경 -->
+							<!-- row 6 -->
+							<tr>
+								<td class="is-center">6</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 7 -->
+							<tr>
+								<td class="is-center">7</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 8 -->
+							<tr>
+								<td class="is-center">8</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 9 -->
+							<tr>
+								<td class="is-center">9</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<!-- row 10 -->
+							<tr>
+								<td class="is-center">10</td>
+								<td class="is-center"><input type="radio" name="lead_traveler"></td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>성인</option>
+											<option>아동</option>
+											<option>유아</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select">
+											<option selected>미신청</option>
+											<option>신청</option>
+										</select></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>MR</option>
+											<option>MRS</option>
+											<option>MS</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Ramirez"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="Jose"></div>
+								</td>
+								<td class="show">
+									<div class="cell"><select class="select w-auto">
+											<option selected>남성</option>
+											<option>여성</option>
+										</select></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="number" class="form-control" value="40"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="19710101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="필리핀"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="P1234567"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20200101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell"><input type="text" class="form-control" value="20300101"></div>
+								</td>
+								<td class="is-center">
+									<div class="cell">
+										<div class="field-row jw-center">
+											<div class="jw-center jw-gap10"><img src="/admin/image/file.svg" alt=""> 여권 사진</div>
+											<div class="jw-center jw-gap10">
+												<i></i>
+												<button type="button" class="jw-button typeF" aria-label="download"><img
+														src="/admin/image/buttun-download.svg" alt=""></button>
+												<button type="button" class="jw-button typeF" aria-label="remove"><img
+														src="/admin/image/button-close2.svg" alt=""></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+
+				<div class="jw-pagebox" role="navigation" aria-label="페이지네이션">
+					<div class="contents">
+						<button type="button" class="first" aria-label="첫 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.0635 5.35156C10.2995 5.35156 10.4937 5.42844 10.6465 5.58105C10.7992 5.73373 10.8759 5.92817 10.876 6.16406C10.876 6.40017 10.7993 6.59527 10.6465 6.74805L7.39648 9.99805L10.6465 13.248C10.7992 13.4008 10.8759 13.595 10.876 13.8311C10.876 14.0671 10.7992 14.2613 10.6465 14.4141C10.4937 14.5668 10.2996 14.6436 10.0635 14.6436C9.82737 14.6436 9.63325 14.5668 9.48047 14.4141L5.64648 10.5811C5.56332 10.4978 5.50442 10.4076 5.46973 10.3105C5.43502 10.2134 5.41799 10.1091 5.41797 9.99805C5.41797 9.88699 5.43504 9.78273 5.46973 9.68555C5.50445 9.58832 5.56315 9.4974 5.64648 9.41406L9.48047 5.58105C9.63321 5.42844 9.82749 5.35156 10.0635 5.35156ZM13.876 5.35156C14.1121 5.35156 14.3072 5.42828 14.46 5.58105C14.6125 5.7337 14.6884 5.92826 14.6885 6.16406C14.6885 6.40009 14.6126 6.59529 14.46 6.74805L11.209 9.99805L14.459 13.248C14.6117 13.4008 14.6884 13.595 14.6885 13.8311C14.6885 14.0672 14.6118 14.2613 14.459 14.4141C14.3062 14.5668 14.1121 14.6436 13.876 14.6436C13.6399 14.6435 13.4457 14.5668 13.293 14.4141L9.45898 10.5811C9.37585 10.4978 9.31691 10.4076 9.28223 10.3105C9.24752 10.2134 9.23049 10.1091 9.23047 9.99805C9.23047 9.88701 9.24755 9.78271 9.28223 9.68555C9.31695 9.58832 9.37565 9.4974 9.45898 9.41406L13.293 5.58105C13.4457 5.42842 13.64 5.3516 13.876 5.35156Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="prev" aria-label="이전 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.25521 9.9987L12.5052 13.2487C12.658 13.4015 12.7344 13.5959 12.7344 13.832C12.7344 14.0681 12.658 14.2626 12.5052 14.4154C12.3524 14.5681 12.158 14.6445 11.9219 14.6445C11.6858 14.6445 11.4913 14.5681 11.3385 14.4154L7.50521 10.582C7.42188 10.4987 7.36285 10.4084 7.32813 10.3112C7.2934 10.214 7.27604 10.1098 7.27604 9.9987C7.27604 9.88759 7.2934 9.78342 7.32813 9.6862C7.36285 9.58898 7.42188 9.4987 7.50521 9.41536L11.3385 5.58203C11.4913 5.42925 11.6858 5.35286 11.9219 5.35286C12.158 5.35286 12.3524 5.42925 12.5052 5.58203C12.658 5.73481 12.7344 5.92925 12.7344 6.16536C12.7344 6.40148 12.658 6.59592 12.5052 6.7487L9.25521 9.9987Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+
+						<div class="page" role="list">
+							<button type="button" class="p" role="listitem">1</button>
+							<button type="button" class="p" role="listitem">2</button>
+							<button type="button" class="p show" role="listitem" aria-current="page">3</button>
+							<button type="button" class="p" role="listitem">4</button>
+							<button type="button" class="p" role="listitem">5</button>
+						</div>
+
+						<button type="button" class="next" aria-label="다음 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.7526 10.0013L7.5026 6.7513C7.34983 6.59852 7.27344 6.40408 7.27344 6.16797C7.27344 5.93186 7.34983 5.73741 7.5026 5.58464C7.65538 5.43186 7.84983 5.35547 8.08594 5.35547C8.32205 5.35547 8.51649 5.43186 8.66927 5.58464L12.5026 9.41797C12.5859 9.5013 12.645 9.59158 12.6797 9.6888C12.7144 9.78602 12.7318 9.89019 12.7318 10.0013C12.7318 10.1124 12.7144 10.2166 12.6797 10.3138C12.645 10.411 12.5859 10.5013 12.5026 10.5846L8.66927 14.418C8.51649 14.5707 8.32205 14.6471 8.08594 14.6471C7.84983 14.6471 7.65538 14.5707 7.5026 14.418C7.34983 14.2652 7.27344 14.0707 7.27344 13.8346C7.27344 13.5985 7.34983 13.4041 7.5026 13.2513L10.7526 10.0013Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+						<button type="button" class="last" aria-label="마지막 페이지" aria-disabled="false">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.23047 5.35938C6.46635 5.35945 6.66079 5.43529 6.81348 5.58789L10.6465 9.42188C10.7298 9.50521 10.7895 9.59516 10.8242 9.69238C10.8589 9.78958 10.876 9.89381 10.876 10.0049C10.876 10.116 10.8589 10.2202 10.8242 10.3174C10.7895 10.4146 10.7298 10.5046 10.6465 10.5879L6.81348 14.4219C6.66079 14.5745 6.46635 14.6503 6.23047 14.6504C5.99436 14.6504 5.79926 14.5747 5.64648 14.4219C5.49371 14.2691 5.41797 14.074 5.41797 13.8379C5.41804 13.602 5.49389 13.4076 5.64648 13.2549L8.89648 10.0049L5.64648 6.75488C5.49389 6.6022 5.41804 6.40776 5.41797 6.17188C5.41797 5.93576 5.49371 5.74067 5.64648 5.58789C5.79926 5.43511 5.99436 5.35938 6.23047 5.35938ZM10.0215 5.35938C10.2576 5.35938 10.4527 5.43511 10.6055 5.58789L14.4385 9.42188C14.5217 9.50513 14.5805 9.59528 14.6152 9.69238C14.65 9.7896 14.667 9.89377 14.667 10.0049C14.667 10.116 14.65 10.2202 14.6152 10.3174C14.5805 10.4145 14.5217 10.5046 14.4385 10.5879L10.6055 14.4219C10.4527 14.5747 10.2576 14.6504 10.0215 14.6504C9.78557 14.6504 9.59118 14.5745 9.43848 14.4219C9.2857 14.2691 9.20898 14.074 9.20898 13.8379C9.20905 13.6019 9.28577 13.4076 9.43848 13.2549L12.6885 10.0049L9.43848 6.75488C9.28577 6.60218 9.20905 6.40784 9.20898 6.17188C9.20898 5.93576 9.2857 5.74067 9.43848 5.58789C9.59118 5.43531 9.78557 5.35941 10.0215 5.35938Z" fill="#B0B0B0"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/agent.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_agent.html'
+		});
+	</script>
+</body>
+
+</html>

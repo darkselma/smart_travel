@@ -8,6 +8,7 @@
 .jw-around { justify-content:space-around; }
 .jw-flex-c { justify-content:center; }
 .jw-flex-r { justify-content:flex-end; }
+.jw-flex-s { justify-content:flex-start; }
 
 /* Grid */
 .jw-grid-span2 { grid-column:span 2; }
@@ -33,8 +34,8 @@
 .jw-gap30 { gap:30px; } .jw-gap40 { gap:40px; } .jw-gap50 { gap:50px; } .jw-gap150 { gap:150px; }
 
 /* Margin */
-.jw-mgt10 { margin-top:10px; } .jw-mgt15 { margin-top:15px; } .jw-mgt20 { margin-top:20px; }
-.jw-mgt30 { margin-top:30px; } .jw-mgt40 { margin-top:40px; } .jw-mgt50 { margin-top:50px; } .jw-mgt80 { margin-top:80px; }
+.jw-mgt10 { margin-top:10px; } .jw-mgt15 { margin-top:15px; } .jw-mgt16 { margin-top:16px; } .jw-mgt20 { margin-top:20px; }
+.jw-mgt30 { margin-top:30px; } .jw-mgt32 { margin-top:32px; } .jw-mgt40 { margin-top:40px; } .jw-mgt50 { margin-top:50px; } .jw-mgt68 { margin-top:68px; }
 .jw-mgb10 { margin-bottom:10px; } .jw-mgb50 { margin-bottom:50px; }
 .jw-mgr10 { margin-right:10px; } .jw-mgl10 { margin-left:10px; } .jw-mgl20 { margin-left:20px; }
 .jw-mg10 { margin:0 10px; }
@@ -59,7 +60,7 @@
 .rem36{ font-size:2rem; } .rem38{ font-size:2.11rem; } .rem46{ font-size:2.56rem; } .rem48{ font-size:2.67rem; }
 .rem50{ font-size:2.78rem; } .rem60{ font-size:3.33rem; } .rem72{ font-size:4rem; }
 
-/* 보너스 유틸(실전에서 자주 씀) */
+/* 보너스 유틸 */
 .jw-ellipsis { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .jw-break { word-break:break-word; overflow-wrap:anywhere; }
 .jw-hide { display:none !important; }

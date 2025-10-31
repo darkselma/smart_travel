@@ -1,5 +1,5 @@
 /* ================== Root Tokens ================== */
-:root { --html-font:14px; --font-color:#222; --bg-color:#fff; --sunbursi-orange:#FE8130; --shadow-steel:#2D2D2D; --deep-wave:#4876EE; --sidebar-w:300px; --header-h:100px; --foot-h:55px; --hamberg-size:30px; --hamberg-color:#333; }
+:root { --html-font:14px; --font-color:#121212; --bg-color:#fff; --sunbursi-orange:#FE8130; --shadow-steel:#2D2D2D; --deep-wave:#4876EE; --sidebar-w:300px; --header-h:100px; --foot-h:55px; --hamberg-size:30px; --hamberg-color:#333; }
 
 /* ================== Global Reset ================== */
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
@@ -26,7 +26,6 @@ input, textarea { outline:none; border:0; background:transparent; }
 input::placeholder, textarea::placeholder { color:#9F9F9F; transition:color .3s ease; }
 :focus::placeholder { color:transparent; }
 input[type="text"] { padding:0 10px; }
-input[type="file"] { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus { box-shadow:0 0 0 1000px #fff inset!important; -webkit-box-shadow:0 0 0 1000px #fff inset!important; transition:background-color 5000s ease-in-out 0s; }
 textarea { min-height:100px; resize:vertical; }
 select { display:none; appearance:none; border:0; outline:0; background:none; }

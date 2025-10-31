@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+					<span>목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<button type="button" class="jw-button typeB">저장</button>
+				</div>
+			</div>
+
+			<h1 class="page-title">문의 등록</h1>
+
+			<h2 class="section-title">문의 내용</h2>
+			
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+
+					<!-- 제목 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="q-title">제목</label>
+						<input id="q-title" type="text" class="form-control" placeholder="제목">
+					</div>
+
+					<!-- 내용 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="q-content">내용</label>
+						<div class="editor-box-wrap">
+							<textarea id="q-content" rows="10" placeholder="내용을 입력해주세요"></textarea>
+						</div>
+					</div>
+
+					<!-- 첨부파일 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">첨부파일</label>
+						<button type="button" class="jw-button typeE"><img src="/admin/image/upload.svg" alt=""> 파일 업로드</button>
+						<div class="attach-list">
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/agent.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_agent.html'
+		});
+	</script>
+</body>
+
+</html>
