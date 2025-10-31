@@ -24,37 +24,44 @@
 		<nav class="layout-nav"></nav>
 
 		<section class="layout-content">
-			<h1 class="page-title">에이전트 목록</h1>
+			<h1 class="page-title">가이드 목록</h1>
 
 			<div class="card-panel jw-mgt32">
-			
+
 				<div class="list-header">
 					<div class="result-count">
 						검색결과 <span class="result-count__num">999</span>개
 					</div>
 					<form class="search-form" action="" method="get">
+						<select class="select" name="" onchange="">
+							<option value="" >전체 상태</option>
+							<option value="" >전체</option>
+						</select>
+
 						<div class="search-field">
 							<input type="text" class="search-input" placeholder="고객명 검색">
 							<button type="submit" class="jw-button search-btn" aria-label="검색">
-								<span class="search-ico"><img src="/admin/image/search.svg" alt=""></span>
+								<span class="search-ico"><img src="/smart_travel/admin/image/search.svg" alt=""></span>
 							</button>
 						</div>
 					</form>
 				</div>
-				
+
 				<table class="jw-tableA">
 					<colgroup>
 						<col class="col-60"> <!-- No -->
-						<col > <!-- 지점명 -->
-						<col > <!-- 담당자 -->
+						<col> <!-- 가이드명 -->
+						<col > <!-- 이메일 -->
+						<col > <!-- 연락처 -->
 						<col > <!-- 계약 기간 -->
 						<col > <!-- 활동 상태 -->
 					</colgroup>
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>지점명</th>
-							<th>담당자</th>
+							<th>가이드명</th>
+							<th>이메일</th>
+							<th>연락처</th>
 							<th>계약 기간</th>
 							<th class="is-center">활동 상태</th>
 						</tr>
@@ -62,77 +69,89 @@
 					<tbody>
 						<tr>
 							<td class="no is-center">10</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">9</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약 종료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">8</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">7</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">6</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">5</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">4</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">3</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">2</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">1</td>
-							<td class="is-center">Bacolod City</td>
-							<td class="is-center">Maria Santos</td>
+							<td class="is-center">Hyunwoo Park</td>
+							<td class="is-center">hyunwoo@gmail.com</td>
+							<td class="is-center">+82 10 1234 5678</td>
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
 					</tbody>
 				</table>
 
+
+				
 				<div class="jw-pagebox" role="navigation" aria-label="페이지네이션">
 					<div class="contents">
 						<button type="button" class="first" aria-label="첫 페이지" aria-disabled="false">
@@ -167,12 +186,11 @@
 					</div>
 				</div>
 
-
 			</div>
 
 			<div class="controller">
 				<button type="button" class="jw-button typeA">다운로드</button>
-				<button type="button" class="jw-button typeB"><img src="/admin/image/buttonB.svg" alt="">Add New Agent</button>
+				<button type="button" class="jw-button typeB"><img src="/smart_travel/admin/image/buttonB.svg" alt="">Add New Guide</button>
 			</div>
 
 		</section>

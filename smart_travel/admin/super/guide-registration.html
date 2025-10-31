@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
-	<link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
@@ -35,85 +34,69 @@
 				</a>
 
 				<div class="page-toolbar-actions">
-					<select class="select">
-						<option value="contract" selected>계약중</option>
-						<option value="review">검토중</option>
-						<option value="paused">중지</option>
-						<option value="terminated">해지</option>
-					</select>
-					
 					<button type="button" class="jw-button typeB">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title">에이전트 상세</h1>
+			<h1 class="page-title">가이드 등록</h1>
 
 			<h2 class="section-title">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item">
-						<label class="label-name">지점명</label>
-						<input type="text" class="form-control" value="Bacolod City">
+						<label class="label-name">가이드명</label>
+						<input type="text" class="form-control" placeholder="가이드명">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">지역</label>
-						<input type="text" class="form-control" value="Manila">
+						<label class="label-name">이메일</label>
+						<input type="email" class="form-control" placeholder="이메일">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">담당자명</label>
-						<input type="text" class="form-control" value="Maria Santos">
+						<label class="label-name">연락처</label>
+						<div class="field-row">
+							<select class="select w-auto">
+								<option selected>+82</option>
+							</select>
+							<input type="text" class="form-control" placeholder="숫자 입력">
+						</div>
 					</div>
 
 					<!-- 2행 -->
 					<div class="grid-item">
-						<label class="label-name">담당자 이메일</label>
-						<input type="email" class="form-control" value="maria@agency.davao.ph">
-					</div>
-					<div class="grid-item">
-						<label class="label-name">담당자 연락처</label>
-						<div class="field-row">
-							<select class="select w-auto">
-								<option selected>+63</option>
-							</select>
-							<input type="text" class="form-control" value="917 123 4567">
-						</div>
-					</div>
-					<div class="grid-item">
 						<label class="label-name">ID</label>
-						<input type="text" class="form-control" value="abc123">
+						<input type="text" class="form-control" placeholder="ID">
 					</div>
-
-					<!-- 3행 -->
 					<div class="grid-item">
 						<label class="label-name">PW</label>
 						<div class="input-box">
-							<input type="password" value="**********">
-							<button type="button" class="jw-button typeD"><img src="/admin/image/replay.svg" alt="">초기화</button>
+							<input type="password" value="" placeholder="8~12자, 영문/숫자/특수문자 포함">
+							<button type="button" class="jw-button typeD"><img src="/smart_travel/admin/image/replay.svg" alt="">자동 입력</button>
 						</div>
 					</div>
-					<div class="grid-item">
-						<label class="label-name">제휴 코드</label>
-						<input type="text" class="form-control" value="ASIEKDH" disabled>
-					</div>
-					<div class="grid-item">
-						<label class="label-name">소속 고객 수</label>
-						<input type="text" class="form-control" value="73" disabled>
-					</div>
+					<div class="grid-item"></div>
 
-					<!-- 4행 -->
+					<!-- 3행 : 증명사진 -->
 					<div class="grid-item">
-						<label class="label-name">등록일시</label>
-						<input type="text" class="form-control" value="2025-06-20 12:12" disabled>
+						<label class="label-name">증명사진</label>
+						<button type="button" class="jw-button typeE"><img src="/smart_travel/admin/image/upload.svg" alt=""> 이미지 업로드</button>
 					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
+
+					<!-- 4행 : 가이드 소개 전체폭 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">가이드 소개</label>
+						<div class="editor-box-wrap">
+							<textarea rows="8" placeholder="내용을 입력해주세요"></textarea>
+						</div>
+					</div>
 
 					<!-- 5행 : 메모 전체폭 -->
 					<div class="grid-item col-span-3">
 						<label class="label-name">메모</label>
 						<div class="editor-box-wrap">
-							<textarea name="memo" rows="8" placeholder="메모입력란입니다.">메모입력란입니다.</textarea>
+							<textarea rows="8" placeholder="내용을 입력해주세요"></textarea>
 						</div>
 					</div>
 				</div>
@@ -122,20 +105,13 @@
 			<h2 class="section-title">계약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
-					<!-- 계약 기간 -->
 					<div class="grid-item">
 						<label class="label-name">계약 기간</label>
 						<div class="field-row">
-							<input type="text" class="form-control" placeholder="YYYY-MM-DD ~ YYYY-MM-DD"
-								value="2024-06-01 ~ 2027-06-01">
-							<button type="button" class="btn-icon calendar" aria-label="달력 열기"></button>
+							<input type="date" class="form-control" name="contract_start" value="2024-06-01" aria-label="계약 시작일">
+							<span class="w-auto" aria-hidden="true">~</span>
+							<input type="date" class="form-control" name="contract_end" value="2027-06-01" aria-label="계약 종료일">
 						</div>
-					</div>
-
-					<!-- 예약금 비율(%) -->
-					<div class="grid-item">
-						<label class="label-name">예약금 비율 (%)</label>
-						<input type="number" class="form-control" value="15" min="0" max="100" step="1" placeholder="0">
 					</div>
 				</div>
 			</div>

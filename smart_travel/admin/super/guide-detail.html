@@ -24,115 +24,237 @@
 		<nav class="layout-nav"></nav>
 
 		<section class="layout-content">
-			<h1 class="page-title">고객 목록</h1>
+			<div class="page-toolbar">
+				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+					<span>목록으로 돌아가기</span>
+				</a>
 
-			<div class="card-panel jw-mgt32">
-
-				<div class="list-header">
-					<div class="result-count">
-						검색결과 <span class="result-count__num">999</span>개
-					</div>
-					<form class="search-form" action="" method="get">
-						<div class="search-field">
-							<input type="text" class="search-input" placeholder="고객명 검색">
-							<button type="submit" class="jw-button search-btn" aria-label="검색">
-								<span class="search-ico"><img src="/admin/image/search.svg" alt=""></span>
-							</button>
-						</div>
-					</form>
+				<div class="page-toolbar-actions">
+					<button type="button" class="jw-button typeB">저장</button>
 				</div>
+			</div>
 
+			<h1 class="page-title">가이드 상세</h1>
+
+			<h2 class="section-title">기본 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 1행 -->
+					<div class="grid-item">
+						<label class="label-name">가이드명</label>
+						<input type="text" class="form-control" value="Hyunwoo Park">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">이메일</label>
+						<input type="email" class="form-control" value="hyunwoo@gmail.com">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">연락처</label>
+						<div class="field-row">
+							<select class="select w-auto">
+								<option selected>+82</option>
+							</select>
+							<input type="text" class="form-control" value="1234 5678" placeholder="숫자 입력">
+						</div>
+					</div>
+
+					<!-- 2행 -->
+					<div class="grid-item">
+						<label class="label-name">ID</label>
+						<input type="text" class="form-control" value="abc123">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">PW</label>
+						<div class="input-box">
+							<input type="password" value="*********" placeholder="8~12자, 영문/숫자/특수문자 포함">
+							<button type="button" class="jw-button typeD"><img src="/smart_travel/admin/image/replay.svg" alt="">초기화</button>
+						</div>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">등록일시</label>
+						<input type="text" class="form-control" value="2025-06-20 12:12" disabled>
+					</div>
+
+					<!-- 3행 : 증명사진 -->
+					<div class="grid-item">
+						<label class="label-name">증명사진</label>
+						<div class="upload-box">
+							<input id="file-passport" type="file" accept="image/*">
+							<label for="file-passport" class="thumb" aria-label="preview"></label>
+							<div class="upload-meta">
+								<div class="file-title">이미지</div>
+								<div class="file-info">jpg, 328KB</div>
+								<div class="file-controller">
+									<button type="button" class="btn-icon" aria-label="다운로드"><img src="/smart_travel/admin/image/button-download.svg" alt=""></button>
+									<button type="button" class="btn-icon" aria-label="삭제"><img src="/smart_travel/admin/image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+
+					<!-- 4행 : 가이드 소개 전체폭 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">가이드 소개</label>
+						<div class="editor-box-wrap">
+							<textarea name="guide_desc" rows="8" placeholder="가이드소개를 입력하세요.">가이드소개란입니다.</textarea>
+						</div>
+					</div>
+
+					<!-- 5행 : 메모 전체폭 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">메모</label>
+						<div class="editor-box-wrap">
+							<textarea name="memo" rows="8" placeholder="내용을 입력해주세요.">메모입력란입니다.</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title">계약 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item col-span-3">
+						<label class="label-name">계약 기간</label>
+						<div class="field-row">
+							<input type="date" class="form-control" name="contract_start" value="2024-06-01" aria-label="계약 시작일">
+							<span class="w-auto" aria-hidden="true">~</span>
+							<input type="date" class="form-control" name="contract_end" value="2027-06-01" aria-label="계약 종료일">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title">배정된 일정 목록</h2>
+			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
 						<col class="col-60"> <!-- No -->
-						<col> <!-- 고객명 (auto) -->
-						<col> <!-- 이메일 -->
-						<col> <!-- 연락처 -->
-						<col> <!-- 등록일시 -->
+						<col> <!-- 상품명 (auto) -->
+						<col> <!-- 여행 시작일 -->
+						<col> <!-- 예약자명 -->
+						<col> <!-- 예약 인원 -->
+						<col> <!-- 여행 상태 -->
 					</colgroup>
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>고객명</th>
-							<th>이메일</th>
-							<th>연락처</th>
-							<th>등록일시</th>
+							<th>상품명</th>
+							<th>여행 시작일</th>
+							<th>예약자명</th>
+							<th class="is-center">예약 인원</th>
+							<th class="is-center">여행 상태</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td class="no is-center">10</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">출발 예정</td>
 						</tr>
 						<tr>
 							<td class="no is-center">9</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행중</td>
 						</tr>
 						<tr>
 							<td class="no is-center">8</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">7</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">6</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">5</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">4</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">3</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">2</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 						<tr>
 							<td class="no is-center">1</td>
+							<td class="td-ellipsis">
+								<span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span>
+							</td>
+							<td class="is-center">2025-04-19</td>
 							<td class="is-center">Jose Ramirez</td>
-							<td class="is-center">ramirez@gmail.com</td>
-							<td class="is-center">+63 917 123 4567</td>
-							<td class="is-center">2025-06-20 12:12</td>
+							<td class="is-center">5</td>
+							<td class="is-center">여행 완료</td>
 						</tr>
 					</tbody>
 				</table>
-
+				
 				<div class="jw-pagebox" role="navigation" aria-label="페이지네이션">
 					<div class="contents">
 						<button type="button" class="first" aria-label="첫 페이지" aria-disabled="false">
@@ -169,10 +291,6 @@
 
 			</div>
 
-			<div class="controller">
-				<button type="button" class="jw-button typeA">다운로드</button>
-				<button type="button" class="jw-button typeB"><img src="/admin/image/buttonB.svg" alt="">Add New Customer</button>
-			</div>
 
 		</section>
 
@@ -180,11 +298,12 @@
 
 	<!-- 기본 스크립트 -->
 	<script src="../js/default.js"></script>
-	<script src="../js/agent.js"></script>
+	<script src="../js/super.js"></script>
+
 	<script>
 		init({
 			headerUrl: '../inc/header.html',
-			navUrl: '../inc/nav_agent.html'
+			navUrl: '../inc/nav_super.html'
 		});
 	</script>
 </body>
