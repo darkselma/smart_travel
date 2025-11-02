@@ -24,7 +24,7 @@
 		<nav class="layout-nav"></nav>
 
 		<section class="layout-content">
-			<h1 class="page-title">예약 목록</h1>
+			<h1 class="page-title" data-lan-eng="">예약 목록</h1>
 
 			<div class="card-panel jw-mgt32">
 
@@ -59,23 +59,23 @@
 					<colgroup>
 						<col class="col-60"> <!-- No -->
 						<col> <!-- 상품명 (auto) -->
-						<col class="col-140"> <!-- 여행 시작일 -->
-						<col class="col-160"> <!-- 예약자명 -->
-						<col class="col-100"> <!-- 예약 인원 -->
-						<col class="col-140"> <!-- 상태 -->
+						<col> <!-- 여행 시작일 -->
+						<col> <!-- 예약자명 -->
+						<col> <!-- 예약 인원 -->
+						<col> <!-- 상태 -->
 					</colgroup>
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>상품명</th>
-							<th>여행 시작일</th>
-							<th>예약자명</th>
-							<th>예약 인원</th>
-							<th>상태</th>
+							<th data-lan-eng="">상품명</th>
+							<th data-lan-eng="">여행 시작일</th>
+							<th data-lan-eng="">예약자명</th>
+							<th data-lan-eng="">예약 인원</th>
+							<th data-lan-eng="">상태</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">10</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -85,7 +85,7 @@
 								<span class="badge badge-blue">선금 확인 전</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">9</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -95,7 +95,7 @@
 								<span class="badge badge-green">잔금 확인 전</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">8</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -105,7 +105,7 @@
 								<span class="badge badge-orange">예약 확정</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">7</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -115,7 +115,7 @@
 								<span class="badge badge-gray">여행 완료</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">6</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -125,7 +125,7 @@
 								<span class="badge badge-red">예약 취소</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">5</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -135,7 +135,7 @@
 								<span class="badge badge-purple">환불 완료</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">4</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -145,7 +145,7 @@
 								<span class="badge badge-purple">환불 완료</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">3</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -165,7 +165,7 @@
 								<span class="badge badge-purple">환불 완료</span>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('reservation-detail.html')">
 							<td class="no is-center">1</td>
 							<td class="ellipsis">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</td>
 							<td class="is-center">2025-04-19</td>
@@ -215,8 +215,8 @@
 			</div>
 
 			<div class="controller">
-				<button type="button" class="jw-button typeA">다운로드</button>
-				<button type="button" class="jw-button typeB"><img src="../image/buttonB.svg" alt="">Create Booking</button>
+				<button type="button" class="jw-button typeA" data-lan-eng="">다운로드</button>
+				<button type="button" class="jw-button typeB" onclick="temp_link('create-reservation.html')"><img src="../image/buttonB.svg" alt="">Create Booking</button>
 			</div>
 
 		</section>

@@ -9,6 +9,7 @@
 .jw-flex-c { justify-content:center; }
 .jw-flex-r { justify-content:flex-end; }
 .jw-flex-s { justify-content:flex-start; }
+.jw-self-center { place-self:center; }
 
 /* Grid */
 .jw-grid-span2 { grid-column:span 2; }
@@ -16,7 +17,7 @@
 /* Width */
 .jw-w10 { width:10px; } .jw-w20 { width:20px; } .jw-w50 { width:50px; } .jw-w80 { width:80px; }
 .jw-w100 { width:100px; } .jw-w120 { width:120px; } .jw-w150 { width:150px; } .jw-w200 { width:200px; }
-.jw-w250 { width:250px; } .jw-w300 { width:300px; } .jw-w335 { width:335px; } .jw-w400 { width:400px; }
+.jw-w250 { width:250px; } .jw-w300 { width:300px; } .jw-w335 { width:335px; } .jw-w348 { width:348px; } .jw-w400 { width:400px; }
 .jw-w450 { width:450px; } .jw-w500 { width:500px; } .jw-w800 { width:800px; } .jw-w1280 { width:1280px; }
 .jw-wf { flex:1; min-width:0; } /* overflow 방지 */
 .jw-w { width:100%; }
@@ -34,8 +35,8 @@
 .jw-gap30 { gap:30px; } .jw-gap40 { gap:40px; } .jw-gap50 { gap:50px; } .jw-gap150 { gap:150px; }
 
 /* Margin */
-.jw-mgt10 { margin-top:10px; } .jw-mgt15 { margin-top:15px; } .jw-mgt16 { margin-top:16px; } .jw-mgt20 { margin-top:20px; }
-.jw-mgt30 { margin-top:30px; } .jw-mgt32 { margin-top:32px; } .jw-mgt40 { margin-top:40px; } .jw-mgt50 { margin-top:50px; } .jw-mgt68 { margin-top:68px; }
+.jw-mgt4 { margin-top:4px; } .jw-mgt8 { margin-top:8px; } .jw-mgt10 { margin-top:10px; } .jw-mgt12 { margin-top:12px; } .jw-mgt15 { margin-top:15px; } .jw-mgt16 { margin-top:16px; } .jw-mgt20 { margin-top:20px; } .jw-mgt24 { margin-top:24px; }
+.jw-mgt30 { margin-top:30px; } .jw-mgt32 { margin-top:32px; } .jw-mgt40 { margin-top:40px; } .jw-mgt44 { margin-top:44px; } .jw-mgt50 { margin-top:50px; } .jw-mgt68 { margin-top:68px; }
 .jw-mgb10 { margin-bottom:10px; } .jw-mgb50 { margin-bottom:50px; }
 .jw-mgr10 { margin-right:10px; } .jw-mgl10 { margin-left:10px; } .jw-mgl20 { margin-left:20px; }
 .jw-mg10 { margin:0 10px; }

@@ -25,20 +25,17 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="inquiry-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeB">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title">문의 상세</h1>
+			<h1 class="page-title" data-lan-eng="">문의 상세</h1>
 
 			<h2 class="section-title">문의 내용</h2>
 			<div class="card-panel jw-mgt16">
@@ -46,7 +43,7 @@
 
 					<!-- 1행: 작성일시 -->
 					<div class="grid-item">
-						<label class="label-name" for="created_at">작성일시</label>
+						<label class="label-name" for="created_at" data-lan-eng="">작성일시</label>
 						<input id="created_at" type="text" class="form-control" value="2025-12-01 12:12" disabled>
 					</div>
 					<div class="grid-item"></div>
@@ -54,13 +51,13 @@
 
 					<!-- 2행: 제목(전체폭) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="title">제목</label>
+						<label class="label-name" for="title" data-lan-eng="">제목</label>
 						<input id="title" type="text" class="form-control" value="제목입니다">
 					</div>
 
 					<!-- 3행: 내용(에디터, 전체폭) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="content">내용</label>
+						<label class="label-name" for="content" data-lan-eng="">내용</label>
 						<div class="editor-box-wrap">
 							<!-- 필요 시 툴바 구성은 기존 컴포넌트 재사용 -->
 							<textarea id="content" rows="10" placeholder="문의 내용을 입력하세요.">문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
@@ -69,17 +66,15 @@
 
 					<!-- 4행: 첨부파일(전체폭) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">첨부파일</label>
+						<label class="label-name" data-lan-eng="">첨부파일</label>
 
 						<!-- 업로드 버튼 -->
 						<div class="jw-mgb12">
-							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> 파일 업로드</button>
+							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt="" data-lan-eng=""> 파일 업로드</button>
 						</div>
 
 						<!-- 첨부 리스트 -->
 						<div class="attach-list">
-
-							<!-- 파일(PDF) : pill 컴포넌트 -->
 							<div class="cell">
 								<div class="field-row jw-center">
 									<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 파일 [pdf, 328KB]</div>
@@ -90,8 +85,8 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
+						
 					</div>
 					
 					<div class="grid-item">
@@ -99,7 +94,7 @@
 							<input id="file-passport" type="file" accept="image/*">
 							<label for="file-passport" class="thumb" aria-label="preview"></label>
 							<div class="upload-meta">
-								<div class="file-title">이미지</div>
+								<div class="file-title" data-lan-eng="">이미지</div>
 								<div class="file-info">jpg, 328KB</div>
 								<div class="file-controller">
 									<button type="button" class="btn-icon" aria-label="다운로드"><img src="../image/button-download.svg" alt=""></button>

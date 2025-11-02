@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<time class="page-date" datetime="2025-01-01">January 1, 2025</time>
+
+			<h1 class="page-title" data-lan-eng="">운영현황</h1>
+			
+						
+			<div class="overview-card-grid jw-mgt32">
+				<!-- 예약 현황 -->
+				<article class="card">
+					<div>
+						<h2 class="card-title" data-lan-eng="">예약 현황</h2>
+						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+					</div>
+					<div>
+						<ul class="status-list">
+							<li class="status-item">
+								<i class="dot dot-blue" aria-hidden="true"></i>
+								<span class="label" data-lan-eng="">선금 확인 전</span>
+								<strong class="count" data-lan-eng="">11건</strong>
+							</li>
+							<li class="status-item">
+								<i class="dot dot-green" aria-hidden="true"></i>
+								<span class="label" data-lan-eng="">잔금 확인 전</span>
+								<strong class="count" data-lan-eng="">8건</strong>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<!-- 문의 현황 -->
+				<article class="card">
+					<div>
+						<h2 class="card-title">문의 현황</h2>
+						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+					</div>
+					<div>
+						<ul class="status-list">
+							<li class="status-item">
+								<i class="dot dot-blue" aria-hidden="true"></i>
+								<span class="label" data-lan-eng="">미답변</span>
+								<strong class="count" data-lan-eng="">15건</strong>
+							</li>
+							<li class="status-item">
+								<i class="dot dot-green" aria-hidden="true"></i>
+								<span class="label" data-lan-eng="">처리중</span>
+								<strong class="count" data-lan-eng="">7건</strong>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+
+			<div class="card-panel jw-mgt68">
+				<h2 class="card-title" data-lan-eng="">오늘 여행 일정</h2>
+				<p class="card-subtitle"><strong>12건</strong></p>
+
+				<div class="tableA-scroll">
+					<div class="jw-tableA typeB">
+						<table>
+							<colgroup>
+								<col style="width:60px;"><!-- No -->
+								<col><!-- 상품명 -->
+								<col style="width:220px;"><!-- 여행 기간 -->
+								<col style="width:120px;"><!-- 고객 유형 -->
+								<col style="width:100px;"><!-- 인원 수 -->
+								<col style="width:140px;"><!-- 배정 가이드 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th data-lan-eng="">상품명</th>
+									<th data-lan-eng="">여행 기간</th>
+									<th data-lan-eng="">고객 유형</th>
+									<th data-lan-eng="">인원 수</th>
+									<th data-lan-eng="">배정 가이드</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">김민수</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td>한국 베이직 투어 4박 5일 – 남이섬, 에버랜드 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">이지훈</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td>단풍 투어 & 설악산 케이블카 4박 5일</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2C</td>
+									<td class="is-center">50</td>
+									<td class="is-center">이수빈</td>
+								</tr>
+								<tr>
+									<td class="is-center">4</td>
+									<td>겨울 패키지 4박 5일 – 에버랜드 & 스키 옵션 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">최하은</td>
+								</tr>
+								<tr>
+									<td class="is-center">5</td>
+									<td>전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마을</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2B</td>
+									<td class="is-center">50</td>
+									<td class="is-center">정예준</td>
+								</tr>
+								<tr>
+									<td class="is-center">6</td>
+									<td>낙산 힐링 투어 6박 7일 – 부산·여수·거제 포함</td>
+									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
+									<td class="is-center">B2C</td>
+									<td class="is-center">50</td>
+									<td class="is-center">위효빈</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="card-panel jw-mgt68 sales-range">
+				<h2 class="card-title" data-lan-eng="">매출 통계</h2>
+				
+				<h3 class="card-subtitle2 jw-mgt44" data-lan-eng="">기간 선택</h3>
+				<div class="jw-cols jw-gap10 jw-mgt16">
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" checked>
+						<p class="text">일간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">주간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">월간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">연간</p>
+					</label>
+				</div>
+				
+				<div class="input-box jw-mgt16">
+					<input name="" value="2025-01-06 ~ 2025-01-06">
+				</div>
+				
+				<div class="info-text jw-mgt44">총 매출액 (₱)</div>
+				<div class="info-text2">15,000</div>
+				
+				
+				<div class="chart-wrap jw-mgt30">
+					<div id="myChart" class="chart"></div>
+				</div>
+
+			</div>
+
+			<div class="card-panel jw-mgt68 product-sales-range">
+				<h2 class="card-title" data-lan-eng="">상품별 판매 현황</h2>
+				<h3 class="card-subtitle2 jw-mgt44" data-lan-eng="">기간 선택</h3>
+				
+				<div class="jw-cols jw-gap10 jw-mgt16">
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" checked>
+						<p class="text">일간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">주간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">월간</p>
+					</label>
+					<label class="jw-radio typeA">
+						<input type="radio" name="radio1" >
+						<p class="text">연간</p>
+					</label>
+					<div class="input-box jw-w200">
+						<input type="date" name="" value="">
+					</div>
+				</div>
+				<div class="input-box jw-mgt16 jw-w400">
+					<input name="" value="2025-01-06 ~ 2025-01-06">
+				</div>
+				<div class="info-text jw-mgt44">총 판매 건수</div>
+				<div class="info-text2">1,000</div>
+
+				
+				<div class="sales-info jw-mgt32">
+					<div class="sales-chart">
+						<div class="sales-item">
+							<p class="sales-title">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호</p>
+							<div class="bar"><span class="bar__fill" style="width:100%"></span></div>
+							<div class="value">200건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">한국 베이직 투어 4박 5일 - 남이섬, 에버랜드 포함</p>
+							<div class="bar"><span class="bar__fill" style="width:80%"></span></div>
+							<div class="value">160건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">단풍 투어 & 설악산 케이블카 4박 5일</p>
+							<div class="bar"><span class="bar__fill" style="width:75%"></span></div>
+							<div class="value">150건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">겨울 패키지 4박 5일 - 에버랜드 & 스키 옵션 포함</p>
+							<div class="bar"><span class="bar__fill" style="width:50%"></span></div>
+							<div class="value">100건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">한국 베이직 투어 4박 5일 – 남이섬,전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마</p>
+							<div class="bar"><span class="bar__fill" style="width:40%"></span></div>
+							<div class="value">80건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">남해 힐링 투어 6박 7일 – 부산·여수·거제 포함</p>
+							<div class="bar"><span class="bar__fill" style="width:40%"></span></div>
+							<div class="value">80건</div>
+						</div>
+
+						<div class="sales-item">
+							<p class="sales-title">부산&경주 핵심 일주 3박 4일 – 해운대, 불국사 포함</p>
+							<div class="bar"><span class="bar__fill" style="width:25%"></span></div>
+							<div class="value">50건</div>
+						</div>
+					</div>
+					<div class="sales-product">
+						<table class="jw-tableA typeB">
+							<colgroup>
+								<col style="width:60px;"> <!-- No -->
+								<col> <!-- 상품명 -->
+								<col style="width:120px;"> <!-- 조회수 -->
+								<col style="width:120px;"> <!-- 예약건수 -->
+								<col style="width:120px;"> <!-- 예약률 -->
+								<col style="width:160px;"> <!-- 판매액 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>상품명</th>
+									<th>조회수</th>
+									<th>예약건수</th>
+									<th>예약률</th>
+									<th>판매액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드…</td>
+									<td class="is-center">2689</td>
+									<td class="is-center">200</td>
+									<td class="is-center">28.24%</td>
+									<td class="is-center">₩2,000,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td>한국 베이직 투어 4박 5일 – 남이섬, 에버랜드 포함</td>
+									<td class="is-center">2397</td>
+									<td class="is-center">160</td>
+									<td class="is-center">11.76%</td>
+									<td class="is-center">₩800,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td>단풍 투어 & 설악산 케이블카 4박 5일</td>
+									<td class="is-center">3950</td>
+									<td class="is-center">150</td>
+									<td class="is-center">8.24%</td>
+									<td class="is-center">₩2,500,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">4</td>
+									<td>겨울 패키지 4박 5일 – 에버랜드 & 스키 옵션 포함</td>
+									<td class="is-center">2782</td>
+									<td class="is-center">100</td>
+									<td class="is-center">7.06%</td>
+									<td class="is-center">₩2,000,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">5</td>
+									<td>전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마을</td>
+									<td class="is-center">398</td>
+									<td class="is-center">80</td>
+									<td class="is-center">5.88%</td>
+									<td class="is-center">₩400,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">6</td>
+									<td>남해 힐링 투어 6박 7일 – 부산·여수·거제 포함</td>
+									<td class="is-center">2691</td>
+									<td class="is-center">70</td>
+									<td class="is-center">5.01%</td>
+									<td class="is-center">₩490,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">7</td>
+									<td>부산&경주 핵심 일주 3박 4일 – 해운대, 불국사 포함</td>
+									<td class="is-center">3876</td>
+									<td class="is-center">50</td>
+									<td class="is-center">4.71%</td>
+									<td class="is-center">₩190,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">8</td>
+									<td>제주도 환상 일주 4박 5일 – 우도 & 성산일출봉 포함…</td>
+									<td class="is-center">1299</td>
+									<td class="is-center">48</td>
+									<td class="is-center">3.53%</td>
+									<td class="is-center">₩390,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">9</td>
+									<td>남도 정취 투어 4박 5일 – 목포·순천·보성</td>
+									<td class="is-center">693</td>
+									<td class="is-center">47</td>
+									<td class="is-center">3.53%</td>
+									<td class="is-center">₩920,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+	</main>
+
+	<script src="../js/default.js"></script>
+	<script src="../js/super.js"></script>
+
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_super.html'
+		});
+
+
+		document.addEventListener('DOMContentLoaded', () => {
+			/* ========= chart A ========= */
+			const data = [130, 55, 55, 210, 20, 100, 80, 110, 200, 20, 25, 50, 30, 140, 100, 220, 75, 180, 90, 220, 150, 95, 105, 100];
+			
+			// 예시: 이미지처럼 "March, 2025" / "₽2,000"
+			const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+			const fmt = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+			renderBarChart('#myChart', data, {
+				max: 220,
+				highlights: [3, 19],
+				formatTip: (hour, value) => {
+					const title = `${months[hour]}, 2025`;
+					const amount = `₽${fmt(value * 1000)}`; // 예시: 값×1000을 금액으로 가정
+					return `<div class="tip-title">${title}</div><div class="tip-value">${amount}</div>`;
+				}
+			});
+		});
+		
+		//  chart A
+		function renderBarChart(container, data, opts = {}) {
+			const el = (typeof container === 'string') ? document.querySelector(container) : container;
+			if (!el) return;
+			el.innerHTML = '';
+			el.style.position = 'relative';
+
+			const max = (opts.max ?? Math.max(...data)) || 1;
+			const highlights = new Set(opts.highlights || []);
+			const formatTip = typeof opts.formatTip === 'function' ? opts.formatTip : null;
+
+			const ylabels = document.createElement('div'); ylabels.className = 'ylabels';
+			['200만', '100만', '50만', '10만', '5만', '0'].forEach(t => { const s = document.createElement('span'); s.textContent = t; ylabels.appendChild(s); });
+
+			const bars = document.createElement('div'); bars.className = 'bars';
+			data.forEach((v, hour) => {
+				const b = document.createElement('div');
+				b.className = 'bar' + (highlights.has(hour) ? ' highlights' : '');
+				b.style.height = Math.max(0, Math.min(100, (v / max) * 100)) + '%';
+				b.dataset.x = hour;
+				b.dataset.v = v;
+				// 툴팁 내용 미리 저장(HTML 허용)
+				b.dataset.tip = formatTip ? formatTip(hour, v) : `${hour}시 · ${v}`;
+				bars.appendChild(b);
+			});
+
+			const tip = document.createElement('div'); tip.className = 'tooltip'; el.appendChild(tip);
+
+			bars.addEventListener('mouseover', (e) => {
+				const bar = e.target.closest('.bar'); if (!bar) return;
+				tip.innerHTML = bar.dataset.tip;
+				tip.classList.add('show');
+				placeTip(el, bar, tip);
+			});
+			bars.addEventListener('mousemove', (e) => {
+				const bar = e.target.closest('.bar'); if (!bar) return;
+				placeTip(el, bar, tip);
+			});
+			bars.addEventListener('mouseout', (e) => {
+				if (!e.relatedTarget || !bars.contains(e.relatedTarget)) tip.classList.remove('show');
+			});
+			bars.addEventListener('click', (e) => {
+				const bar = e.target.closest('.bar'); if (!bar) return;
+				bar.classList.toggle('on');
+			});
+
+			el.appendChild(ylabels); el.appendChild(bars);
+		}
+		//  chart A
+		function placeTip(container, bar, tip) {
+			const cr = container.getBoundingClientRect();
+			const br = bar.getBoundingClientRect();
+			const x = br.left + br.width / 2 - cr.left;
+			const y = br.top - cr.top - 10;
+			tip.style.left = x + 'px';
+			tip.style.top = y + 'px';
+		}
+		
+	</script>
+</body>
+
+</html>

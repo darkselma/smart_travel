@@ -7,6 +7,9 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
@@ -25,45 +28,42 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="agent-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeB">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title">에이전트 등록</h1>
+			<h1 class="page-title" data-lan-eng="">에이전트 등록</h1>
 
-			<h2 class="section-title">기본 정보</h2>
+			<h2 class="section-title" data-lan-eng="">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item">
-						<label class="label-name">지점명</label>
+						<label class="label-name" data-lan-eng="">지점명</label>
 						<input type="text" class="form-control" placeholder="지점명">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">지역</label>
+						<label class="label-name" data-lan-eng="">지역</label>
 						<input type="text" class="form-control" placeholder="지역">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">담당자명</label>
+						<label class="label-name" data-lan-eng="">담당자명</label>
 						<input type="text" class="form-control" placeholder="담당자명">
 					</div>
 
 					<!-- 2행 -->
 					<div class="grid-item">
-						<label class="label-name">담당자 이메일</label>
+						<label class="label-name" data-lan-eng="">담당자 이메일</label>
 						<input type="email" class="form-control" placeholder="담당자 이메일">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">담당자 연락처</label>
+						<label class="label-name" data-lan-eng="">담당자 연락처</label>
 						<div class="field-row">
 							<select class="select w-auto">
 								<option selected>+63</option>
@@ -89,7 +89,7 @@
 
 					<!-- 4행 : 메모 전체폭 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">메모</label>
+						<label class="label-name" data-lan-eng="">메모</label>
 						<div class="editor-box-wrap">
 							<textarea name="memo" rows="10" placeholder="내용을 입력해주세요"></textarea>
 						</div>
@@ -97,12 +97,12 @@
 				</div>
 			</div>
 
-			<h2 class="section-title">계약 정보</h2>
+			<h2 class="section-title" data-lan-eng="">계약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 계약 기간 -->
 					<div class="grid-item">
-						<label class="label-name">계약 기간</label>
+						<label class="label-name" data-lan-eng="">계약 기간</label>
 						<div class="field-row">
 							<input type="text" class="form-control" placeholder="YYYY-MM-DD ~ YYYY-MM-DD"
 								value="2024-06-01 ~ 2027-06-01">
@@ -112,7 +112,7 @@
 
 					<!-- 예약금 비율(%) -->
 					<div class="grid-item">
-						<label class="label-name">예약금 비율 (%)</label>
+						<label class="label-name" data-lan-eng="">예약금 비율 (%)</label>
 						<input type="number" class="form-control" value="15" min="0" max="100" step="1" placeholder="0">
 					</div>
 				</div>

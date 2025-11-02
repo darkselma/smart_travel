@@ -7,6 +7,9 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
@@ -25,31 +28,28 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="b2c-customer-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeB">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
 				</div>
 			</div>
 			
-			<h1 class="page-title">B2C 고객 상세</h1>
+			<h1 class="page-title" data-lan-eng="">B2C 고객 상세</h1>
 
 			<h2 class="section-title">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 			
 				<div class="grid-wrap">
 					<div class="grid-item">
-						<label class="label-name">고객명</label>
+						<label class="label-name" data-lan-eng="">고객명</label>
 						<input type="text" value="Jose Ramirez">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">연락처</label>
+						<label class="label-name" data-lan-eng="">연락처</label>
 						<div class="field-row">
 							<select class="select">
 								<option>+63</option>
@@ -58,7 +58,7 @@
 						</div>
 					</div>
 					<div class="grid-item">
-						<label class="label-name">이메일</label>
+						<label class="label-name" data-lan-eng="">이메일</label>
 						<input type="email" value="ramirez@gmail.com">
 					</div>
 
@@ -66,25 +66,25 @@
 						<label class="label-name">PW</label>
 						<div class="input-box">
 							<input type="password" value="**********">
-							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt="">초기화</button>
+							<button type="button" class="jw-button typeD" data-lan-eng=""><img src="../image/replay.svg" alt="">초기화</button>
 						</div>
 					</div>
 					<div class="grid-item">
-						<label class="label-name">고객 번호</label>
+						<label class="label-name" data-lan-eng="">고객 번호</label>
 						<input type="text" value="B100231" disabled>
 					</div>
 					<div class="grid-item">
-						<label class="label-name">소속 지점명</label>
+						<label class="label-name" data-lan-eng="">소속 지점명</label>
 						<input type="text" value="Bacolod City" disabled>
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name">등록일시</label>
+						<label class="label-name" data-lan-eng="">등록일시</label>
 						<input type="text" value="2025-06-20 12:12" disabled>
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name">메모</label>
+						<label class="label-name" data-lan-eng="">메모</label>
 						<div class="editor-box-wrap">
 							<textarea name="editor-box" rows="5" placeholder="문의내용">메모입력란입니다.</textarea>
 						</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 
-			<h2 class="section-title">예약 내역</h2>
+			<h2 class="section-title" data-lan-eng="">예약 내역</h2>
 			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
@@ -107,12 +107,12 @@
 					<thead>
 						<tr>
 							<th class="no">No</th>
-							<th>상품명</th>
-							<th>예약일</th>
-							<th>여행 시작일</th>
-							<th>예약 상태</th>
-							<th class="is-center">예약 인원</th>
-							<th class="is-center">주문 금액(₱)</th>
+							<th data-lan-eng="">상품명</th>
+							<th data-lan-eng="">예약일</th>
+							<th data-lan-eng="">여행 시작일</th>
+							<th data-lan-eng="">예약 상태</th>
+							<th class="is-center" data-lan-eng="">예약 인원</th>
+							<th class="is-center" data-lan-eng="">주문 금액(₱)</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -200,7 +200,7 @@
 
 			</div>
 
-			<h2 class="section-title">문의 내역</h2>
+			<h2 class="section-title" data-lan-eng="">문의 내역</h2>
 			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
@@ -214,11 +214,11 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>문의 유형</th>
-							<th>문의 제목</th>
-							<th>작성일</th>
-							<th class="is-center">답변 여부</th>
-							<th class="is-center">처리 상태</th>
+							<th data-lan-eng="">문의 유형</th>
+							<th data-lan-eng="">문의 제목</th>
+							<th data-lan-eng="">작성일</th>
+							<th data-lan-eng="" class="is-center">답변 여부</th>
+							<th data-lan-eng="" class="is-center">처리 상태</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -7,11 +7,13 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
-	<link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
@@ -27,24 +29,21 @@
 		<section class="layout-content layout-content-aside">
 				
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="template-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button jw-button-primary">저장</button>
+					<button type="button" class="jw-button jw-button-primary" data-lan-eng="">저장</button>
 				</div>
 			</div>
 			
 			<div class="content-main">
 
-				<h1 class="page-title">템플릿 등록</h1>
+				<h1 class="page-title" data-lan-eng="">템플릿 등록</h1>
 
-				<h2 class="section-title">템플릿 정보</h2>
+				<h2 class="section-title" data-lan-eng="">템플릿 정보</h2>
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap">
 
@@ -64,7 +63,7 @@
 				</div>
 
 
-				<h2 class="section-title">상품 정보</h2>
+				<h2 class="section-title" data-lan-eng="">상품 정보</h2>
 				<!-- 상품 정보 -->
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap">
@@ -77,7 +76,7 @@
 
 						<!-- 판매 대상 / 대분류 / 중분류 -->
 						<div class="grid-item">
-							<label class="label-name">판매 대상 <span class="req">*</span></label>
+							<label class="label-name" data-lan-eng="">판매 대상 <span class="req">*</span></label>
 							<select class="select">
 								<option selected>B2B</option>
 								<option>B2C</option>
@@ -85,7 +84,7 @@
 						</div>
 
 						<div class="grid-item">
-							<label class="label-name">대분류 <span class="req">*</span></label>
+							<label class="label-name" data-lan-eng="">대분류 <span class="req">*</span></label>
 							<select class="select">
 								<option selected>계절별</option>
 								<option>지역별</option>
@@ -153,10 +152,10 @@
 					</div>
 				</div>
 
-				<h2 class="section-title">일정표</h2>
+				<h2 class="section-title" data-lan-eng="">일정표</h2>
 				<!-- 일정표 -->
 				<div class="card-panel jw-mgt16">
-					<h3 class="grid-wrap-title">미팅 정보</h3>
+					<h3 class="grid-wrap-title" data-lan-eng="">미팅 정보</h3>
 
 					<div class="grid-wrap jw-mgt16">
 
@@ -757,9 +756,7 @@
 						</div>
 					
 				</div>
-
 			</aside>
-
 
 		</section>
 

@@ -6,7 +6,7 @@
 
 /* ================== HTML & BODY ================== */
 html { width:100%; min-height:100dvh; font-size:var(--html-font); -webkit-text-size-adjust:100%; }
-body { display:flex; flex-direction:column; min-height:100dvh; width:100%; overflow-x:hidden; font-family:'Noto Sans KR', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size:14px; color:var(--font-color); background:var(--bg-color); line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+body { display:flex; flex-direction:column; min-height:100dvh; width:100%; overflow-x:hidden; font-family: 'Noto Sans KR', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:14px; color:var(--font-color); background:var(--bg-color); line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
 
 /* ================== Text & Link ================== */
 ol, ul { list-style:none; }

@@ -102,3 +102,226 @@ function jw_select() {
 		});
 	});
 }
+
+function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000); document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`; }
+function getCookie(name) { const seg = `; ${document.cookie}`.split(`; ${name}=`); return (seg.length === 2) ? decodeURIComponent(seg.pop().split(';').shift()) : null; }
+
+function getLangText(el, lang) {
+	if (lang === 'eng') return el.getAttribute('data-lan-eng');
+	return el.getAttribute('data-lan-kor') || el.getAttribute('data-lan-ko');
+}
+
+function language_apply(lang) {
+	document.querySelectorAll('[data-lan-eng],[data-lan-kor],[data-lan-ko]').forEach(el => {
+		const txt = getLangText(el, lang);
+		if (!txt) return;
+
+		const tag = el.tagName;
+		if (tag === 'INPUT' || tag === 'TEXTAREA') {
+			if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', txt);
+			else el.value = txt;
+		} else if (tag === 'IMG') {
+			el.setAttribute('alt', txt);
+		} else {
+			el.textContent = txt;
+		}
+	});
+
+	document.querySelectorAll('.lang-text').forEach(node => {
+		node.textContent = (lang === 'eng') ? 'Korea' : 'English';
+	});
+}
+
+function language_set() {
+	const cur = getCookie('lang') || 'eng';
+	const next = (cur === 'eng') ? 'kor' : 'eng';
+	setCookie('lang', next, 365);
+	if (next === 'kor') {
+		location.reload();
+	} else {
+		language_apply(next);
+	}
+}
+
+class Modal {
+	constructor(action, width, height, sq) {
+		this.action = action;
+		this.width = width;
+		this.height = height;
+		this.sq = sq;
+		this.el = null;
+		this._abort = null;
+	}
+
+	static _toQuery(data) {
+		if (!data) return '';
+		if (typeof data === 'string') return data.replace(/^\?/, '');
+		if (data instanceof FormData) {
+			return new URLSearchParams([...data.entries()]).toString();
+		}
+		return new URLSearchParams(Object.entries(data)).toString();
+	}
+
+	async _loadHTML(url, data) {
+		const ts = Date.now();
+		const u = new URL(url, location.href);
+		u.searchParams.set('_', ts);
+
+		if (this._abort) this._abort.abort();
+		this._abort = new AbortController();
+
+		let res;
+		try {
+			if (data) {
+				const body = Modal._toQuery(data);
+				res = await fetch(u.toString(), {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+					body,
+					signal: this._abort.signal
+				});
+			} else {
+				res = await fetch(u.toString(), { signal: this._abort.signal, credentials: 'same-origin' });
+			}
+			if (!res.ok) throw new Error(`HTTP ${res.status}`);
+			return await res.text();
+		} finally {
+			this._abort = null;
+		}
+	}
+
+	async open() {
+		const d = document.createElement('dialog');
+		d.style.width = (typeof this.width === 'number') ? `${this.width}px` : (this.width || '');
+		d.style.height = (typeof this.height === 'number') ? `${this.height}px` : (this.height || '');
+		d.innerHTML = 'Loading';
+		document.body.appendChild(d);
+		this.el = d;
+
+		if (this.action) {
+			try {
+				const html = await this._loadHTML(this.action, this.sq);
+				d.innerHTML = html;
+				if (window.jw_select) jw_select();
+				const closeBtn = d.querySelector('#closeDialog');
+				if (closeBtn) {
+					closeBtn.addEventListener('click', () => this.close(), { once: true });
+				}
+			} catch (err) {
+				d.innerHTML = `<div style="padding:12px">Load error: ${String(err)}</div>`;
+			}
+		}
+
+		if (typeof d.showModal === 'function') d.showModal();
+		else d.setAttribute('open', '');
+		return this;
+	}
+
+	async update(action, sq) {
+		if (!this.el) return;
+		const url = action || this.action;
+		const data = (typeof sq !== 'undefined') ? sq : this.sq;
+		if (!url) return;
+
+		try {
+			const html = await this._loadHTML(url, data);
+			this.el.innerHTML = html;
+			const closeBtn = this.el.querySelector('#closeDialog');
+			if (closeBtn) {
+				closeBtn.addEventListener('click', () => this.close(), { once: true });
+			}
+		} catch (err) {
+			this.el.innerHTML = `<div style="padding:12px">Load error: ${String(err)}</div>`;
+		}
+	}
+
+	close() {
+		if (!this.el) return;
+		if (this._abort) this._abort.abort();
+		if (typeof this.el.close === 'function') {
+			this.el.close();
+		}
+		this.el.remove();
+		this.el = null;
+	}
+}
+
+function modal(page, w, h, sq) {
+	const m = new Modal(page, w, h, sq);
+	m.open();
+	return m;
+}
+
+function modal_close() {
+	const dialogs = document.querySelectorAll('dialog');
+	if (!dialogs.length) return;
+	const last = dialogs[dialogs.length - 1];
+	if (typeof last.close === 'function') {
+		last.close();
+	}
+	last.remove();
+}
+
+function member_info(btn, page) {
+	const root = btn.closest('.membermenu') || btn; // 버튼+메뉴 래퍼
+	const box = root.querySelector('.position');
+	let wrap = box.querySelector('.wrap');
+	if (!wrap) { wrap = document.createElement('div'); wrap.className = 'wrap'; box.appendChild(wrap); }
+
+	// 토글: 열려있으면 닫기
+	if (box.classList.contains('on')) { return closeBox(); }
+
+	// 열 때만 fetch
+	if (!wrap.innerHTML.trim()) {
+		wrap.innerHTML = '<div style="padding:10px;font-size:13px;color:#6b7280;">불러오는 중…</div>';
+		fetch(page + '?' + Date.now(), { cache: 'no-store' })
+			.then(r => { if (!r.ok) throw 0; return r.text(); })
+			.then(html => { wrap.innerHTML = html; openBox(); })
+			.catch(() => { wrap.innerHTML = '<div style="padding:10px;font-size:13px;color:#ef4444;">불러오기에 실패했어.</div>'; openBox(); });
+	} else {
+		openBox();
+	}
+
+	function openBox() {
+		box.classList.add('on');
+
+		// root(버튼+메뉴) 바깥 클릭 시에만 닫기 => 버튼 클릭은 바깥으로 취급 안 함
+		const onDocDown = (e) => { if (!root.contains(e.target)) closeBox(); };
+
+		// 내부 닫기 버튼(.closeMember_info)로 닫기
+		const onInsideClick = (e) => {
+			const t = e.target.closest('.closeMember_info');
+			if (t) { e.preventDefault(); closeBox(); }
+		};
+
+		removeListeners();
+		document.addEventListener('pointerdown', onDocDown, true);
+		box.addEventListener('click', onInsideClick);
+		box._off = () => {
+			document.removeEventListener('pointerdown', onDocDown, true);
+			box.removeEventListener('click', onInsideClick);
+		};
+	}
+
+	function closeBox() {
+		box.classList.remove('on');
+		removeListeners();
+	}
+
+	function removeListeners() {
+		if (box._off) { box._off(); box._off = null; }
+	}
+}
+
+function helpTextChange(target, v) {
+	const el = document.querySelector(target);
+	if (!el) return;
+	el.textContent = v || '';
+}
+
+function layerToggle(btn) {
+	const menu = btn.closest('.layerToggleWrap')?.querySelector(':scope > .fab-menu');
+	if (!menu) return;
+	menu.classList.toggle('on');
+}
+

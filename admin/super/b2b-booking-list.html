@@ -7,6 +7,9 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
@@ -25,7 +28,7 @@
 
 		<section class="layout-content">
 
-			<h1 class="page-title">B2B 예약 목록</h1>
+			<h1 class="page-title" data-lan-eng="">B2B 예약 목록</h1>
 
 			<div class="card-panel jw-mgt32">
 			
@@ -37,8 +40,8 @@
 						<input type="date" class="travelStartDate" name="" placeholder="여행 시작일">
 						
 						<select class="select" name="" onchange="">
-							<option value="" >전체 상태</option>
-							<option value="" >전체</option>
+							<option value="" data-lan-eng="" >전체 상태</option>
+							<option value="" data-lan-eng="" >전체</option>
 						</select>
 
 						<div class="search-field">
@@ -68,17 +71,17 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>상품명</th>
-							<th>여행 시작일</th>
-							<th>소속 지점명</th>
-							<th>예약자명</th>
-							<th class="is-center">예약 인원</th>
-							<th>배정 가이드</th>
-							<th class="is-center">상태</th>
+							<th data-lan-eng="">상품명</th>
+							<th data-lan-eng="">여행 시작일</th>
+							<th data-lan-eng="">소속 지점명</th>
+							<th data-lan-eng="">예약자명</th>
+							<th data-lan-eng="" class="is-center">예약 인원</th>
+							<th data-lan-eng="">배정 가이드</th>
+							<th data-lan-eng="" class="is-center">상태</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">10</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -88,7 +91,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-wait"> 선금 입금 대기</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">9</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -98,7 +101,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-wait2"> 잔금 입금 대기</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">8</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -108,7 +111,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-confirm"> 예약 확정</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">7</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -118,7 +121,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-done"> 여행 완료</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">6</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -128,7 +131,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-done"> 여행 완료</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">5</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -138,7 +141,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-cancel"> 예약 취소</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">4</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -148,7 +151,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-refund"> 환불 완료</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">3</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -158,7 +161,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-refund"> 환불 완료</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">2</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -168,7 +171,7 @@
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center"><span class="badge badge-refund"> 환불 완료</span></td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('b2b-booking-detail.html')">
 							<td class="no is-center">1</td>
 							<td class="td-ellipsis"><span>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함</span></td>
 							<td class="is-center">2025-04-19</td>
@@ -215,11 +218,10 @@
 						</button>
 					</div>
 				</div>
-
 			</div>
 
 			<div class="controller">
-				<button type="button" class="jw-button typeA">다운로드</button>
+				<button type="button" class="jw-button typeA" data-lan-eng="">다운로드</button>
 			</div>
 
 

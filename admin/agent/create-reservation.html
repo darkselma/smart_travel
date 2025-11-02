@@ -25,12 +25,9 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="reservation-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
@@ -45,14 +42,14 @@
 				</div>
 			</div>
 
-			<h1 class="page-title">예약 생성</h1>
+			<h1 class="page-title" data-lan-eng="">예약 생성</h1>
 
-			<h2 class="section-title">상품 정보</h2>
+			<h2 class="section-title" data-lan-eng="">상품 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 : 상품명 + 검색 버튼 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">상품명 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">상품명 <span class="req">*</span></label>
 						<div class="jw-center jw-gap20">
 							<input type="text" class="form-control jw-wf" placeholder="상품을 선택해주세요" aria-required="true">
 							<button type="button" class="jw-button typeA"><img src="../image/search2.svg" alt="">상품 검색</button>
@@ -61,7 +58,7 @@
 
 					<!-- 2행 : 여행 시작일 -->
 					<div class="grid-item">
-						<label class="label-name">여행 시작일 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">여행 시작일 <span class="req">*</span></label>
 						<input type="text" class="form-control" placeholder="상품을 선택해주세요" aria-required="true">
 					</div>
 
@@ -73,24 +70,24 @@
 
 
 
-			<h2 class="section-title">예약 고객 정보</h2>
+			<h2 class="section-title" data-lan-eng="">예약 고객 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 이름 -->
 					<div class="grid-item">
-						<label for="user_name" class="form-label required">이름</label>
+						<label for="user_name" class="form-label required" data-lan-eng="">이름</label>
 						<input type="text" id="user_name" class="form-control" placeholder="이름" aria-required="true">
 					</div>
 
 					<!-- 이메일 -->
 					<div class="grid-item">
-						<label for="user_email" class="form-label required">이메일</label>
+						<label for="user_email" class="form-label required" data-lan-eng="">이메일</label>
 						<input type="email" id="user_email" class="form-control" placeholder="이메일" aria-required="true">
 					</div>
 
 					<!-- 연락처 -->
 					<div class="grid-item">
-						<label for="user_phone" class="form-label required">연락처</label>
+						<label for="user_phone" class="form-label required" data-lan-eng="">연락처</label>
 						<div class="field-row">
 							<select class="select">
 								<option>+63</option>
@@ -102,11 +99,11 @@
 			</div>
 
 
-			<h2 class="section-title">여행 고객 정보</h2>
+			<h2 class="section-title" data-lan-eng="">여행 고객 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<!-- 상단 액션 -->
 				<div class="jw-mgb12">
-					<button type="button" class="jw-button typeA">＋ 고객 추가</button>
+					<button type="button" class="jw-button typeA" data-lan-eng="">＋ 고객 추가</button>
 				</div>
 
 				<!-- 가로 스크롤 테이블 -->
@@ -128,14 +125,14 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>대표 여행자</th>
-								<th>인원 옵션</th>
-								<th>비자 신청 여부</th>
-								<th>호칭</th>
-								<th>이름</th>
-								<th>성</th>
-								<th>성별</th>
-								<th>나이</th>
+								<th data-lan-eng="">대표 여행자</th>
+								<th data-lan-eng="">인원 옵션</th>
+								<th data-lan-eng="">비자 신청 여부</th>
+								<th data-lan-eng="">호칭</th>
+								<th data-lan-eng="">이름</th>
+								<th data-lan-eng="">성</th>
+								<th data-lan-eng="">성별</th>
+								<th data-lan-eng="">나이</th>
 							</tr>
 						</thead>
 
@@ -237,12 +234,12 @@
 			</div>
 
 
-			<h2 class="section-title">예약 정보</h2>
+			<h2 class="section-title" data-lan-eng="">예약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<div class="grid-item">
-						<label class="label-name">룸 옵션 <span aria-hidden="true">*</span></label>
+						<label class="label-name" data-lan-eng="">룸 옵션 <span aria-hidden="true">*</span></label>
 						<button type="button" class="jw-button">룸 옵션 선택</button>
 					</div>
 					
@@ -284,14 +281,14 @@
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="seat_req">항공 좌석 요청사항</label>
+						<label class="label-name" for="seat_req" data-lan-eng="">항공 좌석 요청사항</label>
 						<div class="editor-box-wrap">
 							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" ></textarea>
 						</div>
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="etc_req">기타 요청사항</label>
+						<label class="label-name" for="etc_req" data-lan-eng="">기타 요청사항</label>
 
 						<div class="editor-box-wrap">
 							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" ></textarea>
@@ -302,7 +299,7 @@
 			</div>
 
 
-			<h2 class="section-title">결제 정보</h2>
+			<h2 class="section-title" data-lan-eng="">결제 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item col-span-3">
@@ -315,7 +312,7 @@
 			</div>
 			
 			
-			<h2 class="section-title">결제 정보</h2>
+			<h2 class="section-title" data-lan-eng="">결제 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 

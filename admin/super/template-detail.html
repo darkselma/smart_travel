@@ -7,11 +7,13 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
-	<link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
@@ -26,34 +28,31 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="template-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button jw-button-primary">저장</button>
+					<button type="button" class="jw-button jw-button-primary" data-lan-eng="">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title">템플릿 상세</h1>
+			<h1 class="page-title" data-lan-eng="">템플릿 상세</h1>
 
-			<h2 class="section-title">템플릿 정보</h2>
+			<h2 class="section-title" data-lan-eng="">템플릿 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<!-- 등록일시 -->
 					<div class="grid-item">
-						<label class="label-name">등록일시</label>
+						<label class="label-name" data-lan-eng="">등록일시</label>
 						<input type="text" class="form-control" value="2025-01-01 12:12" readonly>
 					</div>
 
 					<!-- 템플릿명 (전체폭) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">템플릿명 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">템플릿명 <span class="req">*</span></label>
 						<input type="text" class="form-control" value="벚꽃 테마 5박 6일 투어" placeholder="템플릿명을 입력하세요">
 					</div>
 
@@ -68,13 +67,13 @@
 
 					<!-- 상품명 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">상품명 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">상품명 <span class="req">*</span></label>
 						<input type="text" class="form-control" value="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
 					</div>
 
 					<!-- 판매 대상 / 대분류 / 중분류 -->
 					<div class="grid-item">
-						<label class="label-name">판매 대상 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">판매 대상 <span class="req">*</span></label>
 						<select class="select">
 							<option selected>B2B</option>
 							<option>B2C</option>
@@ -82,7 +81,7 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name">대분류 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">대분류 <span class="req">*</span></label>
 						<select class="select">
 							<option selected>계절별</option>
 							<option>지역별</option>
@@ -91,7 +90,7 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name">중분류 <span class="req">*</span></label>
+						<label class="label-name" data-lan-eng="">중분류 <span class="req">*</span></label>
 						<select class="select">
 							<option selected>봄</option>
 							<option>여름</option>
@@ -372,7 +371,7 @@
 
 				<!-- 숙소 정보 -->
 				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">숙소 정보</h4>
+					<h4 class="grid-wrap-title" data-lan-eng="">숙소 정보</h4>
 
 					<div class="grid-wrap grid-highlight jw-mgt12">
 						<div class="grid-item col-span-3">
@@ -406,7 +405,7 @@
 
 				<!-- 교통편 정보 -->
 				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">교통편 정보</h4>
+					<h4 class="grid-wrap-title" data-lan-eng="">교통편 정보</h4>
 					<div class="grid-wrap grid-highlight jw-mgt12">
 						<div class="grid-item col-span-3">
 							<label class="label-name">설명</label>
@@ -419,7 +418,7 @@
 
 				<!-- 식사 정보 -->
 				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">식사 정보</h4>
+					<h4 class="grid-wrap-title" data-lan-eng="">식사 정보</h4>
 					<div class="grid-wrap grid-highlight jw-mgt12">
 						<div class="grid-item">
 							<label class="label-name">조식</label>
@@ -493,7 +492,7 @@
 			
 			<!-- 싱글룸 이용 요금 -->
 			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">싱글룸 이용 요금</h3>
+				<h3 class="grid-wrap-title" data-lan-eng="">싱글룸 이용 요금</h3>
 
 				<div class="grid-wrap jw-mgt16">
 					<div class="grid-item">
@@ -507,10 +506,10 @@
 			</div>
 
 
-			<h2 class="section-title">포함/불포함 사항</h2>
+			<h2 class="section-title" data-lan-eng="">포함/불포함 사항</h2>
 			<!-- 포함 사항 -->
 			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">포함 사항</h3>
+				<h3 class="grid-wrap-title" data-lan-eng="">포함 사항</h3>
 
 				<!-- 상단 액션 -->
 				<div class="jw-mgt12">
@@ -557,7 +556,7 @@
 			</div>
 			<!-- 불포함 사항 -->
 			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">불포함 사항</h3>
+				<h3 class="grid-wrap-title" data-lan-eng="">불포함 사항</h3>
 
 				<!-- 상단 액션 -->
 				<div class="jw-mgt12">
@@ -603,7 +602,7 @@
 				</div>
 			</div>
 
-			<h2 class="section-title">이용안내</h2>
+			<h2 class="section-title" data-lan-eng="">이용안내</h2>
 			<!-- 이용안내 -->
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap jw-mgt0">
@@ -633,7 +632,7 @@
 			</div>
 
 
-			<h2 class="section-title">취소/환불 규정</h2>
+			<h2 class="section-title" data-lan-eng="">취소/환불 규정</h2>
 			<!-- 취소/환불 규정 -->
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap jw-mgt0">
@@ -650,7 +649,7 @@
 			</div>
 
 
-			<h2 class="section-title">비자 신청 안내</h2>
+			<h2 class="section-title" data-lan-eng="">비자 신청 안내</h2>
 			<!-- 비자 신청 안내 -->
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap jw-mgt0">

@@ -7,6 +7,9 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/a_reset.css">
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
@@ -24,7 +27,7 @@
 		<nav class="layout-nav"></nav>
 
 		<section class="layout-content">
-			<h1 class="page-title">가이드 목록</h1>
+			<h1 class="page-title" data-lan-eng="">가이드 목록</h1>
 
 			<div class="card-panel jw-mgt32">
 
@@ -59,15 +62,15 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>가이드명</th>
-							<th>이메일</th>
-							<th>연락처</th>
-							<th>계약 기간</th>
-							<th class="is-center">활동 상태</th>
+							<th data-lan-eng="">가이드명</th>
+							<th data-lan-eng="">이메일</th>
+							<th data-lan-eng="">연락처</th>
+							<th data-lan-eng="">계약 기간</th>
+							<th data-lan-eng="" class="is-center">활동 상태</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">10</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -75,7 +78,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">9</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -83,7 +86,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약 종료</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">8</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -91,7 +94,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">7</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -99,7 +102,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">6</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -107,7 +110,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">5</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -115,7 +118,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">4</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -123,7 +126,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">3</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -131,7 +134,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">2</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -139,7 +142,7 @@
 							<td class="is-center">2024-06-01 ~ 2027-06-01</td>
 							<td class="is-center">계약중</td>
 						</tr>
-						<tr>
+						<tr onclick="temp_link('guide-detail.html')">
 							<td class="no is-center">1</td>
 							<td class="is-center">Hyunwoo Park</td>
 							<td class="is-center">hyunwoo@gmail.com</td>
@@ -189,8 +192,8 @@
 			</div>
 
 			<div class="controller">
-				<button type="button" class="jw-button typeA">다운로드</button>
-				<button type="button" class="jw-button typeB"><img src="../image/buttonB.svg" alt="">Add New Guide</button>
+				<button type="button" class="jw-button typeA" data-lan-eng="">다운로드</button>
+				<button type="button" class="jw-button typeB" onclick="temp_link('guide-registration.html')"><img src="../image/buttonB.svg" alt="">Add New Guide</button>
 			</div>
 
 		</section>

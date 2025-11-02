@@ -25,12 +25,9 @@
 
 		<section class="layout-content">
 			<div class="page-toolbar">
-				<a href="../agents/agent-list.html" class="jw-button jw-button-back" aria-label="목록으로 돌아가기">
-					<svg class="icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-						<path d="M9.5 3L5 8l4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span>목록으로 돌아가기</span>
+				<a href="customer-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
@@ -45,21 +42,21 @@
 				</div>
 			</div>
 			
-			<h1 class="page-title">고객 상세</h1>
+			<h1 class="page-title" data-lan-eng="">고객 상세</h1>
 
 
-			<h2 class="section-title">기본 정보</h2>
+			<h2 class="section-title" data-lan-eng="">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<!-- 1행: 고객명 / 연락처 / 이메일 -->
 					<div class="grid-item">
-						<label class="label-name" for="cust_name">고객명</label>
+						<label class="label-name" for="cust_name" data-lan-eng="">고객명</label>
 						<input id="cust_name" type="text" class="form-control" value="Jose Ramirez" placeholder="고객명">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_phone">연락처</label>
+						<label class="label-name" for="cust_phone" data-lan-eng="">연락처</label>
 						<div class="field-row">
 							<select class="select w-auto" aria-label="국가 코드">
 								<option selected>+63</option>
@@ -73,7 +70,7 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_email">이메일</label>
+						<label class="label-name" for="cust_email" data-lan-eng="">이메일</label>
 						<input id="cust_email" type="email" class="form-control" value="ramirez@gmail.com"
 							placeholder="email@example.com">
 					</div>
@@ -89,18 +86,18 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_no">고객 번호</label>
+						<label class="label-name" for="cust_no" data-lan-eng="">고객 번호</label>
 						<input id="cust_no" type="text" class="form-control" value="B100231" disabled>
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_branch">소속 지점명</label>
+						<label class="label-name" for="cust_branch" data-lan-eng="">소속 지점명</label>
 						<input id="cust_branch" type="text" class="form-control" value="Bacolod City" disabled>
 					</div>
 
 					<!-- 3행: 등록일시 -->
 					<div class="grid-item">
-						<label class="label-name" for="created_at">등록일시</label>
+						<label class="label-name" for="created_at" data-lan-eng="">등록일시</label>
 						<input id="created_at" type="text" class="form-control" value="2025-06-20 12:12" disabled>
 					</div>
 					<div class="grid-item"></div>
@@ -108,7 +105,7 @@
 
 					<!-- 4행: 메모(에디터, 전체폭) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="memo">메모</label>
+						<label class="label-name" for="memo" data-lan-eng="">메모</label>
 						<div class="editor-box-wrap">
 							<textarea id="memo" rows="10" placeholder="메모입력란입니다.">메모입력란입니다.</textarea>
 						</div>
@@ -118,13 +115,13 @@
 			</div>
 
 
-			<h2 class="section-title">여행자 정보</h2>
+			<h2 class="section-title" data-lan-eng="">여행자 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<!-- 1행: 호칭 / 이름 / 성 -->
 					<div class="grid-item">
-						<label class="label-name" for="title_code">호칭</label>
+						<label class="label-name" for="title_code" data-lan-eng="">호칭</label>
 						<div class="field-row">
 							<select id="title_code" class="select">
 								<option selected>MR</option>
@@ -136,18 +133,18 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="first_name">이름</label>
+						<label class="label-name" for="first_name" data-lan-eng="">이름</label>
 						<input id="first_name" type="text" class="form-control" value="Jose" placeholder="이름">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="last_name">성</label>
+						<label class="label-name" for="last_name" data-lan-eng="">성</label>
 						<input id="last_name" type="text" class="form-control" value="Ramirez" placeholder="성">
 					</div>
 
 					<!-- 2행: 성별 / 나이 / 생년월일 -->
 					<div class="grid-item">
-						<label class="label-name" for="gender">성별</label>
+						<label class="label-name" for="gender" data-lan-eng="">성별</label>
 						<select id="gender" class="select">
 							<option selected>남성</option>
 							<option>여성</option>
@@ -161,38 +158,38 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="birth">생년월일</label>
+						<label class="label-name" for="birth" data-lan-eng="">생년월일</label>
 						<input id="birth" type="text" class="form-control" value="19710101" placeholder="YYYYMMDD"
 							inputmode="numeric">
 					</div>
 
 					<!-- 3행: 출신국가 / 여권번호 / 여권 발행일 -->
 					<div class="grid-item">
-						<label class="label-name" for="nationality">출신국가</label>
+						<label class="label-name" for="nationality" data-lan-eng="">출신국가</label>
 						<input id="nationality" type="text" class="form-control" value="필리핀" placeholder="국가">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="passport_no">여권번호</label>
+						<label class="label-name" for="passport_no" data-lan-eng="">여권번호</label>
 						<input id="passport_no" type="text" class="form-control" value="P1234567" placeholder="여권번호">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="passport_issue">여권 발행일</label>
+						<label class="label-name" for="passport_issue" data-lan-eng="">여권 발행일</label>
 						<input id="passport_issue" type="text" class="form-control" value="20200101" placeholder="YYYYMMDD"
 							inputmode="numeric">
 					</div>
 
 					<!-- 4행: 여권 만료일 / 여권 사진(중간 컬럼) / 여분 -->
 					<div class="grid-item">
-						<label class="label-name" for="passport_expire">여권 만료일</label>
+						<label class="label-name" for="passport_expire" data-lan-eng="">여권 만료일</label>
 						<input id="passport_expire" type="text" class="form-control" value="20300101" placeholder="YYYYMMDD"
 							inputmode="numeric">
 					</div>
 
 					<!-- 여권 사진 -->
 					<div class="grid-item">
-						<label class="label-name">여권 사진</label>
+						<label class="label-name" data-lan-eng="">여권 사진</label>
 						<div class="upload-box">
 							<input id="file-passport" type="file" accept="image/*">
 							<label for="file-passport" class="thumb" aria-label="preview"></label>
@@ -213,7 +210,7 @@
 			</div>
 
 
-			<h2 class="section-title">예약 내역</h2>
+			<h2 class="section-title" data-lan-eng="">예약 내역</h2>
 			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
@@ -228,12 +225,12 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>상품명</th>
-							<th>예약일</th>
-							<th>여행 시작일</th>
-							<th>예약 상태</th>
-							<th>예약 인원</th>
-							<th>주문 금액 (₱)</th>
+							<th data-lan-eng="">상품명</th>
+							<th data-lan-eng="">예약일</th>
+							<th data-lan-eng="">여행 시작일</th>
+							<th data-lan-eng="">예약 상태</th>
+							<th data-lan-eng="">예약 인원</th>
+							<th data-lan-eng="">주문 금액 (₱)</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -321,7 +318,7 @@
 
 			</div>
 
-			<h2 class="section-title">문의 내역</h2>
+			<h2 class="section-title" data-lan-eng="">문의 내역</h2>
 			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
@@ -335,11 +332,11 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th>문의 유형</th>
-							<th>문의 제목</th>
-							<th>작성일</th>
-							<th>답변 여부</th>
-							<th>처리 상태</th>
+							<th data-lan-eng="">문의 유형</th>
+							<th data-lan-eng="">문의 제목</th>
+							<th data-lan-eng="">작성일</th>
+							<th data-lan-eng="">답변 여부</th>
+							<th data-lan-eng="">처리 상태</th>
 						</tr>
 					</thead>
 					<tbody>
