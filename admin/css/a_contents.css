@@ -52,7 +52,7 @@ body { min-height: 100vh; display: flex; flex-direction: column; background: #EC
 .layout-content.layout-content-aside { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:24px; align-items:start; }
 
 .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.list-header .result-count { color:#121212; font-size:16px; }
+.list-header .result-count { color:#121212; font-size:16px; display:flex; align-items:center; gap:10px; }
 
 .search-form { display:flex; justify-content:center; align-items:center; gap:10px; }
 .search-form > .search-field { min-width:348px; height:46px; border: 1px solid #D4D4D4; border-radius:12px; display:flex; align-items:center; gap:10px; padding:0 24px; }

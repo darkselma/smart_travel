@@ -202,7 +202,12 @@ class Modal {
 			try {
 				const html = await this._loadHTML(this.action, this.sq);
 				d.innerHTML = html;
-				if (window.jw_select) jw_select();
+
+				const lang = getCookie('lang') || 'eng';
+				setCookie('lang', lang, 365);
+				await Promise.resolve(language_apply(lang));
+				if (typeof jw_select === 'function') await Promise.resolve(jw_select());
+
 				const closeBtn = d.querySelector('#closeDialog');
 				if (closeBtn) {
 					closeBtn.addEventListener('click', () => this.close(), { once: true });
@@ -325,3 +330,7 @@ function layerToggle(btn) {
 	menu.classList.toggle('on');
 }
 
+/* 임시 */
+function temp_link(v){
+	location.href=v;
+}
