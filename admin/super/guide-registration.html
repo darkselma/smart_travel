@@ -32,30 +32,30 @@
 			<div class="page-toolbar">
 				<a href="guide-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
-					<span data-lan-eng="">목록으로 돌아가기</span>
+					<span data-lan-eng="Return to list">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title" data-lan-eng="">가이드 등록</h1>
+			<h1 class="page-title" data-lan-eng="Register Guide">가이드 등록</h1>
 
-			<h2 class="section-title jw-mgt32">기본 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Basic Information">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">가이드명</label>
+						<label class="label-name" data-lan-eng="Guide Name">가이드명</label>
 						<input type="text" class="form-control" placeholder="가이드명">
 					</div>
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">이메일</label>
+						<label class="label-name" data-lan-eng="Email">이메일</label>
 						<input type="email" class="form-control" placeholder="이메일">
 					</div>
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">연락처</label>
+						<label class="label-name" data-lan-eng="Contacts">연락처</label>
 						<div class="field-row">
 							<select class="select w-auto">
 								<option selected>+82</option>
@@ -72,43 +72,48 @@
 					<div class="grid-item">
 						<label class="label-name">PW</label>
 						<div class="input-box">
-							<input type="password" value="" placeholder="8~12자, 영문/숫자/특수문자 포함">
-							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt="">자동 입력</button>
+							<input type="password" value="" placeholder="8~12자, 영문/숫자/특수문자 포함" data-lan-eng="8~12 characters, including English letters/numbers/special characters">
+							<button type="button" class="jw-button typeD" onclick="makepassword(this)"><img src="../image/replay.svg" alt=""><span data-lan-eng="Auto Input">자동 입력</span></button>
 						</div>
 					</div>
 					<div class="grid-item"></div>
 
 					<!-- 3행 : 증명사진 -->
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">증명사진</label>
-						<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> 이미지 업로드</button>
+						<label class="label-name" data-lan-eng="ID Photo">증명사진</label>
+						<label class="inputFile">
+							<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
+						</label>
+
+						
 					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 
 					<!-- 4행 : 가이드 소개 전체폭 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">가이드 소개</label>
+						<label class="label-name" data-lan-eng="Guide Introduction">가이드 소개</label>
 						<div class="editor-box-wrap">
-							<textarea rows="8" placeholder="내용을 입력해주세요"></textarea>
+							<textarea rows="8" placeholder="내용을 입력해주세요" data-lan-eng="Please enter your content"></textarea>
 						</div>
 					</div>
 
 					<!-- 5행 : 메모 전체폭 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">메모</label>
+						<label class="label-name" data-lan-eng="Note">메모</label>
 						<div class="editor-box-wrap">
-							<textarea rows="8" placeholder="내용을 입력해주세요"></textarea>
+							<textarea rows="8" placeholder="내용을 입력해주세요" data-lan-eng="Please enter your content"></textarea>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">계약 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Contract Information">계약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">계약 기간</label>
+						<label class="label-name" data-lan-eng="Contract period">계약 기간</label>
 						<div class="field-row">
 							<input type="date" class="form-control" name="contract_start" value="2024-06-01" aria-label="계약 시작일">
 							<span class="w-auto" aria-hidden="true">~</span>

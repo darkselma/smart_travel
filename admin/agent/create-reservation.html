@@ -31,25 +31,20 @@
 				<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
 			</div>
 		
-			<h2 class="section-title jw-mgt32" data-lan-eng="">상품 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Product Information">상품 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
-					<!-- 1행 : 상품명 + 검색 버튼 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">상품명 <span class="req">*</span></label>
+						<label class="label-name"><span data-lan-eng="Product Name">상품명</span> <span class="req">*</span></label>
 						<div class="jw-center jw-gap20">
 							<input type="text" class="form-control jw-wf" placeholder="상품을 선택해주세요" aria-required="true">
-							<button type="button" class="jw-button typeA"><img src="../image/search2.svg" alt="">상품 검색</button>
+							<button type="button" class="jw-button typeA"><img src="../image/search2.svg" alt=""><span data-lan-eng="Product Search">상품 검색</span></button>
 						</div>
 					</div>
-
-					<!-- 2행 : 여행 시작일 -->
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">여행 시작일 <span class="req">*</span></label>
+						<label class="label-name"><span data-lan-eng="Travel start date">여행 시작일</span> <span class="req">*</span></label>
 						<input type="text" class="form-control" placeholder="상품을 선택해주세요" aria-required="true">
 					</div>
-
-					<!-- 컬럼 맞춤용 빈칸 -->
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 				</div>
@@ -57,24 +52,24 @@
 
 
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">예약 고객 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Customer Information">예약 고객 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 이름 -->
 					<div class="grid-item">
-						<label for="user_name" class="form-label required" data-lan-eng="">이름</label>
+						<label for="user_name" class="form-label required"><span data-lan-eng="Name">이름</span> <span class="req">*</span></label>
 						<input type="text" id="user_name" class="form-control" placeholder="이름" aria-required="true">
 					</div>
 
 					<!-- 이메일 -->
 					<div class="grid-item">
-						<label for="user_email" class="form-label required" data-lan-eng="">이메일</label>
+						<label for="user_email" class="form-label required"><span data-lan-eng="Email">이메일</span> <span class="req">*</span></label>
 						<input type="email" id="user_email" class="form-control" placeholder="이메일" aria-required="true">
 					</div>
 
 					<!-- 연락처 -->
 					<div class="grid-item">
-						<label for="user_phone" class="form-label required" data-lan-eng="">연락처</label>
+						<label for="user_phone" class="form-label required"><span data-lan-eng="Contact">연락처</span> <span class="req">*</span></label>
 						<div class="field-row">
 							<select class="select">
 								<option>+63</option>
@@ -86,11 +81,11 @@
 			</div>
 
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">여행 고객 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Travel Customer Information">여행 고객 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<!-- 상단 액션 -->
 				<div class="jw-mgb12">
-					<button type="button" class="jw-button typeA" data-lan-eng="">＋ 고객 추가</button>
+					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add Customer">＋ 고객 추가</button>
 				</div>
 
 				<!-- 가로 스크롤 테이블 -->
@@ -112,14 +107,14 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th data-lan-eng="">대표 여행자</th>
-								<th data-lan-eng="">인원 옵션</th>
-								<th data-lan-eng="">비자 신청 여부</th>
-								<th data-lan-eng="">호칭</th>
-								<th data-lan-eng="">이름</th>
-								<th data-lan-eng="">성</th>
-								<th data-lan-eng="">성별</th>
-								<th data-lan-eng="">나이</th>
+								<th data-lan-eng="Main traveler">대표 여행자</th>
+								<th data-lan-eng="Number of people option">인원 옵션</th>
+								<th data-lan-eng="Visa application status">비자 신청 여부</th>
+								<th data-lan-eng="Title">호칭</th>
+								<th data-lan-eng="Name">이름</th>
+								<th data-lan-eng="Nature">성</th>
+								<th data-lan-eng="Gender">성별</th>
+								<th data-lan-eng="Age">나이</th>
 							</tr>
 						</thead>
 
@@ -213,46 +208,46 @@
 			</div>
 
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">예약 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Reservation Information">예약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">룸 옵션 <span aria-hidden="true">*</span></label>
-						<button type="button" class="jw-button">룸 옵션 선택</button>
+						<label class="label-name"><span data-lan-eng="Room Options">룸 옵션 </span><span aria-hidden="true">*</span></label>
+						<button type="button" class="jw-button" data-lan-eng="Select Room Options">룸 옵션 선택</button>
 					</div>
 					
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 
 					<div class="grid-item">
-						<label class="label-name" for="opt_breakfast">기내 수화물 추가 <span aria-hidden="true">*</span></label>
+						<label class="label-name" for="opt_breakfast"><span data-lan-eng="Carry-on baggage additional">기내 수화물 추가</span> <span aria-hidden="true">*</span></label>
 						<select id="opt_breakfast" class="select">
-							<option selected>선택안함</option>
+							<option selected data-lan-eng="Not selected">선택안함</option>
 							<option></option>
 						</select>
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="opt_breakfast">조식 신청 <span aria-hidden="true">*</span></label>
+						<label class="label-name" for="opt_breakfast"><span data-lan-eng="Breakfast Request">조식 신청</span> <span aria-hidden="true">*</span></label>
 						<select id="opt_breakfast" class="select">
-							<option selected>미신청</option>
+							<option selected data-lan-eng="Not applied">미신청</option>
 							<option>신청</option>
 						</select>
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="opt_wifi">와이파이 대여 <span aria-hidden="true">*</span></label>
+						<label class="label-name" for="opt_wifi"><span data-lan-eng="WiFi Rental">와이파이 대여</span> <span aria-hidden="true">*</span></label>
 						<select id="opt_wifi" class="select">
-							<option selected>미신청</option>
+							<option selected data-lan-eng="Not applied">미신청</option>
 							<option>신청</option>
 						</select>
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="opt_baggage">기내 수화물 추가 <span aria-hidden="true">*</span></label>
+						<label class="label-name" for="opt_baggage"><span data-lan-eng="">기내 수화물 추가</span> <span aria-hidden="true">*</span></label>
 						<select id="opt_baggage" class="select">
-							<option selected>선택안함</option>
+							<option selected data-lan-eng="Not applied">선택안함</option>
 							<option>15kg 추가</option>
 							<option>20kg 추가</option>
 							<option>30kg 추가</option>
@@ -260,14 +255,14 @@
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="seat_req" data-lan-eng="">항공 좌석 요청사항</label>
+						<label class="label-name" for="seat_req" data-lan-eng="Airline seat request details">항공 좌석 요청사항</label>
 						<div class="editor-box-wrap">
 							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" ></textarea>
 						</div>
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="etc_req" data-lan-eng="">기타 요청사항</label>
+						<label class="label-name" for="etc_req" data-lan-eng="Other requests">기타 요청사항</label>
 
 						<div class="editor-box-wrap">
 							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" ></textarea>
@@ -278,11 +273,11 @@
 			</div>
 
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">결제 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Agent Notes">결제 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="memo_text">메모</label>
+						<label class="label-name" for="memo_text" data-lan-eng="Note">메모</label>
 						<div class="editor-box-wrap">
 							<textarea id="q-content" rows="6" placeholder="내용을 입력해주세요" ></textarea>
 						</div>
@@ -291,36 +286,36 @@
 			</div>
 			
 			
-			<h2 class="section-title jw-mgt32" data-lan-eng="">결제 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Payment Information">결제 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<div class="grid-item">
-						<label class="label-name" for="pay_total">주문 금액 (₱)</label>
+						<label class="label-name" for="pay_total" data-lan-eng="Order Amount (₱)">주문 금액 (₱)</label>
 						<input id="pay_total" type="text" class="form-control" value="0" disabled>
 					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 
 					<div class="grid-item">
-						<label class="label-name req" for="pay_deposit">선금 (₱) <span class="reqmark">*</span></label>
+						<label class="label-name req" for="pay_deposit"><span data-lan-eng="Advance payment (₱)">선금 (₱)</span> <span class="reqmark">*</span></label>
 						<input id="pay_deposit" type="number" inputmode="numeric" class="form-control" placeholder="숫자 입력">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name req" for="deposit_due">선금 입금 기한 <span class="reqmark">*</span></label>
+						<label class="label-name req" for="deposit_due"><span data-lan-eng="Advance payment deposit deadline">선금 입금 기한 </span><span class="reqmark">*</span></label>
 						<input id="" type="date" class="form-control" >
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="deposit_file">선금 증빙 파일</label>
+						<label class="label-name" for="deposit_file"><span data-lan-eng="Advance payment proof file">선금 증빙 파일</span></label>
 						<div class="field-col">
 							<label class="inputFile">
 								<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
 								<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
 							</label>
 
-							<p class="help-text" style="color:#d58b00; margin-top:8px;">
+							<p class="help-text" style="color:#d58b00; margin-top:8px;" data-lan-eng="Please upload the file within the set deposit deadline.<br>If not uploaded within the deadline, your reservation will be canceled.">
 								설정한 선금 입금 기한 내에 파일을 업로드 해주세요.<br>
 								기한 내에 업로드 되지 않을 시 예약이 취소됩니다.
 							</p>
@@ -328,7 +323,7 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="pay_balance">잔금 (₱)</label>
+						<label class="label-name" for="pay_balance" data-lan-eng="Balance (₱)">잔금 (₱)</label>
 						<input id="pay_balance" type="text" class="form-control" value="0" disabled>
 					</div>
 

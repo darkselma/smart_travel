@@ -1,0 +1,7516 @@
+{
+    "admin": [
+        [
+            "아이디",
+            "ID"
+        ],
+        [
+            "아이디",
+            "ID"
+        ],
+        [
+            "비밀번호",
+            "Password"
+        ],
+        [
+            "비밀번호",
+            "Password"
+        ],
+        [
+            "아이디 저장",
+            "Remember ID"
+        ],
+        [
+            "아이디 찾기",
+            "Find ID"
+        ],
+        [
+            "비밀번호 재설정",
+            "Reset Password"
+        ],
+        [
+            "로그인",
+            "Login"
+        ]
+    ]
+},
+{
+    "overview.html": [
+        [
+            "운영현황",
+            "Operating Status"
+        ],
+        [
+            "예약 현황",
+            "Reservation Status"
+        ],
+        [
+            "선금 확인 전",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "잔금 확인 전",
+            "Waiting for balance payment"
+        ],
+        [
+            "8건",
+            ""
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "문의 현황",
+            "Inquiry Status"
+        ],
+        [
+            "미답변",
+            "Unanswered"
+        ],
+        [
+            "15건",
+            ""
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "처리중",
+            "Processing"
+        ],
+        [
+            "7건",
+            ""
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "오늘 여행 일정",
+            "Today's Travel Itinerary"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            "Travel period"
+        ],
+        [
+            "고객 유형",
+            "Customer Type"
+        ],
+        [
+            "인원 수",
+            "Number of people"
+        ],
+        [
+            "배정 가이드",
+            "Assignment Guide"
+        ],
+        [
+            "매출 통계",
+            "Sales Statistics"
+        ],
+        [
+            "기간 선택",
+            "Select period"
+        ],
+        [
+            "일간",
+            "Daily"
+        ],
+        [
+            "주간",
+            "Weekly"
+        ],
+        [
+            "월간",
+            "Annual"
+        ],
+        [
+            "연간",
+            "All"
+        ],
+        [
+            "총 매출액 (₱)",
+            "Total sales amount (₱)"
+        ],
+        [
+            "상품별 판매 현황",
+            "Sales Status by Product"
+        ],
+        [
+            "기간 선택",
+            "Select period"
+        ],
+        [
+            "일간",
+            "Daily"
+        ],
+        [
+            "주간",
+            "Weekly"
+        ],
+        [
+            "월간",
+            "Annual"
+        ],
+        [
+            "연간",
+            "All"
+        ],
+        [
+            "총 판매 건수",
+            "Total number of sales"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "조회수",
+            "Views"
+        ],
+        [
+            "예약건수",
+            "Number of reservations"
+        ],
+        [
+            "예약률",
+            "Reservation rate"
+        ],
+        [
+            "판매액",
+            "Sales amount"
+        ]
+    ]
+},
+{
+    "member-list.html": [
+        [
+            "전체 회원 목록",
+            "Member List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Customer Name Search"
+        ],
+        [
+            "회원 유형",
+            "Member type"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "b2b-customer-list.html": [
+        [
+            "B2B 고객 목록",
+            "B2B Customer List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "전체",
+            "all"
+        ],
+        [
+            "전체",
+            "all"
+        ],
+        [
+            "고객명 검색",
+            "Customer Name Search"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "b2c-customer-list.html": [
+        [
+            "B2C 고객 목록",
+            "B2C Customer List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Customer Name Search"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "agent-list.html": [
+        [
+            "에이전트 목록",
+            "Agent List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Agent Name Search"
+        ],
+        [
+            "지점명",
+            "Agent Name"
+        ],
+        [
+            "담당자",
+            "Person in charge"
+        ],
+        [
+            "계약 기간",
+            "Contract period"
+        ],
+        [
+            "활동 상태",
+            "Activity Status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "guide-list.html": [
+        [
+            "가이드 목록",
+            "Guide List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Search Guide Name"
+        ],
+        [
+            "가이드명",
+            "Guide Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "계약 기간",
+            "Contract period"
+        ],
+        [
+            "활동 상태",
+            "Activity Status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "b2b-booking-list.html": [
+        [
+            "B2B 예약 목록",
+            "B2B Reservation List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "전체 상태",
+            ""
+        ],
+        [
+            "전체",
+            ""
+        ],
+        [
+            "전체",
+            "all"
+        ],
+        [
+            "전체",
+            "all"
+        ],
+        [
+            "고객명 검색",
+            "Search"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "예약자명",
+            "Reserver's name"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "배정 가이드",
+            "Assignment Guide"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "잔금 입금 대기",
+            "Waiting for balance payment"
+        ],
+        [
+            "예약 확정",
+            "Reservation confirmed"
+        ],
+        [
+            "여행 완료",
+            "Trip completed"
+        ],
+        [
+            "여행 완료",
+            "Trip completed"
+        ],
+        [
+            "예약 취소",
+            "Reservation cancellation"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "b2c-booking-list.html": [
+        [
+            "B2C 예약 목록",
+            "B2C Reservation List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Search"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약자명",
+            "Reserver's name"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "배정 가이드",
+            "Assignment Guide"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "입금 대기",
+            "Payment completed"
+        ],
+        [
+            "예약 확정",
+            "Payment cancellation"
+        ],
+        [
+            "여행 완료",
+            "Payment Suspension"
+        ],
+        [
+            "예약 취소",
+            "Trip completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "sales-date.html": [
+        [
+            "날짜별 매출",
+            "Sales by date"
+        ],
+        [
+            "기간 선택",
+            "Select period"
+        ],
+        [
+            "일간",
+            "Daily"
+        ],
+        [
+            "주간",
+            "Weekly"
+        ],
+        [
+            "월간",
+            "Monthly"
+        ],
+        [
+            "연간",
+            "Annual"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "시간대",
+            "Time zone"
+        ],
+        [
+            "총 매출액 (₱)",
+            "Total sales amount (₱)"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "sales-product.html": [
+        [
+            "상품별 매출",
+            "Sales by product"
+        ],
+        [
+            "기간 선택",
+            "Select period"
+        ],
+        [
+            "일간",
+            "Daily"
+        ],
+        [
+            "주간",
+            "Weekly"
+        ],
+        [
+            "월간",
+            "Monthly"
+        ],
+        [
+            "연간",
+            "Annual"
+        ],
+        [
+            "전체",
+            "All"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "조회수",
+            "Views"
+        ],
+        [
+            "예약건수",
+            "Number of reservations"
+        ],
+        [
+            "예약률",
+            "Reservation rate"
+        ],
+        [
+            "판매액 (₱)",
+            "Sales Amount (₱)"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "product-list.html": [
+        [
+            "상품 목록",
+            "Product List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "전체 상태",
+            "Overall status"
+        ],
+        [
+            "제품명 검색",
+            "Search Product Name"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "잔여 수량",
+            "Remaining quantity"
+        ],
+        [
+            "판매 기간",
+            "Sales period"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ]
+    ]
+},
+{
+    "product-registration.html": [
+        [
+            "상품 등록",
+            "Product Registration"
+        ],
+        [
+            "임시저장",
+            "Temporary save"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "템플릿 불러오기",
+            "Load Template"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "판매 대상 *",
+            ""
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류 *",
+            ""
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "계절별",
+            "Select main category"
+        ],
+        [
+            "중분류 *",
+            ""
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "대분류를 먼저 선택해주세요",
+            "Please select a main category first"
+        ],
+        [
+            "상품 설명 *",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상세 소개 이미지 *",
+            "Detailed introduction image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "판매 기간",
+            "Sale period *"
+        ],
+        [
+            "기간은 최대 100일까지만 설정이 가능합니다.",
+            "The period can only be set up to a maximum of 100 days."
+        ],
+        [
+            "숫자 입력",
+            "Minimum departure headcount"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "기본 항공 요금 (₱)",
+            "Basic Airfare (₱)"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "＋ 관광지 추가",
+            "＋ Add Tourist Attraction"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule end time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "주소를 검색해주세요",
+            "Please search for an address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "관광지 이미지 *",
+            "Sight Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "",
+            "Delete tourist attraction"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "숙소 이미지 *",
+            "Accommodation image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "교통편 정보",
+            "Transportation Information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱) *"
+        ],
+        [
+            "숫자 입력",
+            "Enter numbers"
+        ],
+        [
+            "* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.",
+            "* When booking for 2 or more people, you will be charged for the number of single rooms selected. For 1 person booking, it is applied for free."
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "구성 요소",
+            "Components"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "1일차",
+            "1st day"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일차 추가",
+            "Add day"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ]
+    ]
+},
+{
+    "product-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 상세",
+            "Product Details"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "템플릿 불러오기",
+            "Load Template"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "상품코드",
+            "Product code"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "상품 설명",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상세 소개 이미지",
+            "Detailed introduction image"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "판매 기간",
+            "Sale period"
+        ],
+        [
+            "기간은 최대 100일까지만 설정이 가능합니다.",
+            "The period can only be set up to a maximum of 100 days."
+        ],
+        [
+            "최소 출발 인원",
+            "Minimum departure headcount"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "기본 항공 요금 (₱)",
+            "Basic airfare (₱)"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "항공편 출발일",
+            "Flight departure date"
+        ],
+        [
+            "예약된 인원",
+            "Reserved personnel"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "항공 요금 (₱)",
+            "Airfare (₱)"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "인천 도착",
+            "Arrival at Incheon"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "＋ 관광지 추가",
+            "＋ Add Tourist Attraction"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule end time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "관광지 이미지 *",
+            "Sight Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "",
+            "Delete tourist attraction"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "숙소 이미지",
+            "Accommodation image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "교통편 정보",
+            "Transportation Information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱) *"
+        ],
+        [
+            "* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.",
+            "* When booking for 2 or more people, you will be charged for the number of single rooms selected. For 1 person booking, it is applied for free."
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "No",
+            ""
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "This is an explanation"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "This is an explanation"
+        ],
+        [
+            "템플릿으로 저장하기",
+            "Save as Template"
+        ],
+        [
+            "구성 요소",
+            "Components"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "1일차",
+            "1st day"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "2일차",
+            "Day 2"
+        ],
+        [
+            "일차 추가",
+            "Add day"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ]
+    ]
+},
+{
+    "product-preview.html": [
+        [
+            "미리보기",
+            "Preview"
+        ],
+        [
+            "취소",
+            "Cancel"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함",
+            "Seoul Cherry Blossom Highlights 6-Day, 5-Night Package – Includes Full Itinerary Guide and Meals, with Visits to Nami Island, Seokchon Lake, and Yunjung-ro"
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "계절별",
+            "Seasonal"
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "봄",
+            "Spring"
+        ],
+        [
+            "상품 설명",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "상세 소개 이미지",
+            "Detailed introduction image"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "판매 기간",
+            "Sales period"
+        ],
+        [
+            "최소 출발 인원",
+            "Minimum number of participants required"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "기본 현장 요금 (¥)",
+            "Basic Airfare (₱)"
+        ],
+        [
+            "옵션별 판매 조건",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "일정별 옵션명",
+            "Flight departure date"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "현장 요금 (¥)",
+            "Airfare (₱)"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "인천 도착",
+            "Arrival at Incheon"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule End Time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "관광지 이미지",
+            "Sight Image"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "숙소 이미지",
+            "Accommodation images"
+        ],
+        [
+            "교통편 정보",
+            "Transportation Information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱)"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "전 일정 숙박 (2인 1실 기준)",
+            "All accommodation (based on 2 people per room)"
+        ],
+        [
+            "전용 차량 및 전문 가이드 동행",
+            "Accompanied by a dedicated vehicle and professional guide"
+        ],
+        [
+            "일정 내 명시된 식사 및 입장료 일체 포함",
+            "All meals and entrance fees specified in the schedule are included"
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "개인 여행자 보험 및 개인 경비",
+            "Personal travel insurance and personal expenses"
+        ],
+        [
+            "자유 일정 시 식사 및 교통비",
+            "Meals and transportation costs during free time"
+        ],
+        [
+            "매너 팁 및 선택 관광 비용",
+            "Manner tips and optional tourism costs"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명입니다",
+            "This is an explanation"
+        ]
+    ]
+},
+{
+    "template-list.html": [
+        [
+            "템플릿 목록",
+            "Template List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "템플릿명",
+            "Template name"
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "일정 기간",
+            "Schedule period"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ]
+    ]
+},
+{
+    "category-management.html": [
+        [
+            "카테고리 관리",
+            ""
+        ],
+        [
+            "카테고리 관리",
+            ""
+        ],
+        [
+            "계절별",
+            "Seasonal"
+        ],
+        [
+            "중분류 추가",
+            "Add subcategory"
+        ],
+        [
+            "지역별",
+            "By region"
+        ],
+        [
+            "중분류 추가",
+            "Add subcategory"
+        ],
+        [
+            "테마별",
+            "By theme"
+        ],
+        [
+            "중분류 추가",
+            "Add subcategory"
+        ],
+        [
+            "프라이빗",
+            "Private"
+        ],
+        [
+            "중분류명 입력",
+            "Enter category name"
+        ],
+        [
+            "중분류 추가",
+            "Add subcategory"
+        ],
+        [
+            "대분류 추가",
+            "Add main category"
+        ]
+    ]
+},
+{
+    "user-inquiry-list.html": [
+        [
+            "회원 문의 목록",
+            "Member Inquiry List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "",
+            ""
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "",
+            ""
+        ],
+        [
+            "최신순",
+            "Latest"
+        ],
+        [
+            "",
+            ""
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "agent-inquiry-list.html": [
+        [
+            "에이전트 문의 목록",
+            "Agent Inquiry List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "최신순",
+            "Latest"
+        ],
+        [
+            "지점명",
+            "Agent Name"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "visa-app-list.html": [
+        [
+            "비자 신청 목록",
+            "Visa Application List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "전체 상태",
+            ""
+        ],
+        [
+            "신청자명",
+            "Applicant name"
+        ],
+        [
+            "신청일시",
+            "Application date/time"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "popup-management.html": [
+        [
+            "팝업 관리",
+            "Popup Management"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "전체 상태",
+            "Overall status"
+        ],
+        [
+            "최신순",
+            "Latest"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "팝업 등록",
+            "Register Popup"
+        ]
+    ]
+},
+{
+    "banner-management.html": [
+        [
+            "배너 관리",
+            "Banner Management"
+        ],
+        [
+            "배너 1",
+            "Banner 1"
+        ],
+        [
+            "배너 이미지 (권장 사이즈 640x320)",
+            "Banner image (recommended size 640x320)"
+        ],
+        [
+            "URL",
+            ""
+        ],
+        [
+            "이미지 삭제",
+            "Delete image"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "배너 2",
+            "Banner 2"
+        ],
+        [
+            "배너 이미지 (권장 사이즈 640x320)",
+            "Banner image (recommended size 640x320)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "URL",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "배너 3",
+            "Banner 3"
+        ],
+        [
+            "배너 이미지 (권장 사이즈 640x320)",
+            "Banner image (recommended size 640x320)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "URL",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "배너 4",
+            "Banner 4"
+        ],
+        [
+            "배너 이미지 (권장 사이즈 640x320)",
+            "Banner image (recommended size 640x320)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "URL",
+            "URL"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "배너 5",
+            "Banner 5"
+        ],
+        [
+            "배너 이미지 (권장 사이즈 640x320)",
+            "Banner image (recommended size 640x320)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "URL",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ]
+    ]
+},
+{
+    "notice.html": [
+        [
+            "공지사항",
+            "Announcements"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "최신순",
+            "Latest"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ],
+        [
+            "공지 등록",
+            "Notice Registration"
+        ]
+    ]
+},
+{
+    "terms.html": [
+        [
+            "이용 약관",
+            "Terms of Use"
+        ],
+        [
+            "이용 약관",
+            "Terms of Use"
+        ],
+        [
+            "개인정보 수집 및 이용",
+            "Collection and Use of Personal Information"
+        ],
+        [
+            "개인정보 제3자 제공",
+            "Personal Information Provided to Third Parties"
+        ],
+        [
+            "마케팅 이용",
+            "Marketing Use"
+        ],
+        [
+            "영어",
+            "English"
+        ],
+        [
+            "따갈로그어",
+            "Tagalog"
+        ],
+        [
+            "변경사항 저장",
+            "Save changes"
+        ]
+    ]
+},
+{
+    "company-information.html": [
+        [
+            "회사 정보",
+            "Company Information"
+        ],
+        [
+            "정보",
+            "Information"
+        ],
+        [
+            "주소",
+            "Address"
+        ],
+        [
+            "대표 이메일",
+            "Representative email"
+        ],
+        [
+            "문의전화 (국내)",
+            "Inquiry phone number (domestic)"
+        ],
+        [
+            "문의전화 (해외)",
+            "Inquiry phone number (overseas)"
+        ],
+        [
+            "변경사항 저장",
+            "Save changes"
+        ]
+    ]
+},
+{
+    "b2b-customer-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "B2B 고객 상세",
+            "B2B Customer Details"
+        ],
+        [
+            "기본 정보",
+            "Basic Information"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "초기화",
+            "Reset"
+        ],
+        [
+            "고객 번호",
+            "Customer number"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "문의내용",
+            "This is a memo input field."
+        ],
+        [
+            "여행자 정보",
+            "Traveler Information"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "예약 내역",
+            "Reservation Details"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "예약일",
+            "Reservation date"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약 상태",
+            "Reservation Status"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "주문 금액(₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "문의 내역",
+            "Inquiry History"
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ]
+    ]
+},
+{
+    "b2c-customer-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "B2C 고객 상세",
+            "B2C Customer Details"
+        ],
+        [
+            "기본 정보",
+            ""
+        ],
+        [
+            "고객명",
+            "Basic Information"
+        ],
+        [
+            "연락처",
+            "Customer Name"
+        ],
+        [
+            "이메일",
+            "Contacts"
+        ],
+        [
+            "초기화",
+            ""
+        ],
+        [
+            "초기화",
+            "Reset"
+        ],
+        [
+            "고객 번호",
+            "Customer number"
+        ],
+        [
+            "소속 지점명",
+            "Registration date/time"
+        ],
+        [
+            "등록일시",
+            ""
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "예약 내역",
+            "Reservation Details"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "예약일",
+            "Reservation date"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약 상태",
+            "Reservation Status"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "주문 금액(₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "문의 내역",
+            "Inquiry History"
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ]
+    ]
+},
+{
+    "agent-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "계약중",
+            "Under contract"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "에이전트 상세",
+            "Agent Details"
+        ],
+        [
+            "기본 정보",
+            "Basic Information"
+        ],
+        [
+            "지점명",
+            "Agent Name"
+        ],
+        [
+            "지역",
+            "Area"
+        ],
+        [
+            "담당자명",
+            "Person in charge"
+        ],
+        [
+            "담당자 이메일",
+            "Person in charge email"
+        ],
+        [
+            "담당자 연락처",
+            "Contact information"
+        ],
+        [
+            "초기화",
+            "Reset"
+        ],
+        [
+            "제휴 코드",
+            "Partnership code"
+        ],
+        [
+            "소속 고객 수",
+            "Number of affiliated customers"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "메모입력란입니다.",
+            "This is a memo input field."
+        ],
+        [
+            "계약 정보",
+            "Contract Information"
+        ],
+        [
+            "계약 기간",
+            "Contract period"
+        ],
+        [
+            "예약금 비율 (%)",
+            "Deposit ratio (%)"
+        ]
+    ]
+},
+{
+    "guide-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "계약중",
+            "Under contract"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "가이드 상세",
+            "Guide Details"
+        ],
+        [
+            "기본 정보",
+            "Basic Information"
+        ],
+        [
+            "가이드명",
+            "Guide Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "초기화",
+            "Reset"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "증명사진",
+            "ID Photo"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "가이드 소개",
+            "Guide Introduction"
+        ],
+        [
+            "가이드소개를 입력하세요.",
+            "Guide introduction section."
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "This is a memo input field."
+        ],
+        [
+            "계약 정보",
+            "Contract Information"
+        ],
+        [
+            "계약 기간",
+            "Contract period"
+        ],
+        [
+            "배정된 일정 목록",
+            "Assigned schedule list"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약자명",
+            "Reserver's name"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "여행 상태",
+            "Travel status"
+        ]
+    ]
+},
+{
+    "b2b-booking-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "B2B 예약 상세",
+            "B2B Reservation Details"
+        ],
+        [
+            "상품 및 예약 정보",
+            "Product and Reservation Information"
+        ],
+        [
+            "집합 위치",
+            "Meeting location"
+        ],
+        [
+            "공지사항",
+            "Announcements"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            "Travel period"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소",
+            "Meeting place"
+        ],
+        [
+            "예약 정보",
+            "Reservation Information"
+        ],
+        [
+            "예약 번호",
+            "Reservation number"
+        ],
+        [
+            "예약일시",
+            "Reservation date and time"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "룸 옵션",
+            "Room options"
+        ],
+        [
+            "기내 수화물 추가",
+            "Add Cabin Baggage"
+        ],
+        [
+            "선택안함",
+            "Not selected"
+        ],
+        [
+            "조식 신청",
+            "Breakfast Request"
+        ],
+        [
+            "신청",
+            "Apply"
+        ],
+        [
+            "와이파이 대여",
+            "WiFi Rental"
+        ],
+        [
+            "신청",
+            "Apply"
+        ],
+        [
+            "항공 좌석 요청사항",
+            "Airline seat request details"
+        ],
+        [
+            "기타 요청사항",
+            "Other requests"
+        ],
+        [
+            "결제 정보",
+            "Payment Information"
+        ],
+        [
+            "주문 금액 (₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "선금 (₱)",
+            "Advance payment (₱)"
+        ],
+        [
+            "선금 입금 기한",
+            "Deadline for advance payment"
+        ],
+        [
+            "선금 증빙 파일",
+            "Advance payment proof file"
+        ],
+        [
+            "선금 증빙 파일",
+            "Advance payment proof file"
+        ],
+        [
+            "잔금 (₱)",
+            "Balance (₱)"
+        ],
+        [
+            "잔금 입금 기한",
+            "Payment deadline"
+        ],
+        [
+            "날짜를 선택해주세요",
+            "Please select a date"
+        ],
+        [
+            "잔금 증빙 파일",
+            "Proof of balance file"
+        ],
+        [
+            "에이전트 정보",
+            "Agent Information"
+        ],
+        [
+            "지점명",
+            "Agent Name"
+        ],
+        [
+            "담당자명",
+            "Person in charge"
+        ],
+        [
+            "담당자 이메일",
+            "Person in charge email"
+        ],
+        [
+            "담당자 연락처",
+            "Contact information"
+        ],
+        [
+            "예약금 비율 (%)",
+            "Deposit ratio (%)"
+        ],
+        [
+            "에이전트 전달사항",
+            "Agent Notes"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "에이전트가 작성한 전달사항입니다",
+            "This is a message written by the agent"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "예약 고객 정보",
+            "Customer Information"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "여행 고객 정보",
+            "Travel Customer Information"
+        ],
+        [
+            "대표 여행자",
+            "Main traveler"
+        ],
+        [
+            "예약 상태",
+            "Reservation Status"
+        ],
+        [
+            "인원 옵션",
+            "Number of people option"
+        ],
+        [
+            "비자 신청 여부",
+            "Visa application status"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "확정",
+            ""
+        ],
+        [
+            "취소",
+            ""
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "선금 입금 대기",
+            "Waiting for advance payment deposit"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ]
+    ]
+},
+{
+    "b2c-booking-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "예약 확정",
+            "Reservation confirmed"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "B2C 예약 상세",
+            "B2C Reservation Details"
+        ],
+        [
+            "상품 및 예약 정보",
+            "Product and Reservation Information"
+        ],
+        [
+            "집합 위치",
+            "Meeting location"
+        ],
+        [
+            "공지사항",
+            "Announcements"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            "Travel period"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소",
+            "Meeting place"
+        ],
+        [
+            "예약 정보",
+            "Reservation Information"
+        ],
+        [
+            "예약 번호",
+            "Reservation number"
+        ],
+        [
+            "예약일시",
+            "Reservation date and time"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "룸 옵션",
+            "Room options"
+        ],
+        [
+            "기내 수화물 추가",
+            "Add Cabin Baggage"
+        ],
+        [
+            "선택안함",
+            "Not selected"
+        ],
+        [
+            "조식 신청",
+            "Breakfast Request"
+        ],
+        [
+            "와이파이 대여",
+            "WiFi Rental"
+        ],
+        [
+            "신청",
+            "Apply"
+        ],
+        [
+            "항공 좌석 요청사항",
+            "Airline seat request details"
+        ],
+        [
+            "기타 요청사항",
+            "Other requests"
+        ],
+        [
+            "결제 정보",
+            "Payment Information"
+        ],
+        [
+            "주문 금액",
+            "Order Amount"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "예약 고객 정보",
+            "Customer Information"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "여행 고객 정보",
+            "Travel Customer Information"
+        ],
+        [
+            "대표 여행자",
+            "Main traveler"
+        ],
+        [
+            "예약 상태",
+            "Reservation Status"
+        ],
+        [
+            "인원 옵션",
+            "Number of people option"
+        ],
+        [
+            "비자 신청 여부",
+            "Visa application status"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 확정",
+            "Reservation Status"
+        ],
+        [
+            "성인",
+            "Adult"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "남성",
+            "Male"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ]
+    ]
+},
+{
+    "product-registration.html": [
+        [
+            "상품 등록",
+            "Product Registration"
+        ],
+        [
+            "임시저장",
+            "Temporary save"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "템플릿 불러오기",
+            "Load Template"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "판매 대상 *",
+            ""
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류 *",
+            ""
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "계절별",
+            "Select main category"
+        ],
+        [
+            "중분류 *",
+            ""
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "대분류를 먼저 선택해주세요",
+            "Please select a main category first"
+        ],
+        [
+            "상품 설명 *",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상세 소개 이미지 *",
+            "Detailed introduction image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "판매 기간",
+            "Sale period *"
+        ],
+        [
+            "기간은 최대 100일까지만 설정이 가능합니다.",
+            "The period can only be set up to a maximum of 100 days."
+        ],
+        [
+            "숫자 입력",
+            "Minimum departure headcount"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "기본 항공 요금 (₱)",
+            "Basic Airfare (₱)"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "＋ 관광지 추가",
+            "＋ Add Tourist Attraction"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule end time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "주소를 검색해주세요",
+            "Please search for an address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "관광지 이미지 *",
+            "Sight Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "",
+            "Delete tourist attraction"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "숙소 이미지 *",
+            "Accommodation image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "교통편 정보",
+            "Transportation Information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱) *"
+        ],
+        [
+            "숫자 입력",
+            "Enter numbers"
+        ],
+        [
+            "* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.",
+            "* When booking for 2 or more people, you will be charged for the number of single rooms selected. For 1 person booking, it is applied for free."
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "Please enter a description"
+        ],
+        [
+            "구성 요소",
+            "Components"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "1일차",
+            "1st day"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일차 추가",
+            "Add day"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ]
+    ]
+},
+{
+    "product-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 상세",
+            "Product Details"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "템플릿 불러오기",
+            "Load Template"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "상품코드",
+            "Product code"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "상품 설명",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상세 소개 이미지",
+            "Detailed introduction image"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발시각",
+            "Departure time"
+        ],
+        [
+            "도착시각",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "판매 기간",
+            "Sale period"
+        ],
+        [
+            "기간은 최대 100일까지만 설정이 가능합니다.",
+            "The period can only be set up to a maximum of 100 days."
+        ],
+        [
+            "최소 출발 인원",
+            "Minimum departure headcount"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "기본 항공 요금 (₱)",
+            "Basic airfare (₱)"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "항공편 출발일",
+            "Flight departure date"
+        ],
+        [
+            "예약된 인원",
+            "Reserved personnel"
+        ],
+        [
+            "최대 수용 인원",
+            "Maximum capacity"
+        ],
+        [
+            "항공 요금 (₱)",
+            "Airfare (₱)"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "인천 도착",
+            "Arrival at Incheon"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "＋ 관광지 추가",
+            "＋ Add Tourist Attraction"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule end time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "관광지 이미지 *",
+            "Sight Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "",
+            "Delete tourist attraction"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "숙소 이미지",
+            "Accommodation image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "교통편 정보",
+            "Transportation Information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱) *"
+        ],
+        [
+            "* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.",
+            "* When booking for 2 or more people, you will be charged for the number of single rooms selected. For 1 person booking, it is applied for free."
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "No",
+            ""
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "This is an explanation"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "This is an explanation"
+        ],
+        [
+            "템플릿으로 저장하기",
+            "Save as Template"
+        ],
+        [
+            "구성 요소",
+            "Components"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "판매 정보",
+            "Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "기본 판매 정보",
+            "Basic Sales Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일자별 판매 조정",
+            "Daily Sales Adjustment"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "1일차",
+            "1st day"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "2일차",
+            "Day 2"
+        ],
+        [
+            "일차 추가",
+            "Add day"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ]
+    ]
+},
+{
+    "template-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            ""
+        ],
+        [
+            "템플릿 상세",
+            "Template Details"
+        ],
+        [
+            "템플릿 정보",
+            "Template Information"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "템플릿명 *",
+            "Template name"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명 *",
+            "Product Name"
+        ],
+        [
+            "판매 대상",
+            "Sales Target"
+        ],
+        [
+            "대분류",
+            "Category"
+        ],
+        [
+            "중분류",
+            "Category"
+        ],
+        [
+            "상품 설명",
+            "Product Description"
+        ],
+        [
+            "썸네일 이미지",
+            "Thumbnail image"
+        ],
+        [
+            "상품 이미지",
+            "Product image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "상세 소개 이미지",
+            "Detailed introduction image"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소명",
+            "Meeting place name"
+        ],
+        [
+            "미팅 장소 주소",
+            "Meeting place address"
+        ],
+        [
+            "일정 요약",
+            "Schedule Summary"
+        ],
+        [
+            "관광지 정보",
+            "Tourist Information"
+        ],
+        [
+            "＋ 관광지 추가",
+            "＋ Add Tourist Attraction"
+        ],
+        [
+            "일정 시작 시각",
+            "Schedule start time"
+        ],
+        [
+            "일정 종료 시각",
+            "Schedule end time"
+        ],
+        [
+            "관광지명",
+            "Sight Name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "관광지 주소",
+            "Sight Address"
+        ],
+        [
+            "관광지 설명",
+            "Sight Information"
+        ],
+        [
+            "관광지 이미지",
+            "Sight Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image Upload"
+        ],
+        [
+            "관광지 삭제",
+            "Delete tourist attraction"
+        ],
+        [
+            "숙소 정보",
+            "Accommodation Information"
+        ],
+        [
+            "숙소명",
+            "Accommodation name"
+        ],
+        [
+            "주소 검색",
+            "Address Search"
+        ],
+        [
+            "숙소 주소",
+            "Accommodation address"
+        ],
+        [
+            "숙소 설명",
+            "Accommodation Description"
+        ],
+        [
+            "설명입니다",
+            "This is an explanation"
+        ],
+        [
+            "숙소 이미지",
+            "Accommodation image"
+        ],
+        [
+            "이미지 업로드",
+            "Image Upload"
+        ],
+        [
+            "교통편 정보",
+            "Meal information"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "전용 차량 이동",
+            "Dedicated vehicle transportation"
+        ],
+        [
+            "식사 정보",
+            "Meal information"
+        ],
+        [
+            "조식",
+            "Breakfast"
+        ],
+        [
+            "중식",
+            "Chinese food"
+        ],
+        [
+            "석식",
+            "Dinner"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "인원별 요금",
+            "Number of people fee"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "옵션명",
+            "Option name"
+        ],
+        [
+            "인원별 요금 (₱)",
+            "Number of people fee (₱)"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "싱글룸 이용 요금",
+            "Room rate for single occupancy"
+        ],
+        [
+            "싱글룸 이용 요금 (₱)",
+            "Single room usage fee (₱) *"
+        ],
+        [
+            "* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.",
+            "* When booking for 2 or more people, you will be charged for the number of single rooms selected. For 1 person booking, it is applied for free."
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "No",
+            ""
+        ],
+        [
+            "포함 사항",
+            "Included items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "＋ 추가",
+            "＋ Add"
+        ],
+        [
+            "No",
+            ""
+        ],
+        [
+            "불포함 사항",
+            "Excluded items"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "안내문",
+            "Notice"
+        ],
+        [
+            "파일",
+            "Description"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "설명",
+            "Description"
+        ],
+        [
+            "설명을 입력하세요.",
+            "This is an explanation"
+        ],
+        [
+            "구성 요소",
+            "Components"
+        ],
+        [
+            "템플릿 정보",
+            "Template Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "상품 정보",
+            "Product Information Required"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "일정표",
+            "Schedule"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "미팅 정보",
+            "Meeting Information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "1일차",
+            "1st day"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "2일차",
+            "Day 2"
+        ],
+        [
+            "일차 추가",
+            "Add day"
+        ],
+        [
+            "요금 정보",
+            "Fee information"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "포함/불포함 사항",
+            "Included/Not Included Items"
+        ],
+        [
+            "이용안내",
+            "Usage Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "취소/환불 규정",
+            "Cancellation/Refund Policy"
+        ],
+        [
+            "필수",
+            "Required"
+        ],
+        [
+            "비자 신청 안내",
+            "Visa Application Guide"
+        ],
+        [
+            "필수",
+            "Required"
+        ]
+    ]
+},
+{
+    "user-inquiry-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "처리 완료",
+            "Processing complete"
+        ],
+        [
+            "회원 문의 상세",
+            "Member Inquiry Details"
+        ],
+        [
+            "문의자 정보",
+            "Inquirer Information"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "고객 번호",
+            "Customer number"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "문의 내용",
+            "Inquiry details"
+        ],
+        [
+            "작성일시",
+            "Date Created"
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "첨부파일",
+            "Attachment"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "증명사진",
+            ""
+        ],
+        [
+            "이미지",
+            ""
+        ],
+        [
+            "답변 남기기",
+            "Leave a reply"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "Please enter your content"
+        ],
+        [
+            "답변 전송",
+            "Send answer"
+        ]
+    ]
+},
+{
+    "agent-inquiry-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "에이전트 문의 상세",
+            "Agent Inquiry Details"
+        ],
+        [
+            "문의자 정보",
+            "Inquirer Information"
+        ],
+        [
+            "지점명",
+            "Agent Name"
+        ],
+        [
+            "지역",
+            "Area"
+        ],
+        [
+            "담당자명",
+            "Person in charge"
+        ],
+        [
+            "담당자 이메일",
+            "Person in charge email"
+        ],
+        [
+            "담당자 연락처",
+            "Contact information"
+        ],
+        [
+            "문의 내용",
+            "Inquiry details"
+        ],
+        [
+            "작성일시",
+            "Date Created"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "첨부파일",
+            "Attachment"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "증명사진",
+            ""
+        ],
+        [
+            "이미지",
+            ""
+        ],
+        [
+            "답변 남기기",
+            "Leave a reply"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "Please enter your content"
+        ],
+        [
+            "답변 전송",
+            "Send answer"
+        ]
+    ]
+},
+{
+    "visa-app-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "처리 완료",
+            "Under review"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "비자 신청 상세",
+            "Visa Application Details"
+        ],
+        [
+            "서류 내역",
+            "Document details"
+        ],
+        [
+            "증명사진 (최근 6개월 이내)",
+            "ID Photo (Within the last 6 months)"
+        ],
+        [
+            "증명사진",
+            "ID Photo"
+        ],
+        [
+            "여권 사본",
+            "Passport copy"
+        ],
+        [
+            "여권 사본",
+            "Passport copy"
+        ],
+        [
+            "은행 계좌 증명서",
+            "Bank Account Certificate"
+        ],
+        [
+            "은행 계좌 증명서",
+            "Bank Account Certificate"
+        ],
+        [
+            "최근 3개월간의 은행 거래 내역서",
+            "Bank transaction history for the last 3 months"
+        ],
+        [
+            "은행 거래 내역서",
+            "Bank Transaction Statement"
+        ],
+        [
+            "항공편 정보가 포함된 여행 일정표",
+            "Travel Itinerary Including Flight Information"
+        ],
+        [
+            "여행 일정표",
+            "Travel Itinerary"
+        ],
+        [
+            "신청 정보",
+            "Application Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "신청일시",
+            "Application date/time"
+        ],
+        [
+            "신청자 정보",
+            "Applicant Information"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "비자 업로드",
+            "Visa Upload"
+        ],
+        [
+            "비자 파일",
+            "Visa file"
+        ],
+        [
+            "파일 업로드",
+            "Upload"
+        ]
+    ]
+},
+{
+    "popup-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "팝업 상세",
+            "Member Inquiry List"
+        ],
+        [
+            "팝업 정보",
+            "Popup information"
+        ],
+        [
+            "팝업 이미지 (권장 사이즈 640x640)",
+            "Popup image (recommended size 640x640)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "활성화",
+            "Activate"
+        ]
+    ]
+},
+{
+    "popup-registration.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "팝업 등록",
+            "Register Popup"
+        ],
+        [
+            "팝업 정보",
+            "Popup information"
+        ],
+        [
+            "팝업 이미지 (권장 사이즈 640x640)",
+            "Popup image (recommended size 640x640)"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ]
+    ]
+},
+{
+    "notice-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "삭제",
+            "Delete"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "공지사항 상세",
+            "Notice Details"
+        ],
+        [
+            "공지등록 정보",
+            "Notice Registration Information"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ],
+        [
+            "영어 공지사항",
+            "Notice"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "제목입니다",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "This is the content"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "따갈로그어 공지사항",
+            "Notice"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "제목입니다",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "This is the content"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지",
+            "Image"
+        ]
+    ]
+},
+{
+    "notice-registration.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "공지사항 등록",
+            "Notice Registration"
+        ],
+        [
+            "공지등록 정보",
+            "Notice Registration Information"
+        ],
+        [
+            "노출 기간",
+            "Exposure period"
+        ],
+        [
+            "영어 공지사항",
+            "Notice"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "Please enter your content"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ],
+        [
+            "따갈로그어 공지사항",
+            "Tagalog Announcements"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요.",
+            "Please enter your content"
+        ],
+        [
+            "이미지",
+            "Image"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ]
+    ]
+},
+{
+    "overview.html": [
+        [
+            "운영현황",
+            "Operating Status"
+        ],
+        [
+            "예약 현황",
+            "Reservation Status"
+        ],
+        [
+            "선금 확인 전",
+            "Checking before advance payment"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "잔금 확인 전",
+            "Check remaining balance"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "문의 현황",
+            "Inquiry Status"
+        ],
+        [
+            "미답변",
+            "Unanswered"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "처리중",
+            "Processing"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "오늘 여행 일정",
+            "Today's Travel Itinerary"
+        ],
+        [
+            "건",
+            "Dry"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            "Travel period"
+        ],
+        [
+            "고객 유형",
+            "Customer Type"
+        ],
+        [
+            "인원 수",
+            "Number of people"
+        ],
+        [
+            "배정 가이드",
+            "Assignment Guide"
+        ]
+    ]
+},
+{
+    "customer-list.html": [
+        [
+            "고객 목록",
+            "Customer List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "고객명 검색",
+            "Customer Name Search"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ],
+        [
+            "단건 등록",
+            "Single registration"
+        ],
+        [
+            "일괄 등록",
+            "Batch Registration"
+        ]
+    ]
+},
+{
+    "customer-detail.html": [
+        [
+            "목록으로 돌아가기",
+            ""
+        ],
+        [
+            "고객 상세",
+            "Customer Details"
+        ],
+        [
+            "기본 정보",
+            "Basic Information"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "",
+            "Reset"
+        ],
+        [
+            "고객 번호",
+            "Customer number"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "등록일시",
+            "Registration date/time"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "메모입력란입니다.",
+            "This is a memo input field."
+        ],
+        [
+            "여행자 정보",
+            "Traveler Information"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "예약 내역",
+            "Reservation Details"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "예약일",
+            "Reservation date"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약 상태",
+            "Reservation Status"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "주문 금액 (₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "문의 내역",
+            ""
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "미답변",
+            "Unanswered"
+        ],
+        [
+            "접수됨",
+            "Received"
+        ]
+    ]
+},
+{
+    "customer-register.html": [
+        [
+            "목록으로 돌아가기",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "고객 등록",
+            "Customer Registration"
+        ],
+        [
+            "기본 정보",
+            "Basic Information"
+        ],
+        [
+            "고객명",
+            "Customer Name"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "",
+            "Auto Input"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "메모를 입력해주세요",
+            "Please enter a memo"
+        ],
+        [
+            "여행자 정보",
+            "Traveler Information"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "이미지 업로드",
+            "Image upload"
+        ]
+    ]
+},
+{
+    "reservation-list.html": [
+        [
+            "예약 목록",
+            "Reservation List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "전체 상태",
+            "Overall status"
+        ],
+        [
+            "전체",
+            "All"
+        ],
+        [
+            " 검색",
+            "Search"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약자명",
+            "Reserver's name"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "상태",
+            "Status"
+        ],
+        [
+            "선금 확인 전",
+            "Checking before advance payment"
+        ],
+        [
+            "잔금 확인 전",
+            "Check remaining balance"
+        ],
+        [
+            "예약 확정",
+            "Reservation confirmed"
+        ],
+        [
+            "여행 완료",
+            "Trip completed"
+        ],
+        [
+            "예약 취소",
+            "Reservation cancellation"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "환불 완료",
+            "Refund completed"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "reservation-detail.html": [
+        [
+            "목록으로 돌아가기",
+            ""
+        ],
+        [
+            "선금 확인 전",
+            "Check remaining balance"
+        ],
+        [
+            "검토중",
+            ""
+        ],
+        [
+            "",
+            ""
+        ],
+        [
+            "",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "예약 상세",
+            "Reservation Details"
+        ],
+        [
+            "상품 및 예약 정보",
+            "Product and Reservation Information"
+        ],
+        [
+            "집합 위치",
+            "Meeting location"
+        ],
+        [
+            "공지사항",
+            "Announcements"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            "Travel period"
+        ],
+        [
+            "미팅 시간",
+            "Meeting time"
+        ],
+        [
+            "미팅 장소",
+            "Meeting place"
+        ],
+        [
+            "예약 정보",
+            "Reservation Information"
+        ],
+        [
+            "예약 번호",
+            "Reservation number"
+        ],
+        [
+            "예약일시",
+            "Reservation date and time"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "룸 옵션",
+            "Room options"
+        ],
+        [
+            "기내 수화물 추가",
+            "Add Cabin Baggage"
+        ],
+        [
+            "조식 신청",
+            "Breakfast Request"
+        ],
+        [
+            "와이파이 대여",
+            "WiFi Rental"
+        ],
+        [
+            "항공 좌석 요청사항",
+            "Airline seat request details"
+        ],
+        [
+            "기타 요청사항",
+            "Other requests"
+        ],
+        [
+            "결제 정보",
+            "Payment Information"
+        ],
+        [
+            "주문 금액 (₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "선금 (₱)",
+            "Advance payment (₱)"
+        ],
+        [
+            "선금 입금 기한",
+            "Deadline for advance payment"
+        ],
+        [
+            "선금 증빙 파일",
+            "Advance payment proof file"
+        ],
+        [
+            "잔금 (₱)",
+            "Balance (₱)"
+        ],
+        [
+            "에이전트 전달사항",
+            "Agent Notes"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            "Flight number"
+        ],
+        [
+            "출발일시",
+            "Departure date and time"
+        ],
+        [
+            "도착일시",
+            "Arrival time"
+        ],
+        [
+            "출발지",
+            "Departure point"
+        ],
+        [
+            "도착지",
+            "Destination"
+        ],
+        [
+            "예약 고객 정보",
+            "Customer Information"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contacts"
+        ],
+        [
+            "여행 고객 정보",
+            "Travel Customer Information"
+        ],
+        [
+            "대표 여행자",
+            "Main traveler"
+        ],
+        [
+            "인원 옵션",
+            "Number of people option"
+        ],
+        [
+            "비자 신청 여부",
+            "Visa application status"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "생년월일",
+            "Date of birth"
+        ],
+        [
+            "출신국가",
+            "Country of origin"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "여권 발행일",
+            "Passport Issue Date"
+        ],
+        [
+            "여권 만료일",
+            "Passport expiration date"
+        ],
+        [
+            "여권 사진",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ],
+        [
+            "",
+            "Passport photo"
+        ]
+    ]
+},
+{
+    "create-reservation.html": [
+        [
+            "예약 생성",
+            "Create Reservation"
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "상품 검색",
+            "Product Search"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약 고객 정보",
+            "Customer Information"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "이메일",
+            "Email"
+        ],
+        [
+            "연락처",
+            "Contact"
+        ],
+        [
+            "여행 고객 정보",
+            "Travel Customer Information"
+        ],
+        [
+            "＋ 고객 추가",
+            "＋ Add Customer"
+        ],
+        [
+            "대표 여행자",
+            "Main traveler"
+        ],
+        [
+            "인원 옵션",
+            "Number of people option"
+        ],
+        [
+            "비자 신청 여부",
+            "Visa application status"
+        ],
+        [
+            "호칭",
+            "Title"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "성별",
+            "Gender"
+        ],
+        [
+            "나이",
+            "Age"
+        ],
+        [
+            "예약 정보",
+            "Reservation Information"
+        ],
+        [
+            "룸 옵션",
+            "Room Options"
+        ],
+        [
+            "룸 옵션 선택",
+            "Select Room Options"
+        ],
+        [
+            "기내 수화물 추가",
+            "Carry-on baggage additional"
+        ],
+        [
+            "선택안함",
+            "Not selected"
+        ],
+        [
+            "조식 신청",
+            "Breakfast Request"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "와이파이 대여",
+            "WiFi Rental"
+        ],
+        [
+            "미신청",
+            "Not applied"
+        ],
+        [
+            "기내 수화물 추가",
+            ""
+        ],
+        [
+            "선택안함",
+            "Not applied"
+        ],
+        [
+            "항공 좌석 요청사항",
+            "Airline seat request details"
+        ],
+        [
+            "기타 요청사항",
+            "Other requests"
+        ],
+        [
+            "결제 정보",
+            "Agent Notes"
+        ],
+        [
+            "메모",
+            "Note"
+        ],
+        [
+            "결제 정보",
+            "Payment Information"
+        ],
+        [
+            "주문 금액 (₱)",
+            "Order Amount (₱)"
+        ],
+        [
+            "선금 (₱)",
+            "Advance payment (₱)"
+        ],
+        [
+            "선금 입금 기한",
+            "Advance payment deposit deadline"
+        ],
+        [
+            "선금 증빙 파일",
+            "Advance payment proof file"
+        ],
+        [
+            "파일 업로드",
+            "File upload"
+        ],
+        [
+            "설정한 선금 입금 기한 내에 파일을 업로드 해주세요.\n\t\t\t\t\t\t\t\t기한 내에 업로드 되지 않을 시 예약이 취소됩니다.",
+            "Please upload the file within the set deposit deadline.<br>If not uploaded within the deadline, your reservation will be canceled."
+        ],
+        [
+            "잔금 (₱)",
+            "Balance (₱)"
+        ]
+    ]
+},
+{
+    "inquiry-list.html": [
+        [
+            "문의 목록",
+            "Inquiry List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "최신순",
+            "Latest"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ]
+    ]
+},
+{
+    "inquiry-detail.html": [
+        [
+            "목록으로 돌아가기",
+            ""
+        ],
+        [
+            "저장",
+            "Save"
+        ],
+        [
+            "문의 상세",
+            "Inquiry Details"
+        ],
+        [
+            "문의 내용",
+            "Inquiry Details"
+        ],
+        [
+            "작성일시",
+            "Date Created"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "첨부파일",
+            "Attachment"
+        ],
+        [
+            "파일 업로드",
+            "File upload"
+        ],
+        [
+            "파일",
+            "File"
+        ],
+        [
+            "이미지",
+            "Image"
+        ]
+    ]
+},
+{
+    "register-inquiry.html": [
+        [
+            "목록으로 돌아가기",
+            ""
+        ],
+        [
+            "저장",
+            ""
+        ],
+        [
+            "문의 등록",
+            "Submit Inquiry"
+        ],
+        [
+            "문의 내용",
+            "Inquiry details"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "제목",
+            "Title"
+        ],
+        [
+            "내용",
+            "Content"
+        ],
+        [
+            "내용을 입력해주세요",
+            "Please enter your content"
+        ],
+        [
+            "첨부파일",
+            "Attachment"
+        ],
+        [
+            "파일 업로드",
+            "File upload"
+        ]
+    ]
+},
+{
+    "inquiry-list.html": [
+        [
+            "문의 목록",
+            "Inquiry List"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "문의 유형",
+            "Inquiry type"
+        ],
+        [
+            "문의 제목",
+            "Inquiry Title"
+        ],
+        [
+            "작성일",
+            "Date created"
+        ],
+        [
+            "답변 여부",
+            "Response status"
+        ],
+        [
+            "처리 상태",
+            "Processing status"
+        ],
+        [
+            "다운로드",
+            "Download"
+        ]
+    ]
+},
+{
+    "inquiry-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "문의 상세",
+            "Inquiry Details"
+        ],
+        [
+            "문의자 정보",
+            "Inquirer Information"
+        ],
+        [
+            "소속 지점명",
+            "Agent Name"
+        ],
+        [
+            "문의 내용",
+            "Inquiry details"
+        ],
+        [
+            "첨부파일",
+            "Attachment"
+        ],
+        [
+            "증명사진",
+            ""
+        ],
+        [
+            "이미지",
+            ""
+        ],
+        [
+            "답변 남기기",
+            "Leave a reply"
+        ],
+        [
+            "답변 전송",
+            ""
+        ]
+    ]
+},
+{
+    "full-list.html": [
+        [
+            "전체 목록",
+            "Full list"
+        ],
+        [
+            "검색결과",
+            "Search results"
+        ],
+        [
+            "개",
+            "items"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 시작일",
+            "Travel start date"
+        ],
+        [
+            "예약자명",
+            "Reserver's name"
+        ],
+        [
+            "예약 인원",
+            "Number of people for reservation"
+        ],
+        [
+            "진행 상태",
+            "Progress status"
+        ]
+    ]
+},
+{
+    "assigned-schedule-detail.html": [
+        [
+            "목록으로 돌아가기",
+            "Return to list"
+        ],
+        [
+            "일정 상세",
+            "Detailed Itinerary"
+        ],
+        [
+            "상품 정보",
+            "Product Information"
+        ],
+        [
+            "상품명",
+            "Product Name"
+        ],
+        [
+            "여행 기간",
+            ""
+        ],
+        [
+            "미팅 시간",
+            ""
+        ],
+        [
+            "미팅 장소",
+            ""
+        ],
+        [
+            "항공편 정보",
+            "Flight Information"
+        ],
+        [
+            "출국편",
+            "Departure flight"
+        ],
+        [
+            "항공편명",
+            ""
+        ],
+        [
+            "출발일시",
+            ""
+        ],
+        [
+            "도착일시",
+            ""
+        ],
+        [
+            "출발지",
+            ""
+        ],
+        [
+            "도착지",
+            ""
+        ],
+        [
+            "귀국편",
+            "Return trip"
+        ],
+        [
+            "항공편명",
+            ""
+        ],
+        [
+            "출발일시",
+            ""
+        ],
+        [
+            "도착일시",
+            ""
+        ],
+        [
+            "출발지",
+            ""
+        ],
+        [
+            "도착지",
+            ""
+        ],
+        [
+            "예약 정보",
+            "Reservation Information"
+        ],
+        [
+            "예약 인원",
+            ""
+        ],
+        [
+            "룸 옵션",
+            ""
+        ],
+        [
+            "여행 고객 정보",
+            "Travel Customer Information"
+        ],
+        [
+            "이름",
+            "Name"
+        ],
+        [
+            "성",
+            "Nature"
+        ],
+        [
+            "여권번호",
+            "Passport number"
+        ],
+        [
+            "인원 옵션",
+            "Number of people option"
+        ]
+    ]
+},
+{
+    "today-schedule-detail.html": [
+        [
+            "일정 상세",
+            "Detailed Itinerary"
+        ],
+        [
+            "상품 정보",
+            ""
+        ],
+        [
+            "상품명",
+            ""
+        ],
+        [
+            "여행 기간",
+            ""
+        ],
+        [
+            "미팅 시간",
+            ""
+        ],
+        [
+            "미팅 장소",
+            ""
+        ],
+        [
+            "항공편 정보",
+            ""
+        ],
+        [
+            "출국편",
+            ""
+        ],
+        [
+            "항공편명",
+            ""
+        ],
+        [
+            "출발일시",
+            ""
+        ],
+        [
+            "도착일시",
+            ""
+        ],
+        [
+            "출발지",
+            ""
+        ],
+        [
+            "도착지",
+            ""
+        ],
+        [
+            "귀국편",
+            ""
+        ],
+        [
+            "항공편명",
+            ""
+        ],
+        [
+            "출발일시",
+            ""
+        ],
+        [
+            "도착일시",
+            ""
+        ],
+        [
+            "출발지",
+            ""
+        ],
+        [
+            "도착지",
+            ""
+        ],
+        [
+            "예약 정보",
+            ""
+        ],
+        [
+            "예약 인원",
+            ""
+        ],
+        [
+            "룸 옵션",
+            ""
+        ],
+        [
+            "여행 고객 정보",
+            ""
+        ],
+        [
+            "이름",
+            ""
+        ],
+        [
+            "성",
+            ""
+        ],
+        [
+            "여권번호",
+            ""
+        ],
+        [
+            "인원 옵션",
+            ""
+        ]
+    ]
+}

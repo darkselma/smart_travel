@@ -32,37 +32,37 @@
 			<div class="page-toolbar">
 				<a href="guide-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
-					<span data-lan-eng="">목록으로 돌아가기</span>
+					<span data-lan-eng="Return to list">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
 					<select class="select" disabled>
-						<option value="contract" selected>계약중</option>
+						<option value="contract" selected data-lan-eng="Under contract">계약중</option>
 						<option value="review">검토중</option>
 						<option value="paused">중지</option>
 						<option value="terminated">해지</option>
 					</select>
 					
-					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
 				</div>
 			</div>
 
-			<h1 class="page-title" data-lan-eng="">가이드 상세</h1>
+			<h1 class="page-title" data-lan-eng="Guide Details">가이드 상세</h1>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">기본 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Basic Information">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">가이드명</label>
+						<label class="label-name" data-lan-eng="Guide Name">가이드명</label>
 						<input type="text" class="form-control" value="Hyunwoo Park">
 					</div>
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">이메일</label>
+						<label class="label-name" data-lan-eng="Email">이메일</label>
 						<input type="email" class="form-control" value="hyunwoo@gmail.com">
 					</div>
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">연락처</label>
+						<label class="label-name" data-lan-eng="Contacts">연락처</label>
 						<div class="field-row">
 							<select class="select w-auto">
 								<option selected>+82</option>
@@ -80,22 +80,22 @@
 						<label class="label-name">PW</label>
 						<div class="input-box">
 							<input type="password" value="*********" placeholder="8~12자, 영문/숫자/특수문자 포함">
-							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt="">초기화</button>
+							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt=""><span data-lan-eng="Reset">초기화</span></button>
 						</div>
 					</div>
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">등록일시</label>
+						<label class="label-name" data-lan-eng="Registration date/time">등록일시</label>
 						<input type="text" class="form-control" value="2025-06-20 12:12" disabled>
 					</div>
 
 					<!-- 3행 : 증명사진 -->
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">증명사진</label>
+						<label class="label-name" data-lan-eng="ID Photo">증명사진</label>
 						<div class="upload-box">
 							<input id="file-passport" type="file" accept="image/*">
 							<label for="file-passport" class="thumb" aria-label="preview"></label>
 							<div class="upload-meta">
-								<div class="file-title" data-lan-eng="">이미지</div>
+								<div class="file-title" data-lan-eng="Image">이미지</div>
 								<div class="file-info">jpg, 328KB</div>
 								<div class="file-controller">
 									<button type="button" class="btn-icon" aria-label="다운로드"><img src="../image/button-download.svg" alt=""></button>
@@ -109,27 +109,27 @@
 
 					<!-- 4행 : 가이드 소개 전체폭 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">가이드 소개</label>
+						<label class="label-name" data-lan-eng="Guide Introduction">가이드 소개</label>
 						<div class="editor-box-wrap">
-							<textarea name="guide_desc" rows="8" placeholder="가이드소개를 입력하세요.">가이드소개란입니다.</textarea>
+							<textarea name="guide_desc" rows="8" placeholder="가이드소개를 입력하세요." data-lan-eng="Guide introduction section.">가이드소개란입니다.</textarea>
 						</div>
 					</div>
 
 					<!-- 5행 : 메모 전체폭 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">메모</label>
+						<label class="label-name" data-lan-eng="Note">메모</label>
 						<div class="editor-box-wrap">
-							<textarea name="memo" rows="8" placeholder="내용을 입력해주세요.">메모입력란입니다.</textarea>
+							<textarea name="memo" rows="8" placeholder="내용을 입력해주세요." data-lan-eng="This is a memo input field.">메모입력란입니다.</textarea>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">계약 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Contract Information">계약 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">계약 기간</label>
+						<label class="label-name" data-lan-eng="Contract period">계약 기간</label>
 						<div class="field-row">
 							<input type="date" class="form-control" name="contract_start" value="2024-06-01" aria-label="계약 시작일">
 							<span class="w-auto" aria-hidden="true">~</span>
@@ -141,7 +141,7 @@
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">배정된 일정 목록</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Assigned schedule list">배정된 일정 목록</h2>
 			<div class="card-panel jw-mgt16">
 				<table class="jw-tableA">
 					<colgroup>
@@ -155,11 +155,11 @@
 					<thead>
 						<tr>
 							<th class="no is-center">No</th>
-							<th data-lan-eng="">상품명</th>
-							<th data-lan-eng="">여행 시작일</th>
-							<th data-lan-eng="">예약자명</th>
-							<th data-lan-eng="" class="is-center">예약 인원</th>
-							<th data-lan-eng="" class="is-center">여행 상태</th>
+							<th data-lan-eng="Product Name">상품명</th>
+							<th data-lan-eng="Travel start date">여행 시작일</th>
+							<th data-lan-eng="Reserver's name">예약자명</th>
+							<th data-lan-eng="Number of people for reservation">예약 인원</th>
+							<th data-lan-eng="Travel status">여행 상태</th>
 						</tr>
 					</thead>
 					<tbody>

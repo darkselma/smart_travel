@@ -1,10 +1,10 @@
+const lang = getCookie('lang') || 'eng';
 function init(options) {
+	language_audit_eng_json_map();
 	const start = async () => {
 		await runInit(options);
 		layoutNav();
 		nav_status();
-
-		const lang = getCookie('lang') || 'eng';
 		setCookie('lang', lang, 365);
 		await Promise.resolve(language_apply(lang));
 		jw_select();
@@ -18,7 +18,6 @@ function init(options) {
 }
 
 
-// 슬롯 로더: Promise 반환
 function loadIntoSlot(slotSelector, url) {
 	const slotEl = document.querySelector(slotSelector);
 	if (!slotEl || !url) return Promise.resolve(false);
@@ -34,7 +33,6 @@ function loadIntoSlot(slotSelector, url) {
 		});
 }
 
-// 헤더/네비 로드 모두 끝난 뒤에 이어서 동작
 function runInit(options) {
 	options = options || {};
 	const pHeader = loadIntoSlot('.layout-header', options.headerUrl);

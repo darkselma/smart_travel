@@ -31,27 +31,28 @@
 			<div class="page-toolbar">
 				<a href="visa-app-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
-					<span data-lan-eng="">목록으로 돌아가기</span>
+					<span data-lan-eng="Return to list">목록으로 돌아가기</span>
 				</a>
 
 				<div class="page-toolbar-actions">
-					<select class="select" name="" onchange="">
-						<option value="" >처리 완료</option>
+					<select class="select" name="" onchange="" disabled>
+						<option value="" data-lan-eng="Under review">처리 완료</option>
 						<option value="" ></option>
 					</select>
+					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
 				</div>
 			</div>
-			<h1 class="page-title" data-lan-eng="Member Inquiry List">비자 신청 상세</h1>
+			<h1 class="page-title" data-lan-eng="Visa Application Details">비자 신청 상세</h1>
 			
-			<h2 class="section-title jw-mgt32" data-lan-eng="">서류 내역</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Document details">서류 내역</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item">
-						<label class="label-name">증명사진 (최근 6개월 이내)</label>
+						<label class="label-name" data-lan-eng="ID Photo (Within the last 6 months)">증명사진 (최근 6개월 이내)</label>
 						<div class="cell">
 							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 증명사진 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="ID Photo">증명사진</span> [pdf, 328KB]</div>
 								<div class="jw-center jw-gap10">
 									<i></i>
 									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
@@ -62,10 +63,10 @@
 
 					</div>
 					<div class="grid-item">
-						<label class="label-name">여권 사본</label>
+						<label class="label-name" data-lan-eng="Passport copy" data-lan-eng="Passport copy">여권 사본</label>
 						<div class="cell">
 							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 여권 사본 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="Passport copy">여권 사본</span> [pdf, 328KB]</div>
 								<div class="jw-center jw-gap10">
 									<i></i>
 									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
@@ -76,10 +77,10 @@
 
 					</div>
 					<div class="grid-item">
-						<label class="label-name">은행 계좌 증명서</label>
+						<label class="label-name" data-lan-eng="Bank Account Certificate">은행 계좌 증명서</label>
 						<div class="cell">
 							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 은행 계좌 증명서 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="Bank Account Certificate">은행 계좌 증명서</span> [pdf, 328KB]</div>
 								<div class="jw-center jw-gap10">
 									<i></i>
 									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
@@ -92,10 +93,10 @@
 
 					<!-- 2행 -->
 					<div class="grid-item">
-						<label class="label-name">최근 3개월간의 은행 거래 내역서</label>
+						<label class="label-name" data-lan-eng="Bank transaction history for the last 3 months">최근 3개월간의 은행 거래 내역서</label>
 						<div class="cell">
 							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 은행 거래 내역서 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="Bank Transaction Statement">은행 거래 내역서</span> [pdf, 328KB]</div>
 								<div class="jw-center jw-gap10">
 									<i></i>
 									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
@@ -106,10 +107,10 @@
 
 					</div>
 					<div class="grid-item ">
-						<label class="label-name">항공편 정보가 포함된 여행 일정표</label>
+						<label class="label-name" data-lan-eng="Travel Itinerary Including Flight Information">항공편 정보가 포함된 여행 일정표</label>
 						<div class="cell">
 							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 여행 일정표 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="Travel Itinerary">여행 일정표</span> [pdf, 328KB]</div>
 								<div class="jw-center jw-gap10">
 									<i></i>
 									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
@@ -122,84 +123,84 @@
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">신청 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Application Information">신청 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name">상품명</label>
-						<input type="text" class="form-control" value="2025-12-01 12:12" disabled>
+						<label class="label-name" data-lan-eng="Product Name">상품명</label>
+						<input type="text" class="form-control" value="" disabled>
 					</div>
 
 					<!-- 2행 -->
 					<div class="grid-item ">
-						<label class="label-name">신청일시</label>
-						<input type="text" class="form-control" value="제목입니다" disabled>
+						<label class="label-name" data-lan-eng="Application date/time">신청일시</label>
+						<input type="text" class="form-control" value="" disabled>
 					</div>
 					
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">신청자 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Applicant Information">신청자 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item">
-						<label class="label-name">호칭</label>
+						<label class="label-name" data-lan-eng="Title">호칭</label>
 						<select class="select" name="" onchange="">
 							<option value="" >MR</option>
 							<option value="" ></option>
 						</select>
 					</div>
 					<div class="grid-item">
-						<label class="label-name">이름</label>
+						<label class="label-name" data-lan-eng="Name">이름</label>
 						<input type="text" class="form-control" value="Jose">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">성</label>
+						<label class="label-name" data-lan-eng="Nature">성</label>
 						<input type="text" class="form-control" value="Ramirez">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name">성별</label>
+						<label class="label-name" data-lan-eng="Gender">성별</label>
 						<select class="select" name="" onchange="">
 							<option value="" >남성</option>
 							<option value="" ></option>
 						</select>
 					</div>
 					<div class="grid-item">
-						<label class="label-name">나이</label>
+						<label class="label-name" data-lan-eng="Age">나이</label>
 						<input type="text" class="form-control" value="40">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">생년월일</label>
+						<label class="label-name" data-lan-eng="Date of birth">생년월일</label>
 						<input type="text" class="form-control" value="19710101">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name">출신국가</label>
+						<label class="label-name" data-lan-eng="Country of origin">출신국가</label>
 						<input type="text" class="form-control" value="필리핀">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">여권번호</label>
+						<label class="label-name" data-lan-eng="Passport number">여권번호</label>
 						<input type="text" class="form-control" value="P1234567">
 					</div>
 					<div class="grid-item">
-						<label class="label-name">여권 발행일</label>
+						<label class="label-name" data-lan-eng="Passport Issue Date">여권 발행일</label>
 						<input type="text" class="form-control" value="20200101">
 					</div>
 					
 					<div class="grid-item">
-						<label class="label-name">여권 만료일</label>
+						<label class="label-name" data-lan-eng="Passport expiration date">여권 만료일</label>
 						<input type="text" class="form-control" value="20300101">
 					</div>
 					
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">여권 사진</label>
+						<label class="label-name" data-lan-eng="Passport photo">여권 사진</label>
 						<div class="upload-box">
 							<input id="file-passport" type="file" accept="image/*">
 							<label for="file-passport" class="thumb" aria-label="preview"></label>
 							<div class="upload-meta">
-								<div class="file-title" data-lan-eng="">이미지</div>
+								<div class="file-title" data-lan-eng="Image">이미지</div>
 								<div class="file-info">jpg, 328KB</div>
 							</div>
 						</div>
@@ -208,15 +209,17 @@
 				</div>
 			</div>
 			
-			<h2 class="section-title jw-mgt32" data-lan-eng="">비자 업로드</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Visa Upload">비자 업로드</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 첨부파일 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">비자 파일</label>
-						<button type="button" class="jw-button typeE jw-mgt8"><img src="../image/upload.svg" alt=""> 파일 업로드</button>
+						<label class="label-name" data-lan-eng="Visa file">비자 파일</label>
+						<label class="inputFile">
+							<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+							<button type="button" class="jw-button typeE jw-mgt8"><img src="../image/upload.svg" alt=""> <span data-lan-eng="Upload">파일 업로드</span></button>
+						</label>
 						<div class="attach-list">
-							
 						</div>
 					</div>
 				</div>

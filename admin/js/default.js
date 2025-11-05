@@ -132,7 +132,6 @@ function jw_select() {
 	});
 }
 
-
 function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000); document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`; }
 function getCookie(name) { const seg = `; ${document.cookie}`.split(`; ${name}=`); return (seg.length === 2) ? decodeURIComponent(seg.pop().split(';').shift()) : null; }
 
@@ -171,6 +170,69 @@ function language_set() {
 	} else {
 		language_apply(next);
 	}
+}
+
+function language_audit_eng_json_map() {
+	const path = location.pathname;
+	const file = decodeURIComponent(path.split('/').filter(Boolean).pop() || 'index.html');
+
+	const getBefore = (el) => {
+		const tag = el.tagName;
+		if (tag === 'INPUT' || tag === 'TEXTAREA') {
+			if (el.hasAttribute('placeholder')) return el.getAttribute('placeholder') || '';
+			return el.value || '';
+		}
+		if (tag === 'IMG') return el.getAttribute('alt') || '';
+		return (el.textContent || '').trim();
+	};
+
+	const getAfter = (el) => {
+		if (typeof getLangText === 'function') return getLangText(el, 'eng') || '';
+		return el.getAttribute('data-lan-eng') || '';
+	};
+
+	const pairs = [];
+	document.querySelectorAll('[data-lan-eng]').forEach(el => {
+		pairs.push([getBefore(el), getAfter(el)]);
+	});
+
+	const out = { [file]: pairs };
+	console.log( out );
+	//console.log(JSON.stringify(out, null, 2));
+}
+
+function language_audit_eng_json_map2(action) {
+	// 대상 dialog 잡기: 마지막(가장 최근) dialog
+	const dialogs = document.querySelectorAll('dialog');
+	if (!dialogs.length) { console.warn('No <dialog> found'); return; }
+	const container = dialogs[dialogs.length - 1];
+
+	// 키: 페이지 대신 action 사용 (없으면 'dialog')
+	const key = (action && String(action).trim()) || 'dialog';
+
+	const getBefore = (el) => {
+		const tag = el.tagName;
+		if (tag === 'INPUT' || tag === 'TEXTAREA') {
+			if (el.hasAttribute('placeholder')) return el.getAttribute('placeholder') || '';
+			return el.value || '';
+		}
+		if (tag === 'IMG') return el.getAttribute('alt') || '';
+		return (el.textContent || '').trim();
+	};
+
+	const getAfter = (el) => {
+		if (typeof getLangText === 'function') return getLangText(el, 'eng') || '';
+		return el.getAttribute('data-lan-eng') || '';
+	};
+
+	const pairs = [];
+	container.querySelectorAll('[data-lan-eng]').forEach(el => {
+		pairs.push([getBefore(el), getAfter(el)]);
+	});
+
+	const out = { [key]: pairs };
+	console.log(out);
+	// console.log(JSON.stringify(out, null, 2));
 }
 
 class Modal {
@@ -235,9 +297,10 @@ class Modal {
 
 				const lang = getCookie('lang') || 'eng';
 				setCookie('lang', lang, 365);
-				await Promise.resolve(language_apply(lang));
-				if (typeof jw_select === 'function') await Promise.resolve(jw_select());
-
+				language_audit_eng_json_map2(this.action);
+				language_apply(lang);
+				if (typeof jw_select === 'function') jw_select();
+				
 				const closeBtn = d.querySelector('#closeDialog');
 				if (closeBtn) {
 					closeBtn.addEventListener('click', () => this.close(), { once: true });
@@ -543,24 +606,39 @@ function change_category_5(el) {
 		'</div>';
 }
 
-function b2b_booking_detail() {
-	const target = document.getElementById('b2b_booking_detail_target');
-	if (!target) return;
+function makepassword(btn) {
+	const box = btn.closest('.input-box');
+	if (!box) return;
+	const input = box.querySelector('input[type="password"], input[type="text"]');
+	if (!input) return;
 
-	target.innerHTML = `
-    <div class="cell">
-      <div class="field-row jw-center">
-        <div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 선금 증빙 파일 [pdf, 328KB]</div>
-        <div class="jw-center jw-gap10">
-          <i></i>
-          <button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
-        </div>
-      </div>
-    </div>
-  `;
+	const lowers = 'abcdefghijklmnopqrstuvwxyz';
+	const uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	const digits = '0123456789';
+	const specials = '!@#$%^&*()-_=+[]{};:,.?/';
+
+	const all = lowers + uppers + digits + specials;
+	const len = 8 + Math.floor(Math.random() * 5); // 8~12
+	const pick = (set) => set[Math.floor(Math.random() * set.length)];
+	const chars = [
+		pick(lowers),
+		pick(uppers),
+		pick(digits),
+		pick(specials)
+	];
+
+	for (let i = chars.length; i < len; i++) {
+		chars.push(pick(all));
+	}
+	for (let i = chars.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[chars[i], chars[j]] = [chars[j], chars[i]];
+	}
+
+	const pwd = chars.join('');
+	input.value = pwd;
 }
 
-/* 임시 */
 function temp_link(v){
 	location.href=v;
 }
