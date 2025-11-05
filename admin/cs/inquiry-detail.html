@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+		
+			<div class="page-toolbar">
+				<a href="inquiry-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
+				</a>
+			</div>
+
+			<h1 class="page-title" data-lan-eng="">문의 상세</h1>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="">문의자 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 1행 -->
+					<div class="grid-item">
+						<label class="label-name">고객명</label>
+						<input type="text" class="form-control" value="Jose Ramirez" disabled>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">연락처</label>
+						<input type="text" class="form-control" value="+63 917 123 4567" disabled>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">이메일</label>
+						<input type="email" class="form-control" value="ramirez@gmail.com" disabled>
+					</div>
+
+					<!-- 2행 -->
+					<div class="grid-item">
+						<label class="label-name">고객 번호</label>
+						<input type="text" class="form-control" value="B100231" disabled>
+					</div>
+					<div class="grid-item col-span-2">
+						<label class="label-name">소속 지점명</label>
+						<input type="text" class="form-control" value="Bacolod City" disabled>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="">문의 내용</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 1행 -->
+					<div class="grid-item">
+						<label class="label-name">작성일시</label>
+						<input type="text" class="form-control" value="2025-12-01 12:12" disabled>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">문의 유형</label>
+						<select class="select" disabled>
+							<option selected>상품 문의</option>
+							<option>결제 문의</option>
+							<option>환불/취소</option>
+							<option>기타</option>
+						</select>
+					</div>
+					<div class="grid-item"></div>
+
+					<!-- 2행 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">제목</label>
+						<input type="text" class="form-control" value="제목입니다" disabled>
+					</div>
+
+					<!-- 3행 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">내용</label>
+						<div class="editor-box-wrap">
+							<textarea rows="8" placeholder="내용을 입력해주세요."
+								disabled>문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
+						</div>
+					</div>
+
+					<div class="grid-item col-span-3">
+						<label class="label-name"><span data-lan-eng="">첨부파일</span> <span class="req">*</span></label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 파일 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="grid-item col-span-3">
+						<label class="label-name" data-lan-eng="">증명사진</label>
+						<div class="upload-box">
+							<input id="file-passport" type="file" accept="image/*">
+							<label for="file-passport" class="thumb" aria-label="preview"></label>
+							<div class="upload-meta">
+								<div class="file-title" data-lan-eng="">이미지</div>
+								<div class="file-info">jpg, 328KB</div>
+								<div class="file-controller">
+									<button type="button" class="btn-icon" aria-label="다운로드"><img src="../image/button-download.svg" alt=""></button>
+									<button type="button" class="btn-icon" aria-label="삭제"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="">답변 남기기</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item col-span-3">
+						<label class="label-name">내용</label>
+						<div class="editor-box-wrap">
+							<textarea rows="8" placeholder="내용을 입력해주세요."></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="controller jw-flex-s">
+					<button type="button" class="jw-button typeB " data-lan-eng="">답변 전송</button>
+				</div>
+
+			</div>
+
+		</section>
+
+	</main>
+
+	<script src="../js/default.js"></script>
+	<script src="../js/cs.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_cs.html'
+		});
+	</script>
+</body>
+
+</html>

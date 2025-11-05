@@ -7,6 +7,7 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -26,7 +27,7 @@
 		<!-- nav 들어올 자리 -->
 		<nav class="layout-nav"></nav>
 
-		<section class="layout-content">
+		<section class="layout-content layout-content-aside">
 			<div class="page-toolbar">
 				<a href="product-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
@@ -39,751 +40,666 @@
 				</div>
 			</div>
 
-			<h1 class="page-title" data-lan-eng="">상품 상세</h1>
+			<div class="content-main">
+				<h1 class="page-title" data-lan-eng="">상품 상세</h1>
 
-			<h2 class="section-title" data-lan-eng="">상품 정보</h2>
-			<div class="card-panel jw-mgt16">
-				<div class="grid-wrap">
-					<!-- 1행 -->
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">등록일시</label>
-						<input type="datetime-local" class="form-control" value="2025-01-01T12:12" disabled>
-					</div>
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">상품코드</label>
-						<input type="text" class="form-control" placeholder="KOR54124" disabled>
-					</div>
-					<div class="grid-item"></div>
-
-					<!-- 2행 : 상품명 전체폭 -->
-					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">상품명</label>
-						<input type="text" class="form-control"
-							placeholder="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
-					</div>
-
-					<!-- 3행 : 판매대상/대분류/중분류 -->
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">판매 대상 <span class="req">*</span></label>
-						<select class="select" disabled>
-							<option selected>B2B</option>
-							<option>B2C</option>
-						</select>
-					</div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">대분류 <span class="req">*</span></label>
-						<select class="select">
-							<option selected>계절별</option>
-							<option>지역별</option>
-							<option>테마별</option>
-						</select>
-					</div>
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">중분류 <span class="req">*</span></label>
-						<select class="select">
-							<option selected>봄</option>
-							<option>여름</option>
-							<option>가을</option>
-							<option>겨울</option>
-						</select>
-					</div>
-					<div class="grid-item"></div>
-
-					<!-- 4행 : 상품 설명 전체폭 (에디터) -->
-					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">상품 설명 <span class="req">*</span></label>
-						<div class="editor-box-wrap">
-							<textarea rows="8" placeholder="봄 시즌 한정 벚꽃 투어!&#10;서울의 대표 벚꽃 명소를 전일정 가이드와 함께 여행하며..."></textarea>
-						</div>
-					</div>
-
-					<!-- 5행 : 썸네일 이미지 (좌측 한 칸) -->
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">썸네일 이미지 <span class="req">*</span></label>
-						<div class="upload-grid">
-							<div class="upload-item is-filled">
-								<img class="preview" src="https://picsum.photos/600/600" alt="">
-								<button type="button" class="btn-close" aria-label="remove">×</button>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-
-					<!-- 6행 : 상품 이미지 (가로 여러 개) -->
-					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">상품 이미지</label>
-						<div class="upload-grid">
-							<div class="upload-item is-filled">
-								<img class="preview" src="https://picsum.photos/600/600" alt="">
-								<button type="button" class="btn-close" aria-label="remove">×</button>
-							</div>
-							<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-							<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-							<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-							<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-						</div>
-					</div>
-
-					<!-- 7행 : 상세 소개 이미지 (좌측 한 칸) -->
-					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">상세 소개 이미지 <span class="req">*</span></label>
-						<div class="upload-grid">
-							<div class="upload-item is-filled">
-								<img class="preview" src="https://picsum.photos/600/600" alt="">
-								<button type="button" class="btn-close" aria-label="remove">×</button>
-							</div>
-						</div>
-
-					</div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-				</div>
-			</div>
-
-			<h2 class="section-title" data-lan-eng="">항공편 정보</h2>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title" data-lan-eng="">출국편</h3>
-
-				<div class="grid-wrap jw-mgt16">
-					<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
-					<div class="grid-item">
-						<label class="label-name">항공편명 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="PR467">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">출발시각 <span class="req">*</span></label>
-						<div class="meeting-wrap">
-							<select class="select">
-								<option>00</option>
-								<option>01</option>
-								<option>02</option>
-								<option>03</option>
-								<option>04</option>
-								<option>05</option>
-								<option>06</option>
-								<option>07</option>
-								<option>08</option>
-								<option>09</option>
-								<option>10</option>
-								<option>11</option>
-								<option selected>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-							</select>
-							<select class="select">
-								<option>00</option>
-								<option>10</option>
-								<option selected>20</option>
-								<option>30</option>
-								<option>40</option>
-								<option>50</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">도착시각 <span class="req">*</span></label>
-						<div class="meeting-wrap">
-							<select class="select">
-								<option>00</option>
-								<option>01</option>
-								<option>02</option>
-								<option>03</option>
-								<option>04</option>
-								<option>05</option>
-								<option>06</option>
-								<option>07</option>
-								<option>08</option>
-								<option>09</option>
-								<option>10</option>
-								<option selected>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-							</select>
-							<select class="select">
-								<option>00</option>
-								<option>10</option>
-								<option selected>20</option>
-								<option>30</option>
-								<option>40</option>
-								<option>50</option>
-							</select>
-						</div>
-					</div>
-
-					<!-- 2행 : 출발지 / 도착지 -->
-					<div class="grid-item">
-						<label class="label-name">출발지 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="마닐라 (MNL)">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">도착지 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="인천 (ICN)">
-					</div>
-
-					<div class="grid-item"></div>
-				</div>
-			</div>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">귀국편</h3>
-
-				<div class="grid-wrap jw-mgt16">
-					<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
-					<div class="grid-item">
-						<label class="label-name">항공편명 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="PR468">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">출발시각 <span class="req">*</span></label>
-						<div class="meeting-wrap">
-							<select class="select">
-								<option>00</option>
-								<option>01</option>
-								<option>02</option>
-								<option>03</option>
-								<option>04</option>
-								<option>05</option>
-								<option>06</option>
-								<option>07</option>
-								<option>08</option>
-								<option>09</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option selected>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-							</select>
-							<select class="select">
-								<option>00</option>
-								<option selected>05</option>
-								<option>10</option>
-								<option>20</option>
-								<option>30</option>
-								<option>40</option>
-								<option>50</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">도착시각 <span class="req">*</span></label>
-						<div class="meeting-wrap">
-							<select class="select">
-								<option>00</option>
-								<option>01</option>
-								<option>02</option>
-								<option>03</option>
-								<option>04</option>
-								<option>05</option>
-								<option>06</option>
-								<option>07</option>
-								<option>08</option>
-								<option>09</option>
-								<option>10</option>
-								<option>11</option>
-								<option selected>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-							</select>
-							<select class="select">
-								<option>00</option>
-								<option selected>05</option>
-								<option>10</option>
-								<option>20</option>
-								<option>30</option>
-								<option>40</option>
-								<option>50</option>
-							</select>
-						</div>
-					</div>
-
-					<!-- 2행 : 출발지 / 도착지 -->
-					<div class="grid-item">
-						<label class="label-name">출발지 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="인천 (ICN)">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">도착지 <span class="req">*</span></label>
-						<input type="text" class="form-control" placeholder="마닐라 (MNL)">
-					</div>
-
-					<div class="grid-item"></div>
-				</div>
-			</div>
-
-
-			<h2 class="section-title" data-lan-eng="">판매 정보</h2>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title" data-lan-eng="">기본 판매 정보</h3>
-
-				<div class="grid-wrap jw-mgt16">
-					<!-- 판매 기간 -->
-					<div class="grid-item">
-						<label class="label-name">판매 기간 <span class="req">*</span></label>
-						<div class="field-row date-range">
-							<input type="date" class="form-control" value="2025-03-05">
-							<span class="tilde">~</span>
-							<input type="date" class="form-control" value="2025-06-12">
-						</div>
-						<p class="form-desc is-warning">기간은 최대 <b>100</b>일까지만 설정이 가능합니다.</p>
-					</div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-					<!-- 최소/최대/요금 -->
-					<div class="grid-item">
-						<label class="label-name">최소 출발 인원 <span class="req">*</span></label>
-						<input type="number" class="form-control" value="2" min="0" placeholder="0">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">최대 수용 인원 <span class="req">*</span></label>
-						<input type="number" class="form-control" value="36" min="0" placeholder="0">
-					</div>
-
-					<div class="grid-item">
-						<label class="label-name">기본 항공 요금 (₱) <span class="req">*</span></label>
-						<input type="text" class="form-control" value="15,000" inputmode="numeric" placeholder="15,000">
-					</div>
-				</div>
-			</div>
-
-			
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">일자별 판매 조정</h3>
-
-				<!-- 달력 자리만 -->
-				<div class="calendar-row jw-mgt16">
-					<div>
-						<div class="cal-month">
-							<div class="cal-header">Jun 2025</div>
-							
-							<div class="cal-head">
-							  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-							</div>
-							<div class="cal-body">
-								<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
-								<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
-								<div class="cal-day"><time datetime="2025-06-09">9</time></div>
-								<div class="cal-day"><time datetime="2025-06-10">10</time></div>
-								<div class="cal-day"><time datetime="2025-06-11">11</time></div>
-								<div class="cal-day"><time datetime="2025-06-12">12</time></div>
-								<div class="cal-day"><time datetime="2025-06-13">13</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
-								<div class="cal-day"><time datetime="2025-06-16">16</time></div>
-								<div class="cal-day"><time datetime="2025-06-17">17</time></div>
-								<div class="cal-day"><time datetime="2025-06-18">18</time></div>
-								<div class="cal-day"><time datetime="2025-06-19">19</time></div>
-								<div class="cal-day"><time datetime="2025-06-20">20</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
-								<div class="cal-day"><time datetime="2025-06-23">23</time></div>
-								<div class="cal-day"><time datetime="2025-06-24">24</time></div>
-								<div class="cal-day"><time datetime="2025-06-25">25</time></div>
-								<div class="cal-day"><time datetime="2025-06-26">26</time></div>
-								<div class="cal-day"><time datetime="2025-06-27">27</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
-								<div class="cal-day"><time datetime="2025-06-30">30</time></div>
-								<div class="cal-day"><time datetime="2025-07-01">1</time></div>
-								<div class="cal-day"><time datetime="2025-07-02">2</time></div>
-								<div class="cal-day"><time datetime="2025-07-03">3</time></div>
-								<div class="cal-day"><time datetime="2025-07-04">4</time></div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="cal-month">
-							<div class="cal-header">Jun 2025</div>
-							
-							<div class="cal-head">
-							  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-							</div>
-							<div class="cal-body">
-								<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
-								<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
-								<div class="cal-day"><time datetime="2025-06-09">9</time></div>
-								<div class="cal-day"><time datetime="2025-06-10">10</time></div>
-								<div class="cal-day"><time datetime="2025-06-11">11</time></div>
-								<div class="cal-day"><time datetime="2025-06-12">12</time></div>
-								<div class="cal-day"><time datetime="2025-06-13">13</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
-								<div class="cal-day"><time datetime="2025-06-16">16</time></div>
-								<div class="cal-day"><time datetime="2025-06-17">17</time></div>
-								<div class="cal-day"><time datetime="2025-06-18">18</time></div>
-								<div class="cal-day"><time datetime="2025-06-19">19</time></div>
-								<div class="cal-day"><time datetime="2025-06-20">20</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
-								<div class="cal-day"><time datetime="2025-06-23">23</time></div>
-								<div class="cal-day"><time datetime="2025-06-24">24</time></div>
-								<div class="cal-day"><time datetime="2025-06-25">25</time></div>
-								<div class="cal-day"><time datetime="2025-06-26">26</time></div>
-								<div class="cal-day"><time datetime="2025-06-27">27</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
-								<div class="cal-day"><time datetime="2025-06-30">30</time></div>
-								<div class="cal-day"><time datetime="2025-07-01">1</time></div>
-								<div class="cal-day"><time datetime="2025-07-02">2</time></div>
-								<div class="cal-day"><time datetime="2025-07-03">3</time></div>
-								<div class="cal-day"><time datetime="2025-07-04">4</time></div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="cal-month">
-							<div class="cal-header">Jun 2025</div>
-							
-							<div class="cal-head">
-							  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-							</div>
-							<div class="cal-body">
-								<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
-								<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
-								<div class="cal-day"><time datetime="2025-06-09">9</time></div>
-								<div class="cal-day"><time datetime="2025-06-10">10</time></div>
-								<div class="cal-day"><time datetime="2025-06-11">11</time></div>
-								<div class="cal-day"><time datetime="2025-06-12">12</time></div>
-								<div class="cal-day"><time datetime="2025-06-13">13</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
-								<div class="cal-day"><time datetime="2025-06-16">16</time></div>
-								<div class="cal-day"><time datetime="2025-06-17">17</time></div>
-								<div class="cal-day"><time datetime="2025-06-18">18</time></div>
-								<div class="cal-day"><time datetime="2025-06-19">19</time></div>
-								<div class="cal-day"><time datetime="2025-06-20">20</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
-								<div class="cal-day"><time datetime="2025-06-23">23</time></div>
-								<div class="cal-day"><time datetime="2025-06-24">24</time></div>
-								<div class="cal-day"><time datetime="2025-06-25">25</time></div>
-								<div class="cal-day"><time datetime="2025-06-26">26</time></div>
-								<div class="cal-day"><time datetime="2025-06-27">27</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
-								<div class="cal-day"><time datetime="2025-06-30">30</time></div>
-								<div class="cal-day"><time datetime="2025-07-01">1</time></div>
-								<div class="cal-day"><time datetime="2025-07-02">2</time></div>
-								<div class="cal-day"><time datetime="2025-07-03">3</time></div>
-								<div class="cal-day"><time datetime="2025-07-04">4</time></div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="cal-month">
-							<div class="cal-header">Jun 2025</div>
-							
-							<div class="cal-head">
-							  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-							</div>
-							<div class="cal-body">
-								<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
-								<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
-								<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
-								<div class="cal-day"><time datetime="2025-06-09">9</time></div>
-								<div class="cal-day"><time datetime="2025-06-10">10</time></div>
-								<div class="cal-day"><time datetime="2025-06-11">11</time></div>
-								<div class="cal-day"><time datetime="2025-06-12">12</time></div>
-								<div class="cal-day"><time datetime="2025-06-13">13</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
-								<div class="cal-day"><time datetime="2025-06-16">16</time></div>
-								<div class="cal-day"><time datetime="2025-06-17">17</time></div>
-								<div class="cal-day"><time datetime="2025-06-18">18</time></div>
-								<div class="cal-day"><time datetime="2025-06-19">19</time></div>
-								<div class="cal-day"><time datetime="2025-06-20">20</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
-								<div class="cal-day"><time datetime="2025-06-23">23</time></div>
-								<div class="cal-day"><time datetime="2025-06-24">24</time></div>
-								<div class="cal-day"><time datetime="2025-06-25">25</time></div>
-								<div class="cal-day"><time datetime="2025-06-26">26</time></div>
-								<div class="cal-day"><time datetime="2025-06-27">27</time></div>
-								<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
-
-								<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
-								<div class="cal-day"><time datetime="2025-06-30">30</time></div>
-								<div class="cal-day"><time datetime="2025-07-01">1</time></div>
-								<div class="cal-day"><time datetime="2025-07-02">2</time></div>
-								<div class="cal-day"><time datetime="2025-07-03">3</time></div>
-								<div class="cal-day"><time datetime="2025-07-04">4</time></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<!-- 테이블 -->
-				<div class="tableA-scrollY jw-mgt32" style="height:400px;">
-					<table class="jw-tableA booking-detail">
-						<colgroup>
-							<col class="col-60">
-							<col>
-							<col>
-							<col>
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="no is-center">No</th>
-								<th>항공편 출발일</th>
-								<th>예약된 인원</th>
-								<th>최대 수용 인원</th>
-								<th>항공 요금 (₱)</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="no is-center">1</td>
-								<td class="is-center">2025-04-05</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">2</td>
-								<td class="is-center">2025-04-06</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">3</td>
-								<td class="is-center">2025-04-10</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">4</td>
-								<td class="is-center">2025-04-13</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">5</td>
-								<td class="is-center">2025-04-17</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">6</td>
-								<td class="is-center">2025-04-20</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">7</td>
-								<td class="is-center">2025-04-21</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">8</td>
-								<td class="is-center">2025-04-24</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">9</td>
-								<td class="is-center">2025-04-27</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-							<tr>
-								<td class="no is-center">10</td>
-								<td class="is-center">2025-04-30</td>
-								<td class="is-center">4</td>
-								<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<h2 class="section-title">일정표</h2>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">미팅 정보</h3>
-
-				<div class="grid-wrap jw-mgt16">
-					<!-- 1행 : 미팅 시간 -->
-					<div class="grid-item">
-						<label class="label-name">미팅 시간 <span class="req">*</span></label>
-						<div class="meeting-wrap">
-							<!-- 시 -->
-							<select class="select">
-								<option>00</option>
-								<option>01</option>
-								<option>02</option>
-								<option>03</option>
-								<option>04</option>
-								<option>05</option>
-								<option>06</option>
-								<option>07</option>
-								<option>08</option>
-								<option selected>09</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-							</select>
-							<!-- 분 -->
-							<select class="select">
-								<option selected>00</option>
-								<option>05</option>
-								<option>10</option>
-								<option>15</option>
-								<option>20</option>
-								<option>25</option>
-								<option>30</option>
-								<option>35</option>
-								<option>40</option>
-								<option>45</option>
-								<option>50</option>
-								<option>55</option>
-							</select>
-						</div>
-					</div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-
-					<!-- 2행 : 미팅 장소명 전체폭 + 주소검색 버튼 -->
-					<div class="grid-item col-span-3">
-						<label class="label-name">미팅 장소명 <span class="req">*</span></label>
-						<div class="jw-center jw-gap20">
-							<input type="text" class="form-control jw-wf" value="인천국제공항 제2여객터미널" disabled>
-							<button type="button" class="jw-button typeA ">주소 검색</button>
-						</div>
-					</div>
-
-					<!-- 3행 : 미팅 장소 주소 전체폭 -->
-					<div class="grid-item col-span-3">
-						<label class="label-name">미팅 장소 주소 <span class="req">*</span></label>
-						<input type="text" class="form-control" value="인천광역시 중구 제2터미널대로 446" disabled>
-					</div>
-				</div>
-			</div>
-
-			<div class="card-panel jw-mgt16">
-				<!-- Day Header -->
-				<h3 class="grid-wrap-title">
-					<select class="select">
-						<option>1Day</option>
-					</select>
-				</h3>
-				
-				<i class="line"></i>
-
-
-				<!-- 일정 요약 -->
-				<div class="grid-wrap jw-mgt12">
-					<div class="grid-item col-span-3">
-						<label class="label-name">일정 요약</label>
-						<input type="text" class="form-control" placeholder="인천 도착">
-					</div>
-				</div>
-
-				<!-- 관광지 정보 -->
-				<div class="sub-panel jw-mgt20">
-					
-					<h3 class="grid-wrap-title">관광지 정보</h3>
-					<button type="button" class="jw-button typeA jw-mgt12">＋ 관광지 추가</button>
-
-
-					<div class="grid-wrap grid-highlight jw-mgt12">
-						<!-- 시간 -->
+				<h2 class="section-title jw-mgt32" data-lan-eng="">상품 정보</h2>
+				<div class="card-panel jw-mgt16">
+					<div class="grid-wrap">
+						<!-- 1행 -->
 						<div class="grid-item">
-							<label class="label-name">일정 시작 시각 <span class="req">*</span></label>
+							<label class="label-name" data-lan-eng="">등록일시</label>
+							<input type="datetime-local" class="form-control" value="2025-01-01T12:12" disabled>
+						</div>
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">상품코드</label>
+							<input type="text" class="form-control" placeholder="KOR54124" disabled>
+						</div>
+						<div class="grid-item"></div>
+
+						<!-- 2행 : 상품명 전체폭 -->
+						<div class="grid-item col-span-3">
+							<label class="label-name" data-lan-eng="">상품명</label>
+							<input type="text" class="form-control"
+								placeholder="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
+						</div>
+
+						<!-- 3행 : 판매대상/대분류/중분류 -->
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">판매 대상 <span class="req">*</span></label>
+							<select class="select" disabled>
+								<option selected>B2B</option>
+								<option>B2C</option>
+							</select>
+						</div>
+						<div class="grid-item"></div>
+						<div class="grid-item"></div>
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">대분류 <span class="req">*</span></label>
+							<select class="select">
+								<option selected>계절별</option>
+								<option>지역별</option>
+								<option>테마별</option>
+							</select>
+						</div>
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">중분류 <span class="req">*</span></label>
+							<select class="select">
+								<option selected>봄</option>
+								<option>여름</option>
+								<option>가을</option>
+								<option>겨울</option>
+							</select>
+						</div>
+						<div class="grid-item"></div>
+
+						<!-- 4행 : 상품 설명 전체폭 (에디터) -->
+						<div class="grid-item col-span-3">
+							<label class="label-name" data-lan-eng="">상품 설명 <span class="req">*</span></label>
+							<div class="editor-box-wrap">
+								<textarea rows="8" placeholder="봄 시즌 한정 벚꽃 투어!&#10;서울의 대표 벚꽃 명소를 전일정 가이드와 함께 여행하며..."></textarea>
+							</div>
+						</div>
+
+						<!-- 5행 : 썸네일 이미지 (좌측 한 칸) -->
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">썸네일 이미지 <span class="req">*</span></label>
+							<div class="upload-grid">
+								<div class="upload-item is-filled">
+									<img class="preview" src="https://picsum.photos/600/600" alt="">
+									<button type="button" class="btn-close" aria-label="remove">×</button>
+								</div>
+							</div>
+						</div>
+						<div class="grid-item"></div>
+						<div class="grid-item"></div>
+
+						<!-- 6행 : 상품 이미지 (가로 여러 개) -->
+						<div class="grid-item col-span-3">
+							<label class="label-name" data-lan-eng="">상품 이미지</label>
+							<div class="upload-grid">
+								<div class="upload-item is-filled">
+									<img class="preview" src="https://picsum.photos/600/600" alt="">
+									<button type="button" class="btn-close" aria-label="remove">×</button>
+								</div>
+								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
+								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
+								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
+								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
+							</div>
+						</div>
+
+						<!-- 7행 : 상세 소개 이미지 (좌측 한 칸) -->
+						<div class="grid-item">
+							<label class="label-name" data-lan-eng="">상세 소개 이미지 <span class="req">*</span></label>
+							<div class="upload-grid">
+								<div class="upload-item is-filled">
+									<img class="preview" src="https://picsum.photos/600/600" alt="">
+									<button type="button" class="btn-close" aria-label="remove">×</button>
+								</div>
+							</div>
+
+						</div>
+						<div class="grid-item"></div>
+						<div class="grid-item"></div>
+					</div>
+				</div>
+
+				<h2 class="section-title jw-mgt32" data-lan-eng="">항공편 정보</h2>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title" data-lan-eng="">출국편</h3>
+
+					<div class="grid-wrap jw-mgt16">
+						<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
+						<div class="grid-item">
+							<label class="label-name">항공편명 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="PR467">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">출발시각 <span class="req">*</span></label>
 							<div class="meeting-wrap">
 								<select class="select">
 									<option>00</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option selected>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+								</select>
+								<select class="select">
+									<option>00</option>
+									<option>10</option>
+									<option selected>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">도착시각 <span class="req">*</span></label>
+							<div class="meeting-wrap">
+								<select class="select">
+									<option>00</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option selected>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+								</select>
+								<select class="select">
+									<option>00</option>
+									<option>10</option>
+									<option selected>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 2행 : 출발지 / 도착지 -->
+						<div class="grid-item">
+							<label class="label-name">출발지 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="마닐라 (MNL)">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">도착지 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="인천 (ICN)">
+						</div>
+
+						<div class="grid-item"></div>
+					</div>
+				</div>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title">귀국편</h3>
+
+					<div class="grid-wrap jw-mgt16">
+						<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
+						<div class="grid-item">
+							<label class="label-name">항공편명 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="PR468">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">출발시각 <span class="req">*</span></label>
+							<div class="meeting-wrap">
+								<select class="select">
+									<option>00</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option selected>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+								</select>
+								<select class="select">
+									<option>00</option>
+									<option selected>05</option>
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">도착시각 <span class="req">*</span></label>
+							<div class="meeting-wrap">
+								<select class="select">
+									<option>00</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option selected>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+								</select>
+								<select class="select">
+									<option>00</option>
+									<option selected>05</option>
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 2행 : 출발지 / 도착지 -->
+						<div class="grid-item">
+							<label class="label-name">출발지 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="인천 (ICN)">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">도착지 <span class="req">*</span></label>
+							<input type="text" class="form-control" placeholder="마닐라 (MNL)">
+						</div>
+
+						<div class="grid-item"></div>
+					</div>
+				</div>
+
+
+				<h2 class="section-title jw-mgt32" data-lan-eng="">판매 정보</h2>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title" data-lan-eng="">기본 판매 정보</h3>
+
+					<div class="grid-wrap jw-mgt16">
+						<!-- 판매 기간 -->
+						<div class="grid-item">
+							<label class="label-name">판매 기간 <span class="req">*</span></label>
+							<div class="field-row date-range">
+								<input type="date" class="form-control" value="2025-03-05">
+								<span class="tilde">~</span>
+								<input type="date" class="form-control" value="2025-06-12">
+							</div>
+							<p class="form-desc is-warning">기간은 최대 <b>100</b>일까지만 설정이 가능합니다.</p>
+						</div>
+						<div class="grid-item"></div>
+						<div class="grid-item"></div>
+						<!-- 최소/최대/요금 -->
+						<div class="grid-item">
+							<label class="label-name">최소 출발 인원 <span class="req">*</span></label>
+							<input type="number" class="form-control" value="2" min="0" placeholder="0">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">최대 수용 인원 <span class="req">*</span></label>
+							<input type="number" class="form-control" value="36" min="0" placeholder="0">
+						</div>
+
+						<div class="grid-item">
+							<label class="label-name">기본 항공 요금 (₱) <span class="req">*</span></label>
+							<input type="text" class="form-control" value="15,000" inputmode="numeric" placeholder="15,000">
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title">일자별 판매 조정</h3>
+
+					<!-- 달력 자리만 -->
+					<div class="calendar-row jw-mgt16">
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- 테이블 -->
+					<div class="tableA-scrollY jw-mgt32" style="height:400px;">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-60">
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="no is-center">No</th>
+									<th>항공편 출발일</th>
+									<th>예약된 인원</th>
+									<th>최대 수용 인원</th>
+									<th>항공 요금 (₱)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="no is-center">1</td>
+									<td class="is-center">2025-04-05</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">2</td>
+									<td class="is-center">2025-04-06</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">3</td>
+									<td class="is-center">2025-04-10</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">4</td>
+									<td class="is-center">2025-04-13</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">5</td>
+									<td class="is-center">2025-04-17</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">6</td>
+									<td class="is-center">2025-04-20</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">7</td>
+									<td class="is-center">2025-04-21</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">8</td>
+									<td class="is-center">2025-04-24</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">9</td>
+									<td class="is-center">2025-04-27</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">10</td>
+									<td class="is-center">2025-04-30</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h2 class="section-title jw-mgt32">일정표</h2>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title">미팅 정보</h3>
+
+					<div class="grid-wrap jw-mgt16">
+						<!-- 1행 : 미팅 시간 -->
+						<div class="grid-item">
+							<label class="label-name">미팅 시간 <span class="req">*</span></label>
+							<div class="meeting-wrap">
+								<!-- 시 -->
+								<select class="select">
+									<option>00</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
 									<option selected>09</option>
 									<option>10</option>
 									<option>11</option>
@@ -800,397 +716,577 @@
 									<option>22</option>
 									<option>23</option>
 								</select>
+								<!-- 분 -->
 								<select class="select">
 									<option selected>00</option>
+									<option>05</option>
 									<option>10</option>
-									<option>20</option>
-									<option>30</option>
-									<option>40</option>
-									<option>50</option>
-								</select>
-							</div>
-						</div>
-						<div class="grid-item">
-							<label class="label-name">일정 종료 시각 <span class="req">*</span></label>
-							<div class="meeting-wrap">
-								<select class="select">
-									<option>00</option>
-									<option>09</option>
-									<option selected>10</option>
-									<option>11</option>
-									<option>12</option>
-									<option>13</option>
-									<option>14</option>
 									<option>15</option>
-									<option>16</option>
-									<option>17</option>
-									<option>18</option>
-									<option>19</option>
 									<option>20</option>
-									<option>21</option>
-									<option>22</option>
-									<option>23</option>
-								</select>
-								<select class="select">
-									<option selected>00</option>
-									<option>10</option>
-									<option>20</option>
+									<option>25</option>
 									<option>30</option>
+									<option>35</option>
 									<option>40</option>
+									<option>45</option>
 									<option>50</option>
+									<option>55</option>
 								</select>
 							</div>
 						</div>
 						<div class="grid-item"></div>
+						<div class="grid-item"></div>
 
-						<!-- 명/주소 -->
+						<!-- 2행 : 미팅 장소명 전체폭 + 주소검색 버튼 -->
 						<div class="grid-item col-span-3">
-							<label class="label-name">관광지명 <span class="req">*</span></label>
+							<label class="label-name">미팅 장소명 <span class="req">*</span></label>
 							<div class="jw-center jw-gap20">
-								<input type="text" class="form-control jw-wf" value="남이섬" disabled>
+								<input type="text" class="form-control jw-wf" value="인천국제공항 제2여객터미널" disabled>
 								<button type="button" class="jw-button typeA ">주소 검색</button>
 							</div>
 						</div>
 
+						<!-- 3행 : 미팅 장소 주소 전체폭 -->
 						<div class="grid-item col-span-3">
-							<label class="label-name">관광지 주소</label>
-							<input type="text" class="form-control" value="강원 춘천시 남산면 남이섬길 1" disabled>
-						</div>
-
-						<!-- 설명(에디터) -->
-						<div class="grid-item col-span-3">
-							<label class="label-name">관광지 설명</label>
-							<div class="editor-box-wrap">
-								<textarea rows="6" placeholder="설명을 입력하세요."></textarea>
-							</div>
-						</div>
-
-						<!-- 이미지 업로드 -->
-						<div class="grid-item col-span-3">
-							<label class="label-name">관광지 이미지 <span class="req">*</span></label>
-							<div class="upload-grid">
-								<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
-							</div>
-						</div>
-
-						<!-- 행 삭제 -->
-						<div class="grid-item col-span-3">
-							<div class="grid-item-controoler">
-								<button type="button" class="jw-button typeA"><img src="../image/trash.svg" alt="">관광지 삭제</button>
-							</div>
+							<label class="label-name">미팅 장소 주소 <span class="req">*</span></label>
+							<input type="text" class="form-control" value="인천광역시 중구 제2터미널대로 446" disabled>
 						</div>
 					</div>
 				</div>
 
-				<!-- 숙소 정보 -->
-				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">숙소 정보</h4>
+				<div class="card-panel jw-mgt16">
+					<!-- Day Header -->
+					<h3 class="grid-wrap-title">
+						<select class="select">
+							<option>1Day</option>
+						</select>
+					</h3>
+					
+					<i class="line"></i>
 
-					<div class="grid-wrap grid-highlight jw-mgt12">
+
+					<!-- 일정 요약 -->
+					<div class="grid-wrap jw-mgt12">
 						<div class="grid-item col-span-3">
-							<label class="label-name">숙소명 <span class="req">*</span></label>
-							<div class="jw-center jw-gap20">
-								<input type="text" class="form-control jw-wf" value="에어스카이 호텔 인천" disabled>
-								<button type="button" class="jw-button typeA ">주소 검색</button>
-							</div>
-
-						</div>
-
-						<div class="grid-item col-span-3">
-							<label class="label-name">숙소 주소 <span class="req">*</span></label>
-							<input type="text" class="form-control" value="인천 중구 운서동 로얄로9번길 31 Airsky Hotel" disabled>
-						</div>
-
-						<div class="grid-item col-span-3">
-							<label class="label-name">숙소 설명</label>
-							<div class="editor-box-wrap">
-								<textarea rows="6" placeholder="설명입니다"></textarea>
-							</div>
-						</div>
-
-						<div class="grid-item col-span-3">
-							<label class="label-name">숙소 이미지</label>
-							<div class="upload-grid">
-								<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
-							</div>
+							<label class="label-name">일정 요약</label>
+							<input type="text" class="form-control" placeholder="인천 도착">
 						</div>
 					</div>
-				</div>
 
-				<!-- 교통편 정보 -->
-				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">교통편 정보</h4>
-					<div class="grid-wrap grid-highlight jw-mgt12">
-						<div class="grid-item col-span-3">
-							<label class="label-name">설명</label>
-							<div class="editor-box-wrap">
-								<textarea rows="6" placeholder="전용 차량 이동"></textarea>
+					<!-- 관광지 정보 -->
+					<div class="sub-panel jw-mgt20">
+						
+						<h3 class="grid-wrap-title">관광지 정보</h3>
+						<button type="button" class="jw-button typeA jw-mgt12">＋ 관광지 추가</button>
+
+
+						<div class="grid-wrap grid-highlight jw-mgt12">
+							<!-- 시간 -->
+							<div class="grid-item">
+								<label class="label-name">일정 시작 시각 <span class="req">*</span></label>
+								<div class="meeting-wrap">
+									<select class="select">
+										<option>00</option>
+										<option selected>09</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+									</select>
+									<select class="select">
+										<option selected>00</option>
+										<option>10</option>
+										<option>20</option>
+										<option>30</option>
+										<option>40</option>
+										<option>50</option>
+									</select>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
+							<div class="grid-item">
+								<label class="label-name">일정 종료 시각 <span class="req">*</span></label>
+								<div class="meeting-wrap">
+									<select class="select">
+										<option>00</option>
+										<option>09</option>
+										<option selected>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+									</select>
+									<select class="select">
+										<option selected>00</option>
+										<option>10</option>
+										<option>20</option>
+										<option>30</option>
+										<option>40</option>
+										<option>50</option>
+									</select>
+								</div>
+							</div>
+							<div class="grid-item"></div>
 
-				<!-- 식사 정보 -->
-				<div class="sub-panel jw-mgt20">
-					<h4 class="grid-wrap-title">식사 정보</h4>
-					<div class="grid-wrap grid-highlight jw-mgt12">
-						<div class="grid-item">
-							<label class="label-name">조식</label>
-							<input type="text" class="form-control" value="호텔 조식">
-						</div>
-						<div class="grid-item">
-							<label class="label-name">중식</label>
-							<input type="text" class="form-control" value="BBQ 치킨">
-						</div>
-						<div class="grid-item">
-							<label class="label-name">석식</label>
-							<input type="text" class="form-control" value="한식">
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-			<h2 class="section-title">요금 정보</h2>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">인원별 요금</h3>
-				<i class="line"></i>
-				<button type="button" class="jw-button typeA">＋ 추가</button>
+							<!-- 명/주소 -->
+							<div class="grid-item col-span-3">
+								<label class="label-name">관광지명 <span class="req">*</span></label>
+								<div class="jw-center jw-gap20">
+									<input type="text" class="form-control jw-wf" value="남이섬" disabled>
+									<button type="button" class="jw-button typeA ">주소 검색</button>
+								</div>
+							</div>
 
-				<!-- 테이블 -->
-				<div class="tableA-scroll jw-mgt12">
-					<table class="jw-tableA booking-detail">
-						<colgroup>
-							<col class="col-80"> <!-- No -->
-							<col> <!-- 옵션명 -->
-							<col class="col-300"> <!-- 인원별 요금 -->
-							<col class="col-100"> <!-- 삭제 -->
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="is-center">No</th>
-								<th>옵션명</th>
-								<th class="is-center">인원별 요금 (₱)</th>
-								<th class="is-center">삭제</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="is-center">1</td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="성인" placeholder="옵션명"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="34,000" inputmode="numeric" placeholder="0"></div></td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">2</td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="아동"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="23,800" inputmode="numeric"></div></td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">3</td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="소아"></div></td>
-								<td class="is-center"><div class="cell"><input type="text" class="form-control" value="0" inputmode="numeric"></div></td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title" data-lan-eng="">싱글룸 이용 요금</h3>
-				<div class="grid-wrap jw-mgt16">
-					<div class="grid-item col-span-2">
-						<label class="label-name">싱글룸 이용 요금 (₱) <span class="req">*</span></label>
-						<input type="text" class="form-control jw-w348" value="10,000" inputmode="numeric" placeholder="0">
-						<p class="form-desc is-warning">* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.</p>
-					</div>
-				</div>
-			</div>
+							<div class="grid-item col-span-3">
+								<label class="label-name">관광지 주소</label>
+								<input type="text" class="form-control" value="강원 춘천시 남산면 남이섬길 1" disabled>
+							</div>
 
+							<!-- 설명(에디터) -->
+							<div class="grid-item col-span-3">
+								<label class="label-name">관광지 설명</label>
+								<div class="editor-box-wrap">
+									<textarea rows="6" placeholder="설명을 입력하세요."></textarea>
+								</div>
+							</div>
 
-			<h2 class="section-title" data-lan-eng="">포함/불포함 사항</h2>
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title">포함 사항</h3>
-				<i class="line"></i>
-				<button type="button" class="jw-button typeA">＋ 추가</button>
+							<!-- 이미지 업로드 -->
+							<div class="grid-item col-span-3">
+								<label class="label-name">관광지 이미지 <span class="req">*</span></label>
+								<div class="upload-grid">
+									<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
+								</div>
+							</div>
 
-				<!-- 테이블 -->
-				<div class="tableA-scroll jw-mgt20">
-					<table class="jw-tableA booking-detail">
-						<colgroup>
-							<col class="col-80"> <!-- No -->
-							<col> <!-- 포함 사항 -->
-							<col class="col-100"> <!-- 삭제 -->
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="is-center">No</th>
-								<th class="is-center">포함 사항</th>
-								<th class="is-center">삭제</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="is-center">1</td>
-								<td class="is-center">
-									<div class="cell">
-										<input type="text" class="form-control" value="전 일정 호텔 숙박 (2인 1실 기준)">
-									</div>
-								</td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">2</td>
-								<td class="is-center">
-									<div class="cell">
-										<input type="text" class="form-control" value="전용 차량 및 전문 가이드 동행">
-									</div>
-								</td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">3</td>
-								<td class="is-center">
-									<div class="cell">
-										<input type="text" class="form-control" value="일정 내 명시된 식사 및 입장료 일체 포함">
-									</div>
-								</td>
-								<td class="is-center">
-									<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			
-			<div class="card-panel jw-mgt16">
-				<h3 class="grid-wrap-title" data-lan-eng="">불포함 사항</h3>
-				<i class="line"></i>
-				<button type="button" class="jw-button typeA">＋ 추가</button>
-
-				<div class="tableA-scroll jw-mgt20">
-					<table class="jw-tableA booking-detail">
-						<colgroup>
-							<col class="col-80"> <!-- No -->
-							<col> <!-- 불포함 사항 -->
-							<col class="col-100"> <!-- 삭제 -->
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="is-center">No</th>
-								<th class="is-center">불포함 사항</th>
-								<th class="is-center">삭제</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="is-center">1</td>
-								<td class="is-center">
-									<div class="cell">
-										<input type="text" class="form-control" value="개인 여행자 보험 및 개인 경비">
-									</div>
-								</td>
-								<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">2</td>
-								<td class="is-center">
-									<div class="cell">
-										<input type="text" class="form-control" value="자유 일정 시 식사 및 교통비">
-									</div>
-								</td>
-								<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="is-center">3</td>
-								<td class="is-center">	
-									<div class="cell">
-										<input type="text" class="form-control" value="매너 팁 및 선택 관광 비용">
-									</iv>
-								</td>
-								<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-
-			<h2 class="section-title" data-lan-eng="">이용안내</h2>
-			<div class="card-panel jw-mgt16">
-				<div class="grid-wrap jw-mgt0">
-					<!-- 안내문 파일 -->
-					<div class="grid-item col-span-3">
-						<label class="label-name">안내문 <span class="req">*</span></label>
-						<div class="cell">
-							<div class="field-row jw-center">
-								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 파일 [pdf, 328KB]</div>
-								<div class="jw-center jw-gap10">
-									<i></i>
-									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
-									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+							<!-- 행 삭제 -->
+							<div class="grid-item col-span-3">
+								<div class="grid-item-controoler">
+									<button type="button" class="jw-button typeA"><img src="../image/trash.svg" alt="">관광지 삭제</button>
 								</div>
 							</div>
 						</div>
-
 					</div>
 
-					<!-- 설명 에디터 -->
-					<div class="grid-item col-span-3">
-						<label class="label-name">설명 <span class="req">*</span></label>
-						<div class="editor-box-wrap">
-							<textarea rows="10" placeholder="설명을 입력하세요.">설명입니다</textarea>
+					<!-- 숙소 정보 -->
+					<div class="sub-panel jw-mgt20">
+						<h4 class="grid-wrap-title">숙소 정보</h4>
+
+						<div class="grid-wrap grid-highlight jw-mgt12">
+							<div class="grid-item col-span-3">
+								<label class="label-name">숙소명 <span class="req">*</span></label>
+								<div class="jw-center jw-gap20">
+									<input type="text" class="form-control jw-wf" value="에어스카이 호텔 인천" disabled>
+									<button type="button" class="jw-button typeA ">주소 검색</button>
+								</div>
+
+							</div>
+
+							<div class="grid-item col-span-3">
+								<label class="label-name">숙소 주소 <span class="req">*</span></label>
+								<input type="text" class="form-control" value="인천 중구 운서동 로얄로9번길 31 Airsky Hotel" disabled>
+							</div>
+
+							<div class="grid-item col-span-3">
+								<label class="label-name">숙소 설명</label>
+								<div class="editor-box-wrap">
+									<textarea rows="6" placeholder="설명입니다"></textarea>
+								</div>
+							</div>
+
+							<div class="grid-item col-span-3">
+								<label class="label-name">숙소 이미지</label>
+								<div class="upload-grid">
+									<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 교통편 정보 -->
+					<div class="sub-panel jw-mgt20">
+						<h4 class="grid-wrap-title">교통편 정보</h4>
+						<div class="grid-wrap grid-highlight jw-mgt12">
+							<div class="grid-item col-span-3">
+								<label class="label-name">설명</label>
+								<div class="editor-box-wrap">
+									<textarea rows="6" placeholder="전용 차량 이동"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 식사 정보 -->
+					<div class="sub-panel jw-mgt20">
+						<h4 class="grid-wrap-title">식사 정보</h4>
+						<div class="grid-wrap grid-highlight jw-mgt12">
+							<div class="grid-item">
+								<label class="label-name">조식</label>
+								<input type="text" class="form-control" value="호텔 조식">
+							</div>
+							<div class="grid-item">
+								<label class="label-name">중식</label>
+								<input type="text" class="form-control" value="BBQ 치킨">
+							</div>
+							<div class="grid-item">
+								<label class="label-name">석식</label>
+								<input type="text" class="form-control" value="한식">
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			
-			<h2 class="section-title" data-lan-eng="">취소/환불 규정</h2>
-			<div class="card-panel jw-mgt16">
-				<div class="grid-wrap jw-mgt0">
-					<div class="grid-item col-span-3">
-						<label class="label-name">설명 <span class="req">*</span></label>
-						<div class="editor-box-wrap">
-							<textarea rows="10" placeholder="설명을 입력하세요.">• Before 15 days of departure: 100% tour fare refund(No cancellation charge)
-• Before 8-14 days of departure: 50% tour fare refund(50% cancellation charge)
-• Before 4-7 days of departure: 30% tour fare refund(70% cancellation charge)
-• Before 1-3 days of departure: 0% tour fare refund(100% cancellation charge)</textarea>
+				
+				
+				<h2 class="section-title jw-mgt32">요금 정보</h2>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title">인원별 요금</h3>
+					<i class="line"></i>
+					<button type="button" class="jw-button typeA">＋ 추가</button>
+
+					<!-- 테이블 -->
+					<div class="tableA-scroll jw-mgt12">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-80"> <!-- No -->
+								<col> <!-- 옵션명 -->
+								<col class="col-300"> <!-- 인원별 요금 -->
+								<col class="col-100"> <!-- 삭제 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="is-center">No</th>
+									<th>옵션명</th>
+									<th class="is-center">인원별 요금 (₱)</th>
+									<th class="is-center">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="성인" placeholder="옵션명"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="34,000" inputmode="numeric" placeholder="0"></div></td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="아동"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="23,800" inputmode="numeric"></div></td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="소아"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="0" inputmode="numeric"></div></td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title" data-lan-eng="">싱글룸 이용 요금</h3>
+					<div class="grid-wrap jw-mgt16">
+						<div class="grid-item col-span-2">
+							<label class="label-name">싱글룸 이용 요금 (₱) <span class="req">*</span></label>
+							<input type="text" class="form-control jw-w348" value="10,000" inputmode="numeric" placeholder="0">
+							<p class="form-desc is-warning">* 2인 이상 예약 시, 선택한 싱글룸 수만큼 요금이 부과됩니다. 1인 예약 시에는 무료로 적용됩니다.</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<h2 class="section-title" data-lan-eng="">비자 신청 안내</h2>
-			<div class="card-panel jw-mgt16">
-				<div class="grid-wrap jw-mgt0">
-					<div class="grid-item col-span-3">
-						<label class="label-name">설명 <span class="req">*</span></label>
-						<div class="editor-box-wrap">
-							<textarea rows="10" placeholder="설명을 입력하세요.">설명입니다</textarea>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">포함/불포함 사항</h2>
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title">포함 사항</h3>
+					<i class="line"></i>
+					<button type="button" class="jw-button typeA">＋ 추가</button>
+
+					<!-- 테이블 -->
+					<div class="tableA-scroll jw-mgt20">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-80"> <!-- No -->
+								<col> <!-- 포함 사항 -->
+								<col class="col-100"> <!-- 삭제 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="is-center">No</th>
+									<th class="is-center">포함 사항</th>
+									<th class="is-center">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="전 일정 호텔 숙박 (2인 1실 기준)">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="전용 차량 및 전문 가이드 동행">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="일정 내 명시된 식사 및 입장료 일체 포함">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="card-panel jw-mgt16">
+					<h3 class="grid-wrap-title" data-lan-eng="">불포함 사항</h3>
+					<i class="line"></i>
+					<button type="button" class="jw-button typeA">＋ 추가</button>
+
+					<div class="tableA-scroll jw-mgt20">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-80"> <!-- No -->
+								<col> <!-- 불포함 사항 -->
+								<col class="col-100"> <!-- 삭제 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="is-center">No</th>
+									<th class="is-center">불포함 사항</th>
+									<th class="is-center">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="개인 여행자 보험 및 개인 경비">
+										</div>
+									</td>
+									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="자유 일정 시 식사 및 교통비">
+										</div>
+									</td>
+									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td class="is-center">	
+										<div class="cell">
+											<input type="text" class="form-control" value="매너 팁 및 선택 관광 비용">
+										</iv>
+									</td>
+									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+				<h2 class="section-title jw-mgt32" data-lan-eng="">이용안내</h2>
+				<div class="card-panel jw-mgt16">
+					<div class="grid-wrap jw-mgt0">
+						<!-- 안내문 파일 -->
+						<div class="grid-item col-span-3">
+							<label class="label-name">안내문 <span class="req">*</span></label>
+							<div class="cell">
+								<div class="field-row jw-center">
+									<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 파일 [pdf, 328KB]</div>
+									<div class="jw-center jw-gap10">
+										<i></i>
+										<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+										<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- 설명 에디터 -->
+						<div class="grid-item col-span-3">
+							<label class="label-name">설명 <span class="req">*</span></label>
+							<div class="editor-box-wrap">
+								<textarea rows="10" placeholder="설명을 입력하세요.">설명입니다</textarea>
+							</div>
 						</div>
 					</div>
 				</div>
+				
+				<h2 class="section-title jw-mgt32" data-lan-eng="">취소/환불 규정</h2>
+				<div class="card-panel jw-mgt16">
+					<div class="grid-wrap jw-mgt0">
+						<div class="grid-item col-span-3">
+							<label class="label-name">설명 <span class="req">*</span></label>
+							<div class="editor-box-wrap">
+								<textarea rows="10" placeholder="설명을 입력하세요.">• Before 15 days of departure: 100% tour fare refund(No cancellation charge)
+	• Before 8-14 days of departure: 50% tour fare refund(50% cancellation charge)
+	• Before 4-7 days of departure: 30% tour fare refund(70% cancellation charge)
+	• Before 1-3 days of departure: 0% tour fare refund(100% cancellation charge)</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<h2 class="section-title jw-mgt32" data-lan-eng="">비자 신청 안내</h2>
+				<div class="card-panel jw-mgt16">
+					<div class="grid-wrap jw-mgt0">
+						<div class="grid-item col-span-3">
+							<label class="label-name">설명 <span class="req">*</span></label>
+							<div class="editor-box-wrap">
+								<textarea rows="10" placeholder="설명을 입력하세요.">설명입니다</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="controller jw-flex-s">
+					<button type="button" class="jw-button typeG" data-lan-eng="">템플릿으로 저장하기</button>
+				</div>
 			</div>
-			
-			<div class="controller jw-flex-s">
-				<button type="button" class="jw-button typeG" data-lan-eng="">템플릿으로 저장하기</button>
-			</div>
+
+			<aside class="content-aside" aria-label="구성 요소">
+				<h3 class="aside-title">구성 요소</h3>
+				<div class="card-panel jw-mgt16">
+						<div class="grid-item">
+
+							<div class="aside-list">
+
+								<!-- 템플릿 정보 -->
+								<div class="aside-row">
+									<div class="aside-row__title">템플릿 정보</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 상품 정보 -->
+								<div class="aside-row">
+									<div class="aside-row__title">상품 정보</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 일정표 -->
+								<div class="aside-row">
+									<div class="aside-row__title">일정표</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<!-- 일정표 하위: 미팅 정보 / 1일차 / 2일차 / + 일차 추가 -->
+								<div class="aside-sub">
+									<div class="aside-row">
+										<div class="aside-row__title">미팅 정보</div>
+										<span class="aside-row__req">필수</span>
+									</div>
+									<div class="aside-row">
+										<div class="aside-row__title">1일차</div>
+									</div>
+									<div class="aside-row">
+										<div class="aside-row__title">2일차</div>
+									</div>
+									<div class="aside-row">
+										<button type="button" class="btn w-auto">＋ 일차 추가</button>
+									</div>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 요금 정보 -->
+								<div class="aside-row">
+									<div class="aside-row__title">요금 정보</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 포함/불포함 사항 -->
+								<div class="aside-row">
+									<div class="aside-row__title">포함/불포함 사항</div>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 이용안내 -->
+								<div class="aside-row">
+									<div class="aside-row__title">이용안내</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 취소/환불 규정 -->
+								<div class="aside-row">
+									<div class="aside-row__title">취소/환불 규정</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+								<hr class="aside-row__sep">
+
+								<!-- 비자 신청 안내 -->
+								<div class="aside-row">
+									<div class="aside-row__title">비자 신청 안내</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+
+							</div>
+
+						</div>
+					
+				</div>
+			</aside>
+
 		</section>
 
 	</main>

@@ -330,6 +330,77 @@ function layerToggle(btn) {
 	menu.classList.toggle('on');
 }
 
+function filePreview(el) {
+	const f = el.files && el.files[0]; if (!f) return;
+	const box = el.closest('.image-preview') || el.closest('.banner-item')?.querySelector('.image-preview') || el.closest('.banner-image-wrap') || el.closest('.upload-item') || null;
+	if (!box) return;
+	const url = URL.createObjectURL(f);
+	box.style.backgroundImage = `url("${url}")`;
+	box.style.backgroundSize = 'cover';
+	box.style.backgroundPosition = 'center';
+	box.classList.add('has-image');
+	setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+function essentialCheck(it) {
+	const wrap = it.closest('[data-essentialWrap="y"]');
+	if (!wrap) return false;
+	const essentials = wrap.querySelectorAll('[data-essential="y"]');
+	if (!essentials.length) return false;
+
+	const allOK = Array.prototype.every.call(essentials, el => {
+		const tag = el.tagName;
+		const type = (el.type || '').toLowerCase();
+
+		if (type === 'checkbox' || type === 'radio') return el.checked;
+		if (tag === 'SELECT') return (el.value ?? '') !== '';
+		if (type === 'file') return (el.files && el.files.length > 0);
+		return ((el.value || '').trim().length > 0);
+	});
+	console.log( 11 );
+	wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
+		tg.disabled = !allOK;
+		tg.classList.toggle('active', allOK);
+		tg.classList.toggle('inactive', !allOK);
+	});
+
+	return allOK;
+}
+
+function togglePlusMinus(btn) {
+	var hasOn = btn.classList.contains('on');
+	var img = btn.querySelector('img');
+	var target = btn.getAttribute('data-target-section');
+	var targets = target ? document.querySelectorAll('[data-section-name="' + target + '"]') : [];
+
+	if (hasOn) {
+		// on 이 있으면: on 제거 + 아이콘 minus
+		btn.classList.remove('on');
+		targets.forEach(function (el) { if (el !== btn) el.classList.remove('hidden'); });
+		img.src = '../image/minus.svg';
+		img.alt = 'minus';
+	} else {
+		// on 이 없으면: on 추가 + 아이콘 plus
+		btn.classList.add('on');
+		targets.forEach(function (el) { if (el !== btn) el.classList.add('hidden'); });
+		img.src = '../image/plus.svg';
+		img.alt = 'plus';
+	}
+}
+
+function trash_typeA(it) {
+	var tbody = it.closest('tbody');
+	if (!tbody) return;
+
+	var rows = tbody.querySelectorAll('tr');
+	if (rows.length === 1) {
+		modal('product-detail_modal_5.html', '600px', '252px');
+		return;
+	}
+	var tr = it.closest('tr');
+	if (tr) tr.remove();
+}
+
 /* 임시 */
 function temp_link(v){
 	location.href=v;

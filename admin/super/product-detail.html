@@ -7,6 +7,7 @@
 	<title>SMART TRAVEL ADMIN</title>
 
 	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -14,6 +15,11 @@
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </head>
 
 <body>
@@ -34,15 +40,18 @@
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeA">삭제</button>
-					<button type="button" class="jw-button typeB">저장</button>
+					<button type="button" class="jw-button typeA" onclick="modal('product-detail_modal_5.html', '600px', '252px')">삭제</button>
+					<button type="button" class="jw-button typeB" onclick="modal('product-preview.html', '1000px', '100%')">저장</button>
 				</div>
 			</div>
 
-
 			<div class="content-main">
 				<h1 class="page-title" data-lan-eng="">상품 상세</h1>
-				<h2 class="section-title" data-lan-eng="">상품 정보</h2>
+				<div class="jw-cols jw-between jw-mgt32">
+					<h2 class="section-title" data-lan-eng="">상품 정보</h2>
+					<button type="button" class="jw-button typeA" onclick="">템플릿 불러오기</button>
+				</div>
+				
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap">
 						<!-- 1행 -->
@@ -58,9 +67,9 @@
 
 						<!-- 2행 : 상품명 전체폭 -->
 						<div class="grid-item col-span-3">
-							<label class="label-name" data-lan-eng="">상품명</label>
+							<label class="label-name" data-lan-eng="">상품명 <span class="req">*</span></label>
 							<input type="text" class="form-control"
-								placeholder="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
+								value="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
 						</div>
 
 						<!-- 3행 : 판매대상/대분류/중분류 -->
@@ -96,7 +105,12 @@
 						<div class="grid-item col-span-3">
 							<label class="label-name" data-lan-eng="">상품 설명 <span class="req">*</span></label>
 							<div class="editor-box-wrap">
-								<textarea rows="8" placeholder="봄 시즌 한정 벚꽃 투어!&#10;서울의 대표 벚꽃 명소를 전일정 가이드와 함께 여행하며..."></textarea>
+								<textarea rows="8" >
+봄 시즌 한정 벚꽃 투어!
+서울의 대표 벚꽃 명소를 전문 가이드와 함께 여행하며, 남이섬·석촌호수·여의도 등 주요 관광지를 여유롭게 즐길 수 있습니다.
+가이드 동행으로 언어 걱정 없이 안전하고 편안한 여행을 경험하세요.
+숙박 5박, 전 일정 차량 이동, 식사 포함.
+								</textarea>
 							</div>
 						</div>
 
@@ -106,7 +120,9 @@
 							<div class="upload-grid">
 								<div class="upload-item is-filled">
 									<img class="preview" src="https://picsum.photos/600/600" alt="">
-									<button type="button" class="btn-close" aria-label="remove">×</button>
+									<button type="button" class="jw-button btn-close" aria-label="remove">
+										<div class="ic-close" style="width:15px; height:15px; --line:1px; --color:#969696"></div>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -119,12 +135,34 @@
 							<div class="upload-grid">
 								<div class="upload-item is-filled">
 									<img class="preview" src="https://picsum.photos/600/600" alt="">
-									<button type="button" class="btn-close" aria-label="remove">×</button>
+									<button type="button" class="jw-button btn-close" aria-label="remove">
+										<div class="ic-close" style="width:15px; height:15px; --line:1px; --color:#969696"></div>
+									</button>
 								</div>
-								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
-								<div class="upload-item"><button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button></div>
+								<div class="upload-item jw-center">
+									<label class="inputFile">
+										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+									</label>
+								</div>
+								<div class="upload-item jw-center">
+									<label class="inputFile">
+										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+									</label>
+								</div>
+								<div class="upload-item jw-center">
+									<label class="inputFile">
+										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+									</label>
+								</div>
+								<div class="upload-item jw-center">
+									<label class="inputFile">
+										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+									</label>
+								</div>
 							</div>
 						</div>
 
@@ -144,15 +182,15 @@
 					</div>
 				</div>
 
-				<h2 class="section-title" data-lan-eng="">항공편 정보</h2>
-				<div class="card-panel jw-mgt16">
+				<h2 class="section-title jw-mgt32" data-section-name="flight-information" data-lan-eng="">항공편 정보</h2>
+				<div class="card-panel jw-mgt16" data-section-name="flight-information" >
 					<h3 class="grid-wrap-title" data-lan-eng="">출국편</h3>
 
 					<div class="grid-wrap jw-mgt16">
 						<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
 						<div class="grid-item">
 							<label class="label-name">항공편명 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="PR467">
+							<input type="text" class="form-control" value="PR467">
 						</div>
 
 						<div class="grid-item">
@@ -235,25 +273,25 @@
 						<!-- 2행 : 출발지 / 도착지 -->
 						<div class="grid-item">
 							<label class="label-name">출발지 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="마닐라 (MNL)">
+							<input type="text" class="form-control" value="마닐라 (MNL)">
 						</div>
 
 						<div class="grid-item">
 							<label class="label-name">도착지 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="인천 (ICN)">
+							<input type="text" class="form-control" value="인천 (ICN)">
 						</div>
 
 						<div class="grid-item"></div>
 					</div>
 				</div>
-				<div class="card-panel jw-mgt16">
+				<div class="card-panel jw-mgt16" data-section-name="flight-information" >
 					<h3 class="grid-wrap-title">귀국편</h3>
 
 					<div class="grid-wrap jw-mgt16">
 						<!-- 1행 : 항공편명 / 출발시각 / 도착시각 -->
 						<div class="grid-item">
 							<label class="label-name">항공편명 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="PR468">
+							<input type="text" class="form-control" value="PR468">
 						</div>
 
 						<div class="grid-item">
@@ -331,12 +369,12 @@
 						<!-- 2행 : 출발지 / 도착지 -->
 						<div class="grid-item">
 							<label class="label-name">출발지 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="인천 (ICN)">
+							<input type="text" class="form-control" value="인천 (ICN)">
 						</div>
 
 						<div class="grid-item">
 							<label class="label-name">도착지 <span class="req">*</span></label>
-							<input type="text" class="form-control" placeholder="마닐라 (MNL)">
+							<input type="text" class="form-control" value="마닐라 (MNL)">
 						</div>
 
 						<div class="grid-item"></div>
@@ -344,23 +382,21 @@
 				</div>
 
 
-				<h2 class="section-title" data-lan-eng="">판매 정보</h2>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">판매 정보</h2>
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title" data-lan-eng="">기본 판매 정보</h3>
-
+					<hr class="jw-mgt16">
+					
 					<div class="grid-wrap jw-mgt16">
 						<!-- 판매 기간 -->
-						<div class="grid-item">
+						<div class="grid-item col-span-3">
 							<label class="label-name">판매 기간 <span class="req">*</span></label>
-							<div class="field-row date-range">
-								<input type="date" class="form-control" value="2025-03-05">
-								<span class="tilde">~</span>
-								<input type="date" class="form-control" value="2025-06-12">
+							<div class="field-row jw-w400">
+								<input type="text" id="range" class="form-control jw-w" placeholder="기간 선택">
+								<i><img src="../image/calendar.svg" alt=""></i>
 							</div>
 							<p class="form-desc is-warning">기간은 최대 <b>100</b>일까지만 설정이 가능합니다.</p>
 						</div>
-						<div class="grid-item"></div>
-						<div class="grid-item"></div>
 						<!-- 최소/최대/요금 -->
 						<div class="grid-item">
 							<label class="label-name">최소 출발 인원 <span class="req">*</span></label>
@@ -369,7 +405,7 @@
 
 						<div class="grid-item">
 							<label class="label-name">최대 수용 인원 <span class="req">*</span></label>
-							<input type="number" class="form-control" value="36" min="0" placeholder="0">
+							<input type="number" class="form-control" value="36" min="0" value="0" disabled>
 						</div>
 
 						<div class="grid-item">
@@ -378,7 +414,25 @@
 						</div>
 					</div>
 				</div>
-
+				
+				<script>
+				$(function(){
+				  $('#range').daterangepicker({
+					autoUpdateInput:false,
+					showDropdowns:true,
+					opens:'right',            // 또는 'right'
+					autoApply:true,          // 적용 버튼 없이 즉시 반영
+					locale:{ format:'YYYY-MM-DD', separator:' ~ ',
+					  applyLabel:'적용', cancelLabel:'취소',
+					  daysOfWeek:['일','월','화','수','목','금','토'],
+					  monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] }
+				  }).on('apply.daterangepicker', function(e,p){
+					$(this).val(p.startDate.format('YYYY-MM-DD')+' ~ '+p.endDate.format('YYYY-MM-DD'));
+				  }).on('cancel.daterangepicker', function(){
+					$(this).val('');
+				  });
+				});
+				</script>
 				
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">일자별 판매 조정</h3>
@@ -679,7 +733,7 @@
 					</div>
 				</div>
 
-				<h2 class="section-title">일정표</h2>
+				<h2 class="section-title jw-mgt32">일정표</h2>
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">미팅 정보</h3>
 
@@ -870,7 +924,12 @@
 							<div class="grid-item col-span-3">
 								<label class="label-name">관광지 이미지 <span class="req">*</span></label>
 								<div class="upload-grid">
-									<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
+									<div class="upload-item jw-center">
+										<label class="inputFile">
+											<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+											<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+										</label>
+									</div>
 								</div>
 							</div>
 
@@ -912,7 +971,12 @@
 							<div class="grid-item col-span-3">
 								<label class="label-name">숙소 이미지</label>
 								<div class="upload-grid">
-									<div class="upload-item"><button type="button" class="btn-upload">⬆ 이미지 업로드</button></div>
+									<div class="upload-item jw-center">
+										<label class="inputFile">
+											<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+											<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 이미지 업로드</button>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -952,7 +1016,7 @@
 				</div>
 				
 				
-				<h2 class="section-title">요금 정보</h2>
+				<h2 class="section-title jw-mgt32">요금 정보</h2>
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">인원별 요금</h3>
 					<i class="line"></i>
@@ -981,7 +1045,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="성인" placeholder="옵션명"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="34,000" inputmode="numeric" placeholder="0"></div></td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -989,7 +1053,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="아동"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="23,800" inputmode="numeric"></div></td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -997,7 +1061,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="소아"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="0" inputmode="numeric"></div></td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 							</tbody>
@@ -1016,7 +1080,7 @@
 				</div>
 
 
-				<h2 class="section-title" data-lan-eng="">포함/불포함 사항</h2>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">포함/불포함 사항</h2>
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">포함 사항</h3>
 					<i class="line"></i>
@@ -1046,7 +1110,7 @@
 										</div>
 									</td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1057,7 +1121,7 @@
 										</div>
 									</td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1068,7 +1132,7 @@
 										</div>
 									</td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 							</tbody>
@@ -1103,7 +1167,7 @@
 											<input type="text" class="form-control" value="개인 여행자 보험 및 개인 경비">
 										</div>
 									</td>
-									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1113,7 +1177,7 @@
 											<input type="text" class="form-control" value="자유 일정 시 식사 및 교통비">
 										</div>
 									</td>
-									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1123,7 +1187,7 @@
 											<input type="text" class="form-control" value="매너 팁 및 선택 관광 비용">
 										</iv>
 									</td>
-									<td class="is-center"><button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 							</tbody>
@@ -1132,7 +1196,7 @@
 				</div>
 
 
-				<h2 class="section-title" data-lan-eng="">이용안내</h2>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">이용안내</h2>
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap jw-mgt0">
 						<!-- 안내문 파일 -->
@@ -1161,7 +1225,7 @@
 					</div>
 				</div>
 				
-				<h2 class="section-title" data-lan-eng="">취소/환불 규정</h2>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">취소/환불 규정</h2>
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap jw-mgt0">
 						<div class="grid-item col-span-3">
@@ -1177,7 +1241,7 @@
 				</div>
 
 
-				<h2 class="section-title" data-lan-eng="">비자 신청 안내</h2>
+				<h2 class="section-title jw-mgt32" data-lan-eng="">비자 신청 안내</h2>
 				<div class="card-panel jw-mgt16">
 					<div class="grid-wrap jw-mgt0">
 						<div class="grid-item col-span-3">
@@ -1194,53 +1258,70 @@
 				</div>
 			</div>
 
-			<aside class="content-aside" aria-label="구성 요소">
+			<aside class="content-aside off" aria-label="구성 요소"> <!-- 고정은 off 추가 -->
 				<h3 class="aside-title">구성 요소</h3>
 				<div class="card-panel jw-mgt16">
 						<div class="grid-item">
 
 							<div class="aside-list">
 
-								<!-- 템플릿 정보 -->
-								<div class="aside-row">
-									<div class="aside-row__title">템플릿 정보</div>
-									<span class="aside-row__req">필수</span>
-								</div>
-
-								<hr class="aside-row__sep">
-
 								<!-- 상품 정보 -->
 								<div class="aside-row">
 									<div class="aside-row__title">상품 정보</div>
 									<span class="aside-row__req">필수</span>
 								</div>
+								<hr>
+								<!-- 항공편 정보 -->
+								<div class="aside-row">
+									<div class="aside-row__title">항공편 정보</div>
+									<button type="button" class="jw-button aside-add-section" data-target-section="flight-information" onclick="togglePlusMinus(this)"><img src="../image/minus.svg" alt=""></button>
+								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
-								<!-- 일정표 -->
+								<!-- 판매 정보 -->
+								<div class="aside-row">
+									<div class="aside-row__title">판매 정보</div>
+									<span class="aside-row__req">필수</span>
+								</div>
+								<!-- sub -->
+								<div class="aside-sub">
+									<div class="aside-row">
+										<div class="aside-row__subtitle">기본 판매 정보</div>
+										<span class="aside-row__req">필수</span>
+									</div>
+									<div class="aside-row">
+										<div class="aside-row__subtitle">일자별 판매 조정</div>
+										<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
+									</div>
+								</div>
+
+								<!-- 판매 정보 -->
 								<div class="aside-row">
 									<div class="aside-row__title">일정표</div>
 									<span class="aside-row__req">필수</span>
 								</div>
 
-								<!-- 일정표 하위: 미팅 정보 / 1일차 / 2일차 / + 일차 추가 -->
+								<!-- sub -->
 								<div class="aside-sub">
 									<div class="aside-row">
 										<div class="aside-row__title">미팅 정보</div>
 										<span class="aside-row__req">필수</span>
 									</div>
 									<div class="aside-row">
-										<div class="aside-row__title">1일차</div>
+										<div class="aside-row__subtitle">1일차</div>
+										<span class="aside-row__req">필수</span>
 									</div>
 									<div class="aside-row">
-										<div class="aside-row__title">2일차</div>
+										<div class="aside-row__subtitle">2일차</div>
+										<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
 									</div>
 									<div class="aside-row">
-										<button type="button" class="btn w-auto">＋ 일차 추가</button>
+										<button type="button" class="jw-button aside-button-typeA"><img src="../image/plus.svg" alt=""> 일차 추가</button>
 									</div>
 								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
 								<!-- 요금 정보 -->
 								<div class="aside-row">
@@ -1248,14 +1329,15 @@
 									<span class="aside-row__req">필수</span>
 								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
 								<!-- 포함/불포함 사항 -->
 								<div class="aside-row">
 									<div class="aside-row__title">포함/불포함 사항</div>
+									<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
 								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
 								<!-- 이용안내 -->
 								<div class="aside-row">
@@ -1263,7 +1345,7 @@
 									<span class="aside-row__req">필수</span>
 								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
 								<!-- 취소/환불 규정 -->
 								<div class="aside-row">
@@ -1271,7 +1353,7 @@
 									<span class="aside-row__req">필수</span>
 								</div>
 
-								<hr class="aside-row__sep">
+								<hr>
 
 								<!-- 비자 신청 안내 -->
 								<div class="aside-row">

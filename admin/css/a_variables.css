@@ -31,7 +31,7 @@
 .jw-pdl10 { padding-left:10px; } .jw-pdl20 { padding-left:20px; }
 
 /* Gap (컨테이너에 jw-flex/jw-grid 필요) */
-.jw-gap5 { gap:5px; } .jw-gap10 { gap:10px; } .jw-gap15 { gap:15px; } .jw-gap20 { gap:20px; }
+.jw-gap5 { gap:5px; } .jw-gap8 { gap:8px; } .jw-gap10 { gap:10px; } .jw-gap15 { gap:15px; } .jw-gap20 { gap:20px; } .jw-gap24 { gap:24px; }
 .jw-gap30 { gap:30px; } .jw-gap40 { gap:40px; } .jw-gap50 { gap:50px; } .jw-gap150 { gap:150px; }
 
 /* Margin */

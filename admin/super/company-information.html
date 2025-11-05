@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<h1 class="page-title" data-lan-eng="">회사 정보</h1>
+			
+			<h2 class="section-title jw-mgt32">정보</h2>
+			<div class="card-panel jw-mgt16">
+			
+				<div class="grid-wrap">
+					<div class="grid-item col-span-3">
+						<label class="label-name" data-lan-eng="">주소</label>
+						<input type="text" value="Jose Ramirez">
+					</div>
+					
+					<div class="grid-item">
+						<label class="label-name" data-lan-eng="">대표 이메일</label>
+						<input type="email" value="support@smarttravel.co.kr">
+					</div>
+					
+					<div class="grid-item">
+						<label class="label-name" data-lan-eng="">문의전화 (국내)</label>
+						<div class="field-row">
+							<select class="select">
+								<option>+63</option>
+							</select>
+							<input type="text" value="917 123 4567">
+						</div>
+					</div>
+					
+					<div class="grid-item">
+						<label class="label-name" data-lan-eng="">문의전화 (해외)</label>
+						<div class="field-row">
+							<select class="select">
+								<option>+82</option>
+							</select>
+							<input type="text" value="1234-1234">
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+
+
+
+			<div class="controller">
+				<button type="button" class="jw-button typeB" data-lan-eng="">변경사항 저장</button>
+			</div>
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/super.js"></script>
+
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_super.html'
+		});
+	</script>
+</body>
+
+</html>
