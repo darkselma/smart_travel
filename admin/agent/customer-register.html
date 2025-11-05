@@ -32,24 +32,24 @@
 				</a>
 
 				<div class="page-toolbar-actions">
-					<button type="button" class="jw-button typeB" data-lan-eng="">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
 				</div>
 			</div>
 			
-			<h1 class="page-title" data-lan-eng="">고객 등록</h1>
+			<h1 class="page-title" data-lan-eng="Customer Registration">고객 등록</h1>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">기본 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Basic Information">기본 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<!-- 1행: 고객명 / 연락처 / 이메일 -->
 					<div class="grid-item">
-						<label class="label-name" for="cust_name" data-lan-eng="">고객명</label>
+						<label class="label-name" for="cust_name" data-lan-eng="Customer Name">고객명</label>
 						<input id="cust_name" type="text" class="form-control" placeholder="고객명">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_phone" data-lan-eng="">연락처</label>
+						<label class="label-name" for="cust_phone" data-lan-eng="Contacts">연락처</label>
 						<div class="field-row">
 							<select class="select w-auto" aria-label="국가 코드">
 								<option selected>+63</option>
@@ -62,7 +62,7 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="cust_email" data-lan-eng="">이메일</label>
+						<label class="label-name" for="cust_email" data-lan-eng="Email">이메일</label>
 						<input id="cust_email" type="email" class="form-control" placeholder="이메일">
 					</div>
 
@@ -71,7 +71,7 @@
 						<label class="label-name" for="cust_pw">PW</label>
 						<div class="input-box">
 							<input type="password" value="">
-							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt="">자동 입력</button>
+							<button type="button" class="jw-button typeD"><img src="../image/replay.svg" alt="" data-lan-eng="Auto Input">자동 입력</button>
 						</div>
 					</div>
 					<div class="grid-item"></div>
@@ -79,9 +79,9 @@
 
 					<!-- 3행: 메모 (전체폭 에디터) -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="memo" data-lan-eng="">메모</label>
+						<label class="label-name" for="memo" data-lan-eng="Note">메모</label>
 						<div class="editor-box-wrap">
-							<textarea id="memo" rows="10" placeholder="메모를 입력해주세요"></textarea>
+							<textarea id="memo" rows="10" placeholder="메모를 입력해주세요" data-lan-eng="Please enter a memo"></textarea>
 						</div>
 					</div>
 
@@ -89,12 +89,12 @@
 			</div>
 
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">여행자 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Traveler Information">여행자 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<div class="grid-item">
-						<label class="label-name" for="gender" data-lan-eng="">호칭</label>
+						<label class="label-name" for="gender" data-lan-eng="Title">호칭</label>
 						<select id="gender" class="select">
 							<option selected>MR</option>
 							<option>MS</option>
@@ -104,18 +104,18 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="first_name" data-lan-eng="">이름</label>
+						<label class="label-name" for="first_name" data-lan-eng="Name">이름</label>
 						<input id="first_name" type="text" class="form-control" placeholder="이름">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="last_name" data-lan-eng="">성</label>
+						<label class="label-name" for="last_name" data-lan-eng="Nature">성</label>
 						<input id="last_name" type="text" class="form-control" placeholder="성">
 					</div>
 
 					<!-- 2행: 성별 / 나이 / 생년월일 -->
 					<div class="grid-item">
-						<label class="label-name" for="gender" data-lan-eng="">성별</label>
+						<label class="label-name" for="gender" data-lan-eng="Gender">성별</label>
 						<select id="gender" class="select">
 							<option selected>남성</option>
 							<option>여성</option>
@@ -124,40 +124,43 @@
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="age" data-lan-eng="">나이</label>
+						<label class="label-name" for="age" data-lan-eng="Age">나이</label>
 						<input id="age" type="number" class="form-control" placeholder="숫자 입력" min="0">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="birth" data-lan-eng="">생년월일</label>
+						<label class="label-name" for="birth" data-lan-eng="Date of birth">생년월일</label>
 						<input id="birth" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
 					</div>
 
 					<!-- 3행: 출신국가 / 여권번호 / 여권 발행일 -->
 					<div class="grid-item">
-						<label class="label-name" for="nationality" data-lan-eng="">출신국가</label>
+						<label class="label-name" for="nationality" data-lan-eng="Country of origin">출신국가</label>
 						<input id="nationality" type="text" class="form-control" placeholder="출신국가">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="passport_no" data-lan-eng="">여권번호</label>
+						<label class="label-name" for="passport_no" data-lan-eng="Passport number">여권번호</label>
 						<input id="passport_no" type="text" class="form-control" placeholder="여권번호">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" for="passport_issue" data-lan-eng="">여권 발행일</label>
+						<label class="label-name" for="passport_issue" data-lan-eng="Passport Issue Date">여권 발행일</label>
 						<input id="passport_issue" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
 					</div>
 
 					<!-- 4행: 여권 만료일 / 여권 사진 / 빈칸 -->
 					<div class="grid-item">
-						<label class="label-name" for="passport_expire" data-lan-eng="">여권 만료일</label>
+						<label class="label-name" for="passport_expire" data-lan-eng="Passport expiration date">여권 만료일</label>
 						<input id="passport_expire" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
 					</div>
 
 					<div class="grid-item">
-						<label class="label-name" data-lan-eng="">여권 사진</label>
-						<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> 이미지 업로드</button>
+						<label class="label-name" data-lan-eng="Passport photo">여권 사진</label>
+						<label class="inputFile">
+							<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
+							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
+						</label>
 					</div>
 
 					<div class="grid-item"></div>

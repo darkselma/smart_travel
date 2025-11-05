@@ -36,31 +36,35 @@
 				</div>
 			</div>
 
-			<h1 class="page-title" data-lan-eng="">문의 등록</h1>
+			<h1 class="page-title" data-lan-eng="Submit Inquiry">문의 등록</h1>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">문의 내용</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry details">문의 내용</h2>
 			
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 
 					<!-- 제목 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="q-title" data-lan-eng="">제목</label>
-						<input id="q-title" type="text" class="form-control" placeholder="제목">
+						<label class="label-name" for="q-title" data-lan-eng="Title">제목</label>
+						<input id="q-title" type="text" class="form-control" placeholder="제목" data-lan-eng="Title">
 					</div>
 
 					<!-- 내용 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" for="q-content" data-lan-eng="">내용</label>
+						<label class="label-name" for="q-content" data-lan-eng="Content">내용</label>
 						<div class="editor-box-wrap">
-							<textarea id="q-content" rows="10" placeholder="내용을 입력해주세요"></textarea>
+							<textarea id="q-content" rows="10" placeholder="내용을 입력해주세요" data-lan-eng="Please enter your content"></textarea>
 						</div>
 					</div>
 
 					<!-- 첨부파일 -->
 					<div class="grid-item col-span-3">
-						<label class="label-name" data-lan-eng="">첨부파일</label>
-						<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> 파일 업로드</button>
+						<label class="label-name" data-lan-eng="Attachment">첨부파일</label>
+						<label class="inputFile">
+							<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
+							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
+						</label>
+
 						<div class="attach-list">
 							
 						</div>

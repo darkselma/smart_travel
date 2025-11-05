@@ -67,6 +67,18 @@ function nav_status() {
 	});
 }
 
-function inquiry_detail_submit(){
-	
+function inquiry_detail_submit(it) {
+	it.remove();
+	const targets = document.querySelectorAll('.temp-targetA');
+	if (!targets.length) return;
+
+	targets.forEach(el => {
+		const hiddenAncestor = el.closest('.hidden, [hidden]');
+		if (hiddenAncestor) {
+			hiddenAncestor.classList.remove('hidden');
+			if (hiddenAncestor.hasAttribute('hidden')) hiddenAncestor.removeAttribute('hidden');
+		}
+
+		if ('disabled' in el) el.disabled = true; else el.setAttribute('disabled', '');
+	});
 }
