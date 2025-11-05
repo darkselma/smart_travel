@@ -38,7 +38,7 @@
 				<article class="card">
 					<div>
 						<h2 class="card-title" data-lan-eng="Reservation Status">예약 현황</h2>
-						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+						<a href="b2b-booking-list.html" class="card-link">See All →</a>
 					</div>
 					<div>
 						<ul class="status-list">
@@ -60,7 +60,7 @@
 				<article class="card">
 					<div>
 						<h2 class="card-title" data-lan-eng="Inquiry Status">문의 현황</h2>
-						<a href="../reservations/reservation-list.html" class="card-link">See All →</a>
+						<a href="user-inquiry-list.html" class="card-link">See All →</a>
 					</div>
 					<div>
 						<ul class="status-list">
@@ -95,6 +95,7 @@
 								<col style="width:140px;"><!-- 배정 가이드 -->
 							</colgroup>
 							<thead>
+							
 								<tr>
 									<th>No</th>
 									<th data-lan-eng="Product Name">상품명</th>
@@ -105,9 +106,9 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr >
 									<td class="is-center">1</td>
-									<td>서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">서울 벚꽃 명소 집중 탐방 5박 6일 패키지 – 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2B</td>
 									<td class="is-center">50</td>
@@ -115,7 +116,7 @@
 								</tr>
 								<tr>
 									<td class="is-center">2</td>
-									<td>한국 베이직 투어 4박 5일 – 남이섬, 에버랜드 포함</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">한국 베이직 투어 4박 5일 – 남이섬, 에버랜드 포함</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2B</td>
 									<td class="is-center">50</td>
@@ -123,7 +124,7 @@
 								</tr>
 								<tr>
 									<td class="is-center">3</td>
-									<td>단풍 투어 & 설악산 케이블카 4박 5일</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">단풍 투어 & 설악산 케이블카 4박 5일</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2C</td>
 									<td class="is-center">50</td>
@@ -131,7 +132,7 @@
 								</tr>
 								<tr>
 									<td class="is-center">4</td>
-									<td>겨울 패키지 4박 5일 – 에버랜드 & 스키 옵션 포함</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">겨울 패키지 4박 5일 – 에버랜드 & 스키 옵션 포함</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2B</td>
 									<td class="is-center">50</td>
@@ -139,7 +140,7 @@
 								</tr>
 								<tr>
 									<td class="is-center">5</td>
-									<td>전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마을</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">전주·군산 레트로 투어 3박 4일 – 한옥마을 + 철길마을</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2B</td>
 									<td class="is-center">50</td>
@@ -147,7 +148,7 @@
 								</tr>
 								<tr>
 									<td class="is-center">6</td>
-									<td>낙산 힐링 투어 6박 7일 – 부산·여수·거제 포함</td>
+									<td onclick="temp_link('b2b-booking-detail.html')">낙산 힐링 투어 6박 7일 – 부산·여수·거제 포함</td>
 									<td class="is-center">2025-04-19 ~ 2025-04-24</td>
 									<td class="is-center">B2C</td>
 									<td class="is-center">50</td>
@@ -167,19 +168,19 @@
 				<div class="jw-cols jw-gap10 jw-mgt16">
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" checked>
-						<p class="text">일간</p>
+						<p class="text" data-lan-eng="Daily">일간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">주간</p>
+						<p class="text" data-lan-eng="Weekly">주간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">월간</p>
+						<p class="text" data-lan-eng="Annual">월간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">연간</p>
+						<p class="text" data-lan-eng="All">연간</p>
 					</label>
 				</div>
 				
@@ -204,19 +205,19 @@
 				<div class="jw-cols jw-gap10 jw-mgt16">
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" checked>
-						<p class="text">일간</p>
+						<p class="text" data-lan-eng="Daily">일간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">주간</p>
+						<p class="text" data-lan-eng="Weekly">주간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">월간</p>
+						<p class="text" data-lan-eng="Annual">월간</p>
 					</label>
 					<label class="jw-radio typeA">
 						<input type="radio" name="radio1" >
-						<p class="text">연간</p>
+						<p class="text" data-lan-eng="All">연간</p>
 					</label>
 					<div class="input-box jw-w200">
 						<input type="date" name="" value="">
@@ -365,6 +366,46 @@
 									<td class="is-center">47</td>
 									<td class="is-center">3.53%</td>
 									<td class="is-center">₩920,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
+								</tr>
+								<tr>
+									<td class="is-center">10</td>
+									<td>강릉&속초 바다 힐링 투어 3박 4일</td>
+									<td class="is-center">720</td>
+									<td class="is-center">42</td>
+									<td class="is-center">2.35%</td>
+									<td class="is-center">₩530,000</td>
 								</tr>
 								<tr>
 									<td class="is-center">10</td>

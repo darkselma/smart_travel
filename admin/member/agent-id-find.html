@@ -1,4 +1,4 @@
-<div class="dialog-container">
+<div class="dialog-container"  data-essentialWrap="y">
 	<button type="button" class="dialog-close"  id="closeDialog" onclick=""><i class="ic-close"></i></button>
 	
 	<h1 data-lan-eng="Find ID">아이디 찾기</h1>
@@ -8,8 +8,9 @@
 		<div class="field">
 			<label class="label-name" data-lan-eng="Agent Name" >지점명 <span class="req">*</span></label>
 			<div class="input-box">
-				<select class="select" onchange="">
+				<select class="select" data-essential="y" onchange="essentialCheck(this);">
 					<option value="" >Please Select</option>
+					<option value="aa" >aa</option>
 				</select>
 			</div>
 		</div>
@@ -17,20 +18,25 @@
 		<div class="field jw-mgt32">
 			<label class="label-name" data-lan-eng="Person in charge" >담당자 이름 <span class="req">*</span></label>
 			<div class="input-box">
-				<input type="password" value="" placeholder="Please Enter">
+				<input type="text" data-essential="y" value="" placeholder="Please Enter" onkeyup="essentialCheck(this);">
 			</div>
 		</div>
 		
 		<div class="field jw-mgt32">
 			<label class="label-name" data-lan-eng="Person in charge email" >담당자 이메일 <span class="req">*</span></label>
 			<div class="input-box">
-				<input type="password" value="" placeholder="Please Enter">
+				<input type="text" data-essential="y" value="" placeholder="Please Enter" onkeyup="essentialCheck(this);">
 			</div>
 		</div>
-
+		<div class="jw-rows">
+			<small id="help1" class="help typeB">&nbsp;</small>
+			<small id="help2" class="help typeB inactive" data-essentialTarget="y">지점명, 이름, 이메일을 모두 정확하게 입력해주세요.</small>
+		</div>
 	</div>
 	
 	<div class="dialog-controls jw-mgt50">
-		<button type="button" class="jw-button typeB" data-lan-eng="Find ID">아이디 찾기</button>
+		<button type="button" class="jw-button typeB" data-lan-eng="Find ID" onclick="helpTextChange('#help1', '회원 정보를 찾을 수 없습니다.'); modal('member/false_case_4.html', '600px', '252px');">아이디 찾기</button>
 	</div>
 </div>
+
+

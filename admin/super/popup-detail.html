@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="popup-management.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<button type="button" class="jw-button typeB" onclick="">저장</button>
+				</div>
+			</div>
+			<h1 class="page-title" data-lan-eng="Member Inquiry List">팝업 상세</h1>
+			
+			<h2 class="section-title jw-mgt32" data-lan-eng="">팝업 정보</h2>
+			<div class="card-panel jw-mgt16">
+
+				<div class="grid-wrap">
+					<div class="grid-item col-span-3">
+						<label class="label-name">팝업 이미지 (권장 사이즈 640x640)</label>
+						<div class="">
+							<div id="popup-image-preview" class="default-bg"></div>
+							<button type="button" class="jw-button typeE jw-mgt8"><img src="../image/trash.svg" alt="">이미지 삭제</button>
+						</div>
+
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">제목</label>
+						<input type="text" class="form-control" value="팝업 제목입니다" >
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">노출 기간</label>
+						<input type="text" class="form-control" value="2024-07-01 ~ 2024-07-01" >
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">URL</label>
+						<input type="text" class="form-control" value="http://" >
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">등록일시</label>
+						<input type="text" class="form-control" value="2024-07-01 21:59:25" disabled>
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">상태</label>
+						<input type="text" class="form-control" value="활성화" disabled>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</section>
+
+	</main>
+
+	<script src="../js/default.js"></script>
+	<script src="../js/super.js"></script>
+
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_super.html'
+		});
+	</script>
+</body>
+
+</html>

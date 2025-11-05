@@ -106,10 +106,10 @@
 							<label class="label-name" data-lan-eng="">상품 설명 <span class="req">*</span></label>
 							<div class="editor-box-wrap">
 								<textarea rows="8" >
-봄 시즌 한정 벚꽃 투어!
-서울의 대표 벚꽃 명소를 전문 가이드와 함께 여행하며, 남이섬·석촌호수·여의도 등 주요 관광지를 여유롭게 즐길 수 있습니다.
-가이드 동행으로 언어 걱정 없이 안전하고 편안한 여행을 경험하세요.
-숙박 5박, 전 일정 차량 이동, 식사 포함.
+								봄 시즌 한정 벚꽃 투어!
+								서울의 대표 벚꽃 명소를 전문 가이드와 함께 여행하며, 남이섬·석촌호수·여의도 등 주요 관광지를 여유롭게 즐길 수 있습니다.
+								가이드 동행으로 언어 걱정 없이 안전하고 편안한 여행을 경험하세요.
+								숙박 5박, 전 일정 차량 이동, 식사 포함.
 								</textarea>
 							</div>
 						</div>
@@ -182,8 +182,8 @@
 					</div>
 				</div>
 
-				<h2 class="section-title jw-mgt32" data-section-name="flight-information" data-lan-eng="">항공편 정보</h2>
-				<div class="card-panel jw-mgt16" data-section-name="flight-information" >
+				<h2 class="section-title jw-mgt32 hidden" data-section-name="flight-information" data-lan-eng="">항공편 정보</h2>
+				<div class="card-panel jw-mgt16 hidden" data-section-name="flight-information" >
 					<h3 class="grid-wrap-title" data-lan-eng="">출국편</h3>
 
 					<div class="grid-wrap jw-mgt16">
@@ -284,7 +284,7 @@
 						<div class="grid-item"></div>
 					</div>
 				</div>
-				<div class="card-panel jw-mgt16" data-section-name="flight-information" >
+				<div class="card-panel jw-mgt16 hidden" data-section-name="flight-information" >
 					<h3 class="grid-wrap-title">귀국편</h3>
 
 					<div class="grid-wrap jw-mgt16">
@@ -397,6 +397,26 @@
 							</div>
 							<p class="form-desc is-warning">기간은 최대 <b>100</b>일까지만 설정이 가능합니다.</p>
 						</div>
+				
+						<script>
+						$(function(){
+						  $('#range').daterangepicker({
+							autoUpdateInput:false,
+							showDropdowns:true,
+							opens:'right',
+							autoApply:true,
+							locale:{ format:'YYYY-MM-DD', separator:' ~ ',
+							  applyLabel:'적용', cancelLabel:'취소',
+							  daysOfWeek:['일','월','화','수','목','금','토'],
+							  monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] }
+						  }).on('apply.daterangepicker', function(e,p){
+							$(this).val(p.startDate.format('YYYY-MM-DD')+' ~ '+p.endDate.format('YYYY-MM-DD'));
+						  }).on('cancel.daterangepicker', function(){
+							$(this).val('');
+						  });
+						});
+						</script>
+
 						<!-- 최소/최대/요금 -->
 						<div class="grid-item">
 							<label class="label-name">최소 출발 인원 <span class="req">*</span></label>
@@ -414,25 +434,6 @@
 						</div>
 					</div>
 				</div>
-				
-				<script>
-				$(function(){
-				  $('#range').daterangepicker({
-					autoUpdateInput:false,
-					showDropdowns:true,
-					opens:'right',            // 또는 'right'
-					autoApply:true,          // 적용 버튼 없이 즉시 반영
-					locale:{ format:'YYYY-MM-DD', separator:' ~ ',
-					  applyLabel:'적용', cancelLabel:'취소',
-					  daysOfWeek:['일','월','화','수','목','금','토'],
-					  monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] }
-				  }).on('apply.daterangepicker', function(e,p){
-					$(this).val(p.startDate.format('YYYY-MM-DD')+' ~ '+p.endDate.format('YYYY-MM-DD'));
-				  }).on('cancel.daterangepicker', function(){
-					$(this).val('');
-				  });
-				});
-				</script>
 				
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">일자별 판매 조정</h3>
@@ -1015,7 +1016,7 @@
 					</div>
 				</div>
 				
-				
+
 				<h2 class="section-title jw-mgt32">요금 정보</h2>
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title">인원별 요금</h3>
@@ -1258,7 +1259,7 @@
 				</div>
 			</div>
 
-			<aside class="content-aside off" aria-label="구성 요소"> <!-- 고정은 off 추가 -->
+			<aside class="content-aside " aria-label="구성 요소"> <!-- 고정은 off 추가 -->
 				<h3 class="aside-title">구성 요소</h3>
 				<div class="card-panel jw-mgt16">
 						<div class="grid-item">

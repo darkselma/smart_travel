@@ -32,16 +32,15 @@
 			<div class="page-toolbar">
 				<a href="inquiry-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
-					<span data-lan-eng="">목록으로 돌아가기</span>
+					<span data-lan-eng="Return to list">목록으로 돌아가기</span>
 				</a>
 			</div>
 
-			<h1 class="page-title" data-lan-eng="">문의 상세</h1>
+			<h1 class="page-title" data-lan-eng="Inquiry Details">문의 상세</h1>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">문의자 정보</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquirer Information">문의자 정보</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
-					<!-- 1행 -->
 					<div class="grid-item">
 						<label class="label-name">고객명</label>
 						<input type="text" class="form-control" value="Jose Ramirez" disabled>
@@ -55,19 +54,18 @@
 						<input type="email" class="form-control" value="ramirez@gmail.com" disabled>
 					</div>
 
-					<!-- 2행 -->
 					<div class="grid-item">
 						<label class="label-name">고객 번호</label>
 						<input type="text" class="form-control" value="B100231" disabled>
 					</div>
 					<div class="grid-item col-span-2">
-						<label class="label-name">소속 지점명</label>
+						<label class="label-name" data-lan-eng="Agent Name">소속 지점명</label>
 						<input type="text" class="form-control" value="Bacolod City" disabled>
 					</div>
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">문의 내용</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry details">문의 내용</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<!-- 1행 -->
@@ -102,7 +100,7 @@
 					</div>
 
 					<div class="grid-item col-span-3">
-						<label class="label-name"><span data-lan-eng="">첨부파일</span> <span class="req">*</span></label>
+						<label class="label-name"><span data-lan-eng="Attachment">첨부파일</span> <span class="req">*</span></label>
 						<div class="cell">
 							<div class="field-row jw-center">
 								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 파일 [pdf, 328KB]</div>
@@ -133,7 +131,7 @@
 				</div>
 			</div>
 
-			<h2 class="section-title jw-mgt32" data-lan-eng="">답변 남기기</h2>
+			<h2 class="section-title jw-mgt32" data-lan-eng="Leave a reply">답변 남기기</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
 					<div class="grid-item col-span-3">
@@ -144,7 +142,7 @@
 					</div>
 				</div>
 				<div class="controller jw-flex-s">
-					<button type="button" class="jw-button typeB " data-lan-eng="">답변 전송</button>
+					<button type="button" class="jw-button typeB " data-lan-eng="" onclick="inquiry_detail_submit()">답변 전송</button>
 				</div>
 
 			</div>

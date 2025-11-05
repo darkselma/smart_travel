@@ -30,7 +30,7 @@
 .jw-button.typeB { height:44px; background:#0065F8; color:#FFFFFF; border-radius:12px; font-weight:bold; padding:0 24px; }
 .jw-button.typeB2 { height:44px; background:#FFFFFF; color:#0065F8; border: 1px solid #0065F8; border-radius:12px; font-weight:bold; padding:0 24px; }
 .jw-button.typeC { width:100%; height:44px; background:#fff; color:#121212; border-radius:12px; border: 1px solid #D4D4D4; font-weight:bold; padding:0 24px; }
-.jw-button.typeD { height:26px; background:#F3F3F3; color:#4E4E4E; border-radius:8px; padding:0 8px; display:flex; align-items:center; font-size:12px; font-weight:medium; padding:0 8px; }
+.jw-button.typeD { height:26px; background:#F3F3F3; color:#4E4E4E; border-radius:8px; padding:0 8px; display:flex; align-items:center; font-size:12px; font-weight:500; padding:0 8px; }
 .jw-button.typeE { width:180px; height:44px; color:#121212; border-radius:10px; font-size:14px; font-weight:bold; border: 1px solid #D4D4D4; padding:0 24px; }
 .jw-button.typeF { padding:0; }
 .jw-button.typeG { height:44px; padding:0 24px; background:#D4E7FF; color:#0065F8; border-radius:12px; font-weight:bold; }
@@ -46,7 +46,7 @@
 .jw-tableA thead th:last-child { border-right:1px solid #D4E7FF; }
 
 /* body */
-.jw-tableA tbody td { height:54px; font-size:16px; font-weight:medium; color:#1f2937; border-bottom:1px solid #eef2f6; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.jw-tableA tbody td { height:54px; font-size:16px; font-weight:500; color:#1f2937; border-bottom:1px solid #eef2f6; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
 .jw-tableA tbody tr:hover { background:#f9fbff; }
 .jw-tableA tbody tr:last-child td { border-bottom:0; }
 .jw-tableA tbody td.no { text-align:center; }
@@ -96,7 +96,7 @@
 .jw-pagebox > .contents.off { display:none; }
 .jw-pagebox > .contents .page { display:flex; justify-content:center; align-items:center; }
 .jw-pagebox > .contents button { position:relative; width:28px; height:28px; display:flex; justify-content:center; align-items:center; } 
-.jw-pagebox > .contents button.p { font-size:14px; font-weight:medium; color:#B0B0B0; }
+.jw-pagebox > .contents button.p { font-size:14px; font-weight:500; color:#B0B0B0; }
 .jw-pagebox > .contents button.show { font-weight:bold; color:#0065F8; }
 .jw-pagebox > .contents button:hover { background:#eee; } 
 
@@ -139,7 +139,8 @@ dialog { position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
 .ic-close::after { content:""; position:absolute; width:var(--line, 2px); height:100%; background: var(--color, #222); transform: rotate(45deg); }
 .ic-close::before { content:""; position:absolute; width:var(--line, 2px); height:100%; background: var(--color, #222); transform: rotate(-45deg); }
 
-.help { display:inline-block; font-size:14px; font-weight:medium; }
+.help { display:inline-block; font-size:14px; font-weight:500; }
+.help.active { display:none; }
 .help.typeA { color:#F28B00; }
 .help.typeB { color:#E1322E; }
 

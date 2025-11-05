@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="visa-app-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<select class="select" name="" onchange="">
+						<option value="" >처리 완료</option>
+						<option value="" ></option>
+					</select>
+				</div>
+			</div>
+			<h1 class="page-title" data-lan-eng="Member Inquiry List">비자 신청 상세</h1>
+			
+			<h2 class="section-title jw-mgt32" data-lan-eng="">서류 내역</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 1행 -->
+					<div class="grid-item">
+						<label class="label-name">증명사진 (최근 6개월 이내)</label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 증명사진 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="grid-item">
+						<label class="label-name">여권 사본</label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 여권 사본 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="grid-item">
+						<label class="label-name">은행 계좌 증명서</label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 은행 계좌 증명서 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- 2행 -->
+					<div class="grid-item">
+						<label class="label-name">최근 3개월간의 은행 거래 내역서</label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 은행 거래 내역서 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="grid-item ">
+						<label class="label-name">항공편 정보가 포함된 여행 일정표</label>
+						<div class="cell">
+							<div class="field-row jw-center">
+								<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 여행 일정표 [pdf, 328KB]</div>
+								<div class="jw-center jw-gap10">
+									<i></i>
+									<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+									<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="">신청 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 1행 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name">상품명</label>
+						<input type="text" class="form-control" value="2025-12-01 12:12" disabled>
+					</div>
+
+					<!-- 2행 -->
+					<div class="grid-item ">
+						<label class="label-name">신청일시</label>
+						<input type="text" class="form-control" value="제목입니다" disabled>
+					</div>
+					
+				</div>
+			</div>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="">신청자 정보</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item">
+						<label class="label-name">호칭</label>
+						<select class="select" name="" onchange="">
+							<option value="" >MR</option>
+							<option value="" ></option>
+						</select>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">이름</label>
+						<input type="text" class="form-control" value="Jose">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">성</label>
+						<input type="text" class="form-control" value="Ramirez">
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name">성별</label>
+						<select class="select" name="" onchange="">
+							<option value="" >남성</option>
+							<option value="" ></option>
+						</select>
+					</div>
+					<div class="grid-item">
+						<label class="label-name">나이</label>
+						<input type="text" class="form-control" value="40">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">생년월일</label>
+						<input type="text" class="form-control" value="19710101">
+					</div>
+
+					<div class="grid-item">
+						<label class="label-name">출신국가</label>
+						<input type="text" class="form-control" value="필리핀">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">여권번호</label>
+						<input type="text" class="form-control" value="P1234567">
+					</div>
+					<div class="grid-item">
+						<label class="label-name">여권 발행일</label>
+						<input type="text" class="form-control" value="20200101">
+					</div>
+					
+					<div class="grid-item">
+						<label class="label-name">여권 만료일</label>
+						<input type="text" class="form-control" value="20300101">
+					</div>
+					
+					<div class="grid-item">
+						<label class="label-name" data-lan-eng="">여권 사진</label>
+						<div class="upload-box">
+							<input id="file-passport" type="file" accept="image/*">
+							<label for="file-passport" class="thumb" aria-label="preview"></label>
+							<div class="upload-meta">
+								<div class="file-title" data-lan-eng="">이미지</div>
+								<div class="file-info">jpg, 328KB</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<h2 class="section-title jw-mgt32" data-lan-eng="">비자 업로드</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<!-- 첨부파일 -->
+					<div class="grid-item col-span-3">
+						<label class="label-name" data-lan-eng="">비자 파일</label>
+						<button type="button" class="jw-button typeE jw-mgt8"><img src="../image/upload.svg" alt=""> 파일 업로드</button>
+						<div class="attach-list">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+
+	</main>
+
+	<script src="../js/default.js"></script>
+	<script src="../js/super.js"></script>
+
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_super.html'
+		});
+	</script>
+</body>
+
+</html>

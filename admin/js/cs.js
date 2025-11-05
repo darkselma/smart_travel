@@ -66,3 +66,7 @@ function nav_status() {
 		}
 	});
 }
+
+function inquiry_detail_submit(){
+	
+}

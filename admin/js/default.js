@@ -1,107 +1,137 @@
 function jw_select() {
-	const $ = (s, c = document) => c.querySelector(s);
-	const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
-	const el = (t, cls) => { const n = document.createElement(t); if (cls) n.className = cls; return n; };
-	const offWidth = (s) => {
-		const t = el('div'); t.style.cssText =
-			'position:absolute;visibility:hidden;white-space:nowrap;display:inline-block;'; t.textContent = s;
-		document.body.appendChild(t); const w = t.offsetWidth; t.remove(); return w;
-	};
-
 	if (!window.__jwselect_docbound) {
 		document.addEventListener('click', () => {
-			document.querySelectorAll('.jw-select.open').forEach(wrap => {
-				wrap.classList.remove('open');
-				const box = wrap.querySelector('.jw-selected');
-				if (box) box.classList.remove('active'), box.setAttribute('aria-expanded', 'false');
+			document.querySelectorAll('div.jw-selected.active').forEach(box => {
+				box.classList.remove('active');
+				const list = box.nextElementSibling;
+				if (list && list.classList.contains('jw-select-list')) list.style.display = 'none';
 			});
 		});
 		window.__jwselect_docbound = true;
 	}
 
-	document.querySelectorAll('.select').forEach(nativeSel => {
+	const measure = (txt) => {
+		const t = document.createElement('div');
+		t.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;display:inline-block;';
+		t.textContent = txt; document.body.appendChild(t);
+		const w = t.offsetWidth; t.remove(); return w;
+	};
+
+	const triggerChange = (sel) => {
+		sel.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
+		sel.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+		if (typeof sel.onchange === 'function') { try { sel.onchange.call(sel); } catch { } }
+		if (window.jQuery) { const $sel = window.jQuery(sel); $sel.addClass('select').trigger('change').removeClass('select'); }
+	};
+
+	document.querySelectorAll('select.select').forEach(nativeSel => {
+		let maxWidth = 0;
+
 		nativeSel.classList.remove('select');
 		nativeSel.classList.add('jw-sr-only');
 
-		const wrap = el('div', 'jw-select');
+		const wrap = document.createElement('div');
+		wrap.className = 'jw-select';
 		nativeSel.parentNode.insertBefore(wrap, nativeSel);
 		wrap.appendChild(nativeSel);
 
-		const box = el('div', 'jw-selected');
-		box.setAttribute('role', 'button');
-		box.setAttribute('aria-haspopup', 'listbox');
-		box.setAttribute('aria-expanded', 'false');
-		wrap.appendChild(box);
+		const styled = document.createElement('div');
+		styled.className = 'jw-selected';
+		wrap.appendChild(styled);
 
-		const setBox = () => {
-			const opt = nativeSel.selectedOptions[0] || nativeSel.options[0];
-			const label = opt ? opt.textContent : '';
-			const icon = opt?.dataset?.icon;
-			box.innerHTML = icon ? `<i class="${icon}"></i> ${label}` : label;
-		};
-		setBox();
-
-		const list = el('ul', 'jw-select-list');
-		list.setAttribute('role', 'listbox');
-		wrap.appendChild(list);
-
-		let maxWidth = 0;
-		Array.from(nativeSel.options).forEach(o => {
-			const li = el('li', 'jw-select-item');
-			li.setAttribute('role', 'option');
-			li.dataset.value = o.value;
-			li.innerHTML = o.dataset?.icon ? `<i class="${o.dataset.icon}"></i> ${o.textContent}` : o.textContent;
-
-			// ✅ disabled 옵션 반영
-			if (o.disabled) {
-				li.setAttribute('aria-disabled', 'true');
-				li.classList.add('is-disabled');
-			}
-
-			if (o.selected) li.setAttribute('aria-selected', 'true');
-			list.appendChild(li);
-			maxWidth = Math.max(maxWidth, offWidth(o.textContent));
-		});
-
-		if (maxWidth) wrap.style.minWidth = (maxWidth + 40) + 'px';
-		if (nativeSel.dataset.direction === 'up') wrap.classList.add('up');
-
-		// ✅ 전체 select disabled 처리
 		if (nativeSel.disabled) {
 			wrap.classList.add('is-disabled');
-			box.setAttribute('aria-disabled', 'true');
-			box.tabIndex = -1;
+			styled.setAttribute('aria-disabled', 'true');
 		}
 
-		const openList = () => {
-			if (nativeSel.disabled) return; // 전체 비활성화면 열지 않음
-			wrap.classList.add('open'); box.classList.add('active'); box.setAttribute('aria-expanded', 'true');
-		};
-		const closeList = () => {
-			wrap.classList.remove('open'); box.classList.remove('active');
-			box.setAttribute('aria-expanded', 'false');
-		};
+		const selectedOpt = nativeSel.selectedOptions[0] || nativeSel.options[0];
+		const selectedText = selectedOpt ? selectedOpt.textContent : '';
+		const selectedIcon = selectedOpt && selectedOpt.dataset ? selectedOpt.dataset.icon : null;
+		if (selectedIcon) styled.innerHTML = `<i class="${selectedIcon}"></i> ${selectedText}`;
+		else styled.textContent = selectedText;
 
-		const choose = (itemEl) => {
-			// ✅ 항목이 disabled면 선택 막기
-			if (itemEl.getAttribute('aria-disabled') === 'true') return;
+		const list = document.createElement('ul');
+		list.className = 'jw-select-list';
+		styled.insertAdjacentElement('afterend', list);
 
-			list.querySelectorAll('.jw-select-item[aria-selected="true"]').forEach(li => li.removeAttribute('aria-selected'));
-			itemEl.setAttribute('aria-selected', 'true');
-			nativeSel.value = itemEl.dataset.value;
-			nativeSel.dispatchEvent(new Event('change', { bubbles: true }));
-			setBox(); closeList();
-		};
+		const numberOfOptions = nativeSel.options.length;
+		for (let i = 0; i < numberOfOptions; i++) {
+			const o = nativeSel.options[i];
+			const li = document.createElement('li');
+			li.className = 'jw-select-item';
+			li.setAttribute('rel', o.value);
 
-		box.addEventListener('click', (e) => {
-			e.stopPropagation(); wrap.classList.contains('open') ? closeList() : openList();
+			const iconClass = o.dataset ? o.dataset.icon : null;
+			const iconWidth = o.dataset && o.dataset.iconwidth ? Number(o.dataset.iconwidth) : 0;
+
+			if (iconClass) {
+				li.innerHTML = `<i class="${iconClass}"></i> ${o.textContent}`;
+				if (iconWidth) maxWidth = iconWidth;
+			} else {
+				li.textContent = o.textContent;
+			}
+
+			if (o.disabled) {
+				li.classList.add('is-disabled');
+				li.setAttribute('aria-disabled', 'true');
+			}
+
+			list.appendChild(li);
+		}
+
+		const listItems = Array.from(list.children);
+		if (listItems.length > 0) {
+			listItems.forEach(li => {
+				const w = measure(li.textContent);
+				if (w > maxWidth) maxWidth = w;
+			});
+			maxWidth += 40;
+			wrap.style.minWidth = `${maxWidth}px`;
+		}
+
+		styled.addEventListener('click', (e) => {
+			e.stopPropagation();
+			if (nativeSel.disabled) return;
+
+			document.querySelectorAll('div.jw-selected.active').forEach(box => {
+				if (box !== styled) {
+					box.classList.remove('active');
+					const ul = box.nextElementSibling;
+					if (ul && ul.classList.contains('jw-select-list')) ul.style.display = 'none';
+				}
+			});
+			const next = styled.nextElementSibling;
+			styled.classList.toggle('active');
+			if (next && next.classList.contains('jw-select-list')) {
+				next.style.display = (next.style.display === 'block') ? 'none' : 'block';
+			}
 		});
-		list.addEventListener('click', (e) => {
-			const item = e.target.closest('.jw-select-item'); if (!item) return;
-			e.stopPropagation(); choose(item);
+
+		listItems.forEach(li => {
+			li.addEventListener('click', (e) => {
+				e.stopPropagation();
+				if (li.classList.contains('is-disabled') || li.getAttribute('aria-disabled') === 'true') return;
+
+				const selectedText2 = li.textContent;
+				const iconEl = li.querySelector('i');
+				const selectedIcon2 = iconEl ? iconEl.className : null;
+
+				if (selectedIcon2) styled.innerHTML = `<i class="${selectedIcon2}"></i> ${selectedText2}`;
+				else styled.textContent = selectedText2;
+
+				styled.classList.remove('active');
+				list.style.display = 'none';
+
+				const newVal = li.getAttribute('rel');
+				if (nativeSel.value !== newVal) {
+					nativeSel.value = newVal;
+					triggerChange(nativeSel);
+				}
+			});
 		});
 	});
 }
+
 
 function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000); document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`; }
 function getCookie(name) { const seg = `; ${document.cookie}`.split(`; ${name}=`); return (seg.length === 2) ? decodeURIComponent(seg.pop().split(';').shift()) : null; }
@@ -318,10 +348,10 @@ function member_info(btn, page) {
 	}
 }
 
-function helpTextChange(target, v) {
+function helpTextChange(target) {
 	const el = document.querySelector(target);
 	if (!el) return;
-	el.textContent = v || '';
+	el.classList.remove('active');
 }
 
 function layerToggle(btn) {
@@ -332,7 +362,7 @@ function layerToggle(btn) {
 
 function filePreview(el) {
 	const f = el.files && el.files[0]; if (!f) return;
-	const box = el.closest('.image-preview') || el.closest('.banner-item')?.querySelector('.image-preview') || el.closest('.banner-image-wrap') || el.closest('.upload-item') || null;
+	const box = el.closest('.image-preview') || el.closest('.banner-item')?.querySelector('.image-preview') || el.closest('.popup-image-wrap')?.querySelector('.image-preview') || el.closest('.banner-image-wrap') || el.closest('.upload-item') || null;
 	if (!box) return;
 	const url = URL.createObjectURL(f);
 	box.style.backgroundImage = `url("${url}")`;
@@ -347,6 +377,7 @@ function essentialCheck(it) {
 	if (!wrap) return false;
 	const essentials = wrap.querySelectorAll('[data-essential="y"]');
 	if (!essentials.length) return false;
+	console.log( 11 );
 
 	const allOK = Array.prototype.every.call(essentials, el => {
 		const tag = el.tagName;
@@ -357,7 +388,7 @@ function essentialCheck(it) {
 		if (type === 'file') return (el.files && el.files.length > 0);
 		return ((el.value || '').trim().length > 0);
 	});
-	console.log( 11 );
+	
 	wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
 		tg.disabled = !allOK;
 		tg.classList.toggle('active', allOK);
@@ -372,19 +403,20 @@ function togglePlusMinus(btn) {
 	var img = btn.querySelector('img');
 	var target = btn.getAttribute('data-target-section');
 	var targets = target ? document.querySelectorAll('[data-section-name="' + target + '"]') : [];
+	var row = btn.closest('.aside-row');
 
 	if (hasOn) {
-		// on 이 있으면: on 제거 + 아이콘 minus
 		btn.classList.remove('on');
 		targets.forEach(function (el) { if (el !== btn) el.classList.remove('hidden'); });
 		img.src = '../image/minus.svg';
 		img.alt = 'minus';
+		if (row) row.classList.remove('off');
 	} else {
-		// on 이 없으면: on 추가 + 아이콘 plus
 		btn.classList.add('on');
 		targets.forEach(function (el) { if (el !== btn) el.classList.add('hidden'); });
-		img.src = '../image/plus.svg';
+		img.src = '../image/plus2.svg';
 		img.alt = 'plus';
+		if (row) row.classList.add('off');
 	}
 }
 
@@ -401,7 +433,135 @@ function trash_typeA(it) {
 	if (tr) tr.remove();
 }
 
+function toggle_password(btn) {
+	const targetSel = btn.dataset.target;
+	const box = btn.closest('.input-box');
+	const input = targetSel
+		? document.querySelector(targetSel)
+		: (box ? box.querySelector('input[type="password"], input[type="text"]') : null);
+	if (!input) return;
+
+	const show = input.type === 'password';
+	input.type = show ? 'text' : 'password';
+}
+
+function checkLogin(e) {
+	if (e && e.preventDefault) e.preventDefault();
+	const form = document.getElementById('loginForm');
+	if (!form) return true;
+
+	const idInput = form.querySelector('input[name="id"]');
+	const pwdInput = form.querySelector('.input-box input[type="password"]');
+
+	const id = (idInput && idInput.value || '').trim();
+	const pwd = (pwdInput && pwdInput.value || '').trim();
+
+	if (!id) {
+		modal('member/false_case_1.html', '600px', '252px');
+		if (idInput) idInput.focus();
+		return false;
+	}
+	if (!pwd) {
+		modal('member/false_case_2.html', '600px', '252px');
+		if (pwdInput) pwdInput.focus();
+		return false;
+	}
+	modal('member/false_case_3.html', '600px', '252px');
+	//location.href = '/smart_travel/admin/super/overview.html';
+	return true;
+}
+
+function change_category_1(el) {
+	const head = el.closest('.gpc-head');
+	if (!head) return;
+	head.innerHTML =
+		'<div class="gpc-form iptA">' +
+		'<input type="text" placeholder="대분류명 입력" data-lan-eng="Enter main category name">' +
+		'<button type="button" class="btn-ghost" onclick="change_category_5(this);"><img src="../image/category-check2.svg" alt=""></button>' +
+		'</div>';
+	const input = head.querySelector('input');
+	if (input) input.focus();
+}
+
+function change_category_2(el) {
+	const item = el.closest('.gpc-item');
+	if (!item) return;
+	item.innerHTML = '<div class="gpc-form iptB jw-mgt4"><input type="text" placeholder="중분류명 입력" data-lan-eng="Enter category name"><button type="button" class="btn-ghost" onclick="change_category_4(this);"><img src="../image/category-check2.svg" alt=""></button></div>';
+	const input = item.querySelector('input');
+	if (input) input.focus();
+}
+
+function change_category_3(el) {
+	const card = el.closest('.grid-panel-card');
+	const body = card ? card.querySelector('.gpc-body') : document.querySelector('.gpc-body');
+	if (!body) return;
+
+	const item = document.createElement('div');
+	item.className = 'gpc-item';
+	item.innerHTML = `
+    <div class="gpc-form iptB jw-mgt4"><input type="text" placeholder="중분류명 입력" data-lan-eng="Enter category name"><button type="button" class="btn-ghost" onclick="change_category_4(this);"><img src="../image/category-check2.svg" alt=""></button></div>
+  `;
+	body.appendChild(item);
+}
+
+function change_category_4(el) {
+	const item = el.closest('.gpc-item');
+	if (!item) return;
+	const input = item.querySelector('input');
+	const raw = (input && input.value || '').trim();
+	const name = raw || 'text';
+	const esc = (s) => String(s)
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#39;');
+	item.innerHTML = `
+    <div class="category">
+      <span class="drag"><img src="../image/category-sort.svg" alt=""></span>
+      <span class="name">${esc(name)}</span>
+    </div>
+	<div class="actions">
+		<button class="icon-btn" onclick="change_category_2(this);"><img src="../image/category-edit.svg" alt=""></button>
+		<button class="icon-btn" onclick="modal('category-management-m2.html', '600px', '252px')"><img src="../image/category-delete.svg" alt=""></button>
+	</div>
+  `;
+}
+
+function change_category_5(el) {
+	const head = el.closest('.gpc-head');
+	if (!head) return;
+
+	const input = head.querySelector('input');
+	const title = (input && input.value.trim()) || '제목없음';
+
+	head.innerHTML =
+		'<div class="gpc-title" data-lan-eng="Seasonal">' + title + '</div>' +
+		'<div class="gpc-head-actions">' +
+		'<button type="button" class="icon-btn" title="이름 수정" onclick="change_category_1(this);"><img src="../image/category-edit.svg" alt=""></button>' +
+		'<button type="button" class="icon-btn" title="삭제" onclick="modal(\'category-management-m2.html\', \'600px\', \'252px\')"><img src="../image/category-delete.svg" alt=""></button>' +
+		'</div>';
+}
+
+function b2b_booking_detail() {
+	const target = document.getElementById('b2b_booking_detail_target');
+	if (!target) return;
+
+	target.innerHTML = `
+    <div class="cell">
+      <div class="field-row jw-center">
+        <div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> 선금 증빙 파일 [pdf, 328KB]</div>
+        <div class="jw-center jw-gap10">
+          <i></i>
+          <button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 /* 임시 */
 function temp_link(v){
 	location.href=v;
 }
+
