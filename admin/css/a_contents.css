@@ -380,6 +380,7 @@ textarea[name="terms"] { width:100%; border-radius:12px; padding:24px; border: 1
 
 /* ========= aside ========= */
 .aside-list { display:flex; flex-direction:column; gap:24px; }
+.aside-row-list { display:flex; flex-direction:column; gap:24px; }
 .aside-row { display:flex; align-items:center; justify-content:space-between; }
 .aside-row__title { font-size:20px; font-weight:bold; }
 .aside-row__req { color:#0065F8; }
@@ -406,3 +407,5 @@ textarea[name="terms"] { width:100%; border-radius:12px; padding:24px; border: 1
 
 
 .hidden { display:none; }
+
+#nday.off { max-height:80px; transition: all 0.5s; overflow:hidden; }

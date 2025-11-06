@@ -440,8 +440,6 @@ function essentialCheck(it) {
 	if (!wrap) return false;
 	const essentials = wrap.querySelectorAll('[data-essential="y"]');
 	if (!essentials.length) return false;
-	console.log( 11 );
-
 	const allOK = Array.prototype.every.call(essentials, el => {
 		const tag = el.tagName;
 		const type = (el.type || '').toLowerCase();
@@ -451,14 +449,82 @@ function essentialCheck(it) {
 		if (type === 'file') return (el.files && el.files.length > 0);
 		return ((el.value || '').trim().length > 0);
 	});
-	
 	wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
 		tg.disabled = !allOK;
 		tg.classList.toggle('active', allOK);
 		tg.classList.toggle('inactive', !allOK);
 	});
-
 	return allOK;
+}
+
+function essentialCheck2(it) {
+	const wrap = it.closest('[data-essentialWrap="y"]');
+	if (!wrap) return '';
+
+	const essentials = wrap.querySelectorAll('[data-essential="y"]');
+	if (!essentials.length) return '';
+
+	const clean = (s) => (s || '').replace(/[\*\:\u00A0]/g, ' ').replace(/\s+/g, ' ').trim();
+	const getGroupChecked = (el) => {
+		if (!el.name) return el.checked;
+		const sel = `input[type="${el.type}"][name="${CSS.escape(el.name)}"]`;
+		const scope = el.form || wrap;
+		return Array.prototype.some.call(scope.querySelectorAll(sel), n => n.checked);
+	};
+	const findLabelText = (el) => {
+		if (el.id) {
+			const byFor = document.querySelector(`label[for="${CSS.escape(el.id)}"]`);
+			if (byFor && clean(byFor.textContent)) return clean(byFor.textContent);
+		}
+		const parentLabel = el.closest('label');
+		if (parentLabel && clean(parentLabel.textContent)) return clean(parentLabel.textContent);
+		const prev = el.previousElementSibling;
+		if (prev && (prev.tagName === 'LABEL' || prev.classList.contains('label') || prev.classList.contains('label-name'))) {
+			if (clean(prev.textContent)) return clean(prev.textContent);
+		}
+		const fieldWrap = el.closest('.grid-item, .form-row, .field, .form-group, .editor-box-wrap, div');
+		if (fieldWrap) {
+			const inWrapLabel = fieldWrap.querySelector('label, .label, .label-name, .field-title, .title, .name');
+			if (inWrapLabel && clean(inWrapLabel.textContent)) return clean(inWrapLabel.textContent);
+			if (/radio|checkbox/i.test(el.type || '')) {
+				const fs = el.closest('fieldset');
+				const legend = fs && fs.querySelector('legend');
+				if (legend && clean(legend.textContent)) return clean(legend.textContent);
+			}
+			if (clean(fieldWrap.textContent)) return clean(fieldWrap.textContent);
+		}
+		const near = el.closest('[class], section, article, div');
+		if (near && clean(near.textContent)) return clean(near.textContent);
+		return clean(el.getAttribute('placeholder') || el.name || el.id || '');
+	};
+
+	for (const el of essentials) {
+		const tag = el.tagName;
+		const type = (el.type || '').toLowerCase();
+		let ok = true;
+
+		if (type === 'radio') ok = getGroupChecked(el);
+		else if (type === 'checkbox') ok = el.checked;
+		else if (tag === 'SELECT') ok = (el.value ?? '') !== '';
+		else if (type === 'file') ok = !!(el.files && el.files.length > 0);
+		else ok = ((el.value || '').trim().length > 0);
+
+		if (!ok) {
+			wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
+				tg.disabled = true;
+				tg.classList.remove('active');
+				tg.classList.add('inactive');
+			});
+			return findLabelText(el);
+		}
+	}
+
+	wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
+		tg.disabled = false;
+		tg.classList.add('active');
+		tg.classList.remove('inactive');
+	});
+	return '';
 }
 
 function togglePlusMinus(btn) {
