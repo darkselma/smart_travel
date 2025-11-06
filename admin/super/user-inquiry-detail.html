@@ -141,15 +141,22 @@
 			<h2 class="section-title jw-mgt32" data-lan-eng="Leave a reply">답변 남기기</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
+					<div class="grid-item hidden">
+						<label class="label-name">답변일시</label>
+						<input type="text" class="form-control temp-targetA" value="2025-12-01 12:12" disabled>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+					
 					<div class="grid-item col-span-3">
 						<label class="label-name" data-lan-eng="Content">내용</label>
 						<div class="editor-box-wrap">
-							<textarea rows="8" placeholder="내용을 입력해주세요." data-lan-eng="Please enter your content"></textarea>
+							<textarea rows="8" placeholder="내용을 입력해주세요." data-lan-eng="Please enter your content" class="temp-targetA"></textarea>
 						</div>
 					</div>
 				</div>
 				<div class="controller jw-flex-s">
-					<button type="button" class="jw-button typeB " data-lan-eng="Send answer">답변 전송</button>
+					<button type="button" class="jw-button typeB " data-lan-eng="Send answer" onclick="detail_submit(this)">답변 전송</button>
 				</div>
 
 			</div>
