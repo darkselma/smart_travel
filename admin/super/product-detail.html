@@ -32,7 +32,7 @@
 		<!-- nav 들어올 자리 -->
 		<nav class="layout-nav"></nav>
 
-		<section class="layout-content layout-content-aside">
+		<section class="layout-content layout-content-aside" data-essentialWrap="y">
 			<div class="page-toolbar">
 				<a href="product-list.html" class="jw-button" aria-label="목록으로 돌아가기">
 					<img src="../image/arrow4.svg" alt="">
@@ -41,7 +41,7 @@
 
 				<div class="page-toolbar-actions">
 					<button type="button" class="jw-button typeA" onclick="modal('product-detail_modal_5.html', '600px', '252px')" data-lan-eng="Delete">삭제</button>
-					<button type="button" class="jw-button typeB" onclick="modal('product-preview.html', '1000px', '100%')" data-lan-eng="Save">저장</button>
+					<button type="button" class="jw-button typeB" onclick="product_detail_save(this)" data-lan-eng="Save">저장</button>
 				</div>
 			</div>
 
@@ -49,7 +49,7 @@
 				<h1 class="page-title" data-lan-eng="Product Details">상품 상세</h1>
 				<div class="jw-cols jw-between jw-mgt32">
 					<h2 class="section-title" data-lan-eng="Product Information">상품 정보</h2>
-					<button type="button" class="jw-button typeA" onclick="" data-lan-eng="Load Template">템플릿 불러오기</button>
+					<button type="button" class="jw-button typeA" onclick="modal('product-detail_m1.html', '580px', '508px')" data-lan-eng="Load Template">템플릿 불러오기</button>
 				</div>
 				
 				<div class="card-panel jw-mgt16">
@@ -66,13 +66,12 @@
 
 						<div class="grid-item col-span-3">
 							<label class="label-name"><span data-lan-eng="Product Name">상품명</span> <span class="req">*</span></label>
-							<input type="text" class="form-control"
-								value="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
+							<input type="text" class="form-control" data-essential="y" value="서울 벚꽃 명소 집중 탐방 5박 6일 패키지 - 전일정 가이드 및 식사 포함, 남이섬·석촌호수·윤중로 포함">
 						</div>
 
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Sales Target">판매 대상</span> <span class="req">*</span></label>
-							<select class="select" disabled>
+							<select class="select" disabled >
 								<option selected>B2B</option>
 								<option>B2C</option>
 							</select>
@@ -81,15 +80,16 @@
 						<div class="grid-item"></div>
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Category">대분류</span> <span class="req">*</span></label>
-							<select class="select">
-								<option selected>계절별</option>
-								<option>지역별</option>
-								<option>테마별</option>
+							<select class="select" data-essential="y" data-category="1" onchange="template_detail_sdaf_cate()">
+								<option value="계절별" selected>계절별</option>
+								<option value="지역별">지역별</option>
+								<option value="테마별">테마별</option>
+								<option value="">null</option>
 							</select>
 						</div>
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Category">중분류</span> <span class="req">*</span></label>
-							<select class="select">
+							<select class="select" data-essential="y" data-category="2">
 								<option selected>봄</option>
 								<option>여름</option>
 								<option>가을</option>
@@ -132,25 +132,25 @@
 								</div>
 								<div class="upload-item jw-center">
 									<label class="inputFile">
-										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<input name="" type="file" onchange="filePreview(this);" >
 										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 									</label>
 								</div>
 								<div class="upload-item jw-center">
 									<label class="inputFile">
-										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<input name="" type="file" onchange="filePreview(this);" >
 										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 									</label>
 								</div>
 								<div class="upload-item jw-center">
 									<label class="inputFile">
-										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<input name="" type="file" onchange="filePreview(this);" >
 										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 									</label>
 								</div>
 								<div class="upload-item jw-center">
 									<label class="inputFile">
-										<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+										<input name="" type="file" onchange="filePreview(this);" >
 										<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 									</label>
 								</div>
@@ -375,7 +375,7 @@
 						<div class="grid-item col-span-3">
 							<label class="label-name"><span data-lan-eng="Sale period">판매 기간</span> <span class="req">*</span></label>
 							<div class="field-row jw-w400">
-								<input type="text" id="range" class="form-control jw-w" placeholder="기간 선택">
+								<input type="text" id="range" class="form-control jw-w" data-essential="y" placeholder="기간 선택">
 								<i><img src="../image/calendar.svg" alt=""></i>
 							</div>
 							<p class="form-desc is-warning" data-lan-eng="The period can only be set up to a maximum of 100 days.">기간은 최대 <b>100</b>일까지만 설정이 가능합니다.</p>
@@ -403,17 +403,17 @@
 						<!-- 최소/최대/요금 -->
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Minimum departure headcount">최소 출발 인원</span> <span class="req">*</span></label>
-							<input type="number" class="form-control" value="2" min="0" placeholder="0">
+							<input type="number" class="form-control" value="2" min="0" data-essential="y" placeholder="0">
 						</div>
 
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Maximum capacity">최대 수용 인원</span> <span class="req">*</span></label>
-							<input type="number" class="form-control" value="36" min="0" value="0" disabled>
+							<input type="number" class="form-control" value="36" min="0" value="0" data-essential="y" disabled>
 						</div>
 
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Basic airfare (₱)">기본 항공 요금 (₱)</span> <span class="req">*</span></label>
-							<input type="text" class="form-control" value="15,000" inputmode="numeric" placeholder="15,000">
+							<input type="text" class="form-control" value="15,000" data-essential="y" inputmode="numeric" placeholder="15,000">
 						</div>
 					</div>
 				</div>
@@ -870,7 +870,7 @@
 							<div class="grid-item col-span-3">
 								<label class="label-name"><span data-lan-eng="Sight Name">관광지명</span> <span class="req">*</span></label>
 								<div class="jw-center jw-gap20">
-									<input type="text" class="form-control jw-wf" value="남이섬" disabled>
+									<input type="text" class="form-control jw-wf" data-essential="y" value="남이섬" disabled>
 									<button type="button" class="jw-button typeA " data-lan-eng="Address Search">주소 검색</button>
 								</div>
 							</div>
@@ -891,7 +891,7 @@
 								<div class="upload-grid">
 									<div class="upload-item jw-center">
 										<label class="inputFile">
-											<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+											<input name="" type="file" onchange="filePreview(this);" >
 											<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 										</label>
 									</div>
@@ -934,7 +934,7 @@
 								<div class="upload-grid">
 									<div class="upload-item jw-center">
 										<label class="inputFile">
-											<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+											<input name="" type="file" onchange="filePreview(this);" >
 											<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 										</label>
 									</div>
@@ -1207,7 +1207,7 @@
 				</div>
 			</div>
 
-			<aside class="content-aside off" aria-label="구성 요소">
+			<aside class="content-aside off" aria-label="구성 요소" style="top:5px">
 				<h3 class="aside-title" data-lan-eng="Components">구성 요소</h3>
 				<div class="card-panel jw-mgt16">
 						<div class="grid-item">
@@ -1245,16 +1245,18 @@
 										<div class="aside-row__title" data-lan-eng="Meeting Information">미팅 정보</div>
 										<span class="aside-row__req" data-lan-eng="Required">필수</span>
 									</div>
-									<div class="aside-row">
-										<div class="aside-row__subtitle" data-lan-eng="1st day">1일차</div>
-										<span class="aside-row__req" data-lan-eng="Required">필수</span>
+									<div class="aside-row-list">
+										<div class="aside-row">
+											<div class="aside-row__subtitle" data-lan-eng="1st day">1일차</div>
+											<span class="aside-row__req" data-lan-eng="Required">필수</span>
+										</div>
+										<div class="aside-row">
+											<div class="aside-row__subtitle" data-lan-eng="Day 2">2일차</div>
+											<button type="button" class="jw-button aside-add-section" onclick="template_detail_sdaf_delete(this)"><img src="../image/minus.svg" alt=""></button>
+										</div>
 									</div>
 									<div class="aside-row">
-										<div class="aside-row__subtitle" data-lan-eng="Day 2">2일차</div>
-										<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
-									</div>
-									<div class="aside-row">
-										<button type="button" class="jw-button aside-button-typeA"><img src="../image/plus.svg" alt=""> <span data-lan-eng="Add day">일차 추가</span></button>
+										<button type="button" class="jw-button aside-button-typeA" onclick="template_detail_sdaf(this)"><img src="../image/plus.svg" alt=""> <span data-lan-eng="Add day">일차 추가</span></button>
 									</div>
 								</div>
 								<hr>

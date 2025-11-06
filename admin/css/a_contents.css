@@ -409,3 +409,9 @@ textarea[name="terms"] { width:100%; border-radius:12px; padding:24px; border: 1
 .hidden { display:none; }
 
 #nday.off { max-height:80px; transition: all 0.5s; overflow:hidden; }
+
+.product-detail_m1 {}
+.product-detail_m1 h1 { font-size:32px; }
+.product-detail_m1 .wrap { height:46px; display:flex; justify-content:center; align-items:center; border: 1px solid #D4D4D4; border-radius:12px; }
+.product-detail_m1 .wrap input { width:100%; }
+.product-detail_m1 .wrap:has(input:focus) { border: 1px solid #121212; }
