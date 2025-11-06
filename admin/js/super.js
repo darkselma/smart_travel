@@ -269,6 +269,19 @@ function product_detail_save(it) {
 	}
 	modal('product-preview.html', '1000px', '100%')
 }
+function product_registration_save(it) {
+	const msg = essentialCheck2(it);
+	if (msg) {
+		modal('template-detail-modal1.html', '600px', '252px');
+		setTimeout(() => {
+			const d = document.querySelector('dialog:last-of-type');
+			const tg = d && d.querySelector('.dialog-content #lllll');
+			if (tg) tg.textContent = msg;
+		}, 100);
+		return;
+	}
+	//modal('product-preview.html', '1000px', '100%')
+}
 
 
 

@@ -32,13 +32,13 @@
 		<!-- nav 들어올 자리 -->
 		<nav class="layout-nav"></nav>
 
-		<section class="layout-content layout-content-aside">
+		<section class="layout-content layout-content-aside" data-essentialWrap="y">
 		
 			<div class="jw-cols jw-between col-span-2">
 				<h1 class="page-title" data-lan-eng="Product Registration">상품 등록</h1>
 				<div class="jw-cols jw-gap16">
 					<button type="button" class="jw-button typeA" data-lan-eng="Temporary save">임시저장</button>
-					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
+					<button type="button" class="jw-button typeB" data-lan-eng="Save" onclick="product_registration_save(this)">저장</button>
 				</div>
 			</div>
 
@@ -57,7 +57,7 @@
 
 						<div class="grid-item">
 							<label class="label-name" data-lan-eng=""><span data-lan-eng="Sales Target">판매 대상</span> <span class="req">*</span></label>
-							<select class="select" >
+							<select class="select" data-essential="y">
 								<option selected>B2B</option>
 								<option>B2C</option>
 							</select>
@@ -66,21 +66,23 @@
 						<div class="grid-item"></div>
 						<div class="grid-item">
 							<label class="label-name" data-lan-eng=""><span data-lan-eng="Category">대분류</span> <span class="req">*</span></label>
-							<select class="select">
-								<option selected data-lan-eng="Select main category">계절별</option>
-								<option>지역별</option>
-								<option>테마별</option>
+							<select class="select" data-essential="y" data-category="1" onchange="template_detail_sdaf_cate()">
+								<option value="계절별" >계절별</option>
+								<option value="" selected>빈 내 용</option>
+								<option value="지역별">지역별</option>
+								<option value="테마별">테마별</option>
 							</select>
 						</div>
 						<div class="grid-item">
 							<label class="label-name" data-lan-eng=""><span data-lan-eng="Category">중분류</span> <span class="req">*</span></label>
-							<select class="select" disabled>
+							<select class="select" data-essential="y" data-category="2" disabled>
 								<option selected data-lan-eng="Please select a main category first">대분류를 먼저 선택해주세요</option>
+								<option>봄</option>
 							</select>
 						</div>
 						<div class="grid-item"></div>
 						<div class="grid-item col-span-3">
-							<label class="label-name" data-lan-eng="Product Description">상품 설명 <span class="req">*</span></label>
+							<label class="label-name" data-essential="y" data-lan-eng="Product Description">상품 설명 <span class="req">*</span></label>
 							<div class="editor-box-wrap">
 								<textarea rows="8" placeholder="봄 시즌 한정 벚꽃 투어!&#10;서울의 대표 벚꽃 명소를 전일정 가이드와 함께 여행하며..."></textarea>
 							</div>
@@ -148,7 +150,6 @@
 						<div class="grid-item"></div>
 					</div>
 				</div>
-
 
 				<h2 class="section-title jw-mgt32 hidden" data-section-name="flight-information" data-lan-eng="Flight Information">항공편 정보</h2>
 				<div class="card-panel jw-mgt16 hidden" data-section-name="flight-information" >
@@ -396,6 +397,300 @@
 					</div>
 				</div>
 
+				<div class="card-panel jw-mgt16 hidden" data-section-name="iljastar">
+					<h3 class="grid-wrap-title" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</h3>
+					<div class="calendar-row jw-mgt16">
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="cal-month">
+								<div class="cal-header">Jun 2025</div>
+								
+								<div class="cal-head">
+								  <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+								</div>
+								<div class="cal-body">
+									<div class="cal-day is-sun is-in-range"><time datetime="2025-06-01">1</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-02">2</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-03">3</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-04">4</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-05">5</time></div>
+									<div class="cal-day is-in-range"><time datetime="2025-06-06">6</time></div>
+									<div class="cal-day is-sat is-selected"><time datetime="2025-06-07">7</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-08">8</time></div>
+									<div class="cal-day"><time datetime="2025-06-09">9</time></div>
+									<div class="cal-day"><time datetime="2025-06-10">10</time></div>
+									<div class="cal-day"><time datetime="2025-06-11">11</time></div>
+									<div class="cal-day"><time datetime="2025-06-12">12</time></div>
+									<div class="cal-day"><time datetime="2025-06-13">13</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-14">14</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-15">15</time></div>
+									<div class="cal-day"><time datetime="2025-06-16">16</time></div>
+									<div class="cal-day"><time datetime="2025-06-17">17</time></div>
+									<div class="cal-day"><time datetime="2025-06-18">18</time></div>
+									<div class="cal-day"><time datetime="2025-06-19">19</time></div>
+									<div class="cal-day"><time datetime="2025-06-20">20</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-21">21</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-22">22</time></div>
+									<div class="cal-day"><time datetime="2025-06-23">23</time></div>
+									<div class="cal-day"><time datetime="2025-06-24">24</time></div>
+									<div class="cal-day"><time datetime="2025-06-25">25</time></div>
+									<div class="cal-day"><time datetime="2025-06-26">26</time></div>
+									<div class="cal-day"><time datetime="2025-06-27">27</time></div>
+									<div class="cal-day is-sat"><time datetime="2025-06-28">28</time></div>
+
+									<div class="cal-day is-sun"><time datetime="2025-06-29">29</time></div>
+									<div class="cal-day"><time datetime="2025-06-30">30</time></div>
+									<div class="cal-day"><time datetime="2025-07-01">1</time></div>
+									<div class="cal-day"><time datetime="2025-07-02">2</time></div>
+									<div class="cal-day"><time datetime="2025-07-03">3</time></div>
+									<div class="cal-day"><time datetime="2025-07-04">4</time></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="tableA-scrollY jw-mgt32" style="height:400px;">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-60">
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="no is-center">No</th>
+									<th data-lan-eng="Flight departure date">항공편 출발일</th>
+									<th data-lan-eng="Reserved personnel">예약된 인원</th>
+									<th data-lan-eng="Maximum capacity">최대 수용 인원</th>
+									<th data-lan-eng="Airfare (₱)">항공 요금 (₱)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="no is-center">1</td>
+									<td class="is-center">2025-04-05</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">2</td>
+									<td class="is-center">2025-04-06</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">3</td>
+									<td class="is-center">2025-04-10</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">4</td>
+									<td class="is-center">2025-04-13</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">5</td>
+									<td class="is-center">2025-04-17</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">6</td>
+									<td class="is-center">2025-04-20</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">7</td>
+									<td class="is-center">2025-04-21</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">8</td>
+									<td class="is-center">2025-04-24</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="4" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="40,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">9</td>
+									<td class="is-center">2025-04-27</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+								<tr>
+									<td class="no is-center">10</td>
+									<td class="is-center">2025-04-30</td>
+									<td class="is-center">4</td>
+									<td class="is-center"><div class="cell"><input type="number" class="form-control" value="10" min="0"></div></td>
+									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="25,000" inputmode="numeric"></div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 
 				<h2 class="section-title jw-mgt32" data-lan-eng="Schedule">일정표</h2>
 				<div class="card-panel jw-mgt16">
@@ -463,11 +758,12 @@
 					</div>
 				</div>
 
-				<div class="card-panel jw-mgt16">
+				<div class="card-panel jw-mgt16" id="nday">
 					<h3 class="grid-wrap-title">
-						<select class="select">
+						<!-- <select class="select">
 							<option>1Day</option>
-						</select>
+						</select> -->
+						<button type="button" class="jw-w jw-cols jw-between" onclick="ndasdtoggle()">1Day <img src="../image/arrow42.svg" alt=""></button>
 					</h3>
 					<i class="line"></i>
 					<div class="grid-wrap jw-mgt12">
@@ -477,10 +773,9 @@
 						</div>
 					</div>
 					<div class="sub-panel jw-mgt20">
-						
 						<h3 class="grid-wrap-title" data-lan-eng="Tourist Information">관광지 정보</h3>
-						<button type="button" class="jw-button typeA jw-mgt12" data-lan-eng="＋ Add Tourist Attraction">＋ 관광지 추가</button>
-						<div class="grid-wrap grid-highlight jw-mgt12">
+						<button type="button" class="jw-button typeA jw-mgt12" data-lan-eng="＋ Add Tourist Attraction" onclick="template_detail_dfghs(this)">＋ 관광지 추가</button>
+						<div class="grid-wrap grid-highlight jw-mgt12 dfghs">
 							<div class="grid-item">
 								<label class="label-name"><span data-lan-eng="Schedule start time">일정 시작 시각</span> <span class="req">*</span></label>
 								<div class="meeting-wrap">
@@ -574,7 +869,7 @@
 							</div>
 							<div class="grid-item col-span-3">
 								<div class="grid-item-controoler">
-									<button type="button" class="jw-button typeA"><img src="../image/trash.svg" alt="" data-lan-eng="Delete tourist attraction">관광지 삭제</button>
+									<button type="button" class="jw-button typeA" onclick="template_detail_hsdfghsh(this)"><img src="../image/trash.svg" alt="" data-lan-eng="Delete tourist attraction">관광지 삭제</button>
 								</div>
 							</div>
 						</div>
@@ -651,7 +946,7 @@
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title" data-lan-eng="Number of people fee">인원별 요금</h3>
 					<i class="line"></i>
-					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add">＋ 추가</button>
+					<button type="button" class="jw-button typeA" onclick="template_detail_sfg1(this)" data-lan-eng="＋ Add">＋ 추가</button>
 					<div class="tableA-scroll jw-mgt12">
 						<table class="jw-tableA booking-detail">
 							<colgroup>
@@ -674,7 +969,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="" placeholder="옵션명"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="" inputmode="numeric" placeholder="0"></div></td>
 									<td class="is-center">
-										<button type="button" class="btn w-auto" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="btn w-auto" onclick="template_detail_sfg1d(this)" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 							</tbody>
@@ -691,6 +986,119 @@
 						</div>
 					</div>
 				</div>
+
+				<h2 class="section-title jw-mgt32 hidden" data-section-name="poham" data-lan-eng="Included/Not Included Items">포함/불포함 사항</h2>
+				<div class="card-panel jw-mgt16 hidden" data-section-name="poham">
+					<h3 class="grid-wrap-title" data-lan-eng="Included items">포함 사항</h3>
+					<i class="line"></i>
+					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add" onclick="template_detail_sfg3(this)">＋ 추가</button>
+					<div class="tableA-scroll jw-mgt20">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-80"> <!-- No -->
+								<col> <!-- 포함 사항 -->
+								<col class="col-100"> <!-- 삭제 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th data-lan-eng="Included items">포함 사항</th>
+									<th data-lan-eng="Delete">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="전 일정 호텔 숙박 (2인 1실 기준)">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="전용 차량 및 전문 가이드 동행">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="일정 내 명시된 식사 및 입장료 일체 포함">
+										</div>
+									</td>
+									<td class="is-center">
+										<button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-panel jw-mgt16 hidden" data-section-name="poham">
+					<h3 class="grid-wrap-title" data-lan-eng="Excluded items">불포함 사항</h3>
+					<i class="line"></i>
+					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add" onclick="template_detail_sfg3(this)">＋ 추가</button>
+
+					<div class="tableA-scroll jw-mgt20">
+						<table class="jw-tableA booking-detail">
+							<colgroup>
+								<col class="col-80"> <!-- No -->
+								<col> <!-- 불포함 사항 -->
+								<col class="col-100"> <!-- 삭제 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th data-lan-eng="">No</th>
+									<th data-lan-eng="Excluded items">불포함 사항</th>
+									<th data-lan-eng="Delete">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="is-center">1</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="개인 여행자 보험 및 개인 경비">
+										</div>
+									</td>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">2</td>
+									<td class="is-center">
+										<div class="cell">
+											<input type="text" class="form-control" value="자유 일정 시 식사 및 교통비">
+										</div>
+									</td>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-center">3</td>
+									<td class="is-center">	
+										<div class="cell">
+											<input type="text" class="form-control" value="매너 팁 및 선택 관광 비용">
+										</iv>
+									</td>
+									<td class="is-center"><button type="button" class="jw-button" aria-label="row delete" onclick="trash_typeA(this);"><img src="../image/trash.svg" alt=""></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
 
 				<h2 class="section-title jw-mgt32" data-lan-eng="Usage Guide">이용안내</h2>
 				<div class="card-panel jw-mgt16">
@@ -762,7 +1170,7 @@
 									</div>
 									<div class="aside-row off">
 										<div class="aside-row__subtitle" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</div>
-										<button type="button" class="jw-button aside-add-section" onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
+										<button type="button" class="jw-button aside-add-section" data-target-section="iljastar" onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
 									</div>
 								</div>
 								<div class="aside-row">
@@ -781,7 +1189,7 @@
 										</div>
 									</div>
 									<div class="aside-row">
-										<button type="button" class="jw-button aside-button-typeA"><img src="../image/plus.svg" alt=""> <span data-lan-eng="Add day">일차 추가</span></button>
+										<button type="button" class="jw-button aside-button-typeA" onclick="template_detail_sdaf(this)"><img src="../image/plus.svg" alt=""> <span data-lan-eng="Add day">일차 추가</span></button>
 									</div>
 								</div>
 								<hr class="aside-row__sep">
@@ -792,7 +1200,7 @@
 								<hr>
 								<div class="aside-row off">
 									<div class="aside-row__title" data-lan-eng="Included/Not Included Items">포함/불포함 사항</div>
-									<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/plus2.svg" alt=""></button>
+									<button type="button" class="jw-button aside-add-section" data-target-section="poham" onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
 								</div>
 								<hr>
 								<div class="aside-row">

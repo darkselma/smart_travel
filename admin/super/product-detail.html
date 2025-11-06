@@ -417,11 +417,9 @@
 						</div>
 					</div>
 				</div>
-				
-				<div class="card-panel jw-mgt16">
-					<h3 class="grid-wrap-title" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</h3>
 
-					<!-- 달력 자리만 -->
+				<div class="card-panel jw-mgt16 iljastar">
+					<h3 class="grid-wrap-title" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</h3>
 					<div class="calendar-row jw-mgt16">
 						<div>
 							<div class="cal-month">
@@ -784,11 +782,12 @@
 					</div>
 				</div>
 
-				<div class="card-panel jw-mgt16">
+				<div class="card-panel jw-mgt16"  id="nday">
 					<h3 class="grid-wrap-title">
-						<select class="select">
+						<!-- <select class="select">
 							<option>1Day</option>
-						</select>
+						</select> -->
+						<button type="button" class="jw-w jw-cols jw-between" onclick="ndasdtoggle()">1Day <img src="../image/arrow42.svg" alt=""></button>
 					</h3>
 					<i class="line"></i>
 					<div class="grid-wrap jw-mgt12">
@@ -799,10 +798,8 @@
 					</div>
 					<div class="sub-panel jw-mgt20">
 						<h3 class="grid-wrap-title" data-lan-eng="Tourist Information">관광지 정보</h3>
-						<button type="button" class="jw-button typeA jw-mgt12" data-lan-eng="＋ Add Tourist Attraction">＋ 관광지 추가</button>
-
-
-						<div class="grid-wrap grid-highlight jw-mgt12">
+						<button type="button" class="jw-button typeA jw-mgt12" data-lan-eng="＋ Add Tourist Attraction" onclick="template_detail_dfghs(this)">＋ 관광지 추가</button>
+						<div class="grid-wrap grid-highlight jw-mgt12 dfghs">
 							<div class="grid-item">
 								<label class="label-name"><span data-lan-eng="Schedule start time">일정 시작 시각</span> <span class="req">*</span></label>
 								<div class="meeting-wrap">
@@ -899,7 +896,7 @@
 							</div>
 							<div class="grid-item col-span-3">
 								<div class="grid-item-controoler">
-									<button type="button" class="jw-button typeA"><img src="../image/trash.svg" alt="" data-lan-eng="Delete tourist attraction">관광지 삭제</button>
+									<button type="button" class="jw-button typeA" onclick="template_detail_hsdfghsh(this)"><img src="../image/trash.svg" alt="" data-lan-eng="Delete tourist attraction">관광지 삭제</button>
 								</div>
 							</div>
 						</div>
@@ -977,7 +974,7 @@
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title" data-lan-eng="Number of people fee">인원별 요금</h3>
 					<i class="line"></i>
-					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add">＋ 추가</button>
+					<button type="button" class="jw-button typeA" onclick="template_detail_sfg1(this)" data-lan-eng="＋ Add">＋ 추가</button>
 					<div class="tableA-scroll jw-mgt12">
 						<table class="jw-tableA booking-detail">
 							<colgroup>
@@ -1000,7 +997,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="성인" placeholder="옵션명"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="34,000" inputmode="numeric" placeholder="0"></div></td>
 									<td class="is-center">
-										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" onclick="template_detail_sfg1d(this)" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1008,7 +1005,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="아동"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="23,800" inputmode="numeric"></div></td>
 									<td class="is-center">
-										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" onclick="template_detail_sfg1d(this)" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 								<tr>
@@ -1016,7 +1013,7 @@
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="소아"></div></td>
 									<td class="is-center"><div class="cell"><input type="text" class="form-control" value="0" inputmode="numeric"></div></td>
 									<td class="is-center">
-										<button type="button" class="jw-button" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
+										<button type="button" class="jw-button" onclick="template_detail_sfg1d(this)" aria-label="row delete"><img src="../image/trash.svg" alt=""></button>
 									</td>
 								</tr>
 							</tbody>
@@ -1039,7 +1036,7 @@
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title" data-lan-eng="Included items">포함 사항</h3>
 					<i class="line"></i>
-					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add">＋ 추가</button>
+					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add" onclick="template_detail_sfg3(this)">＋ 추가</button>
 					<div class="tableA-scroll jw-mgt20">
 						<table class="jw-tableA booking-detail">
 							<colgroup>
@@ -1092,11 +1089,10 @@
 						</table>
 					</div>
 				</div>
-				
 				<div class="card-panel jw-mgt16">
 					<h3 class="grid-wrap-title" data-lan-eng="Excluded items">불포함 사항</h3>
 					<i class="line"></i>
-					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add">＋ 추가</button>
+					<button type="button" class="jw-button typeA" data-lan-eng="＋ Add" onclick="template_detail_sfg3(this)">＋ 추가</button>
 
 					<div class="tableA-scroll jw-mgt20">
 						<table class="jw-tableA booking-detail">
@@ -1233,7 +1229,7 @@
 									</div>
 									<div class="aside-row">
 										<div class="aside-row__subtitle" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</div>
-										<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
+										<button type="button" class="jw-button aside-add-section" data-target-section="iljastar" onclick="togglePlusMinus(this)"><img src="../image/minus.svg" alt=""></button>
 									</div>
 								</div>
 								<div class="aside-row">
@@ -1267,7 +1263,7 @@
 								<hr>
 								<div class="aside-row">
 									<div class="aside-row__title" data-lan-eng="Included/Not Included Items">포함/불포함 사항</div>
-									<button type="button" class="jw-button aside-add-section" onclick=""><img src="../image/minus.svg" alt=""></button>
+									<button type="button" class="jw-button aside-add-section" data-target-section="poham" onclick="togglePlusMinus(this)"><img src="../image/minus.svg" alt=""></button>
 								</div>
 								<hr>
 								<div class="aside-row">
