@@ -861,7 +861,7 @@
 								<div class="upload-grid">
 									<div class="upload-item jw-center">
 										<label class="inputFile">
-											<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+											<input name="" type="file" data-essential="y" onchange="filePreview(this); " >
 											<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 										</label>
 									</div>
@@ -1106,7 +1106,7 @@
 						<div class="grid-item col-span-3">
 							<label class="label-name"><span data-lan-eng="Notice">안내문</span> <span class="req">*</span></label>
 							<label class="inputFile">
-								<input name="" type="file" data-essential="y" onchange="filePreview(this);" >
+								<input name="" type="file" data-essential="y" onchange="noticeUploadChange(this)" >
 								<button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 파일 업로드</button>
 							</label>
 						</div>
@@ -1155,9 +1155,9 @@
 									<span class="aside-row__req" data-lan-eng="Required">필수</span>
 								</div>
 								<hr class="aside-row__sep">
-								<div class="aside-row off">
+								<div class="aside-row off" data-target-section="flight-information" onclick="togglePlusMinus(this)" style="cursor:pointer; user-select:none; -webkit-user-select:none; -webkit-user-drag:none;">
 									<div class="aside-row__title" data-lan-eng="Flight Information">항공편 정보</div>
-									<button type="button" class="jw-button aside-add-section" data-target-section="flight-information"  onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
+									<button type="button" class="jw-button aside-add-section" ><img src="../image/plus2.svg" alt=""></button>
 								</div>
 								<div class="aside-row">
 									<div class="aside-row__title" data-lan-eng="Sales Information">판매 정보</div>
@@ -1168,9 +1168,9 @@
 										<div class="aside-row__subtitle" data-lan-eng="Basic Sales Information">기본 판매 정보</div>
 										<span class="aside-row__req" data-lan-eng="Required">필수</span>
 									</div>
-									<div class="aside-row off">
+									<div class="aside-row off" data-target-section="iljastar" onclick="togglePlusMinus(this)" style="cursor:pointer; user-select:none; -webkit-user-select:none; -webkit-user-drag:none;">
 										<div class="aside-row__subtitle" data-lan-eng="Daily Sales Adjustment">일자별 판매 조정</div>
-										<button type="button" class="jw-button aside-add-section" data-target-section="iljastar" onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
+										<button type="button" class="jw-button aside-add-section" ><img src="../image/plus2.svg" alt=""></button>
 									</div>
 								</div>
 								<div class="aside-row">
@@ -1198,9 +1198,9 @@
 									<span class="aside-row__req" data-lan-eng="Required">필수</span>
 								</div>
 								<hr>
-								<div class="aside-row off">
+								<div class="aside-row off" data-target-section="poham" onclick="togglePlusMinus(this)" style="cursor:pointer; user-select:none; -webkit-user-select:none; -webkit-user-drag:none;">
 									<div class="aside-row__title" data-lan-eng="Included/Not Included Items">포함/불포함 사항</div>
-									<button type="button" class="jw-button aside-add-section" data-target-section="poham" onclick="togglePlusMinus(this)"><img src="../image/plus2.svg" alt=""></button>
+									<button type="button" class="jw-button aside-add-section" ><img src="../image/plus2.svg" alt=""></button>
 								</div>
 								<hr>
 								<div class="aside-row">
@@ -1228,14 +1228,6 @@
 		</section>
 
 	</main>
-
-	<div class="temporary-guide">
-		<button type="button" class="jw-button" onclick="modal('product-registration_modal_1.html', '580px', '508px')">템플릿 검색</button>
-		<button type="button" class="jw-button" onclick="modal('product-registration_modal_2.html', '580px', '358px')">템플릿으로 저장</button>
-		<button type="button" class="jw-button" onclick="modal('product-registration_modal_3.html', '580px', '252px')">필수값 입력 요청</button>
-		<button type="button" class="jw-button" onclick="modal('product-registration_modal_4.html', '580px', '252px')">테이블 삭제 시</button>
-		<button type="button" class="jw-button" onclick="modal('product-registration_modal_5.html', '580px', '252px')">삭제 확인</button>
-	</div>
 
 	<!-- 기본 스크립트 -->
 	<script src="../js/default.js"></script>

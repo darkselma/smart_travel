@@ -41,44 +41,31 @@
 			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry Details">문의 내용</h2>
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
-
-					<!-- 1행: 작성일시 -->
 					<div class="grid-item">
 						<label class="label-name" for="created_at" data-lan-eng="Date Created">작성일시</label>
 						<input id="created_at" type="text" class="form-control" value="2025-12-01 12:12" disabled>
 					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
-
-					<!-- 2행: 제목(전체폭) -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" for="title" data-lan-eng="Title">제목</label>
 						<input id="title" type="text" class="form-control" value="제목입니다">
 					</div>
-
-					<!-- 3행: 내용(에디터, 전체폭) -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" for="content" data-lan-eng="Content">내용</label>
 						<div class="editor-box-wrap">
-							<!-- 필요 시 툴바 구성은 기존 컴포넌트 재사용 -->
 							<textarea id="content" rows="10" placeholder="문의 내용을 입력하세요.">문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
 						</div>
 					</div>
-
-					<!-- 4행: 첨부파일(전체폭) -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" data-lan-eng="Attachment">첨부파일</label>
-
-						<!-- 업로드 버튼 -->
 						<div class="jw-mgb12">
 							<label class="inputFile">
-								<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
+								<input name="" type="file" data-essential="y" onchange="noticeUploadChange2(this)" >
 								<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
 							</label>
 						</div>
-
-						<!-- 첨부 리스트 -->
-						<div class="attach-list">
+						<div class="attach-list jw-rows jw-gap8">
 							<div class="cell">
 								<div class="field-row jw-center">
 									<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="File">파일</span> [pdf, 328KB]</div>

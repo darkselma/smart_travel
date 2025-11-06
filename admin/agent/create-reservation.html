@@ -310,10 +310,12 @@
 					<div class="grid-item">
 						<label class="label-name" for="deposit_file"><span data-lan-eng="Advance payment proof file">선금 증빙 파일</span></label>
 						<div class="field-col">
-							<label class="inputFile">
-								<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
-								<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
-							</label>
+							<div class="grid-item">
+								<label class="inputFile">
+									<input name="" type="file" data-essential="y" onchange="noticeUploadChange(this)" >
+									<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
+								</label>
+							</div>
 
 							<p class="help-text" style="color:#d58b00; margin-top:8px;" data-lan-eng="Please upload the file within the set deposit deadline.<br>If not uploaded within the deadline, your reservation will be canceled.">
 								설정한 선금 입금 기한 내에 파일을 업로드 해주세요.<br>

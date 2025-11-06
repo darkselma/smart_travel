@@ -422,7 +422,7 @@ function layerToggle(btn) {
 	if (!menu) return;
 	menu.classList.toggle('on');
 }
-
+/*
 function filePreview(el) {
 	const f = el.files && el.files[0]; if (!f) return;
 	const box = el.closest('.image-preview') || el.closest('.banner-item')?.querySelector('.image-preview') || el.closest('.popup-image-wrap')?.querySelector('.image-preview') || el.closest('.banner-image-wrap') || el.closest('.upload-item') || null;
@@ -433,6 +433,177 @@ function filePreview(el) {
 	box.style.backgroundPosition = 'center';
 	box.classList.add('has-image');
 	setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+*/
+function filePreview(el) {
+	const wrap =
+		el.closest('.upload-item') ||
+		el.closest('.banner-image-wrap') ||
+		el.closest('.popup-image-wrap') ||
+		el.closest('.banner-item');
+	if (!wrap) return;
+	const box = wrap.querySelector('.image-preview') || wrap;
+
+	const f = el.files && el.files[0]; if (!f) return;
+	const url = URL.createObjectURL(f);
+	box.style.backgroundImage = `url("${url}")`;
+	box.style.backgroundSize = 'cover';
+	box.style.backgroundPosition = 'center';
+	box.classList.add('has-image');
+	setTimeout(() => URL.revokeObjectURL(url), 2000);
+	const inputWrap = el.closest('label.inputFile');
+	if (inputWrap) inputWrap.remove();
+	if (!wrap.querySelector('.jw-button.btn-close')) {
+		const btn = document.createElement('button');
+		btn.type = 'button';
+		btn.className = 'jw-button btn-close';
+		btn.setAttribute('aria-label', 'remove');
+		btn.innerHTML = `<div class="ic-close" style="width:15px; height:15px; --line:1px; --color:#969696"></div>`;
+		btn.addEventListener('click', () => resetPreview(wrap, box));
+		wrap.appendChild(btn);
+	}
+}
+function resetPreview(wrap, box) {
+	const target = box || wrap;
+	target.style.aspectRatio = '1 / 1';
+	target.style.backgroundImage = 'linear-gradient(45deg, #f3f3f3 25%, transparent 25%), linear-gradient(-45deg, #f3f3f3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f3f3f3 75%), linear-gradient(-45deg, #fff 75%, #f3f3f3 75%)';
+	target.style.backgroundSize = '16px 16px';
+	target.style.backgroundPosition = '0 0, 0 8px, 8px -8px, -8px 0';
+	target.classList.remove('has-image');
+	const closeBtn = wrap.querySelector('.jw-button.btn-close');
+	if (closeBtn) closeBtn.remove();
+	if (!wrap.querySelector(':scope > label.inputFile')) {
+		wrap.insertAdjacentElement('afterbegin', createUploadLabel());
+	}
+}
+function createUploadLabel() {
+	const label = document.createElement('label');
+	label.className = 'inputFile';
+	label.innerHTML = `
+    <input name="" type="file" onchange="filePreview(this);">
+    <button type="button" class="btn-upload">
+      <img src="../image/upload3.svg" alt="">
+      <span data-lan-eng="Image upload">이미지 업로드</span>
+    </button>
+  `;
+	return label;
+}
+function template_upload_close(btn) {
+	const wrap = btn.closest('.upload-item');
+	if (!wrap) return;
+	wrap.style.aspectRatio = '1 / 1';
+	wrap.style.backgroundImage = 'linear-gradient(45deg, #f3f3f3 25%, transparent 25%), linear-gradient(-45deg, #f3f3f3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f3f3f3 75%), linear-gradient(-45deg, #fff 75%, #f3f3f3 75%)';
+	wrap.style.backgroundSize = '16px 16px';
+	wrap.style.backgroundPosition = '0 0, 0 8px, 8px -8px, -8px 0';
+	wrap.classList.remove('is-filled', 'has-image');
+
+	const img = wrap.querySelector('img.preview');
+	if (img) img.remove();
+
+	btn.remove();
+
+	if (!wrap.querySelector(':scope > label.inputFile')) {
+		wrap.insertAdjacentHTML('afterbegin', `
+      <label class="inputFile">
+        <input name="" type="file" onchange="filePreview(this);">
+        <button type="button" class="btn-upload">
+          <img src="../image/upload3.svg" alt=""> 
+          <span data-lan-eng="Image upload">이미지 업로드</span>
+        </button>
+      </label>
+    `);
+	}
+}
+function download(filename, text) {
+	const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+	const url = URL.createObjectURL(blob);
+	const a = document.createElement('a');
+	a.href = url; a.download = filename || 'tohell.txt';
+	document.body.appendChild(a); a.click(); a.remove();
+	URL.revokeObjectURL(url);
+}
+function deletefile(btn) {
+	const grid = btn.closest('.grid-item'); if (!grid) return;
+	const cell = grid.querySelector('.cell'); if (cell) cell.remove();
+	grid.insertAdjacentHTML('beforeend', `
+    <label class="inputFile">
+      <input name="" type="file" data-essential="y" onchange="noticeUploadChange(this)">
+      <button type="button" class="btn-upload"><img src="../image/upload3.svg" alt=""> 파일 업로드</button>
+    </label>
+  `);
+}
+function noticeUploadChange(input) {
+	const f = input.files && input.files[0]; if (!f) return;
+	const grid = input.closest('.grid-item'); if (!grid) return;
+
+	const label = input.closest('label.inputFile'); if (label) label.remove();
+
+	const name = f.name;
+	const ext = (name.split('.').pop() || '').toLowerCase() || 'file';
+	const size = f.size ? (f.size < 1024 ? f.size + ' B' : (f.size / 1024).toFixed(1) + ' KB') : '';
+
+	const cell = document.createElement('div');
+	cell.className = 'cell';
+	cell.innerHTML = `
+    <div class="field-row jw-center">
+      <div class="jw-center jw-gap10">
+        <img src="../image/file.svg" alt="">
+        <span data-lan-eng="File">파일</span> [${ext}${size ? ', ' + size : ''}]
+      </div>
+      <div class="jw-center jw-gap10">
+        <i></i>
+        <button type="button" class="jw-button typeF" onclick="console.log('download noop');">
+          <img src="../image/buttun-download.svg" alt="">
+        </button>
+        <button type="button" class="jw-button typeF" onclick="deletefile(this)">
+          <img src="../image/button-close2.svg" alt="">
+        </button>
+      </div>
+    </div>
+  `;
+	grid.appendChild(cell);
+}
+
+function noticeUploadChange2(input) {
+	const f = input.files && input.files[0]; if (!f) return;
+
+	const grid = input.closest('.grid-item');
+	const list = grid && grid.querySelector('.attach-list');
+	if (!list) return;
+	const sizeTxt = input.getAttribute('data-size') || '328KB';
+	const name = f.name || 'file';
+	const ext = (input.getAttribute('data-ext')) || (name.split('.').pop() || 'file').toLowerCase();
+
+	const cell = document.createElement('div');
+	cell.className = 'cell';
+	cell.innerHTML = `
+    <div class="field-row jw-center">
+      <div class="jw-center jw-gap10">
+        <img src="../image/file.svg" alt="">
+        <span data-lan-eng="File">파일</span> [${ext}, ${sizeTxt}]
+      </div>
+      <div class="jw-center jw-gap10">
+        <i></i>
+        <button type="button" class="jw-button typeF" onclick="console.log('download noop')">
+          <img src="../image/buttun-download.svg" alt="">
+        </button>
+        <button type="button" class="jw-button typeF" onclick="attachItemDelete(this)">
+          <img src="../image/button-close2.svg" alt="">
+        </button>
+      </div>
+    </div>
+  `;
+	list.appendChild(cell);
+	input.value = '';
+	if (typeof language_apply === 'function') {
+		const lang = (typeof getCookie === 'function' && getCookie('lang')) || 'eng';
+		language_apply(lang);
+	}
+}
+
+function attachItemDelete(btn) {
+	const cell = btn.closest('.cell');
+	if (cell) cell.remove();
 }
 
 function essentialCheck(it) {
@@ -456,14 +627,11 @@ function essentialCheck(it) {
 	});
 	return allOK;
 }
-
 function essentialCheck2(it) {
 	const wrap = it.closest('[data-essentialWrap="y"]');
 	if (!wrap) return '';
-
 	const essentials = wrap.querySelectorAll('[data-essential="y"]');
 	if (!essentials.length) return '';
-
 	const clean = (s) => (s || '').replace(/[\*\:\u00A0]/g, ' ').replace(/\s+/g, ' ').trim();
 	const getGroupChecked = (el) => {
 		if (!el.name) return el.checked;
@@ -471,59 +639,64 @@ function essentialCheck2(it) {
 		const scope = el.form || wrap;
 		return Array.prototype.some.call(scope.querySelectorAll(sel), n => n.checked);
 	};
+
 	const findLabelText = (el) => {
+		const custom = el.getAttribute('data-essential-label') || el.closest('[data-essential-label]')?.getAttribute('data-essential-label');
+		if (custom && clean(custom)) return clean(custom);
+
+		const aria = el.getAttribute('aria-label');
+		if (aria && clean(aria)) return clean(aria);
+
 		if (el.id) {
 			const byFor = document.querySelector(`label[for="${CSS.escape(el.id)}"]`);
 			if (byFor && clean(byFor.textContent)) return clean(byFor.textContent);
 		}
+
 		const parentLabel = el.closest('label');
 		if (parentLabel && clean(parentLabel.textContent)) return clean(parentLabel.textContent);
+
 		const prev = el.previousElementSibling;
 		if (prev && (prev.tagName === 'LABEL' || prev.classList.contains('label') || prev.classList.contains('label-name'))) {
-			if (clean(prev.textContent)) return clean(prev.textContent);
+			const t = clean(prev.textContent); if (t) return t;
 		}
-		const fieldWrap = el.closest('.grid-item, .form-row, .field, .form-group, .editor-box-wrap, div');
+
+		const fieldWrap = el.closest('.grid-item, .form-row, .field, .form-group, .editor-box-wrap, .form-cell');
 		if (fieldWrap) {
 			const inWrapLabel = fieldWrap.querySelector('label, .label, .label-name, .field-title, .title, .name');
-			if (inWrapLabel && clean(inWrapLabel.textContent)) return clean(inWrapLabel.textContent);
-			if (/radio|checkbox/i.test(el.type || '')) {
-				const fs = el.closest('fieldset');
-				const legend = fs && fs.querySelector('legend');
-				if (legend && clean(legend.textContent)) return clean(legend.textContent);
+			if (inWrapLabel) {
+				const t = clean(inWrapLabel.textContent); if (t) return t;
 			}
-			if (clean(fieldWrap.textContent)) return clean(fieldWrap.textContent);
+			if (/radio|checkbox/i.test(el.type || '')) {
+				const legend = fieldWrap.querySelector('legend') || el.closest('fieldset')?.querySelector('legend');
+				if (legend) {
+					const t = clean(legend.textContent); if (t) return t;
+				}
+			}
 		}
-		const near = el.closest('[class], section, article, div');
-		if (near && clean(near.textContent)) return clean(near.textContent);
 		return clean(el.getAttribute('placeholder') || el.name || el.id || '');
 	};
+
+	const seenRadio = new Set();
 
 	for (const el of essentials) {
 		const tag = el.tagName;
 		const type = (el.type || '').toLowerCase();
-		let ok = true;
 
+		if (type === 'radio' && el.name) {
+			if (seenRadio.has(el.name)) continue;
+			seenRadio.add(el.name);
+		}
+
+		let ok = true;
 		if (type === 'radio') ok = getGroupChecked(el);
 		else if (type === 'checkbox') ok = el.checked;
 		else if (tag === 'SELECT') ok = (el.value ?? '') !== '';
 		else if (type === 'file') ok = !!(el.files && el.files.length > 0);
 		else ok = ((el.value || '').trim().length > 0);
 
-		if (!ok) {
-			wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
-				tg.disabled = true;
-				tg.classList.remove('active');
-				tg.classList.add('inactive');
-			});
-			return findLabelText(el);
-		}
+		if (!ok) return findLabelText(el);
 	}
 
-	wrap.querySelectorAll('[data-essentialTarget="y"]').forEach(tg => {
-		tg.disabled = false;
-		tg.classList.add('active');
-		tg.classList.remove('inactive');
-	});
 	return '';
 }
 

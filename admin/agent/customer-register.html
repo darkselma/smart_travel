@@ -112,8 +112,6 @@
 						<label class="label-name" for="last_name" data-lan-eng="Nature">성</label>
 						<input id="last_name" type="text" class="form-control" placeholder="성">
 					</div>
-
-					<!-- 2행: 성별 / 나이 / 생년월일 -->
 					<div class="grid-item">
 						<label class="label-name" for="gender" data-lan-eng="Gender">성별</label>
 						<select id="gender" class="select">
@@ -122,34 +120,26 @@
 							<option>기타</option>
 						</select>
 					</div>
-
 					<div class="grid-item">
 						<label class="label-name" for="age" data-lan-eng="Age">나이</label>
 						<input id="age" type="number" class="form-control" placeholder="숫자 입력" min="0">
 					</div>
-
 					<div class="grid-item">
 						<label class="label-name" for="birth" data-lan-eng="Date of birth">생년월일</label>
 						<input id="birth" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
 					</div>
-
-					<!-- 3행: 출신국가 / 여권번호 / 여권 발행일 -->
 					<div class="grid-item">
 						<label class="label-name" for="nationality" data-lan-eng="Country of origin">출신국가</label>
 						<input id="nationality" type="text" class="form-control" placeholder="출신국가">
 					</div>
-
 					<div class="grid-item">
 						<label class="label-name" for="passport_no" data-lan-eng="Passport number">여권번호</label>
 						<input id="passport_no" type="text" class="form-control" placeholder="여권번호">
 					</div>
-
 					<div class="grid-item">
 						<label class="label-name" for="passport_issue" data-lan-eng="Passport Issue Date">여권 발행일</label>
 						<input id="passport_issue" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
 					</div>
-
-					<!-- 4행: 여권 만료일 / 여권 사진 / 빈칸 -->
 					<div class="grid-item">
 						<label class="label-name" for="passport_expire" data-lan-eng="Passport expiration date">여권 만료일</label>
 						<input id="passport_expire" type="text" class="form-control" placeholder="YYYYMMDD" inputmode="numeric">
@@ -157,8 +147,13 @@
 
 					<div class="grid-item">
 						<label class="label-name" data-lan-eng="Passport photo">여권 사진</label>
-						<label class="inputFile">
+						<!-- <label class="inputFile">
 							<input name="" type="file" data-essential="y" onchange="filePreview(this); essentialCheck(this);" >
+							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
+						</label> -->
+
+						<label class="inputFile">
+							<input name="" type="file" data-essential="y" onchange="noticeUploadChange(this)" >
 							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="Image upload">이미지 업로드</span></button>
 						</label>
 					</div>

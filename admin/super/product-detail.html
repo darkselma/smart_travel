@@ -111,9 +111,9 @@
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Thumbnail image">썸네일 이미지</span> <span class="req">*</span></label>
 							<div class="upload-grid">
-								<div class="upload-item is-filled">
+								<div class="upload-item is-filled jw-center">
 									<img class="preview" src="https://picsum.photos/600/600" alt="">
-									<button type="button" class="jw-button btn-close" aria-label="remove">
+									<button type="button" class="jw-button btn-close" aria-label="remove" onclick="template_upload_close(this)">
 										<div class="ic-close" style="width:15px; height:15px; --line:1px; --color:#969696"></div>
 									</button>
 								</div>
@@ -124,12 +124,14 @@
 						<div class="grid-item col-span-3">
 							<label class="label-name" data-lan-eng="Product image">상품 이미지</label>
 							<div class="upload-grid">
-								<div class="upload-item is-filled">
+							
+								<div class="upload-item is-filled jw-center">
 									<img class="preview" src="https://picsum.photos/600/600" alt="">
-									<button type="button" class="jw-button btn-close" aria-label="remove">
+									<button type="button" class="jw-button btn-close" aria-label="remove" onclick="template_upload_close(this)">
 										<div class="ic-close" style="width:15px; height:15px; --line:1px; --color:#969696"></div>
 									</button>
 								</div>
+								
 								<div class="upload-item jw-center">
 									<label class="inputFile">
 										<input name="" type="file" onchange="filePreview(this);" >
@@ -159,9 +161,9 @@
 						<div class="grid-item">
 							<label class="label-name"><span data-lan-eng="Detailed introduction image">상세 소개 이미지</span> <span class="req">*</span></label>
 							<div class="upload-grid">
-								<div class="upload-item is-filled">
+								<div class="upload-item is-filled jw-center">
 									<img class="preview" src="https://picsum.photos/600/600" alt="">
-									<button type="button" class="btn-close" aria-label="remove">×</button>
+									<button type="button" class="btn-close" aria-label="remove" onclick="template_upload_close(this)">×</button>
 								</div>
 							</div>
 
@@ -1155,8 +1157,8 @@
 									<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="File">파일</span> [pdf, 328KB]</div>
 									<div class="jw-center jw-gap10">
 										<i></i>
-										<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
-										<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+										<button type="button" class="jw-button typeF" onclick="download('', 'melong')"><img src="../image/buttun-download.svg" alt=""></button>
+										<button type="button" class="jw-button typeF" onclick="deletefile(this)"><img src="../image/button-close2.svg" alt=""></button>
 									</div>
 								</div>
 							</div>
