@@ -20,6 +20,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 </head>
 
 <body>
@@ -100,12 +101,9 @@
 						<div class="grid-item col-span-3">
 							<label class="label-name"><span data-lan-eng="Product Description">상품 설명</span> <span class="req">*</span></label>
 							<div class="editor-box-wrap">
-								<textarea rows="8" >
-								봄 시즌 한정 벚꽃 투어!
-								서울의 대표 벚꽃 명소를 전문 가이드와 함께 여행하며, 남이섬·석촌호수·여의도 등 주요 관광지를 여유롭게 즐길 수 있습니다.
-								가이드 동행으로 언어 걱정 없이 안전하고 편안한 여행을 경험하세요.
-								숙박 5박, 전 일정 차량 이동, 식사 포함.
-								</textarea>
+
+								<div class="jweditor" data-placeholder="내용을 입력해주세요"></div>
+
 							</div>
 						</div>
 						<div class="grid-item">
@@ -373,7 +371,6 @@
 					<hr class="jw-mgt16">
 					
 					<div class="grid-wrap jw-mgt16">
-						<!-- 판매 기간 -->
 						<div class="grid-item col-span-3">
 							<label class="label-name"><span data-lan-eng="Sale period">판매 기간</span> <span class="req">*</span></label>
 							<div class="field-row jw-w400">
@@ -1286,20 +1283,21 @@
 							</div>
 
 						</div>
-					
+						<div class="temporary-guide" style="position:relative; margin-top:50px; ">
+							<button type="button" class="jw-button" onclick="modal('product-detail_m1.html', '580px', '508px')">템플릿 검색</button>
+							<button type="button" class="jw-button" onclick="modal('product-detail_m2.html', '580px', '358px')">템플릿으로 저장</button>
+							<button type="button" class="jw-button" onclick="modal('template-detail-modal1.html', '600px', '252px')">필수값 입력 요청</button>
+							
+							<button type="button" class="jw-button" onclick="modal('product-detail_modal_5.html', '580px', '252px')">테이블 삭제 시</button>
+							<button type="button" class="jw-button" onclick="modal('template-detail-modal3.html', '580px', '252px')">삭제 확인</button>
+						</div>
 				</div>
 			</aside>
 		</section>
 	
 	</main>
 
-	<div class="temporary-guide">
-		<button type="button" class="jw-button" onclick="modal('product-detail_modal_1.html', '580px', '508px')">템플릿 검색</button>
-		<button type="button" class="jw-button" onclick="modal('product-detail_modal_2.html', '580px', '358px')">템플릿으로 저장</button>
-		<button type="button" class="jw-button" onclick="modal('product-detail_modal_3.html', '580px', '252px')">필수값 입력 요청</button>
-		<button type="button" class="jw-button" onclick="modal('product-detail_modal_4.html', '580px', '252px')">테이블 삭제 시</button>
-		<button type="button" class="jw-button" onclick="modal('product-detail_modal_5.html', '580px', '252px')">삭제 확인</button>
-	</div>
+
 
 	<!-- 기본 스크립트 -->
 	<script src="../js/default.js"></script>

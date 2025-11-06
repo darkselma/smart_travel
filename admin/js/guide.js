@@ -15,6 +15,7 @@ function init(options) {
 	} else {
 		start();
 	}
+	board();
 }
 
 

@@ -15,6 +15,11 @@
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </head>
 
 <body>
@@ -58,7 +63,32 @@
 					<div class="input-box typeA jw-w200">
 						<input type="date" name="" value="" placeholder="Select period">
 					</div>
+					<div class="grid-item">
+						<div class="field-row jw-w400">
+							<input type="text" id="range" class="form-control jw-w" data-essential="y" placeholder="기간 선택">
+							<i><img src="../image/calendar.svg" alt=""></i>
+						</div>
+					</div>
 				</div>
+						<script>
+						$(function(){
+						  $('#range').daterangepicker({
+							autoUpdateInput:false,
+							showDropdowns:true,
+							opens:'right',
+							autoApply:true,
+							locale:{ format:'YYYY-MM-DD', separator:' ~ ',
+							  applyLabel:'적용', cancelLabel:'취소',
+							  daysOfWeek:['일','월','화','수','목','금','토'],
+							  monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] }
+						  }).on('apply.daterangepicker', function(e,p){
+							$(this).val(p.startDate.format('YYYY-MM-DD')+' ~ '+p.endDate.format('YYYY-MM-DD'));
+						  }).on('cancel.daterangepicker', function(){
+							$(this).val('');
+						  });
+						});
+						</script>
+
 				<div class="input-box typeA jw-w400 jw-mgt16">
 					<input name="" value="2025-01-06 ~ 2025-01-06">
 				</div>

@@ -17,7 +17,9 @@ function init(options) {
 		start();
 	}
 	sdfg = document.querySelector('.dfghs')?.cloneNode(true);
+	board();
 }
+
 function loadIntoSlot(slotSelector, url) {
 	const slotEl = document.querySelector(slotSelector);
 	if (!slotEl || !url) return Promise.resolve(false);
@@ -216,7 +218,7 @@ function template_detail_sfg1(btn) {
     <td class="is-center">${count}</td>
     <td class="is-center"><div class="cell"><input type="text" class="form-control" value=""></div></td>
     <td class="is-center"><div class="cell"><input type="text" class="form-control" value="" inputmode="numeric"></div></td>
-    <td class="is-center">
+    <td class="is-center jw-center">
       <button type="button" class="jw-button" aria-label="row delete" onclick="template_detail_sfg1d(this)"><img src="../image/trash.svg" alt=""></button>
     </td>
   `;
@@ -280,7 +282,7 @@ function product_registration_save(it) {
 		}, 100);
 		return;
 	}
-	//modal('product-preview.html', '1000px', '100%')
+	modal('product-preview.html', '1000px', '100%')
 }
 
 

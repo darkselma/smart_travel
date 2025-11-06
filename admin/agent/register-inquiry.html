@@ -12,6 +12,12 @@
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 </head>
 
 <body>
@@ -42,31 +48,67 @@
 			
 			<div class="card-panel jw-mgt16">
 				<div class="grid-wrap">
-
-					<!-- 제목 -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" for="q-title" data-lan-eng="Title">제목</label>
 						<input id="q-title" type="text" class="form-control" placeholder="제목" data-lan-eng="Title">
 					</div>
-
-					<!-- 내용 -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" for="q-content" data-lan-eng="Content">내용</label>
 						<div class="editor-box-wrap">
-							<textarea id="q-content" rows="10" placeholder="내용을 입력해주세요" data-lan-eng="Please enter your content"></textarea>
+								<div class="jw-editor">
+									<div class="toolbar" id="custom-toolbar">
+										<div class="group">
+											<button type="button" class="editor-btn ql-bold"><img src="../image/editer_bold.svg" ></button>
+											<button type="button" class="editor-btn ql-italic" ><img src="../image/editer_italic.svg" ></button>
+											<button type="button" class="editor-btn ql-underline"><img src="../image/editer_underline.svg" ></button>
+											<button type="button" class="editor-btn ql-strike"><img src="../image/editer_strikethrough.svg" ></button>
+											
+											<button type="button" class="editor-btn font-color" onclick="setColor(this);">가</button>
+											<button type="button" class="background-color" onclick="setColor(this, 2);"></button>
+										</div>
+										<div class="group">
+											<select class=" ql-size" id="fontSize" onchange="fontsize(this);">
+												<option value="" selected>폰트</option>
+												<option value="12px">12px</option>
+												<option value="14px">14px</option>
+												<option value="16px">16px</option>
+												<option value="18px">18px</option>
+												<option value="24px">24px</option>
+											</select>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn ql-align" value=""><img src="../image/editer_left.svg" ></button>
+											<button type="button" class="editor-btn ql-align" value="center"><img src="../image/editer_center.svg" ></button>
+											<button type="button" class="editor-btn ql-align" value="right"><img src="../image/editer_right.svg" ></button>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn ql-list" value="ordered"><img src="../image/editer_ordered.svg" ></button>
+											<button type="button" class="editor-btn ql-list" value="bullet"><img src="../image/editer_unordered.svg" ></button>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn" onclick="removeHtmlTags();"><img src="../image/editer_removeHtmlTags.svg" ></button>
+											<button type="button" class="editor-btn" style="font-size:9px;" onclick="toggleHtmlView();">HTML</button>
+										</div>
+										<div class="group">
+											<label class="inputFile" >
+												<input name="item_img[]" type="file" accept="image/*" multiple onchange="insertImage( this );" >
+												<span class="text" >이미지</span>
+												<i class="progress"></i>
+											</label>
+										</div>
+									</div>
+									<div class="jweditor" data-placeholder="내용을 입력해주세요"></div>
+								</div>
+
 						</div>
 					</div>
-
-					<!-- 첨부파일 -->
 					<div class="grid-item col-span-3">
 						<label class="label-name" data-lan-eng="Attachment">첨부파일</label>
 						<label class="inputFile">
 							<input name="" type="file" data-essential="y" onchange="noticeUploadChange(this)" >
 							<button type="button" class="jw-button typeE"><img src="../image/upload.svg" alt=""> <span data-lan-eng="File upload">파일 업로드</span></button>
 						</label>
-
 						<div class="attach-list">
-							
 						</div>
 					</div>
 

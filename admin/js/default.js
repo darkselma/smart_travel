@@ -1,3 +1,8 @@
+let isHtmlView;
+let quill;
+let imageStorage = []; 
+let imageIndex = 0;
+
 function jw_select() {
 	if (!window.__jwselect_docbound) {
 		document.addEventListener('click', () => {
@@ -202,12 +207,10 @@ function language_audit_eng_json_map() {
 }
 
 function language_audit_eng_json_map2(action) {
-	// 대상 dialog 잡기: 마지막(가장 최근) dialog
 	const dialogs = document.querySelectorAll('dialog');
 	if (!dialogs.length) { console.warn('No <dialog> found'); return; }
 	const container = dialogs[dialogs.length - 1];
 
-	// 키: 페이지 대신 action 사용 (없으면 'dialog')
 	const key = (action && String(action).trim()) || 'dialog';
 
 	const getBefore = (el) => {
@@ -361,32 +364,32 @@ function modal_close() {
 }
 
 function member_info(btn, page) {
-	const root = btn.closest('.membermenu') || btn; // 버튼+메뉴 래퍼
+	const root = btn.closest('.membermenu') || btn;
 	const box = root.querySelector('.position');
 	let wrap = box.querySelector('.wrap');
 	if (!wrap) { wrap = document.createElement('div'); wrap.className = 'wrap'; box.appendChild(wrap); }
 
-	// 토글: 열려있으면 닫기
 	if (box.classList.contains('on')) { return closeBox(); }
 
-	// 열 때만 fetch
 	if (!wrap.innerHTML.trim()) {
 		wrap.innerHTML = '<div style="padding:10px;font-size:13px;color:#6b7280;">불러오는 중…</div>';
 		fetch(page + '?' + Date.now(), { cache: 'no-store' })
 			.then(r => { if (!r.ok) throw 0; return r.text(); })
 			.then(html => { wrap.innerHTML = html; openBox(); })
-			.catch(() => { wrap.innerHTML = '<div style="padding:10px;font-size:13px;color:#ef4444;">불러오기에 실패했어.</div>'; openBox(); });
+			.catch(() => { wrap.innerHTML = '<div style="padding:10px;font-size:13px;color:#ef4444;">불러오기에 실패했어요.</div>'; openBox(); });
 	} else {
 		openBox();
+		
 	}
 
 	function openBox() {
+		const lang = getCookie('lang') || 'eng';
+		language_apply(lang);
+			
 		box.classList.add('on');
 
-		// root(버튼+메뉴) 바깥 클릭 시에만 닫기 => 버튼 클릭은 바깥으로 취급 안 함
 		const onDocDown = (e) => { if (!root.contains(e.target)) closeBox(); };
 
-		// 내부 닫기 버튼(.closeMember_info)로 닫기
 		const onInsideClick = (e) => {
 			const t = e.target.closest('.closeMember_info');
 			if (t) { e.preventDefault(); closeBox(); }
@@ -523,6 +526,7 @@ function download(filename, text) {
 	URL.revokeObjectURL(url);
 }
 function deletefile(btn) {
+	console.log( 11 );
 	const grid = btn.closest('.grid-item'); if (!grid) return;
 	const cell = grid.querySelector('.cell'); if (cell) cell.remove();
 	grid.insertAdjacentHTML('beforeend', `
@@ -896,4 +900,222 @@ function detail_submit(it) {
 
 		if ('disabled' in el) el.disabled = true; else el.setAttribute('disabled', '');
 	});
+}
+
+function board() {
+	if (typeof window.Quill === 'undefined') return;
+	quill = new Quill('.jweditor', {
+		modules: {
+			toolbar: {
+				container: '#custom-toolbar',
+				handlers: {
+					align: function (value) {
+						this.quill.format('align', value || false);
+					}
+				},
+			},
+		},
+	});
+
+	const Size = Quill.import('attributors/style/size');
+	Size.whitelist = ['12px', '14px', '16px', '18px', '24px']; // 커스텀 값 추가
+	Quill.register(Size, true);
+	
+	const fontSizeSelect = document.getElementById('fontSize');
+	fontSizeSelect.value = '';
+	quill.on('selection-change', () => {
+		const format = quill.getFormat();
+		if (format.size) {
+			fontSizeSelect.value = format.size;
+		} else {
+			fontSizeSelect.value = '';
+		}
+		
+		if (format.color) {
+			document.querySelector('.font-color').style.color = format.color;
+		}else{
+			document.querySelector('.font-color').style.color = "#000";
+		}
+		if (format.background) {
+			document.querySelector('.background-color').style.background = format.background;
+		}else{
+			document.querySelector('.background-color').style.background = "#000";
+		}
+	});
+	
+	const BlockEmbed = Quill.import('blots/block/embed');
+	class CustomImageBlot extends BlockEmbed {
+		static create(value) {
+			const node = super.create(value.src);
+			node.setAttribute('src', value.src);
+			node.setAttribute('data-index', value.index); // 고유 인덱스 추가
+			node.classList.add('custom-image-class');
+			return node;
+		}
+
+		static value(node) {
+			return {
+				src: node.getAttribute('src'),
+				index: node.getAttribute('data-index'),
+			};
+		}
+	}
+	CustomImageBlot.blotName = 'jw-image';
+	CustomImageBlot.tagName = 'img';
+	Quill.register(CustomImageBlot);
+
+}
+
+function toggleHtmlView() {
+    const editor = document.querySelector('.ql-editor');
+    if (isHtmlView) {
+        editor.innerHTML = editor.textContent;
+    } else {
+        editor.textContent = editor.innerHTML; 
+    }
+    isHtmlView = !isHtmlView;
+}
+
+function removeHtmlTags() {
+    const editor = document.querySelector('.ql-editor');
+    editor.innerHTML = editor.innerText; 
+}
+
+function fontsize(it) {
+	const size = it.value;
+	quill.format('size', size); 
+}
+
+function setColor(button, type=1) {
+    if (document.querySelector('.colorBox')) return;
+
+    const colorBox = document.createElement('div');
+    colorBox.classList.add('colorBox');
+
+    const colors = getSpectrumColors(20);
+    colors.push('#ffffff', '#000000');
+
+    colors.forEach(color => {
+        const colorButton = document.createElement('button');
+        colorButton.style.backgroundColor = color;
+        colorButton.onclick = (event) => {
+            console.log(`${color}`);
+			if(type!=2){
+				button.style.color = color;
+				quill.format('color', color);
+			}else{
+				button.style.color = color;
+				quill.format('background', color);
+			}
+
+            setFontColorClose();
+            event.stopPropagation(); // 클릭 이벤트가 body로 전파되지 않도록 방지
+        };
+        colorBox.appendChild(colorButton);
+    });
+
+    // body에 colorBox 추가
+    button.appendChild(colorBox);
+
+    // 외곽 클릭 이벤트 추가 (전역에서 한 번만 등록)
+    document.addEventListener('click', removeColorBox);
+
+    // colorBox 닫기 함수
+    function setFontColorClose() {
+        if (colorBox) {
+            colorBox.remove();
+            document.removeEventListener('click', removeColorBox);
+        }
+    }
+
+    // 외곽 클릭 감지 함수
+    function removeColorBox(event) {
+        if (!colorBox.contains(event.target) && event.target !== button) {
+            setFontColorClose();
+        }
+    }
+}
+
+function getSpectrumColors(count) {
+    let colors = [];
+    for (let i = 0; i < count; i++) {
+        let hue = (i / count) * 360; // 0° ~ 360° 범위를 균등 분배
+        colors.push(hslToHex(hue, 100, 50)); // HSL을 Hex 코드로 변환하여 추가
+    }
+    return colors;
+}
+
+function hslToHex(h, s, l) {
+	s /= 100;
+	l /= 100;
+	let c = (1 - Math.abs(2 * l - 1)) * s;
+	let x = c * (1 - Math.abs((h / 60) % 2 - 1));
+	let m = l - c / 2;
+	let r, g, b;
+
+	if (h < 60) {
+	    r = c;
+	    g = x;
+	    b = 0;
+	} else if (h < 120) {
+	    r = x;
+	    g = c;
+	    b = 0;
+	} else if (h < 180) {
+	    r = 0;
+	    g = c;
+	    b = x;
+	} else if (h < 240) {
+	    r = 0;
+	    g = x;
+	    b = c;
+	} else if (h < 300) {
+	    r = x;
+	    g = 0;
+	    b = c;
+	} else {
+	    r = c;
+	    g = 0;
+	    b = x;
+	}
+
+	r = Math.round((r + m) * 255);
+	g = Math.round((g + m) * 255);
+	b = Math.round((b + m) * 255);
+
+	return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+}
+
+function insertImage(input) {
+    const file = input.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const base64Image = e.target.result;
+
+        const range = quill.getSelection();
+        quill.insertEmbed(range.index, 'jw-image', {
+            src: base64Image,
+            index: imageIndex++,
+        });
+    };
+    reader.readAsDataURL(file);
+}
+
+// 이미지 검색
+function findImage(index) {
+    return imageStorage.find((image) => image.index === index);
+}
+
+// 이미지 삭제
+function removeImage(index) {
+    imageStorage = imageStorage.filter((image) => image.index !== index);
+    const img = document.querySelector(`.ql-editor img[data-index="${index}"]`);
+    if (img) img.remove();
+}
+
+// 모든 이미지 출력
+function listImages() {
+    console.log('Current images:', imageStorage);
 }

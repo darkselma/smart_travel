@@ -190,12 +190,12 @@ hr { border:0; height:1px; background:#EAEAEA; }
 .badge { position:relative; display:inline-block; --bgcolor:#D4E7FF; --color:#0065F8; --icon:#0065F8; height:26px; line-height:26px; padding:0 8px 0 26px; font-size:16px; font-weight:500; border-radius:6px; background:var(--bgcolor); color:var(--color); }
 .badge:before { content:""; position:absolute; left:8px; top:50%; width:8px; height:8px; margin-top:-4px; border-radius:50%; background:var(--icon); }
 
-.badge-wait { --bgcolor:#D4E7FF; --color:#0065F8; --color:#0065F8; }  /* 선금 입금 대기 */
-.badge-wait2 { --bgcolor:#D0F2DF; --color:#17884A; --color:#17884A; }  /* 잔금 입금 대기 */
-.badge-confirm { --bgcolor:#FFE2BD; --color:#DB7A00; --color:#DB7A00; } /* 예약 확정 */
-.badge-done { --bgcolor:#EAEAEA; --color:#4E4E4E; --color:#4E4E4E; }    /* 여행 완료 */
-.badge-cancel { --bgcolor:#FFD6D6; --color:#ED1B23; --color:#ED1B23; }    /*  예약 취소 */
-.badge-refund { --bgcolor:#DCE0F2; --color:#3C4A76; --color:#3C4A76; }    /* 환불 완료 */
+.badge-wait { --bgcolor:#D4E7FF; --color:#0065F8; --icon:#0065F8; }  /* 선금 입금 대기 */
+.badge-wait2 { --bgcolor:#D0F2DF; --color:#17884A; --icon:#17884A; }  /* 잔금 입금 대기 */
+.badge-confirm { --bgcolor:#FFE2BD; --color:#DB7A00; --icon:#DB7A00; } /* 예약 확정 */
+.badge-done { --bgcolor:#EAEAEA; --color:#4E4E4E; --icon:#4E4E4E; }    /* 여행 완료 */
+.badge-cancel { --bgcolor:#FFD6D6; --color:#ED1B23; --icon:#ED1B23; }    /*  예약 취소 */
+.badge-refund { --bgcolor:#DCE0F2; --color:#3C4A76; --icon:#3C4A76; }    /* 환불 완료 */
 
 .badge-blue { --bgcolor:#D4E7FF; --color:#0065F8; --icon:#0065F8;} /* 입금 대기 */
 .badge-green { --bgcolor:#D0F2DF; --color:#17884A; --color:#17884A; } /*  */
@@ -230,8 +230,8 @@ input:disabled {background:#F3F3F3; border: 1px solid #D4D4D4; color:#969696; }
 .jw-tableA.booking-detail td { text-align:center; }
 
 
-.attach-list .cell .field-row { width:492px; height:46px; justify-content:space-between; padding:0 12px; }
-.grid-item .cell .field-row { width:492px; height:46px; justify-content:space-between; padding:0 12px; }
+.attach-list .cell .field-row { width:100%; max-width:492px; height:46px; justify-content:space-between; padding:0 12px; }
+.grid-item .cell .field-row { max-width:492px; height:46px; justify-content:space-between; padding:0 12px; }
 
 .overview-card-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:40px; }
 .overview-card-grid .card { height:216px;  background:#fff; display:grid; grid-template-columns:repeat(2, 1fr); padding:32px 24px; border-radius:24px; }
@@ -382,7 +382,7 @@ textarea[name="terms"] { width:100%; border-radius:12px; padding:24px; border: 1
 .aside-list { display:flex; flex-direction:column; gap:24px; }
 .aside-row-list { display:flex; flex-direction:column; gap:24px; }
 .aside-row { display:flex; align-items:center; justify-content:space-between; }
-.aside-row__title { font-size:20px; font-weight:bold; }
+.aside-row__title { font-size:16px; font-weight:bold; }
 .aside-row__req { color:#0065F8; }
 .aside-row__subtitle { font-size:16px; font-weight:bold; color:#363636; }
 .aside-add-section { width:24px; height:24px; border-radius:50%; border: 1px solid #D4D4D4; }
@@ -415,3 +415,10 @@ textarea[name="terms"] { width:100%; border-radius:12px; padding:24px; border: 1
 .product-detail_m1 .wrap { height:46px; display:flex; justify-content:center; align-items:center; border: 1px solid #D4D4D4; border-radius:12px; }
 .product-detail_m1 .wrap input { width:100%; }
 .product-detail_m1 .wrap:has(input:focus) { border: 1px solid #121212; }
+
+.select-list { display:flex; align-items:center; gap:10px;}
+.select-list .item { display:flex; align-items:center; gap:10px; background:#EDF4FF; padding:0 16px; height:46px; }
+
+.create-reservation-m2 .list-header { align-items:flex-end; height:auto; margin:0; }
+.create-reservation-m2 .list-header .result-count { color:#B3B3B3; display:flex; align-items:flex-end; }
+

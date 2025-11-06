@@ -130,12 +130,14 @@
 
 /* ========= dialog ========= */
 dialog { position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background:#fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); overflow:hidden; outline: none; border:none; }
+dialog:has(.create-reservation-m2) { border-radius:32px; }
 .dialog-container { position:relative; height:100%; padding:40px; }
 .dialog-container .dialog-close { position:absolute; top:10px; right:10px; }
 .dialog-controls { display:flex; justify-content:center; align-items:center; gap:10px; }
+.dialog-controls.jw-flex-r { justify-content:flex-end; }
 
 /* ========= ic-close ========= */
-.ic-close { position:relative; width:24px; height:24px; cursor:pointer; display:flex; justify-content:center; align-items:center; transition-duration: 0.5s; }
+.ic-close { position:relative; width:var(--w, 24px); height:var(--w, 24px); cursor:pointer; display:flex; justify-content:center; align-items:center; transition-duration: 0.5s; }
 .ic-close::after { content:""; position:absolute; width:var(--line, 2px); height:100%; background: var(--color, #222); transform: rotate(45deg); }
 .ic-close::before { content:""; position:absolute; width:var(--line, 2px); height:100%; background: var(--color, #222); transform: rotate(-45deg); }
 
@@ -149,3 +151,34 @@ dialog { position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
 .inputFile input[type=file] { position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:auto; opacity:0; cursor:pointer; z-index:3; border:0; padding:0; background:transparent; }
 .inputFile .btn-upload { width:156px; height:44px; display:flex; justify-content:center; align-items:center; padding:0 12px; border:1px solid #e0e0e0; border-radius:12px; background:#fff; font-size:14px; cursor:pointer; }
 .inputFile .btn-upload:hover { border-color:#c8c8c8; }
+
+
+.jw-editor { min-height:200px; border-radius:12px; overflow: hidden; display:flex; flex-direction:column; }
+.jw-editor .toolbar { padding:0 10px 1px 10px; display:flex; align-items:center; flex-wrap:wrap; gap:1px 20px; background:linear-gradient(to top, #ccc 1px, transparent 1px); background-size: 100% 36px; }
+.jw-editor .toolbar .group { position:relative; height:35px; display:flex; align-items:center; gap:10px; }
+.jw-editor .toolbar .group:not(:last-child):after { content:""; position:absolute; width:1px; height:20px; background:#ccc; right:-10px; top:50%; transform:translateY(-50%); }
+.jw-editor .toolbar .jw-select > .jw-selected { border:0; --select-height:100%; }
+.jw-editor .toolbar .editor-btn { background:#fff; min-width:30px; height:100%; display:flex; justify-content:center; align-items:center; }
+.jw-editor .toolbar .inputFile > .text { font-size:12px; }
+.jw-editor .jweditor { position:relative; flex:1; padding:20px; overflow-y:auto; }
+.jw-editor .font-color { position:relative; font-size:16px; color:#000; font-weight:bold; text-shadow:0 0 1px rgba(0, 0, 0, 1); }
+.jw-editor .background-color { position:relative; width:15px; height:15px; background:#000; }
+.jw-editor .colorBox { position: absolute; top:100%; left:0; width:200px; display:flex; flex-wrap: wrap; gap:5px; padding: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); background:#fff; border: 1px solid #ccc; z-index:10; }
+.jw-editor .colorBox button { width:15px; height:15px; border: 1px solid #ccc;}
+.jw-editor .jweditor::-webkit-scrollbar { display:initial; width:10px; }
+.jw-editor .jweditor::-webkit-scrollbar-track { border-radius:4px; background:#fff; }
+.jw-editor .jweditor::-webkit-scrollbar-thumb { background:#888; border-radius:5px; border:3px solid white; }
+.jw-editor .ql-editor { width:100%; height:100%; outline:none; }
+.jw-editor  #background-color { width:20px; height:25px; cursor:pointer; }
+.jw-editor em { font-style: italic; }
+.ql-editor .ql-align-center { text-align: center; }
+.ql-editor .ql-align-right { text-align: right; }
+.ql-editor ol, .ql-editor ul { list-style: inside; }
+.ql-editor ul li { list-style-type: decimal; }
+.ql-editor ol li[data-list=ordered] { list-style-type: disc; }
+.ql-editor ol li[data-list=bullet] { list-style-type: decimal; }
+.jw-editor select { display:inline-block; appearance: auto; }
+.jw-editor .custom-image-class.ql-align-center { display:flex; place-self:center; }
+.jw-editor .custom-image-class.ql-align-right { display:flex; place-self:end; }
+.jweditor[disabled] { pointer-events:none; opacity:.6; background:#f7f8fa; cursor:not-allowed; }
+.jw-editor .ql-editor.ql-blank::before { content:attr(data-placeholder); position:absolute; left:20px; right:0; color:#9aa1a9; pointer-events:none; }

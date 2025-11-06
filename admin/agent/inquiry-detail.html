@@ -12,6 +12,12 @@
 	<link rel="stylesheet" href="../css/a_variables.css">
 	<link rel="stylesheet" href="../css/a_components.css">
 	<link rel="stylesheet" href="../css/a_contents.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 </head>
 
 <body>
@@ -54,7 +60,51 @@
 					<div class="grid-item col-span-3">
 						<label class="label-name" for="content" data-lan-eng="Content">내용</label>
 						<div class="editor-box-wrap">
-							<textarea id="content" rows="10" placeholder="문의 내용을 입력하세요.">문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
+								<div class="jw-editor">
+									<div class="toolbar" id="custom-toolbar">
+										<div class="group">
+											<button type="button" class="editor-btn ql-bold"><img src="../image/editer_bold.svg" ></button>
+											<button type="button" class="editor-btn ql-italic" ><img src="../image/editer_italic.svg" ></button>
+											<button type="button" class="editor-btn ql-underline"><img src="../image/editer_underline.svg" ></button>
+											<button type="button" class="editor-btn ql-strike"><img src="../image/editer_strikethrough.svg" ></button>
+											
+											<button type="button" class="editor-btn font-color" onclick="setColor(this);">가</button>
+											<button type="button" class="background-color" onclick="setColor(this, 2);"></button>
+										</div>
+										<div class="group">
+											<select class=" ql-size" id="fontSize" onchange="fontsize(this);">
+												<option value="" selected>폰트</option>
+												<option value="12px">12px</option>
+												<option value="14px">14px</option>
+												<option value="16px">16px</option>
+												<option value="18px">18px</option>
+												<option value="24px">24px</option>
+											</select>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn ql-align" value=""><img src="../image/editer_left.svg" ></button>
+											<button type="button" class="editor-btn ql-align" value="center"><img src="../image/editer_center.svg" ></button>
+											<button type="button" class="editor-btn ql-align" value="right"><img src="../image/editer_right.svg" ></button>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn ql-list" value="ordered"><img src="../image/editer_ordered.svg" ></button>
+											<button type="button" class="editor-btn ql-list" value="bullet"><img src="../image/editer_unordered.svg" ></button>
+										</div>
+										<div class="group">
+											<button type="button" class="editor-btn" onclick="removeHtmlTags();"><img src="../image/editer_removeHtmlTags.svg" ></button>
+											<button type="button" class="editor-btn" style="font-size:9px;" onclick="toggleHtmlView();">HTML</button>
+										</div>
+										<div class="group">
+											<label class="inputFile" >
+												<input name="item_img[]" type="file" accept="image/*" multiple onchange="insertImage( this );" >
+												<span class="text" >이미지</span>
+												<i class="progress"></i>
+											</label>
+										</div>
+									</div>
+									<div class="jweditor" data-placeholder="내용을 입력해주세요"></div>
+								</div>
+
 						</div>
 					</div>
 					<div class="grid-item col-span-3">
@@ -97,6 +147,8 @@
 
 				</div>
 			</div>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry Details">문의 답변</h2>
 
 
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SMART TRAVEL ADMIN</title>
+
+	<!-- 공통 스타일 -->
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<link rel="stylesheet" href="../css/a_reset.css">
+	<link rel="stylesheet" href="../css/a_variables.css">
+	<link rel="stylesheet" href="../css/a_components.css">
+	<link rel="stylesheet" href="../css/a_contents.css">
+</head>
+
+<body>
+
+	<!-- header 들어올 자리 -->
+	<header class="layout-header"></header>
+
+	<!-- 본문 영역 -->
+	<main class="layout-main">
+		<!-- nav 들어올 자리 -->
+		<nav class="layout-nav"></nav>
+
+		<section class="layout-content">
+			<div class="page-toolbar">
+				<a href="inquiry-list.html" class="jw-button" aria-label="목록으로 돌아가기">
+					<img src="../image/arrow4.svg" alt="">
+					<span data-lan-eng="">목록으로 돌아가기</span>
+				</a>
+
+				<div class="page-toolbar-actions">
+					<button type="button" class="jw-button typeB" data-lan-eng="Save">저장</button>
+				</div>
+			</div>
+
+			<h1 class="page-title" data-lan-eng="Inquiry Details">문의 상세</h1>
+
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry Details">문의 내용</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item">
+						<label class="label-name" for="created_at" data-lan-eng="Date Created">작성일시</label>
+						<input id="created_at" type="text" class="form-control" value="2025-12-01 12:12" disabled>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="title" data-lan-eng="Title">제목</label>
+						<input id="title" type="text" class="form-control" value="제목입니다" disabled>
+					</div>
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="content" data-lan-eng="Content">내용</label>
+						<div class="editor-box-wrap">
+							<textarea id="content" rows="10" placeholder="문의 내용을 입력하세요." disabled>문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
+						</div>
+					</div>
+					<div class="grid-item col-span-3">
+						<label class="label-name" data-lan-eng="Attachment">첨부파일</label>
+						<div class="attach-list jw-rows jw-gap8">
+							<div class="cell">
+								<div class="field-row jw-center">
+									<div class="jw-center jw-gap10"><img src="../image/file.svg" alt=""> <span data-lan-eng="File">파일</span> [pdf, 328KB]</div>
+									<div class="jw-center jw-gap10">
+										<i></i>
+										<button type="button" class="jw-button typeF"><img src="../image/buttun-download.svg" alt=""></button>
+										<button type="button" class="jw-button typeF"><img src="../image/button-close2.svg" alt=""></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="grid-item">
+						<div class="upload-box">
+							<input id="file-passport" type="file" accept="image/*">
+							<label for="file-passport" class="thumb" aria-label="preview"></label>
+							<div class="upload-meta">
+								<div class="file-title" data-lan-eng="Image">이미지</div>
+								<div class="file-info">jpg, 328KB</div>
+								<div class="file-controller">
+									<button type="button" class="btn-icon" aria-label="다운로드"><img src="../image/button-download.svg" alt=""></button>
+									<button type="button" class="btn-icon" aria-label="삭제"><img src="../image/button-close2.svg" alt=""></button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<h2 class="section-title jw-mgt32" data-lan-eng="Inquiry Details">문의 답변</h2>
+			<div class="card-panel jw-mgt16">
+				<div class="grid-wrap">
+					<div class="grid-item">
+						<label class="label-name" for="created_at" data-lan-eng="Date Created">작성일시</label>
+						<input id="created_at" type="text" class="form-control" value="2025-12-01 12:12" disabled>
+					</div>
+					<div class="grid-item"></div>
+					<div class="grid-item"></div>
+					<div class="grid-item col-span-3">
+						<label class="label-name" for="content" data-lan-eng="Content">내용</label>
+						<div class="editor-box-wrap">
+							<textarea id="content" rows="10" placeholder="문의 내용을 입력하세요." disabled>문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다. 문의 내용입니다.</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</section>
+
+	</main>
+
+	<!-- 기본 스크립트 -->
+	<script src="../js/default.js"></script>
+	<script src="../js/agent.js"></script>
+	<script>
+		init({
+			headerUrl: '../inc/header.html',
+			navUrl: '../inc/nav_agent.html'
+		});
+	</script>
+</body>
+
+</html>
